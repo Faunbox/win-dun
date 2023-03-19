@@ -8,9 +8,6 @@ function MyApp({ Component, pageProps }) {
     type: "light",
     theme: {
       fonts: {
-        sans: "Comic Sans MS",
-        mono: "Arial",
-        serif: "Arial",
       },
     },
   });
