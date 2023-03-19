@@ -1,6 +1,6 @@
 import { createTheme, NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import Layout from "../Layout/Layout";
+import Layout from "../layout/Layout";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
