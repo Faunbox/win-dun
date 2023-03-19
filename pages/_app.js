@@ -6,6 +6,13 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   const lightTheme = createTheme({
     type: "light",
+    theme: {
+      fonts: {
+        sans: "Comic Sans MS",
+        mono: "Arial",
+        serif: "Arial",
+      },
+    },
   });
 
   const darkTheme = createTheme({

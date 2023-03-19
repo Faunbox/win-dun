@@ -1,13 +1,24 @@
-import { Container, Dropdown, Navbar } from "@nextui-org/react";
+import { Dropdown, Navbar } from "@nextui-org/react";
 
-const Header = () => {
+const HeaderNavbar = () => {
   return (
-    <Navbar>
+    <Navbar disableBlur={true} variant="sticky">
       <Navbar.Brand>LOGO</Navbar.Brand>
       <Navbar.Content>
         <Navbar.Item>O nas</Navbar.Item>
         <Navbar.Item>Galeria</Navbar.Item>
         <Navbar.Item>Kontakt</Navbar.Item>
+        <Dropdown>
+          <Navbar.Item>
+            <Dropdown.Button light>Przed podróżą</Dropdown.Button>
+          </Navbar.Item>
+          <Dropdown.Menu>
+            <Dropdown.Item>Jak rezerwować przejazd</Dropdown.Item>
+            <Dropdown.Item>Bagaż</Dropdown.Item>
+            <Dropdown.Item>Regulamin</Dropdown.Item>
+            <Dropdown.Item>FAQ</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
       </Navbar.Content>
       <Navbar.Content>
         <Dropdown>
@@ -26,4 +37,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderNavbar;
