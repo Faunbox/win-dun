@@ -7,13 +7,17 @@ function MyApp({ Component, pageProps }) {
   const lightTheme = createTheme({
     type: "light",
     theme: {
-      fonts: {
-      },
+      fonts: {},
     },
   });
 
   const darkTheme = createTheme({
     type: "dark",
+    theme: {
+      colors: {
+        // background: "#879b35",
+      },
+    },
   });
 
   return (
