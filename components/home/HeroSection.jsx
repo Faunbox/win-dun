@@ -1,6 +1,11 @@
-import { Button, Card, Grid, Input } from "@nextui-org/react";
+import { Button, Card, Grid, Input, Radio } from "@nextui-org/react";
+import { useState } from "react";
+import ParcelForn from "./form/ParcelForm";
+import PplForm from "./form/PplForm";
 
 const HeroSection = () => {
+  const [checked, setChecked] = useState("A");
+
   return (
     <Grid.Container
       css={{
@@ -11,10 +16,20 @@ const HeroSection = () => {
       <Grid xs={0} sm={1} md={2}></Grid>
       <Grid xs={12} sm={2} md={3}>
         <Card>
-          <Card.Header>Przewóz osób</Card.Header>
+          <Card.Header>
+            <Radio.Group
+              label="Zarezerwuj przejazd"
+              orientation="horizontal"
+              value={checked}
+              onChange={setChecked}
+            >
+              <Radio value="A">Osób</Radio>
+              <Radio value="B">Paczki</Radio>
+            </Radio.Group>
+          </Card.Header>
           <Card.Divider />
           <Card.Body>
-            <Input label="tak" />
+            {checked === "A" ? <PplForm /> : <ParcelForn />}
           </Card.Body>
           <Card.Divider />
           <Card.Footer>
