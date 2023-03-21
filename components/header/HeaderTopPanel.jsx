@@ -14,20 +14,20 @@ const HeaderTopPanel = () => {
       css={{ margin: "20px 0 20px 0" }}
     >
       <Grid alignItems="center" sm={6} md={2}>
-        <Text>
+        <Text size={"$lg"}>
           <BiMessageDetail /> kontakt@wit-dun.pl
         </Text>
       </Grid>
       <Spacer x={2} />
       <Grid alignItems="center" sm={6} md={2}>
-        <Text>
+        <Text size={"$lg"}>
           <BiPhoneCall /> 123-456-789
         </Text>
       </Grid>
       <Spacer x={2} />
       <Grid alignItems="center" justify="center" sm={12} md={1}>
         <Row>
-          <Text>
+          <Text size={"$lg"}>
             <BsFacebook color="blue" />
           </Text>
           <Spacer x={2} />

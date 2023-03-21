@@ -1,36 +1,56 @@
-import { Dropdown, Navbar } from "@nextui-org/react";
+import { Button, Dropdown, Navbar, Text } from "@nextui-org/react";
+import Link from "next/link";
 
 const HeaderDesktopNavbar = () => {
   return (
     <>
       <Navbar.Content hideIn={"xs"}>
-        <Navbar.Item>O nas</Navbar.Item>
-        <Navbar.Item>Galeria</Navbar.Item>
-        <Navbar.Item>Kontakt</Navbar.Item>
+        <Navbar.Item>
+          <Link href={"/"}>
+            <Text size={"large"}>O nas</Text>
+          </Link>
+        </Navbar.Item>
+        <Navbar.Item>
+          <Link href={"/"}>
+            <Text size={"large"}>Galeria</Text>
+          </Link>
+        </Navbar.Item>
+        <Navbar.Item>
+          <Link href={"/"}>
+            <Text size={"large"}>Kontakt</Text>
+          </Link>
+        </Navbar.Item>
         <Dropdown>
           <Navbar.Item>
-            <Dropdown.Button light>Przed podróżą</Dropdown.Button>
+            <Dropdown.Button light>
+              <Text size={"large"}>Przed podróżą</Text>
+            </Dropdown.Button>
           </Navbar.Item>
           <Dropdown.Menu>
-            <Dropdown.Item>Jak rezerwować przejazd</Dropdown.Item>
-            <Dropdown.Item>Bagaż</Dropdown.Item>
-            <Dropdown.Item>Regulamin</Dropdown.Item>
-            <Dropdown.Item>FAQ</Dropdown.Item>
+            <Dropdown.Item>
+              <Text size={"$lg"}>Jak rezerwować przejazd</Text>
+            </Dropdown.Item>
+            <Dropdown.Item>
+              {" "}
+              <Text size={"$lg"}>Bagaż</Text>
+            </Dropdown.Item>
+            <Dropdown.Item>
+              {" "}
+              <Text size={"$lg"}>Regulamin</Text>
+            </Dropdown.Item>
+            <Dropdown.Item>
+              {" "}
+              <Text size={"$lg"}>FAQ</Text>
+            </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       </Navbar.Content>
       <Navbar.Content>
-        <Dropdown>
-          <Navbar.Item>
-            <Dropdown.Button auto color={"warning"}>
-              Rezerwacja
-            </Dropdown.Button>
-          </Navbar.Item>
-          <Dropdown.Menu>
-            <Dropdown.Item>Przewóz osób</Dropdown.Item>
-            <Dropdown.Item>Przewóz paczek</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
+        <Navbar.Item>
+          <Link href={"/"}>
+            <Button>Zarezerwuj</Button>
+          </Link>
+        </Navbar.Item>
       </Navbar.Content>
     </>
   );

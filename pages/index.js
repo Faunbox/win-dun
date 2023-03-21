@@ -22,8 +22,6 @@ export default function Home() {
 
       <Container
         css={{
-          minHeight: "100vh",
-          background: "#879b35",
           minWidth: "100vw",
         }}
       >

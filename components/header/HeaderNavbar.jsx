@@ -5,10 +5,14 @@ import HeaderMobileNavbar from "./HeaderMobileNavbar";
 const HeaderNavbar = () => {
   return (
     <Navbar
-      disableBlur={false}
+      // disableBlur={false}
       variant="sticky"
       disableShadow={true}
-      containerCss={{ maxWidth: "100vw", width: "100%", padding: "0 10%" }}
+      containerCss={{
+        maxWidth: "100vw",
+        width: "100%",
+        padding: "0 10%",
+      }}
       id={"navbar"}
     >
       <Navbar.Brand>LOGO</Navbar.Brand>

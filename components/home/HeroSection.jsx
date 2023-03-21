@@ -15,16 +15,16 @@ const HeroSection = () => {
     >
       <Grid xs={0} sm={1} md={2}></Grid>
       <Grid xs={12} sm={2} md={3}>
-        <Card>
+        <Card css={{ borderRadius: "0" }} variant="bordered">
           <Card.Header>
             <Radio.Group
-              label="Zarezerwuj przejazd"
+              label="Przewóz"
               orientation="horizontal"
               value={checked}
               onChange={setChecked}
             >
               <Radio value="A">Osób</Radio>
-              <Radio value="B">Paczki</Radio>
+              <Radio value="B">Paczek</Radio>
             </Radio.Group>
           </Card.Header>
           <Card.Divider />
