@@ -2,6 +2,7 @@ import { createTheme, NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import Layout from "../layout/Layout";
 import "../styles/globals.css";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 function MyApp({ Component, pageProps }) {
   const lightTheme = createTheme({
