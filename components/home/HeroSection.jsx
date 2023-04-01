@@ -40,7 +40,7 @@ const HeroSection = () => {
       gap={2}
     >
       <Grid xs={0} sm={1} md={2}></Grid>
-      <Grid xs={12} sm={2} md={3}>
+      <Grid xs={12} sm={5} md={4}>
         <Card css={{ borderRadius: "0" }} variant="bordered">
           <Card.Header>
             <Radio.Group
@@ -72,7 +72,7 @@ const HeroSection = () => {
           </Card.Footer>
         </Card>
       </Grid>
-      <Grid xs={0} sm={5} md={6} justify="center">
+      <Grid xs={0} sm={6} md={6} justify="center">
         <Text h2>Jeździmy w każdy piątek, sobotę i niedziele</Text>
       </Grid>
     </Grid.Container>

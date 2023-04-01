@@ -1,0 +1,8 @@
+{
+  "website": "PL description",
+  "navbar": [
+    { "title": "O nas", "href": "/" },
+    { "title": "Galeria", "href": "/galeria" },
+    { "title": "Kontakt", "href": "/kontakt" }
+  ]   
+}

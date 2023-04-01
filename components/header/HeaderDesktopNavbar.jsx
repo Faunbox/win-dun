@@ -1,25 +1,22 @@
 import { Button, Dropdown, Navbar, Text } from "@nextui-org/react";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
+import { useEffect } from "react";
 
 const HeaderDesktopNavbar = () => {
+  const { t, ready } = useTranslation("website");
+
+  const navbarContent = t("navbar", { returnObjects: true });
   return (
     <>
-      <Navbar.Content hideIn={"xs"}>
-        <Navbar.Item>
-          <Link href={"/"}>
-            <Text size={"large"}>O nas</Text>
+      <Navbar.Content hideIn={"sm"}>
+        {navbarContent.map(obj => (
+          <Navbar.Item key={obj.title}>
+          <Link href={obj.href}>
+            <Text size={"large"}>{obj.title}</Text>
           </Link>
         </Navbar.Item>
-        <Navbar.Item>
-          <Link href={"/"}>
-            <Text size={"large"}>Galeria</Text>
-          </Link>
-        </Navbar.Item>
-        <Navbar.Item>
-          <Link href={"/"}>
-            <Text size={"large"}>Kontakt</Text>
-          </Link>
-        </Navbar.Item>
+        ))}
         <Dropdown>
           <Navbar.Item>
             <Dropdown.Button light>

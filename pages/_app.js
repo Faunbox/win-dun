@@ -1,10 +1,12 @@
-import { createTheme, NextUIProvider } from "@nextui-org/react";
+import { appWithTranslation } from "next-i18next";
+import { createTheme, NextUIProvider, useSSR } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import Layout from "../layout/Layout";
 import "../styles/globals.css";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 function MyApp({ Component, pageProps }) {
+  const { isBrowser } = useSSR();
   const lightTheme = createTheme({
     type: "light",
     theme: {
@@ -22,21 +24,23 @@ function MyApp({ Component, pageProps }) {
   });
 
   return (
-    <NextThemesProvider
-      defaultTheme="light"
-      attribute="class"
-      value={{
-        light: lightTheme.className,
-        dark: darkTheme.className,
-      }}
-    >
-      <NextUIProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </NextUIProvider>
-    </NextThemesProvider>
+    isBrowser && (
+      <NextThemesProvider
+        defaultTheme="light"
+        attribute="class"
+        value={{
+          light: lightTheme.className,
+          dark: darkTheme.className,
+        }}
+      >
+        <NextUIProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </NextUIProvider>
+      </NextThemesProvider>
+    )
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

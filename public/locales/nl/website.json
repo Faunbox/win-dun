@@ -1,0 +1,8 @@
+{
+  "website": "NL description",
+  "navbar": [
+    { "title": "O nas", "href": "/O-nas" },
+    { "title": "Galeria", "href": "/galeria" },
+    { "title": "Kontakt", "href": "/kontakt" }
+  ]
+}
