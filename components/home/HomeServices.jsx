@@ -4,7 +4,7 @@ const HomeServices = () => {
   return (
     <Container display="flex" alignItems="center" justify="center">
       <Text h2>Nasze usługi</Text>
-      <Grid.Container gap={2} justify="center">
+      <Grid.Container gap={2} justify="center" wrap="nowrap">
         <Grid xs="12" sm="6" md="4">
           <Card>
             <Card.Body>

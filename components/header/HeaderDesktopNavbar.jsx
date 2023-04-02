@@ -126,9 +126,9 @@ const HeaderDesktopNavbar = () => {
       <Navbar.Content>
         <Navbar.Item>
           <Link href={"/"}>
-            {router.locale === "pl" && <Button>{ReservationPl}</Button>}
-            {router.locale === "en" && <Button>{ReservationEn}</Button>}
-            {router.locale === "nl" && <Button>{ReservationNl}</Button>}
+            {router.locale === "pl" && <Button auto>{ReservationPl}</Button>}
+            {router.locale === "en" && <Button auto>{ReservationEn}</Button>}
+            {router.locale === "nl" && <Button auto>{ReservationNl}</Button>}
           </Link>
         </Navbar.Item>
       </Navbar.Content>
