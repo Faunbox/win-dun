@@ -1,61 +1,12 @@
 import { Button, Dropdown, Navbar, Text } from "@nextui-org/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { BfTravelEn, BfTravelNl, BfTravelPL, EnNavbar, NlNavbar, PlNavbar, ReservationEn, ReservationNl, ReservationPl } from "./navbar";
 
 const HeaderDesktopNavbar = () => {
   const router = useRouter();
 
-  const EnNavbar = [
-    { title: "About", href: "/about" },
-    { title: "Gallery", href: "/gallery" },
-    { title: "Contact", href: "/contact" },
-  ];
-
-  const NlNavbar = [
-    { title: "About NL", href: "/about" },
-    { title: "Gallery NL", href: "/gallery" },
-    { title: "Contact NL", href: "/contact" },
-  ];
-
-  const PlNavbar = [
-    { title: "O nas", href: "/o-nas" },
-    { title: "Galeria", href: "/galeria" },
-    { title: "Kontakt", href: "/kontakt" },
-  ];
-
-  const BfTravelPL = {
-    title: "Przed podróżą",
-    menu: [
-      { name: "Jak rezerwować przejazd", href: "/jak-rezerwowac" },
-      { name: "Bagaż", href: "/bagaz" },
-      { name: "Regulamin", href: "/regulami" },
-      { name: "FAQ", href: "/faq" },
-    ],
-  };
-
-  const BfTravelEn = {
-    title: "Before Travel",
-    menu: [
-      { name: "Jak rezerwować przejazd EN", href: "/jak-rezerwowac" },
-      { name: "Bagaż EN", href: "/bagaz" },
-      { name: "Regulamin EN", href: "/regulami" },
-      { name: "FAQ EN", href: "/faq" },
-    ],
-  };
-  const BfTravelNl = {
-    title: "Przed podróżą NL",
-    menu: [
-      { name: "Jak rezerwować przejazd NL", href: "/jak-rezerwowac" },
-      { name: "Bagaż NL", href: "/bagaz" },
-      { name: "Regulamin NL", href: "/regulami" },
-      { name: "FAQ NL", href: "/faq" },
-    ],
-  };
-
-  const ReservationPl = "Rezerwacja";
-  const ReservationEn = "Rezerwacja EN";
-  const ReservationNl = "Rezerwacja NL";
-
+  
   return (
     <>
       <Navbar.Content hideIn={"sm"}>

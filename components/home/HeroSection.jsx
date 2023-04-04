@@ -1,4 +1,4 @@
-import { Button, Card, Grid, Radio, Text } from "@nextui-org/react";
+import { Button, Card, Col, Grid, Radio, Row, Text } from "@nextui-org/react";
 import axios from "axios";
 import { useState } from "react";
 import ParcelForn from "./form/ParcelForm";
@@ -43,20 +43,26 @@ const HeroSection = () => {
       <Grid xs={12} sm={5} md={4}>
         <Card css={{ borderRadius: "0" }} variant="bordered">
           <Card.Header>
-            <Radio.Group
-              label="Przewóz"
-              orientation="horizontal"
-              value={checked}
-              onChange={setChecked}
-            >
-              <Radio value="A">Osób</Radio>
-              <Radio value="B">Paczek</Radio>
-            </Radio.Group>
-            <Button light onPress={handleGeoClick}>
-              <Text small>
-                Pobierz lokalizacje <BsGeoAlt />
-              </Text>
-            </Button>
+            <Grid.Container alignItems="center" justify="center">
+              <Grid>
+                <Radio.Group
+                  label="Przewóz"
+                  orientation="horizontal"
+                  value={checked}
+                  onChange={setChecked}
+                >
+                  <Radio value="A">Osób</Radio>
+                  <Radio value="B">Paczek</Radio>
+                </Radio.Group>
+              </Grid>
+              <Grid justify="flex-end">
+                <Button light onPress={handleGeoClick} auto>
+                  <Text small>
+                    Pobierz lokalizacje <BsGeoAlt />
+                  </Text>
+                </Button>
+              </Grid>
+            </Grid.Container>
           </Card.Header>
           <Card.Divider />
           <Card.Body>

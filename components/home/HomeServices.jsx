@@ -1,12 +1,13 @@
-import { Card, Col, Container, Grid, Image, Text } from "@nextui-org/react";
+import { Card, Container, Grid, Image, Text } from "@nextui-org/react";
 
 const HomeServices = () => {
   return (
-    <Container display="flex" alignItems="center" justify="center">
+    <Container css={{ textAlign: "center" }}>
       <Text h2>Nasze usługi</Text>
-      <Grid.Container gap={2} justify="center" wrap="nowrap">
-        <Grid xs="12" sm="6" md="4">
+      <Grid.Container gap={1} justify="center" alignItems="center">
+        <Grid xs={12} sm={6} md={4}>
           <Card>
+            <Card.Header>Opis1</Card.Header>
             <Card.Body>
               <Image
                 alt="random pic"
@@ -17,13 +18,15 @@ const HomeServices = () => {
             <Card.Footer>
               <Text b>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-                esse!
+                esse1!
               </Text>
             </Card.Footer>
           </Card>
         </Grid>
-        <Grid xs="12" sm="6" md="4">
+        <Grid xs={12} sm={6} md={4}>
           <Card>
+            <Card.Header>Opis2</Card.Header>
+
             <Card.Body>
               <Image
                 alt="random pic"
@@ -34,13 +37,14 @@ const HomeServices = () => {
             <Card.Footer>
               <Text b>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-                esse!
+                esse2!
               </Text>
             </Card.Footer>
           </Card>
         </Grid>
-        <Grid xs="12" sm="6" md="4">
+        <Grid xs={12} sm={6} md={4}>
           <Card>
+            <Card.Header>Opis3</Card.Header>
             <Card.Body>
               <Image
                 alt="random pic"
@@ -51,7 +55,7 @@ const HomeServices = () => {
             <Card.Footer>
               <Text b>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-                esse!
+                esse3!
               </Text>
             </Card.Footer>
           </Card>

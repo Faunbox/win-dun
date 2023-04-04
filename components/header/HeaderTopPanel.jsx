@@ -1,4 +1,4 @@
-import { Grid, Row, Spacer, Switch, Text, useTheme } from "@nextui-org/react";
+import { Container, Grid, Row, Spacer, Switch, Text, useTheme } from "@nextui-org/react";
 import { BiMessageDetail, BiPhoneCall } from "react-icons/bi";
 import { useTheme as useNextTheme } from "next-themes";
 import { useRouter } from "next/router";
@@ -11,7 +11,7 @@ const HeaderTopPanel = () => {
   const { locales, locale } = useRouter();
 
   return (
-    <>
+    <Container>
       <Grid.Container
         alignItems="center"
         justify="center"
@@ -58,7 +58,7 @@ const HeaderTopPanel = () => {
           </Text>
         </Grid>
       </Grid.Container>
-    </>
+    </Container>
   );
 };
 
