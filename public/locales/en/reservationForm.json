@@ -1,4 +1,8 @@
 {
+  "reservationType": [
+    { "text": "Osób EN", "value": "A" },
+    { "text": "Paczek EN", "value": "B" }
+  ],
   "pplSchema": [
     { "label": "Miejsce wyjazdu EN", "type": "text", "value": "city" },
     { "label": "Miejsce przyjzdu", "type": "text" },
@@ -7,5 +11,7 @@
     { "label": "Imię i nazwisko", "type": "text" },
     { "label": "Numer telefonu", "type": "numer" }
   ],
-  "checkbox": "Wyrażam zgodę En"
+  "checkbox": "Wyrażam zgodę En",
+  "localization":"Loc EN",
+  "button":"Reserve"
 }

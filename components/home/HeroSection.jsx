@@ -4,10 +4,12 @@ import { useState } from "react";
 import ParcelForn from "./form/ParcelForm";
 import PplForm from "./form/PplForm";
 import { BsGeoAlt } from "react-icons/bs";
+import { useTranslation } from "next-i18next";
 
 const HeroSection = () => {
   const [checked, setChecked] = useState("A");
   const [city, setCity] = useState("");
+  const { t } = useTranslation("reservationForm");
 
   const getCity = async (position) => {
     const latitude = position.coords.latitude;
@@ -51,14 +53,17 @@ const HeroSection = () => {
                   value={checked}
                   onChange={setChecked}
                 >
-                  <Radio value="A">Osób</Radio>
-                  <Radio value="B">Paczek</Radio>
+                  {t("reservationType", { returnObjects: true }).map((obj) => {
+                    <Radio value={obj.value} key={obj.text}>
+                      {obj.text}
+                    </Radio>;
+                  })}
                 </Radio.Group>
               </Grid>
               <Grid justify="flex-end">
                 <Button light onPress={handleGeoClick} auto>
                   <Text small>
-                    Pobierz lokalizacje <BsGeoAlt />
+                  {t("localization")} <BsGeoAlt />
                   </Text>
                 </Button>
               </Grid>
@@ -74,7 +79,7 @@ const HeroSection = () => {
           </Card.Body>
           <Card.Divider />
           <Card.Footer>
-            <Button>Rezerwacja przejazdu</Button>
+            <Button>{t("button")}</Button>
           </Card.Footer>
         </Card>
       </Grid>

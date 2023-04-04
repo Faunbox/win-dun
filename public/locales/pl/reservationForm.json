@@ -1,11 +1,17 @@
 {
+  "reservationType": [
+    { "text": "Osób", "value": "A" },
+    { "text": "Paczek", "value": "B" }
+  ],
   "pplSchema": [
-    { "label": "Miejsce wyjazdu", "type": "text", "value":"city" },
+    { "label": "Miejsce wyjazdu", "type": "text", "value": "city" },
     { "label": "Miejsce przyjzdu", "type": "text" },
     { "label": "Data wyjazdu", "type": "date" },
     { "label": "Ilośc osób", "type": "numer" },
     { "label": "Imię i nazwisko", "type": "text" },
     { "label": "Numer telefonu", "type": "numer" }
   ],
-  "checkbox": "Wyrażam zgodę na przetważanie danych osobowych"
+  "checkbox": "Wyrażam zgodę na przetważanie danych osobowych",
+  "localization": "Pobierz lokalizacje",
+  "button": "Rezerwuj"
 }
