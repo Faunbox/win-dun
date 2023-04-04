@@ -2,7 +2,7 @@ import { Checkbox, Container, Input, Spacer, Text } from "@nextui-org/react";
 import { useTranslation } from "next-i18next";
 
 const PplForm = ({ city }) => {
-  const { t } = useTranslation("resevationForm");
+  const { t } = useTranslation("reservationForm");
 
   return (
     <>

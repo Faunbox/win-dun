@@ -1,0 +1,12 @@
+{
+    "pplSchema": [
+      { "label": "Miejsce wyjazdu NL", "type": "text", "value":"city" },
+      { "label": "Miejsce przyjzdu NL", "type": "text" },
+      { "label": "Data wyjazdu", "type": "date" },
+      { "label": "Ilośc osób", "type": "numer" },
+      { "label": "Imię i nazwisko", "type": "text" },
+      { "label": "Numer telefonu", "type": "numer" }
+    ],
+    "checkbox": "Zgoda NL"
+  }
+  

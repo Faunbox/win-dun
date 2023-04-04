@@ -1,0 +1,11 @@
+{
+  "pplSchema": [
+    { "label": "Miejsce wyjazdu EN", "type": "text", "value": "city" },
+    { "label": "Miejsce przyjzdu", "type": "text" },
+    { "label": "Data wyjazdu", "type": "date" },
+    { "label": "Ilośc osób", "type": "numer" },
+    { "label": "Imię i nazwisko", "type": "text" },
+    { "label": "Numer telefonu", "type": "numer" }
+  ],
+  "checkbox": "Wyrażam zgodę En"
+}
