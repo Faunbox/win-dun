@@ -54,16 +54,18 @@ const HeroSection = () => {
                   onChange={setChecked}
                 >
                   {t("reservationType", { returnObjects: true }).map((obj) => {
-                    <Radio value={obj.value} key={obj.text}>
-                      {obj.text}
-                    </Radio>;
+                    return (
+                      <Radio value={obj.value} key={obj.text}>
+                        {obj.text}
+                      </Radio>
+                    );
                   })}
                 </Radio.Group>
               </Grid>
               <Grid justify="flex-end">
                 <Button light onPress={handleGeoClick} auto>
                   <Text small>
-                  {t("localization")} <BsGeoAlt />
+                    {t("localization")} <BsGeoAlt />
                   </Text>
                 </Button>
               </Grid>
