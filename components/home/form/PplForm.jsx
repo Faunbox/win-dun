@@ -24,9 +24,9 @@ const PplForm = ({ city }) => {
       {t("pplSchema", { returnObjects: "true" }).map((obj) =>
         obj.type !== "date" ? (
           <>
+            <Text>{obj.label}</Text>
             <Input
               key={obj.label}
-              label={obj.label}
               type={obj.type}
               value={city && obj.value === "city" ? city : ""}
             />
@@ -34,13 +34,14 @@ const PplForm = ({ city }) => {
           </>
         ) : (
           <>
-            {/* <Text as={"label"}>{obj.label}</Text> */}
+            <Text>{obj.label}</Text>
             <DatePicker
               key={obj.label}
-              // inline
+              inline
               locale={locale}
               selected={startDate}
               onChange={(date) => setStartDate(date)}
+              minDate={new Date()}
               filterDate={isWeekday}
               placeholderText="Wybierz date"
             />

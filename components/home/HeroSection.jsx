@@ -64,7 +64,7 @@ const HeroSection = () => {
                   })}
                 </Radio.Group>
               </Grid>
-              <Grid justify="flex-end">
+              <Grid>
                 <Button light onPress={handleGeoClick} auto>
                   <Text small>
                     {t("localization")} <BsGeoAlt />
