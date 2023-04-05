@@ -40,8 +40,10 @@ const HeroSection = () => {
         py: "10%",
       }}
       gap={2}
+      justify="center"
+      alignItems="center"
     >
-      <Grid xs={0} sm={1} md={2}></Grid>
+      {/* <Grid xs={0} sm={1} md={2}></Grid> */}
       <Grid xs={12} sm={5} md={4}>
         <Card css={{ borderRadius: "0" }} variant="bordered">
           <Card.Header>

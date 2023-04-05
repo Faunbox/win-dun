@@ -4,6 +4,7 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 import Layout from "../layout/Layout";
 import "../styles/globals.css";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
+import "react-datepicker/dist/react-datepicker.css";
 
 function MyApp({ Component, pageProps }) {
   const { isBrowser } = useSSR();
@@ -42,6 +43,5 @@ function MyApp({ Component, pageProps }) {
     )
   );
 }
-
 
 export default appWithTranslation(MyApp);
