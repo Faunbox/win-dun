@@ -1,11 +1,13 @@
-import { Checkbox, Input, Spacer, Text } from "@nextui-org/react";
+import { useState } from "react";
+import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
+
+import { Checkbox, Input, Spacer, Text } from "@nextui-org/react";
 import DatePicker, { registerLocale } from "react-datepicker";
+
 import pl from "date-fns/locale/pl";
 import nl from "date-fns/locale/nl";
 import en from "date-fns/locale/en-GB";
-import { useState } from "react";
-import { useRouter } from "next/router";
 registerLocale("pl", pl);
 registerLocale("nl", nl);
 registerLocale("en", en);
@@ -37,7 +39,6 @@ const PplForm = ({ city }) => {
             <Text>{obj.label}</Text>
             <DatePicker
               key={obj.label}
-              inline
               locale={locale}
               selected={startDate}
               onChange={(date) => setStartDate(date)}
@@ -49,11 +50,6 @@ const PplForm = ({ city }) => {
           </>
         )
       )}
-      {/* <Input label="Miejsce przyjzdu" type={"text"} />
-      <Input label="Data wyjazdu" type={"date"} />
-      <Input label="Ilość osób" type={"numer"} />
-      <Input label="Imię i nazwisko" type={"text"} />
-      <Input label="Numer telefonu" type={"numer"} /> */}
       <Spacer y={1} />
       <Checkbox size="sm" css={{ zIndex: "-1" }}>
         {t("checkbox")}
