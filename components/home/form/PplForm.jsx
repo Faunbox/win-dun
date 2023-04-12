@@ -15,7 +15,10 @@ registerLocale("en", en);
 const PplForm = ({ city }) => {
   const { t } = useTranslation("reservationForm");
   const { locale } = useRouter();
+
   const [startDate, setStartDate] = useState(null);
+  const [selected, setSelected] = useState(false);
+
   const isWeekday = (date) => {
     const day = date.getDay();
     return day !== 1 && day !== 2 && day !== 3 && day !== 4;
@@ -30,7 +33,10 @@ const PplForm = ({ city }) => {
             <Input
               key={obj.label}
               type={obj.type}
-              value={city && obj.value === "city" ? city : ""}
+              name={obj.label}
+              size="sm"
+              bordered
+              value={city && obj.value === "city" ? city : null}
             />
             <Spacer y={1} />
           </>
@@ -51,7 +57,13 @@ const PplForm = ({ city }) => {
         )
       )}
       <Spacer y={1} />
-      <Checkbox size="sm" css={{ zIndex: "-1" }}>
+      <Checkbox
+        size="sm"
+        // css={{ zIndex: "-1" }}
+        isSelected={selected}
+        isRequired={true}
+        onChange={() => setSelected((prevState) => !prevState)}
+      >
         {t("checkbox")}
       </Checkbox>
     </>

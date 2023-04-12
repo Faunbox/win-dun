@@ -1,4 +1,12 @@
-import { Container, Grid, Row, Spacer, Switch, Text, useTheme } from "@nextui-org/react";
+import {
+  Container,
+  Grid,
+  Row,
+  Spacer,
+  Switch,
+  Text,
+  useTheme,
+} from "@nextui-org/react";
 import { BiMessageDetail, BiPhoneCall } from "react-icons/bi";
 import { useTheme as useNextTheme } from "next-themes";
 import { useRouter } from "next/router";
@@ -50,12 +58,12 @@ const HeaderTopPanel = () => {
           xs={12}
           sm={5}
         >
-          <Text size={"$lg @xs:$xs"}>
+          <Link href="mailto:kontakt@wit-dun.pl" size={"$lg @xs:$xs"}>
             <BiMessageDetail /> kontakt@wit-dun.pl
-          </Text>
-          <Text size={"$lg @xs:$xs"}>
+          </Link>
+          <Link href="tel:123-456-789" size={"$lg @xs:$xs"}>
             <BiPhoneCall /> 123-456-789
-          </Text>
+          </Link>
         </Grid>
       </Grid.Container>
     </Container>

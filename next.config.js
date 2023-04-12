@@ -19,6 +19,16 @@ const nextConfig = {
       },
 
       //NL routes
+      {
+        source: "/nl/about",
+        destination: "/nl/o-nas",
+        locale: false,
+      },
+      {
+        source: "/nl/gallery",
+        destination: "/nl/galeria",
+        locale: false,
+      },
     ];
   },
 };

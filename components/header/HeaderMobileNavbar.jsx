@@ -47,7 +47,7 @@ const HeaderMobileNavbar = () => {
             </Link>
           ))}
         <Navbar.CollapseItem>
-          <Dropdown>
+          <Dropdown triggerType="listbox" >
             <Dropdown.Button light>
               {router.locale === "pl" && (
                 <Text size={"large"}>{BfTravelPL.title}</Text>
