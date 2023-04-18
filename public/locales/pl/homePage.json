@@ -1,5 +1,7 @@
 {
-  "name": "Nasze usługi",
+  "homeDescription": "Jezdzimy w kazdy piatek, sobote i niedziele",
+
+  "nameServices": "Nasze usługi",
   "services": [
     {
       "title": "Przewóz osób oraz zwierząt",
@@ -16,5 +18,7 @@
       "photo": "",
       "description": "Tak"
     }
-  ]
+  ],
+  "nameAbout": "O nas",
+  "aboutDescription": "gsjdfhgiush dfgiuhfdsiug hdsilufhg dsilhfg liusdhglisufdhgliufdsh glsidh fgli sudhfg lisdfhg isdfg, sjfdbgkjh ds,fb gkjhsdfbgkjh sdbfhkgj sdhfg"
 }

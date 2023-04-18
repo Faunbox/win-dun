@@ -2,17 +2,25 @@ import { Card, Container, Grid, Image, Text } from "@nextui-org/react";
 import { useTranslation } from "next-i18next";
 
 const HomeServices = () => {
-  const { t } = useTranslation("services");
+  const { t } = useTranslation("homePage");
 
   return (
     <Container css={{ textAlign: "center" }}>
-      <Text h2>{t("name")}</Text>
+      <Text h2>{t("nameServices")}</Text>
       <Grid.Container gap={1} justify="center" alignItems="center">
         {t("services", { returnObjects: true }).map((obj) => {
           return (
             <Grid xs={12} sm={6} md={4} key={obj.title}>
               <Card>
-                <Card.Header>{obj.title}</Card.Header>
+                <Card.Header>
+                  <Container
+                    direction="flex"
+                    justify="center"
+                    alignItems="center"
+                  >
+                    <Text h4>{obj.title}</Text>
+                  </Container>
+                </Card.Header>
                 <Card.Body>
                   <Image
                     alt="random pic"
@@ -22,7 +30,13 @@ const HomeServices = () => {
                   />
                 </Card.Body>
                 <Card.Footer>
-                  <Text b>{obj.description}</Text>
+                  <Container
+                    direction="flex"
+                    justify="center"
+                    alignItems="center"
+                  >
+                    <Text b>{obj.description}</Text>
+                  </Container>
                 </Card.Footer>
               </Card>
             </Grid>

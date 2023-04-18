@@ -21,10 +21,10 @@ export default function Home() {
         }}
       >
         <HeroSection />
-        <Spacer y={5} />
         <HomeServices />
-        <Spacer y={5} />
+        <Spacer y={2} />
         <HomeWhy />
+        <Spacer y={2} />
       </Container>
     </>
   );
@@ -32,7 +32,11 @@ export default function Home() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["website","reservationForm","services"])),
+      ...(await serverSideTranslations(locale, [
+        "website",
+        "reservationForm",
+        "homePage",
+      ])),
     },
   };
 }

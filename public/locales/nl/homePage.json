@@ -1,5 +1,7 @@
 {
-  "name": "Our services NL",
+  "homeDescription": "NL Jezdzimy w kazdy piatek, sobote i niedziele",
+
+  "nameServices": "Our services NL",
   "services": [
     {
       "title": "Przewóz osób oraz zwierząt nl",
@@ -16,5 +18,7 @@
       "photo": "",
       "description": "Tak"
     }
-  ]
+  ],
+  "nameAbout": "O nas NL",
+  "aboutDescription": " NIDERLANDZKI '0P9O[==L[ [-gsjdfhgiush dfgiuhfdsiug hdsilufhg dsilhfg liusdhglisufdhgliufdsh glsidh fgli sudhfg lisdfhg isdfg, sjfdbgkjh ds,fb gkjhsdfbgkjh sdbfhkgj sdhfg"
 }

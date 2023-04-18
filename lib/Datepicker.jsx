@@ -6,6 +6,7 @@ import en from "date-fns/locale/en-GB";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { useForm } from "../context/formContext";
+import { Input } from "@nextui-org/react";
 registerLocale("pl", pl);
 registerLocale("nl", nl);
 registerLocale("en", en);
@@ -28,7 +29,8 @@ const Calendar = () => {
       }
       minDate={new Date()}
       filterDate={isWeekday}
-      placeholderText="Wybierz date"
+      customInput={<Input bordered size="sm" fullWidth={true} />}
+      portalId="tak"
     />
   );
 };

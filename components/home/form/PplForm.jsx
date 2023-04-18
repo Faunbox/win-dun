@@ -1,4 +1,11 @@
-import { Checkbox, Input, Spacer, Text } from "@nextui-org/react";
+import {
+  Checkbox,
+  Container,
+  Grid,
+  Input,
+  Spacer,
+  Text,
+} from "@nextui-org/react";
 import { useTranslation } from "next-i18next";
 import Calendar from "../../../lib/Datepicker";
 import { useForm } from "../../../context/formContext";
@@ -15,15 +22,16 @@ const PplForm = () => {
   };
 
   return (
-    <>
+    <Grid.Container gap={2}>
       {t("pplSchema", { returnObjects: "true" }).map((obj) =>
         obj.type !== "date" ? (
-          <div key={obj.label}>
-            <Text>{obj.label}</Text>
+          <Grid xs={6} key={obj.label}>
+            {/* <Text>{obj.label}</Text> */}
             <Input
               key={obj.label}
               type={obj.type}
               name={obj.name}
+              label={obj.label}
               aria-label={obj.label}
               onChange={handleOnChange}
               size="sm"
@@ -32,13 +40,12 @@ const PplForm = () => {
               value={obj.name === "from" ? emailContent.from : null}
             />
             <Spacer y={1} />
-          </div>
+          </Grid>
         ) : (
-          <div key={obj.label}>
-            <Text>{obj.label}</Text>
+          <Grid xs={12} key={obj.label}>
+            <Text small>{obj.label}</Text>
             <Calendar key={obj.label} />
-            <Spacer y={1} />
-          </div>
+          </Grid>
         )
       )}
       {/* <Spacer y={1} /> */}
@@ -67,10 +74,11 @@ const PplForm = () => {
             activate: !prevState.activate,
           }))
         }
+        css={{ zIndex: 0 }}
       >
         {t("checkbox")}
       </Checkbox>
-    </>
+    </Grid.Container>
   );
 };
 

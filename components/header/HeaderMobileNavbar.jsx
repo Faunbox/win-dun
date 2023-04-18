@@ -15,18 +15,19 @@ import {
   ReservationNl,
   ReservationPl,
 } from "./navbar";
+import { useState } from "react";
 
 const HeaderMobileNavbar = () => {
   const { setTheme } = useNextTheme();
-  const { isDark, type } = useTheme();
+  const { isDark } = useTheme();
 
-  const { locales, locale } = useRouter();
+  const { locales } = useRouter();
 
   const router = useRouter();
 
   return (
     <>
-      <Navbar.Toggle showIn={"sm"} />
+      <Navbar.Toggle showIn={"sm"}/>
       <Navbar.Collapse>
         {router.locale === "pl" &&
           PlNavbar?.map((obj) => (
@@ -47,7 +48,7 @@ const HeaderMobileNavbar = () => {
             </Link>
           ))}
         <Navbar.CollapseItem>
-          <Dropdown triggerType="listbox" >
+          <Dropdown triggerType="listbox">
             <Dropdown.Button light>
               {router.locale === "pl" && (
                 <Text size={"large"}>{BfTravelPL.title}</Text>

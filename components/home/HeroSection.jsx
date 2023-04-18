@@ -3,11 +3,11 @@ import axios from "axios";
 import ParcelForn from "./form/ParcelForm";
 import PplForm from "./form/PplForm";
 import { BsGeoAlt } from "react-icons/bs";
-import { useTranslation } from "next-i18next";
+import { useTranslation, Translation } from "next-i18next";
 import { useForm } from "../../context/formContext";
 
 const HeroSection = () => {
-  const { t } = useTranslation("reservationForm");
+  const { t } = useTranslation(["reservationForm", "homePage"]);
 
   const { emailContent, handleSubmit, setEmailContent } = useForm();
 
@@ -83,7 +83,7 @@ const HeroSection = () => {
             </Grid.Container>
           </Card.Header>
           <Card.Divider />
-          <Card.Body>
+          <Card.Body css={{ height: "auto" }}>
             {emailContent.what ? <PplForm /> : <ParcelForn />}
           </Card.Body>
           <Card.Divider />
@@ -98,7 +98,16 @@ const HeroSection = () => {
         </Card>
       </Grid>
       <Grid xs={0} sm={6} md={6} justify="center">
-        <Text h2>Jeździmy w każdy piątek, sobotę i niedziele</Text>
+        {
+          <Text
+            h1
+            css={{
+              textGradient: "30deg, black -30%, #AD1917 50%",
+            }}
+          >
+            {t("homeDescription", { ns: "homePage" })}
+          </Text>
+        }
       </Grid>
     </Grid.Container>
   );

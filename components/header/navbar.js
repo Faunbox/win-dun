@@ -51,3 +51,7 @@ export const BfTravelNl = {
 export const ReservationPl = "Rezerwacja";
 export const ReservationEn = "Rezerwacja EN";
 export const ReservationNl = "Rezerwacja NL";
+
+export const FooterNavigationPl = "Nawigacja"
+export const FooterNavigationEn = "Navigation"
+export const FooterNavigationNl = "Nawigacja Nl"
