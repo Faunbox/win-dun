@@ -8,11 +8,9 @@ import { useTranslation } from "next-i18next";
 import { useForm } from "../../context/formContext";
 
 const HeroSection = () => {
-  const [checked, setChecked] = useState("A");
-  const [city, setCity] = useState("");
   const { t } = useTranslation("reservationForm");
 
-  const { emailContent, handleSubmit } = useForm();
+  const { emailContent, handleSubmit, setEmailContent } = useForm();
 
   const getCity = async (position) => {
     const latitude = position.coords.latitude;
@@ -21,8 +19,7 @@ const HeroSection = () => {
     const geoApiUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=pl`;
 
     const city = await axios.get(geoApiUrl).then((res) => res.data.city);
-
-    return setCity(city);
+    return setEmailContent((prevState) => ({ ...prevState, from: city }));
   };
 
   const successCallback = (position) => {
@@ -60,8 +57,13 @@ const HeroSection = () => {
                 <Radio.Group
                   label="Przewóz"
                   orientation="horizontal"
-                  value={checked}
-                  onChange={setChecked}
+                  value={emailContent.what ? "A" : "B"}
+                  onChange={() =>
+                    setEmailContent((prevState) => ({
+                      ...prevState,
+                      what: !emailContent.what,
+                    }))
+                  }
                 >
                   {t("reservationType", { returnObjects: true }).map((obj) => {
                     return (
@@ -83,11 +85,7 @@ const HeroSection = () => {
           </Card.Header>
           <Card.Divider />
           <Card.Body>
-            {checked === "A" ? (
-              <PplForm city={city} />
-            ) : (
-              <ParcelForn city={city} />
-            )}
+            {emailContent.what ? <PplForm /> : <ParcelForn />}
           </Card.Body>
           <Card.Divider />
           <Card.Footer>

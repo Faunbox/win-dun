@@ -1,0 +1,20 @@
+{
+  "name": "Nasze usługi",
+  "services": [
+    {
+      "title": "Przewóz osób oraz zwierząt",
+      "photo": "",
+      "description": "Tak"
+    },
+    {
+      "title": "Przewóz listów, paczek oraz gabarytów",
+      "photo": "",
+      "description": "Tak"
+    },
+    {
+      "title": "Przeprowadzki",
+      "photo": "",
+      "description": "Tak"
+    }
+  ]
+}

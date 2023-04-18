@@ -6,7 +6,7 @@ import { Checkbox, Input, Spacer, Text } from "@nextui-org/react";
 import Calendar from "../../../lib/Datepicker";
 import { useForm } from "../../../context/formContext";
 
-const PplForm = ({ city }) => {
+const PplForm = () => {
   const { emailContent, setEmailContent } = useForm();
   const { t } = useTranslation("reservationForm");
 
@@ -16,8 +16,6 @@ const PplForm = ({ city }) => {
       [e.target.name]: e.target.value,
     }));
   };
-
-  
 
   return (
     <>
@@ -33,7 +31,8 @@ const PplForm = ({ city }) => {
               onChange={handleOnChange}
               size="sm"
               bordered
-              value={city && obj.value === "city" ? city : null}
+              // required
+              value={obj.name === "from" ? emailContent.from : null}
             />
             <Spacer y={1} />
           </>
@@ -45,7 +44,7 @@ const PplForm = ({ city }) => {
           </>
         )
       )}
-      <Spacer y={1} />
+      {/* <Spacer y={1} /> */}
       <Checkbox
         defaultSelected={false}
         isRequired={false}

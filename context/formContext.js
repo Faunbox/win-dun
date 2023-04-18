@@ -9,6 +9,7 @@ export function useForm() {
 
 export function FormProvider({ children }) {
   const [emailContent, setEmailContent] = useState({
+    what: true,
     from: "",
     to: "",
     date: "",
@@ -28,6 +29,7 @@ export function FormProvider({ children }) {
       method: "POST",
       url: "/api/nodemailer",
       data: {
+        email: emailContent.email,
         from: emailContent.from,
         to: emailContent.to,
         date: emailContent.date,

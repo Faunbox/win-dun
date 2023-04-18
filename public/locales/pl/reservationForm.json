@@ -4,12 +4,17 @@
     { "text": "Paczek", "value": "B" }
   ],
   "pplSchema": [
-    { "label": "Miejsce wyjazdu", "type": "text", "value": "city", "name":"from" },
-    { "label": "Miejsce przyjzdu", "type": "text", "name":"to" },
-    { "label": "Data wyjazdu", "type": "date", "name":"date" },
-    { "label": "Ilośc osób", "type": "numer", "name":"ppl" },
-    { "label": "Imię i nazwisko", "type": "text", "name":"name" },
-    { "label": "Numer telefonu", "type": "numer", "name":"number" }
+    {
+      "label": "Miejsce wyjazdu",
+      "type": "text",
+      "name": "from"
+    },
+    { "label": "Miejsce przyjzdu", "type": "text", "name": "to" },
+    { "label": "Data wyjazdu", "type": "date", "name": "date" },
+    { "label": "Ilośc osób", "type": "numer", "name": "ppl" },
+    { "label": "Imię i nazwisko", "type": "text", "name": "name" },
+    { "label": "Adres email", "type": "email", "name": "email" },
+    { "label": "Numer telefonu", "type": "numer", "name": "number" }
   ],
   "checkbox": "Wyrażam zgodę na przetważanie danych osobowych",
   "localization": "Pobierz lokalizacje",
