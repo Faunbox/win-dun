@@ -27,7 +27,8 @@ export function FormProvider({ children }) {
     //
     await axios({
       method: "POST",
-      url: "/api/nodemailer",
+      // url: "/api/nodemailer",
+      url: "https://win-dun.vercel.app/api/nodemailer",
       data: {
         email: emailContent.email,
         from: emailContent.from,
