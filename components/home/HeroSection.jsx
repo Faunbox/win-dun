@@ -1,6 +1,5 @@
 import { Button, Card, Col, Grid, Radio, Row, Text } from "@nextui-org/react";
 import axios from "axios";
-import { useState } from "react";
 import ParcelForn from "./form/ParcelForm";
 import PplForm from "./form/PplForm";
 import { BsGeoAlt } from "react-icons/bs";

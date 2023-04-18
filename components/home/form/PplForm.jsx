@@ -1,8 +1,5 @@
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
-
 import { Checkbox, Input, Spacer, Text } from "@nextui-org/react";
+import { useTranslation } from "next-i18next";
 import Calendar from "../../../lib/Datepicker";
 import { useForm } from "../../../context/formContext";
 
@@ -21,7 +18,7 @@ const PplForm = () => {
     <>
       {t("pplSchema", { returnObjects: "true" }).map((obj) =>
         obj.type !== "date" ? (
-          <>
+          <div key={obj.label}>
             <Text>{obj.label}</Text>
             <Input
               key={obj.label}
@@ -35,13 +32,13 @@ const PplForm = () => {
               value={obj.name === "from" ? emailContent.from : null}
             />
             <Spacer y={1} />
-          </>
+          </div>
         ) : (
-          <>
+          <div key={obj.label}>
             <Text>{obj.label}</Text>
             <Calendar key={obj.label} />
             <Spacer y={1} />
-          </>
+          </div>
         )
       )}
       {/* <Spacer y={1} /> */}

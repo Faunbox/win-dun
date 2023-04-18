@@ -10,10 +10,9 @@ registerLocale("pl", pl);
 registerLocale("nl", nl);
 registerLocale("en", en);
 
-const Calendar = ({ key }) => {
+const Calendar = () => {
   const { locale } = useRouter();
   const { emailContent, setEmailContent } = useForm();
-
 
   const isWeekday = (date) => {
     const day = date.getDay();
@@ -22,7 +21,6 @@ const Calendar = ({ key }) => {
 
   return (
     <DatePicker
-      key={key}
       locale={locale}
       selected={emailContent.date}
       onChange={(e) =>
