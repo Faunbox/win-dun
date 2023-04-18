@@ -4,12 +4,12 @@
     { "text": "Paczek NL", "value": "B" }
   ],
   "pplSchema": [
-    { "label": "Miejsce wyjazdu NL", "type": "text", "value": "city" },
-    { "label": "Miejsce przyjzdu NL", "type": "text" },
-    { "label": "Data wyjazdu", "type": "date" },
-    { "label": "Ilośc osób", "type": "numer" },
-    { "label": "Imię i nazwisko", "type": "text" },
-    { "label": "Numer telefonu", "type": "numer" }
+    { "label": "Miejsce wyjazdu NL", "type": "text", "value": "city", "name": "from"},
+    { "label": "Miejsce przyjzdu NL", "type": "text", "name": "to"},
+    { "label": "Data wyjazdu", "type": "date", "name": "date"},
+    { "label": "Ilośc osób", "type": "numer", "name": "ppl"},
+    { "label": "Imię i nazwisko", "type": "text", "name": "name"},
+    { "label": "Numer telefonu", "type": "numer", "name": "number"}
   ],
   "checkbox": "Zgoda NL",
   "localization": "Loc NL",

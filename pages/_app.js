@@ -5,6 +5,7 @@ import Layout from "../layout/Layout";
 import "../styles/globals.css";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import "react-datepicker/dist/react-datepicker.css";
+import { FormProvider } from "../context/formContext";
 
 function MyApp({ Component, pageProps }) {
   const { isBrowser } = useSSR();
@@ -34,11 +35,13 @@ function MyApp({ Component, pageProps }) {
           dark: darkTheme.className,
         }}
       >
-        <NextUIProvider>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </NextUIProvider>
+        <FormProvider>
+          <NextUIProvider>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </NextUIProvider>
+        </FormProvider>
       </NextThemesProvider>
     )
   );

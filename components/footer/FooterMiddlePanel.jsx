@@ -1,4 +1,5 @@
 import { Grid, Text } from "@nextui-org/react";
+import PrivacyPolitics from '../footer/PrivacyPolitics'
 
 const FooterMiddlePanel = () => {
     return ( <Grid
@@ -7,7 +8,7 @@ const FooterMiddlePanel = () => {
         alignItems="center"
         direction="row"
       >
-        <Text>Polityka prywatności</Text>
+        <PrivacyPolitics />
         <Text>Regulamin</Text>
         <Text>Najczęsciej zadawane pytania</Text>
       </Grid> );

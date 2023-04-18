@@ -1,28 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 
 import { Checkbox, Input, Spacer, Text } from "@nextui-org/react";
-import DatePicker, { registerLocale } from "react-datepicker";
-
-import pl from "date-fns/locale/pl";
-import nl from "date-fns/locale/nl";
-import en from "date-fns/locale/en-GB";
-registerLocale("pl", pl);
-registerLocale("nl", nl);
-registerLocale("en", en);
+import Calendar from "../../../lib/Datepicker";
+import { useForm } from "../../../context/formContext";
 
 const PplForm = ({ city }) => {
+  const { emailContent, setEmailContent } = useForm();
   const { t } = useTranslation("reservationForm");
-  const { locale } = useRouter();
 
-  const [startDate, setStartDate] = useState(null);
-  const [selected, setSelected] = useState(false);
-
-  const isWeekday = (date) => {
-    const day = date.getDay();
-    return day !== 1 && day !== 2 && day !== 3 && day !== 4;
+  const handleOnChange = (e) => {
+    setEmailContent((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
   };
+
+  
 
   return (
     <>
@@ -33,7 +28,9 @@ const PplForm = ({ city }) => {
             <Input
               key={obj.label}
               type={obj.type}
-              name={obj.label}
+              name={obj.name}
+              aria-label={obj.label}
+              onChange={handleOnChange}
               size="sm"
               bordered
               value={city && obj.value === "city" ? city : null}
@@ -43,26 +40,37 @@ const PplForm = ({ city }) => {
         ) : (
           <>
             <Text>{obj.label}</Text>
-            <DatePicker
-              key={obj.label}
-              locale={locale}
-              selected={startDate}
-              onChange={(date) => setStartDate(date)}
-              minDate={new Date()}
-              filterDate={isWeekday}
-              placeholderText="Wybierz date"
-            />
+            <Calendar key={obj.label} />
             <Spacer y={1} />
           </>
         )
       )}
       <Spacer y={1} />
       <Checkbox
+        defaultSelected={false}
+        isRequired={false}
+        name="_honey"
+        aria-label="honey"
+        css={{ display: "none" }}
+        onChange={() =>
+          setEmailContent((prevState) => ({
+            ...prevState,
+            honey: !prevState.honey,
+          }))
+        }
+      ></Checkbox>
+      <Checkbox
         size="sm"
         // css={{ zIndex: "-1" }}
-        isSelected={selected}
+        isSelected={emailContent.activate}
+        aria-label="activate"
         isRequired={true}
-        onChange={() => setSelected((prevState) => !prevState)}
+        onChange={() =>
+          setEmailContent((prevState) => ({
+            ...prevState,
+            activate: !prevState.activate,
+          }))
+        }
       >
         {t("checkbox")}
       </Checkbox>

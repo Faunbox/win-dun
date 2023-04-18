@@ -5,11 +5,14 @@ import ParcelForn from "./form/ParcelForm";
 import PplForm from "./form/PplForm";
 import { BsGeoAlt } from "react-icons/bs";
 import { useTranslation } from "next-i18next";
+import { useForm } from "../../context/formContext";
 
 const HeroSection = () => {
   const [checked, setChecked] = useState("A");
   const [city, setCity] = useState("");
   const { t } = useTranslation("reservationForm");
+
+  const { emailContent, handleSubmit } = useForm();
 
   const getCity = async (position) => {
     const latitude = position.coords.latitude;
@@ -45,7 +48,12 @@ const HeroSection = () => {
     >
       {/* <Grid xs={0} sm={1} md={2}></Grid> */}
       <Grid xs={12} sm={5} md={4}>
-        <Card css={{ borderRadius: "0" }} variant="bordered">
+        <Card
+          css={{ borderRadius: "0" }}
+          variant="bordered"
+          as="form"
+          onSubmit={handleSubmit}
+        >
           <Card.Header>
             <Grid.Container alignItems="center" justify="center">
               <Grid>
@@ -83,7 +91,12 @@ const HeroSection = () => {
           </Card.Body>
           <Card.Divider />
           <Card.Footer>
-            <Button>{t("button")}</Button>
+            <Button
+              type="submit"
+              disabled={!emailContent.activate ? true : false}
+            >
+              {t("button")}
+            </Button>
           </Card.Footer>
         </Card>
       </Grid>
