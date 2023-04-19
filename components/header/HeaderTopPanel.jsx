@@ -1,10 +1,7 @@
 import {
   Container,
   Grid,
-  Row,
-  Spacer,
   Switch,
-  Text,
   useTheme,
 } from "@nextui-org/react";
 import { BiMessageDetail, BiPhoneCall } from "react-icons/bi";

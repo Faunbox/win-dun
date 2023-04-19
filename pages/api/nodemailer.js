@@ -16,7 +16,7 @@ export default function handler(req, res) {
     <li><a href=${req.body.number}>Numer telefonu: ${req.body.number}</a></li>
     <li>Skąd: ${req.body.from}</li>
     <li>Gdzie: ${req.body.to}</li>
-    <li>Kiedy: ${req.body.date.slice(0, 10)}</li>
+    <li>Kiedy: ${req.body.date}</li>
     <li>Ilość osób: ${req.body.ppl}</li>
     </ul>
     </body>

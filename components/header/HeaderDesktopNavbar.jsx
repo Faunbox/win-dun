@@ -74,7 +74,7 @@ const HeaderDesktopNavbar = () => {
           </Dropdown.Menu>
         </Dropdown>
       </Navbar.Content>
-      <Navbar.Content>
+      {/* <Navbar.Content>
         <Navbar.Item>
           <Link href={"/"}>
             {router.locale === "pl" && <Button auto>{ReservationPl}</Button>}
@@ -82,7 +82,7 @@ const HeaderDesktopNavbar = () => {
             {router.locale === "nl" && <Button auto>{ReservationNl}</Button>}
           </Link>
         </Navbar.Item>
-      </Navbar.Content>
+      </Navbar.Content> */}
     </>
   );
 };

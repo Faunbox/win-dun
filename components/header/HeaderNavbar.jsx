@@ -2,8 +2,13 @@ import { Navbar } from "@nextui-org/react";
 import HeaderDesktopNavbar from "./HeaderDesktopNavbar";
 import HeaderMobileNavbar from "./HeaderMobileNavbar";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 const HeaderNavbar = () => {
+  const { theme } = useTheme();
+
+  console.log({ theme });
+
   return (
     <Navbar
       // disableBlur={false}
@@ -19,7 +24,7 @@ const HeaderNavbar = () => {
     >
       <Navbar.Brand>
         <Image
-          src={"/images/logo.png"}
+          src={theme === "light" ? "/images/logo.png" : "/images/logo-dark.png"}
           alt="Wit-Dun transport polska holandia"
           width={240}
           height={60}

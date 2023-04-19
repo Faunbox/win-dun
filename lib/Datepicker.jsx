@@ -31,6 +31,7 @@ const Calendar = () => {
       filterDate={isWeekday}
       customInput={<Input bordered size="sm" fullWidth={true} />}
       portalId="tak"
+      excludeTimes={true}
     />
   );
 };
