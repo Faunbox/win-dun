@@ -1,6 +1,6 @@
 import { Container, Text } from "@nextui-org/react";
 
-const Gallery = () => {
+const Contact = () => {
   return (
     <Container
       display="flex"
@@ -9,10 +9,10 @@ const Gallery = () => {
       alignItems="center"
     >
       <Text h2 className="title">
-        Galeria
+        Kontakt
       </Text>
     </Container>
   );
 };
 
-export default Gallery;
+export default Contact;

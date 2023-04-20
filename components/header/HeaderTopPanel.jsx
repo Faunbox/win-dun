@@ -1,9 +1,4 @@
-import {
-  Container,
-  Grid,
-  Switch,
-  useTheme,
-} from "@nextui-org/react";
+import { Container, Grid, Switch, useTheme } from "@nextui-org/react";
 import { BiMessageDetail, BiPhoneCall } from "react-icons/bi";
 import { useTheme as useNextTheme } from "next-themes";
 import { useRouter } from "next/router";
@@ -21,7 +16,7 @@ const HeaderTopPanel = () => {
         alignItems="center"
         justify="center"
         direction="row"
-        css={{ margin: "20px 0 20px 0" }}
+        css={{ margin: "5px 0 5px 0" }}
       >
         <Grid alignItems="center" direction="row" xs={0} sm={5}>
           {locales.map((l) => (

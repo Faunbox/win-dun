@@ -3,6 +3,7 @@ import HeaderDesktopNavbar from "./HeaderDesktopNavbar";
 import HeaderMobileNavbar from "./HeaderMobileNavbar";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 const HeaderNavbar = () => {
   const { theme } = useTheme();
@@ -23,12 +24,16 @@ const HeaderNavbar = () => {
       id={"navbar"}
     >
       <Navbar.Brand>
-        <Image
-          src={theme === "light" ? "/images/logo.png" : "/images/logo-dark.png"}
-          alt="Wit-Dun transport polska holandia"
-          width={240}
-          height={60}
-        />
+        <Link href={"/"}>
+          <Image
+            src={
+              theme === "light" ? "/images/logo.png" : "/images/logo-dark.png"
+            }
+            alt="Wit-Dun express transport polska holandia"
+            width={240}
+            height={60}
+          />
+        </Link>
       </Navbar.Brand>
       <HeaderDesktopNavbar />
       <HeaderMobileNavbar />

@@ -8,7 +8,6 @@ export default function handler(req, res) {
     subject: "Wiadomość z formularza kontaktowego",
     text: req.body.name,
     html: `
-    <body style={{background:"grey"}}>
     <h1>Wiadomość od ${req.body.name}</h1>
     <br/>
     <ul>
@@ -19,7 +18,6 @@ export default function handler(req, res) {
     <li>Kiedy: ${req.body.date}</li>
     <li>Ilość osób: ${req.body.ppl}</li>
     </ul>
-    </body>
     `,
   };
 

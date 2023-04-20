@@ -16,6 +16,7 @@ export function FormProvider({ children }) {
     ppl: "",
     name: "",
     number: "",
+    email: "",
     activate: false,
     honey: false,
     isSend: false,
@@ -28,7 +29,7 @@ export function FormProvider({ children }) {
     await axios({
       method: "POST",
       // url: "/api/nodemailer",
-      url: "https://win-dun.vercel.app/api/nodemailer",
+      url: "/api/nodemailer",
       data: {
         email: emailContent.email,
         from: emailContent.from,
@@ -57,7 +58,7 @@ export function FormProvider({ children }) {
     if (emailContent.honey) return;
 
     //prevent double email send
-    if (emailContent.isSend) return alert("isSend");
+    // if (emailContent.isSend) return alert("isSend");
 
     //email send function
     setEmailContent((prevState) => ({

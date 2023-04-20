@@ -11,7 +11,7 @@ registerLocale("pl", pl);
 registerLocale("nl", nl);
 registerLocale("en", en);
 
-const Calendar = () => {
+const Calendar = ({ label }) => {
   const { locale } = useRouter();
   const { emailContent, setEmailContent } = useForm();
 
@@ -29,7 +29,7 @@ const Calendar = () => {
       }
       minDate={new Date()}
       filterDate={isWeekday}
-      customInput={<Input bordered size="sm" fullWidth={true} />}
+      customInput={<Input bordered size="sm" label={label} />}
       portalId="tak"
       excludeTimes={true}
     />

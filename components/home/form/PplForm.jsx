@@ -1,5 +1,6 @@
 import {
   Checkbox,
+  Col,
   Container,
   Grid,
   Input,
@@ -25,7 +26,7 @@ const PplForm = () => {
     <Grid.Container gap={2}>
       {t("pplSchema", { returnObjects: "true" }).map((obj) =>
         obj.type !== "date" ? (
-          <Grid xs={6} key={obj.label}>
+          <Grid key={obj.label}>
             {/* <Text>{obj.label}</Text> */}
             <Input
               key={obj.label}
@@ -39,12 +40,10 @@ const PplForm = () => {
               // required
               value={obj.name === "from" ? emailContent.from : null}
             />
-            <Spacer y={1} />
           </Grid>
         ) : (
-          <Grid xs={12} key={obj.label}>
-            <Text small>{obj.label}</Text>
-            <Calendar key={obj.label} />
+          <Grid key={obj.label}>
+            <Calendar key={obj.label} label={obj.label} />
           </Grid>
         )
       )}

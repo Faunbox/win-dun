@@ -5,13 +5,21 @@ const HomeServices = () => {
   const { t } = useTranslation("homePage");
 
   return (
-    <Container css={{ textAlign: "center" }}>
-      <Text h2>{t("nameServices")}</Text>
+    <Container
+      display="flex"
+      css={{ textAlign: "center" }}
+      justify="center"
+      alignItems="center"
+      className="rotatedBg"
+    >
+      <Text h2 className="title">
+        {t("nameServices")}
+      </Text>
       <Grid.Container gap={1} justify="center" alignItems="center">
         {t("services", { returnObjects: true }).map((obj) => {
           return (
             <Grid xs={12} sm={6} md={4} key={obj.title}>
-              <Card>
+              <Card variant="bordered">
                 <Card.Header>
                   <Container
                     direction="flex"
@@ -21,7 +29,7 @@ const HomeServices = () => {
                     <Text h4>{obj.title}</Text>
                   </Container>
                 </Card.Header>
-                <Card.Body>
+                <Card.Body css={{ opacity: "1" }}>
                   <Image
                     alt="random pic"
                     src="https://picsum.photos/300/400"

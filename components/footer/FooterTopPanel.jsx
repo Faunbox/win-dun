@@ -25,6 +25,7 @@ const FooterTopPanel = () => {
         justify="center"
         alignItems="center"
         direction="column"
+        css={{ textAlign: "center" }}
       >
         <Text size={"large"}>Wit-Dun Express, ul.Źródlana 2A</Text>
         <Text size={"large"}>34-321 Łękawica | Polska</Text>
@@ -36,37 +37,39 @@ const FooterTopPanel = () => {
         justify="space-around"
         alignItems="center"
         direction="column"
+        css={{ textAlign: "center" }}
       >
-        {router.locale === "pl" && <Text> {FooterNavigationPl}</Text>}
-        {router.locale === "en" && <Text> {FooterNavigationEn}</Text>}
-        {router.locale === "nl" && <Text> {FooterNavigationNl}</Text>}
-        <Container
-          display="flex"
-          direction="row"
-          justify="space-around"
-          alignItems="center"
-        >
+        {router.locale === "pl" && <Text b> {FooterNavigationPl}</Text>}
+        {router.locale === "en" && <Text b> {FooterNavigationEn}</Text>}
+        {router.locale === "nl" && <Text b> {FooterNavigationNl}</Text>}
+        <Grid.Container justify="center" alignItems="center">
           {router.locale === "pl" &&
             PlNavbar?.map((obj) => (
-              <Link href={obj.href} key={obj.href}>
-                <Text size={"large"}>{obj.title}</Text>
-              </Link>
+              <Grid xs={6} sm={2} key={obj.href} justify="center">
+                <Link href={obj.href}>
+                  <Text>{obj.title}</Text>
+                </Link>
+              </Grid>
             ))}
           {/* Check for EN lng */}
           {router.locale === "en" &&
             EnNavbar?.map((obj) => (
-              <Link href={obj.href} key={obj.href}>
-                <Text size={"large"}>{obj.title}</Text>
-              </Link>
+              <Grid xs={6} sm={2} key={obj.href} justify="center">
+                <Link href={obj.href} key={obj.href}>
+                  <Text>{obj.title}</Text>
+                </Link>
+              </Grid>
             ))}
           {/* Check for NL lng */}
           {router.locale === "nl" &&
             NlNavbar?.map((obj) => (
-              <Link href={obj.href} key={obj.href}>
-                <Text size={"large"}>{obj.title}</Text>
-              </Link>
+              <Grid xs={6} sm={2} key={obj.href} justify="center">
+                <Link href={obj.href} key={obj.href}>
+                  <Text>{obj.title}</Text>
+                </Link>
+              </Grid>
             ))}
-        </Container>
+        </Grid.Container>
       </Grid>
     </>
   );

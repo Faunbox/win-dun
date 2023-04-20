@@ -1,14 +1,20 @@
 import { Button, Modal, Spacer, Text, useModal } from "@nextui-org/react";
+import { useRouter } from "next/router";
+import {
+  PrivacyPoliticsEn,
+  PrivacyPoliticsNl,
+  PrivacyPoliticsPl,
+} from "../header/navbar";
 
 const PrivacyPolicyModal = () => {
   const { setVisible, bindings } = useModal();
+  const { locale } = useRouter();
+
   return (
-    <Button
-      light
-      size={"@xs"}
-      onClick={() => setVisible(true)}
-    >
-      Polityka prywatności
+    <Button light size={"@xs"} onClick={() => setVisible(true)}>
+      {locale === "pl" && PrivacyPoliticsPl}
+      {locale === "en" && PrivacyPoliticsEn}
+      {locale === "nl" && PrivacyPoliticsNl}
       <Modal
         scroll
         width="700px"

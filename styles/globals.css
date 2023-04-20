@@ -6,6 +6,46 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.title {
+  position: relative;
+  text-decoration: none;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  display: inline;
+  height: 3px;
+  bottom: -3px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 50%;
+  background: #ad1917;
+  animation-name: slideIn;
+  animation-duration: 1s;
+}
+
+.rotatedBg {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 100vw;
+  padding: 20px;
+}
+
+.rotatedBg::after {
+  content: "";
+  position: absolute;
+  width: 180%;
+  height: 200%;
+  top: 0%;
+  left: -70%;
+  z-index: -1;
+  background: #ad1917;
+  transform: rotate(45deg);
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -13,4 +53,17 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@keyframes slideIn {
+  from {
+    margin-top: 100%;
+    width: 0%;
+    opacity: 0.5;
+  }
+  to {
+    margin-top: 0;
+    width: 50%;
+    opacity: 1;
+  }
 }

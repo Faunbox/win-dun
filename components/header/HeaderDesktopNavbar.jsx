@@ -1,12 +1,21 @@
 import { Button, Dropdown, Navbar, Text } from "@nextui-org/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { BfTravelEn, BfTravelNl, BfTravelPL, EnNavbar, NlNavbar, PlNavbar, ReservationEn, ReservationNl, ReservationPl } from "./navbar";
+import {
+  BfTravelEn,
+  BfTravelNl,
+  BfTravelPL,
+  EnNavbar,
+  NlNavbar,
+  PlNavbar,
+  ReservationEn,
+  ReservationNl,
+  ReservationPl,
+} from "./navbar";
 
 const HeaderDesktopNavbar = () => {
   const router = useRouter();
 
-  
   return (
     <>
       <Navbar.Content hideIn={"sm"}>
@@ -56,19 +65,25 @@ const HeaderDesktopNavbar = () => {
             {router.locale === "pl" &&
               BfTravelPL.menu.map((menu) => (
                 <Dropdown.Item key={menu.name}>
-                  <Text size={"$lg"}>{menu.name}</Text>
+                  <Link href={menu.href}>
+                    {menu.name}
+                  </Link>
                 </Dropdown.Item>
               ))}
             {router.locale === "en" &&
               BfTravelEn.menu.map((menu) => (
                 <Dropdown.Item key={menu.name}>
-                  <Text size={"$lg"}>{menu.name}</Text>
+                  <Link href={menu.href}>
+                    {menu.name}
+                  </Link>
                 </Dropdown.Item>
               ))}
             {router.locale === "nl" &&
               BfTravelNl.menu.map((menu) => (
                 <Dropdown.Item key={menu.name}>
-                  <Text size={"$lg"}>{menu.name}</Text>
+                  <Link href={menu.href}>
+                    {menu.name}
+                  </Link>
                 </Dropdown.Item>
               ))}
           </Dropdown.Menu>
