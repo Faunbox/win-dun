@@ -5,9 +5,7 @@ const HomeAbout = () => {
   const { t } = useTranslation("homePage");
   return (
     <Container display="flex" alignItems="center" justify="center">
-      <Text h2 className="title">
-        {t("nameAbout")}
-      </Text>
+      <Text h2>{t("nameAbout")}</Text>
       <Grid.Container>
         <Grid xs={12} sm={6}>
           {t("aboutDescription")}

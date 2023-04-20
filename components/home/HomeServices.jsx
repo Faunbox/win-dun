@@ -29,7 +29,7 @@ const HomeServices = () => {
                     <Text h4>{obj.title}</Text>
                   </Container>
                 </Card.Header>
-                <Card.Body css={{ opacity: "1" }}>
+                <Card.Body>
                   <Image
                     alt="random pic"
                     src="https://picsum.photos/300/400"

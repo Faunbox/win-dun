@@ -1,6 +1,7 @@
 const nodemailer = require("nodemailer");
 
 export default function handler(req, res) {
+  console.log(req.body);
   const message = {
     // from: req.body.name,
     from: req.body.email,
@@ -36,6 +37,7 @@ export default function handler(req, res) {
         res.status(404).json({
           error: `Coś poszło nie tak! Spróbuj ponownie lub napisz wiadomość na kontakt@zywiec-laweta.pl`,
           message: err,
+          info: info,
         });
       } else {
         res.status(250).json({

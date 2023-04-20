@@ -26,6 +26,7 @@ export function FormProvider({ children }) {
     //Spambot check
     if (emailContent.honey) return;
     //
+    console.log(emailContent);
     await axios({
       method: "POST",
       // url: "/api/nodemailer",

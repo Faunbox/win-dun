@@ -1,5 +1,4 @@
 import { Dropdown, Navbar, Switch, Text, useTheme } from "@nextui-org/react";
-import { useTranslation } from "next-i18next";
 import { useTheme as useNextTheme } from "next-themes";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -11,11 +10,7 @@ import {
   EnNavbar,
   NlNavbar,
   PlNavbar,
-  ReservationEn,
-  ReservationNl,
-  ReservationPl,
 } from "./navbar";
-import { useState } from "react";
 
 const HeaderMobileNavbar = () => {
   const { setTheme } = useNextTheme();
@@ -27,7 +22,7 @@ const HeaderMobileNavbar = () => {
 
   return (
     <>
-      <Navbar.Toggle showIn={"sm"}/>
+      <Navbar.Toggle showIn={"sm"} />
       <Navbar.Collapse>
         {router.locale === "pl" &&
           PlNavbar?.map((obj) => (

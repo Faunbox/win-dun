@@ -1,13 +1,4 @@
-import {
-  Button,
-  Card,
-  Col,
-  Container,
-  Grid,
-  Radio,
-  Row,
-  Text,
-} from "@nextui-org/react";
+import { Button, Card, Col, Grid, Radio, Row, Text } from "@nextui-org/react";
 import axios from "axios";
 import ParcelForn from "./form/ParcelForm";
 import PplForm from "./form/PplForm";
@@ -108,16 +99,14 @@ const HeroSection = () => {
       </Grid>
       <Grid xs={0} sm={6} md={6} justify="center">
         {
-          <Container>
-            <Text
-              h1
-              css={{
-                textGradient: "30deg, black -30%, #AD1917 50%",
-              }}
-            >
-              {t("homeDescription", { ns: "homePage" })}
-            </Text>
-          </Container>
+          <Text
+            h1
+            css={{
+              textGradient: "30deg, black -30%, #AD1917 50%",
+            }}
+          >
+            {t("homeDescription", { ns: "homePage" })}
+          </Text>
         }
       </Grid>
     </Grid.Container>
