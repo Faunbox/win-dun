@@ -1,13 +1,11 @@
 const nodemailer = require("nodemailer");
 
 export default function handler(req, res) {
-  console.log(req.body);
   const message = {
     // from: req.body.name,
     from: req.body.email,
     to: process.env.EMAIL_TO,
     subject: "Wiadomość z formularza kontaktowego",
-    text: req.body.name,
     html: `
     <h1>Wiadomość od ${req.body.name}</h1>
     <br/>

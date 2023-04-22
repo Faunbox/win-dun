@@ -47,7 +47,7 @@ const HeaderDesktopNavbar = () => {
               </Link>
             </Navbar.Item>
           ))}
-        <Dropdown>
+        <Dropdown triggerType="menu">
           <Navbar.Item>
             <Dropdown.Button light>
               {router.locale === "pl" && (
@@ -65,25 +65,19 @@ const HeaderDesktopNavbar = () => {
             {router.locale === "pl" &&
               BfTravelPL.menu.map((menu) => (
                 <Dropdown.Item key={menu.name}>
-                  <Link href={menu.href}>
-                    {menu.name}
-                  </Link>
+                  <Link href={menu.href}>{menu.name}</Link>
                 </Dropdown.Item>
               ))}
             {router.locale === "en" &&
               BfTravelEn.menu.map((menu) => (
                 <Dropdown.Item key={menu.name}>
-                  <Link href={menu.href}>
-                    {menu.name}
-                  </Link>
+                  <Link href={menu.href}>{menu.name}</Link>
                 </Dropdown.Item>
               ))}
             {router.locale === "nl" &&
               BfTravelNl.menu.map((menu) => (
                 <Dropdown.Item key={menu.name}>
-                  <Link href={menu.href}>
-                    {menu.name}
-                  </Link>
+                  <Link href={menu.href}>{menu.name}</Link>
                 </Dropdown.Item>
               ))}
           </Dropdown.Menu>

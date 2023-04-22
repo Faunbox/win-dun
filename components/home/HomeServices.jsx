@@ -7,10 +7,11 @@ const HomeServices = () => {
   return (
     <Container
       display="flex"
-      css={{ textAlign: "center" }}
+      css={{
+        textAlign: "center",
+      }}
       justify="center"
       alignItems="center"
-      className="rotatedBg"
     >
       <Text h2 className="title">
         {t("nameServices")}

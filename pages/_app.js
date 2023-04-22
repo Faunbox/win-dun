@@ -1,18 +1,22 @@
 import { appWithTranslation } from "next-i18next";
 import { createTheme, NextUIProvider, useSSR } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { FormProvider } from "../context/formContext";
 import Layout from "../layout/Layout";
 import "../styles/globals.css";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import "react-datepicker/dist/react-datepicker.css";
-import { FormProvider } from "../context/formContext";
 
 function MyApp({ Component, pageProps }) {
   const { isBrowser } = useSSR();
   const lightTheme = createTheme({
     type: "light",
     theme: {
-      fonts: {},
+      fonts: {
+        sans: "Lato",
+        mono: " Lato",
+        serif: " Lato ",
+      },
     },
   });
 
@@ -22,13 +26,14 @@ function MyApp({ Component, pageProps }) {
       colors: {
         // background: "#879b35",
       },
+      fontFamily: "Outfit",
     },
   });
 
   return (
     isBrowser && (
       <NextThemesProvider
-        defaultTheme="light"
+        defaultTheme="dark"
         attribute="class"
         value={{
           light: lightTheme.className,

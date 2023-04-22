@@ -36,13 +36,26 @@ const HeroSection = () => {
     <Grid.Container
       css={{
         minHeight: "100vh",
-        py: "10%",
+        minWidth: "100vw",
+        paddingLeft: "0px",
       }}
       gap={2}
       justify="center"
       alignItems="center"
     >
       {/* <Grid xs={0} sm={1} md={2}></Grid> */}
+      <Grid xs={12} sm={6} md={6} justify="center">
+        {
+          <Text
+            h1
+            css={{
+              textGradient: "30deg, #AD1917, black 50%",
+            }}
+          >
+            {t("homeDescription", { ns: "homePage" })}
+          </Text>
+        }
+      </Grid>
       <Grid xs={12} sm={5} md={4}>
         <Card
           css={{ borderRadius: "0" }}
@@ -96,18 +109,6 @@ const HeroSection = () => {
             </Button>
           </Card.Footer>
         </Card>
-      </Grid>
-      <Grid xs={0} sm={6} md={6} justify="center">
-        {
-          <Text
-            h1
-            css={{
-              textGradient: "30deg, black -30%, #AD1917 50%",
-            }}
-          >
-            {t("homeDescription", { ns: "homePage" })}
-          </Text>
-        }
       </Grid>
     </Grid.Container>
   );

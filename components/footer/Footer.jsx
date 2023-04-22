@@ -6,7 +6,13 @@ import FooterTopPanel from "./FooterTopPanel";
 
 const Footer = () => {
   return (
-    <Container as="footer" direction="column" css={{ my: 10 }}>
+    <Container
+      as="footer"
+      direction="column"
+      css={{
+        my: 10,
+      }}
+    >
       <Grid.Container justify="space-around" alignContent="center">
         <FooterTopPanel />
         <FooterMiddlePanel />
