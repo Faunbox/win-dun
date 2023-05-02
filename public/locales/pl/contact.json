@@ -1,0 +1,10 @@
+{
+  "text": "Tekst pl",
+  "formHeader":"Form header PL",
+  "formButton":"Wyślij",
+  "formInputs": [
+    { "label": "label pl", "placeholder": "placeholder PL" },
+    { "label": "label pl", "placeholder": "placeholder PL" },
+    { "label": "label pl", "placeholder": "placeholder PL" }
+  ]
+}

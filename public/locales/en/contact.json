@@ -1,0 +1,10 @@
+{
+  "text": "Tekst en",
+  "formHeader": "Form header EN",
+  "formButton": "Send",
+  "formInputs": [
+    { "label": "label en", "placeholder": "placeholder en" },
+    { "label": "label en", "placeholder": "placeholder en" },
+    { "label": "label en", "placeholder": "placeholder en" }
+  ]
+}

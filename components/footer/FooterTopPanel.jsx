@@ -1,4 +1,4 @@
-import { Container, Grid, Text } from "@nextui-org/react";
+import { Container, Grid, Text, useTheme } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -13,11 +13,17 @@ import {
 
 const FooterTopPanel = () => {
   const router = useRouter();
+  const { theme } = useTheme();
 
   return (
     <>
       <Grid sm={12} md={3} justify="center" alignItems="center">
-        <Image src={"/images/logo.png"} alt="logo" width={200} height={50} />
+        <Image
+          src={theme === "light" ? "/images/logo.png" : "/images/logo-dark.png"}
+          alt="logo"
+          width={200}
+          height={50}
+        />
       </Grid>
       <Grid
         sm={12}

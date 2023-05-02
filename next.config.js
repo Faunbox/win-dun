@@ -17,6 +17,11 @@ const nextConfig = {
         destination: "/en/galeria",
         locale: false,
       },
+      {
+        source: "/en/contact",
+        destination: "/en/kontakt",
+        locale: false,
+      },
 
       //NL routes
       {
@@ -27,6 +32,11 @@ const nextConfig = {
       {
         source: "/nl/gallery",
         destination: "/nl/galeria",
+        locale: false,
+      },
+      {
+        source: "/nl/contact",
+        destination: "/nl/kontakt",
         locale: false,
       },
     ];

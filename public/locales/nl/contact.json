@@ -1,0 +1,11 @@
+{
+  "text": "Tekst nl",
+
+  "formHeader": "Form header NL",
+  "formButton": "Wyślij NL",
+  "formInputs": [
+    { "label": "label nl", "placeholder": "placeholder PL" },
+    { "label": "label pl", "placeholder": "placeholder PL" },
+    { "label": "label pl", "placeholder": "placeholder PL" }
+  ]
+}

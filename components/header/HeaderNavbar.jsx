@@ -8,8 +8,6 @@ import Link from "next/link";
 const HeaderNavbar = () => {
   const { theme } = useTheme();
 
-  console.log({ theme });
-
   return (
     <Navbar
       // disableBlur={false}
