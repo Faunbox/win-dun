@@ -7,15 +7,37 @@
   ],
   "pplSchema": [
     {
-      "label": "Miejsce wyjazdu EN",
+      "label": "Exact address from",
       "type": "text",
       "value": "city",
       "name": "cityFrom"
     },
-    { "label": "Ulica", "type": "text", "name": "streetFrom" },
-    { "label": "Data wyjazdu", "type": "date", "name": "date" },
-    { "label": "Ilośc osób", "type": "numer", "name": "ppl" },
-    { "label": "Imię i nazwisko", "type": "text", "name": "name" },
+    { "label": "Exact address to", "type": "text", "name": "cityTo" },
+    { "label": "Travel date", "type": "date", "name": "date" },
+    { "label": "Number of traveling people", "type": "numer", "name": "ppl" },
+    { "label": "Your name", "type": "text", "name": "name" },
+    { "label": "Email address", "type": "email", "name": "email" },
+    { "label": "Phone number", "type": "numer", "name": "number" }
+  ],
+  "parcelSchema": [
+    {
+      "label": "Dokladny adres odbioru EN",
+      "type": "text",
+      "name": "parcelFrom"
+    },
+    {
+      "label": "Dokladny adres dostarczenia",
+      "type": "text",
+      "name": "parcelTo"
+    },
+    {
+      "label": "Wymiary paczki - wysokosc, szerokosc, dlugosc",
+      "type": "text",
+      "name": "dimensions"
+    },
+    { "label": "Waga paczki", "type": "text", "name": "weight" },
+    { "label": "Data wysylki", "type": "date", "name": "date" },
+    { "label": "Adres email", "type": "email", "name": "email" },
     { "label": "Numer telefonu", "type": "numer", "name": "number" }
   ],
   "checkbox": "Wyrażam zgodę En",

@@ -1,11 +1,7 @@
 import {
   Checkbox,
-  Col,
-  Container,
   Grid,
   Input,
-  Spacer,
-  Text,
 } from "@nextui-org/react";
 import { useTranslation } from "next-i18next";
 import Calendar from "../../../lib/Datepicker";

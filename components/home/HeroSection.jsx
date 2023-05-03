@@ -11,26 +11,26 @@ const HeroSection = () => {
 
   const { emailContent, handleSubmit, setEmailContent } = useForm();
 
-  const getCity = async (position) => {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
+  // const getCity = async (position) => {
+  //   const latitude = position.coords.latitude;
+  //   const longitude = position.coords.longitude;
 
-    const geoApiUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=pl`;
+  //   const geoApiUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=pl`;
 
-    const city = await axios.get(geoApiUrl).then((res) => res.data.city);
-    return setEmailContent((prevState) => ({ ...prevState, from: city }));
-  };
+  //   const city = await axios.get(geoApiUrl).then((res) => res.data.city);
+  //   return setEmailContent((prevState) => ({ ...prevState, from: city }));
+  // };
 
-  const successCallback = (position) => {
-    getCity(position);
-  };
+  // const successCallback = (position) => {
+  //   getCity(position);
+  // };
 
-  const errorCallback = (error) => {
-    console.log(error);
-  };
+  // const errorCallback = (error) => {
+  //   console.log(error);
+  // };
 
-  const handleGeoClick = () =>
-    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+  // const handleGeoClick = () =>
+  //   navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
   return (
     <Grid.Container
@@ -86,13 +86,13 @@ const HeroSection = () => {
                   })}
                 </Radio.Group>
               </Grid>
-              <Grid>
+              {/* <Grid>
                 <Button light onPress={handleGeoClick} auto>
                   <Text small>
                     {t("localization")} <BsGeoAlt />
                   </Text>
                 </Button>
-              </Grid>
+              </Grid> */}
             </Grid.Container>
           </Card.Header>
           <Card.Divider />

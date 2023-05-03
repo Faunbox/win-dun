@@ -6,19 +6,35 @@
   ],
   "pplSchema": [
     {
-      "label": "Miejscowość wyjazdu",
+      "label": "Dokladny adres wyjazdu",
       "type": "text",
       "name": "cityFrom"
     },
-    {
-      "label": "Ulica",
-      "type": "text",
-      "name": "streetFrom"
-    },
-    { "label": "Miejsce przyjzdu", "type": "text", "name": "to" },
+    { "label": "Dokladny adres przyjazdu", "type": "text", "name": "cityTo" },
     { "label": "Data wyjazdu", "type": "date", "name": "date" },
     { "label": "Ilośc osób", "type": "numer", "name": "ppl" },
     { "label": "Imię i nazwisko", "type": "text", "name": "name" },
+    { "label": "Adres email", "type": "email", "name": "email" },
+    { "label": "Numer telefonu", "type": "numer", "name": "number" }
+  ],
+  "parcelSchema": [
+    {
+      "label": "Dokladny adres odbioru",
+      "type": "text",
+      "name": "parcelFrom"
+    },
+    {
+      "label": "Dokladny adres dostarczenia",
+      "type": "text",
+      "name": "parcelTo"
+    },
+    {
+      "label": "Wymiary paczki - wysokosc, szerokosc, dlugosc w centymetrach",
+      "type": "text",
+      "name": "dimensions"
+    },
+    { "label": "Waga paczki", "type": "text", "name": "weight" },
+    { "label": "Data wysylki", "type": "date", "name": "date" },
     { "label": "Adres email", "type": "email", "name": "email" },
     { "label": "Numer telefonu", "type": "numer", "name": "number" }
   ],
