@@ -37,11 +37,11 @@ export const BfTravelEn = {
   menu: [
     {
       name: "Jak rezerwować przejazd EN",
-      href: "/przed-podroza/jak-rezerwowac-przejazd",
+      href: "/before-travel/how-to-reserve",
     },
-    { name: "Bagaż EN", href: "/przed-podroza/bagaz" },
-    { name: "Regulamin EN", href: "/regulamin" },
-    { name: "FAQ EN", href: "/przed-podroza/faq" },
+    { name: "Bagaż EN", href: "/before-travel/luggage" },
+    { name: "Regulamin EN", href: "/terms" },
+    { name: "FAQ EN", href: "/before-travel/faq" },
   ],
 };
 export const BfTravelNl = {
@@ -49,11 +49,11 @@ export const BfTravelNl = {
   menu: [
     {
       name: "Jak rezerwować przejazd NL",
-      href: "/przed-podroza/jak-rezerwowac-przejazd",
+      href: "/before-travel-nl/how-to-reserve",
     },
-    { name: "Bagaż NL", href: "/przed-podroza/bagaz" },
-    { name: "Regulamin NL", href: "/regulamin" },
-    { name: "FAQ NL", href: "/przed-podroza/faq" },
+    { name: "Bagaż NL", href: "/before-travel-nl/luggage" },
+    { name: "Regulamin NL", href: "/terms" },
+    { name: "FAQ NL", href: "/before-travel-nl/faq" },
   ],
 };
 

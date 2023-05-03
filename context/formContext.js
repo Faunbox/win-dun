@@ -10,7 +10,8 @@ export function useForm() {
 export function FormProvider({ children }) {
   const [emailContent, setEmailContent] = useState({
     what: true,
-    from: "",
+    cityFrom: "",
+    streetFrom: "",
     to: "",
     date: "",
     ppl: "",
@@ -21,7 +22,7 @@ export function FormProvider({ children }) {
     honey: false,
     isSend: false,
   });
-  
+
   const contactFormEmailToOwner = async () => {
     //Spambot check
     if (emailContent.honey) return;

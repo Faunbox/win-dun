@@ -13,9 +13,7 @@ function MyApp({ Component, pageProps }) {
     type: "light",
     theme: {
       fonts: {
-        sans: "Lato",
-        mono: " Lato",
-        serif: " Lato ",
+        
       },
     },
   });

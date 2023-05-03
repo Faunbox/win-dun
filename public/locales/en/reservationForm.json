@@ -1,4 +1,6 @@
 {
+  "reservation": "Przewóz EN",
+
   "reservationType": [
     { "text": "Osób EN", "value": "A" },
     { "text": "Paczek EN", "value": "B" }
@@ -8,9 +10,9 @@
       "label": "Miejsce wyjazdu EN",
       "type": "text",
       "value": "city",
-      "name": "from"
+      "name": "cityFrom"
     },
-    { "label": "Miejsce przyjzdu", "type": "text", "name": "to" },
+    { "label": "Ulica", "type": "text", "name": "streetFrom" },
     { "label": "Data wyjazdu", "type": "date", "name": "date" },
     { "label": "Ilośc osób", "type": "numer", "name": "ppl" },
     { "label": "Imię i nazwisko", "type": "text", "name": "name" },

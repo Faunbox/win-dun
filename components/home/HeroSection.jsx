@@ -67,7 +67,7 @@ const HeroSection = () => {
             <Grid.Container alignItems="center" justify="center">
               <Grid>
                 <Radio.Group
-                  label="Przewóz"
+                  label={t("reservation", { ns: "reservationForm" })}
                   orientation="horizontal"
                   value={emailContent.what ? "A" : "B"}
                   onChange={() =>

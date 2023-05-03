@@ -1,13 +1,19 @@
 {
+  "reservation": "Przewóz",
   "reservationType": [
     { "text": "Osób", "value": "A" },
     { "text": "Paczek", "value": "B" }
   ],
   "pplSchema": [
     {
-      "label": "Miejsce wyjazdu",
+      "label": "Miejscowość wyjazdu",
       "type": "text",
-      "name": "from"
+      "name": "cityFrom"
+    },
+    {
+      "label": "Ulica",
+      "type": "text",
+      "name": "streetFrom"
     },
     { "label": "Miejsce przyjzdu", "type": "text", "name": "to" },
     { "label": "Data wyjazdu", "type": "date", "name": "date" },

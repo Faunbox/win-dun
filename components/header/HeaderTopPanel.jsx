@@ -7,8 +7,8 @@ import { BsFillMoonFill, BsSunFill } from "react-icons/bs";
 
 const HeaderTopPanel = () => {
   const { setTheme } = useNextTheme();
-  const { isDark, type } = useTheme();
-  const { locales, locale } = useRouter();
+  const { isDark } = useTheme();
+  const { locales, locale, route } = useRouter();
 
   return (
     <Container>
@@ -24,7 +24,7 @@ const HeaderTopPanel = () => {
               key={l}
               locale={l}
               className={l !== "en" ? `fi fi-${l}` : `fi fi-gb`}
-              href="/"
+              href={route}
               size={"xs"}
               style={{
                 margin: "20px",

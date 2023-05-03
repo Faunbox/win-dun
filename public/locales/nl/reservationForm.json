@@ -1,10 +1,13 @@
 {
+  "reservation":"Przewóz NL",
+
   "reservationType": [
     { "text": "Osób Nl", "value": "A" },
     { "text": "Paczek NL", "value": "B" }
   ],
   "pplSchema": [
-    { "label": "Miejsce wyjazdu NL", "type": "text", "value": "city", "name": "from"},
+    { "label": "Miejscowość wyjazdu NL", "type": "text", "value": "city", "name": "cityFrom"},
+    { "label": "Ulica NL", "type": "text", "value": "city", "name": "streetFrom"},
     { "label": "Miejsce przyjzdu NL", "type": "text", "name": "to"},
     { "label": "Data wyjazdu", "type": "date", "name": "date"},
     { "label": "Ilośc osób", "type": "numer", "name": "ppl"},

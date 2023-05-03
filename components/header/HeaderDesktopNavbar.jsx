@@ -8,9 +8,6 @@ import {
   EnNavbar,
   NlNavbar,
   PlNavbar,
-  ReservationEn,
-  ReservationNl,
-  ReservationPl,
 } from "./navbar";
 
 const HeaderDesktopNavbar = () => {

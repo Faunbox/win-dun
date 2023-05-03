@@ -1,8 +1,12 @@
 import { Container, Grid, Image, Text } from "@nextui-org/react";
 import FsLightbox from "fslightbox-react";
 import { useState } from "react";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Gallery = () => {
+  const { t } = useTranslation("common");
+
   const [lightboxController, setLightboxController] = useState({
     toggler: false,
     slide: 1,
@@ -32,9 +36,9 @@ const Gallery = () => {
       direction="column"
     >
       <Text h2 className="title">
-        Galeria
+        {t("gallery")}
       </Text>
-      <Grid.Container gap={2}>
+      <Grid.Container gap={2} justify="center" alignItems="center">
         {images.map((image, index) => (
           <Grid key={image}>
             <Image
@@ -58,3 +62,11 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}

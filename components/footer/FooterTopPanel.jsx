@@ -1,6 +1,7 @@
-import { Container, Grid, Text, useTheme } from "@nextui-org/react";
+import { Grid, Text } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import {
   EnNavbar,

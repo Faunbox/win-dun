@@ -27,7 +27,7 @@ const Contact = () => {
       direction="column"
     >
       <Text h2 className="title">
-        Kontakt
+        {t("title")}
       </Text>
       <Spacer y={1} />
       <Grid.Container justify="space-around" alignItems="center">
@@ -39,15 +39,20 @@ const Contact = () => {
             <Card.Header>{t("formHeader")}</Card.Header>
             <Card.Body>
               {t("formInputs", { returnObjects: "true" }).map((obj, id) => (
-                <Input
-                  key={id}
-                  label={obj.label}
-                  placeholder={obj.placeholder}
-                />
+                <>
+                  <Input
+                    key={id}
+                    label={obj.label}
+                    placeholder={obj.placeholder}
+                    size="sm"
+                    bordered
+                  />
+                  <Spacer y={1} />
+                </>
               ))}
             </Card.Body>
             <Card.Divider />
-            <Card.Footer>
+            <Card.Footer css={{ justifyContent: "flex-end" }}>
               <Button type="submit">{t("formButton")}</Button>
             </Card.Footer>
           </Card>
