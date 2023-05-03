@@ -2,20 +2,24 @@
   "title": "Frequently asked questions",
   "questions": [
     {
-      "question": "How to cośtam",
-      "response": "You have to cośtam"
+      "question": "Czy jeździmy z adresu pod adres? EN",
+      "response": "Tak, wyjeżdżamy spod dowolnego adresu i dowozimy bezpośrednio pod wskazany adres."
     },
     {
-      "question": "How to cośtam",
-      "response": "You have to cośtam"
+      "question": "Czy są przesiadki? EN",
+      "response": "Kursujemy 'od drzwi do drzwi' bez przesiadek. Komfort podrozojacych jest dla nas priorytetem"
     },
     {
-      "question": "How to cośtam",
-      "response": "You have to cośtam"
+      "question": "Ile bagażu można z sobą zabrać?",
+      "response": "W cenie przejazdu przysługują bezpłatny bagaż - podręczny o wadze do 5kg oraz podstawowy waga do 40 kg lub 2 sztuki po 20kg max. Bagaz dodatkowy za dopłata"
     },
     {
-      "question": "How to cośtam",
-      "response": "You have to cośtam"
+      "question": "Jak przygotowac zwierze do podrozy?",
+      "response": "Zwierzę powinno być umieszczone w odpowiednim pojemniku przeznaczonym do podróży, zabezpieczającym przed wyrządzeniem szkody pasażerom lub mieniu firmy. Pojemnik transportowy powinien się znajdować na siedzeniu przy właścicielu bądz w kabinie oddzielonej. Rozmiar pojemnika transportowego musi być dostosowany do wielkości zwierzęcia, nie może jednak przekraczać rozmiarów: wysokość 24 cm, głębokość 28 cm, szerokość 46 cm. "
+    },
+    {
+      "question": "Jaka jest cena przewozu zwierzat?",
+      "response": "Cena za przewóz zwierząt jest adekwatna do aktualnej ceny za przejazd pasażera - wysokość tej kwoty jest zależna od wybranej trasy."
     }
   ]
 }

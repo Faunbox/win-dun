@@ -1,5 +1,4 @@
-import { Container, Grid, Row, Text } from "@nextui-org/react";
-import Link from "next/link";
+import { Container, Grid, Row, Spacer } from "@nextui-org/react";
 import FooterBottomPanel from "./FooterBottomPanel";
 import FooterMiddlePanel from "./FooterMiddlePanel";
 import FooterTopPanel from "./FooterTopPanel";
@@ -13,6 +12,7 @@ const Footer = () => {
         my: 10,
       }}
     >
+      <Spacer y={2} />
       <Grid.Container justify="space-around" alignContent="center">
         <FooterTopPanel />
         <FooterMiddlePanel />
