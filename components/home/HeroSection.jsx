@@ -49,7 +49,7 @@ const HeroSection = () => {
           <Text
             h1
             css={{
-              textGradient: "30deg, #AD1917, black 50%",
+              textGradient: "30deg, #AD1917, white 90%",
             }}
           >
             {t("homeDescription", { ns: "homePage" })}
