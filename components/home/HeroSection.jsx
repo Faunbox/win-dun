@@ -38,6 +38,11 @@ const HeroSection = () => {
         minHeight: "100vh",
         minWidth: "100vw",
         paddingLeft: "0px",
+        backgroundImage: `url("/images/bg1.jpeg")`,
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "scroll",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
       }}
       gap={2}
       justify="center"
@@ -49,7 +54,7 @@ const HeroSection = () => {
           <Text
             h1
             css={{
-              textGradient: "30deg, #AD1917, white 90%",
+              textGradient: "30deg, black, #AD1917 20%",
             }}
           >
             {t("homeDescription", { ns: "homePage" })}
@@ -58,7 +63,11 @@ const HeroSection = () => {
       </Grid>
       <Grid xs={12} sm={5} md={4}>
         <Card
-          css={{ borderRadius: "0" }}
+          css={{
+            borderRadius: "10px",
+            "@dark": { background: "rgba(50, 55, 50, 0.7)" },
+            "@light": { background: "rgba(250, 0, 0, 0.7)" },
+          }}
           variant="bordered"
           as="form"
           onSubmit={handleSubmit}
@@ -100,7 +109,7 @@ const HeroSection = () => {
             {emailContent.what ? <PplForm /> : <ParcelForn />}
           </Card.Body>
           <Card.Divider />
-          <Card.Footer>
+          <Card.Footer css={{ justifyContent: "flex-end" }}>
             <Button
               type="submit"
               disabled={!emailContent.activate ? true : false}

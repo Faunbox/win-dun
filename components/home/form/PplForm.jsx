@@ -1,8 +1,4 @@
-import {
-  Checkbox,
-  Grid,
-  Input,
-} from "@nextui-org/react";
+import { Checkbox, Grid, Input } from "@nextui-org/react";
 import { useTranslation } from "next-i18next";
 import Calendar from "../../../lib/Datepicker";
 import { useForm } from "../../../context/formContext";
@@ -19,7 +15,7 @@ const PplForm = () => {
   };
 
   return (
-    <Grid.Container gap={2}>
+    <Grid.Container gap={2} justify="center" alignItems="center">
       {t("pplSchema", { returnObjects: "true" }).map((obj) =>
         obj.type !== "date" ? (
           <Grid key={obj.label}>
@@ -33,8 +29,10 @@ const PplForm = () => {
               onChange={handleOnChange}
               size="sm"
               bordered
+              fullWidth
               // required
               value={obj.name === "from" ? emailContent.from : null}
+              placeholder="cokolwiek"
             />
           </Grid>
         ) : (

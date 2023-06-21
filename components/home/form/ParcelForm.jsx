@@ -15,7 +15,7 @@ const ParcelForn = () => {
   };
 
   return (
-    <Grid.Container gap={2}>
+    <Grid.Container gap={2} justify="center" alignItems="center">
       {t("parcelSchema", { returnObjects: "true" }).map((obj) =>
         obj.type !== "date" ? (
           <Grid key={obj.label}>
@@ -28,6 +28,7 @@ const ParcelForn = () => {
               aria-label={obj.label}
               onChange={handleOnChange}
               size="sm"
+              fullWidth
               bordered
               // required
               value={obj.name === "from" ? emailContent.from : null}

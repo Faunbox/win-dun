@@ -59,19 +59,19 @@ const HeaderMobileNavbar = () => {
               {router.locale === "pl" &&
                 BfTravelPL.menu.map((menu) => (
                   <Dropdown.Item key={menu.name}>
-                    <Text size={"$lg"}>{menu.name}</Text>
+                    <Link href={menu.href} size={"$lg"}>{menu.name}</Link>
                   </Dropdown.Item>
                 ))}
               {router.locale === "en" &&
                 BfTravelEn.menu.map((menu) => (
                   <Dropdown.Item key={menu.name}>
-                    <Text size={"$lg"}>{menu.name}</Text>
+                    <Link href={menu.href} size={"$lg"}>{menu.name}</Link>
                   </Dropdown.Item>
                 ))}
               {router.locale === "nl" &&
                 BfTravelNl.menu.map((menu) => (
                   <Dropdown.Item key={menu.name}>
-                    <Text size={"$lg"}>{menu.name}</Text>
+                    <Link href={menu.href} size={"$lg"}>{menu.name}</Link>
                   </Dropdown.Item>
                 ))}
             </Dropdown.Menu>

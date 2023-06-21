@@ -4,7 +4,15 @@ import { useTranslation } from "next-i18next";
 const HomeAbout = () => {
   const { t } = useTranslation("homePage");
   return (
-    <Container display="flex" alignItems="center" justify="center">
+    <Container
+      display="flex"
+      alignItems="center"
+      justify="center"
+      css={{
+        my: 2,
+        background: "linear-gradient(35deg,#AD1917 320px,#000 0)",
+      }}
+    >
       <Text h2 className="title">
         {t("nameAbout")}
       </Text>

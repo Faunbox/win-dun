@@ -9,6 +9,7 @@ const HomeServices = () => {
       display="flex"
       css={{
         textAlign: "center",
+        my: "25px",
       }}
       justify="center"
       alignItems="center"
