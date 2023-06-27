@@ -18,7 +18,6 @@ const HeaderNavbar = () => {
         width: "100%",
         padding: "0 10%",
       }}
-      // maxWidth={"fluid"}
       id={"navbar"}
     >
       <Navbar.Brand>

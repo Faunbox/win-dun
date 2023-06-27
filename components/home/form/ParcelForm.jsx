@@ -32,6 +32,9 @@ const ParcelForn = () => {
               bordered
               // required
               value={obj.name === "from" ? emailContent.from : null}
+              css={{
+                $$inputLabelColor: "white",
+              }}
             />
           </Grid>
         ) : (
@@ -66,7 +69,7 @@ const ParcelForn = () => {
             activate: !prevState.activate,
           }))
         }
-        css={{ zIndex: 0 }}
+        css={{ zIndex: 0, $$inputLabelColor: "white" }}
       >
         {t("checkbox")}
       </Checkbox>

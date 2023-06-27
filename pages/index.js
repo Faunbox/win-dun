@@ -15,17 +15,11 @@ export default function Home() {
         <title>{t("website")}</title>
       </Head>
 
-      <Container
-        css={{
-          minWidth: "100vw",
-        }}
-      >
-        <HeroSection />
-        <HomeServices />
-        <Spacer y={2} />
-        <HomeWhy />
-        <Spacer y={2} />
-      </Container>
+      <HeroSection />
+      <HomeServices />
+      <Spacer y={2} />
+      <HomeWhy />
+      <Spacer y={2} />
     </>
   );
 }

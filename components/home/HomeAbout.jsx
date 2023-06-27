@@ -10,15 +10,15 @@ const HomeAbout = () => {
       justify="center"
       css={{
         my: 2,
-        background: "linear-gradient(35deg,#AD1917 320px,#000 0)",
+        background: "linear-gradient(35deg,#AD1917 320px,rgba(0,0,0,0) 0)",
       }}
     >
       <Text h2 className="title">
         {t("nameAbout")}
       </Text>
-      <Grid.Container>
-        <Grid xs={12} sm={6}>
-          {t("aboutDescription")}
+      <Grid.Container gap={2}>
+        <Grid xs={12} sm={6} justify="center" alignItems="center">
+          <Text size={"$xl"}>{t("aboutDescription")}</Text>
         </Grid>
         <Grid xs={12} sm={6}>
           <iframe

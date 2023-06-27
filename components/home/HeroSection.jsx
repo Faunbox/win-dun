@@ -1,9 +1,7 @@
-import { Button, Card, Col, Grid, Radio, Row, Text } from "@nextui-org/react";
-import axios from "axios";
+import { Button, Card, Grid, Radio, Text } from "@nextui-org/react";
 import ParcelForn from "./form/ParcelForm";
 import PplForm from "./form/PplForm";
-import { BsGeoAlt } from "react-icons/bs";
-import { useTranslation, Translation } from "next-i18next";
+import { useTranslation } from "next-i18next";
 import { useForm } from "../../context/formContext";
 
 const HeroSection = () => {
@@ -35,14 +33,14 @@ const HeroSection = () => {
   return (
     <Grid.Container
       css={{
-        minHeight: "100vh",
+        minHeight: "80vh",
         minWidth: "100vw",
-        paddingLeft: "0px",
         backgroundImage: `url("/images/bg1.jpeg")`,
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "scroll",
         backgroundPosition: "center",
         backgroundSize: "cover",
+        margin: "0px auto",
       }}
       gap={2}
       justify="center"
@@ -76,7 +74,6 @@ const HeroSection = () => {
             <Grid.Container alignItems="center" justify="center">
               <Grid>
                 <Radio.Group
-                  label={t("reservation", { ns: "reservationForm" })}
                   orientation="horizontal"
                   value={emailContent.what ? "A" : "B"}
                   onChange={() =>
@@ -85,10 +82,14 @@ const HeroSection = () => {
                       what: !emailContent.what,
                     }))
                   }
+                  css={{ $$labelColor: "white" }}
                 >
+                  <Text size={"$lg"} css={{ px: "10px" }}>
+                    {t("reservation", { ns: "reservationForm" })}
+                  </Text>
                   {t("reservationType", { returnObjects: true }).map((obj) => {
                     return (
-                      <Radio value={obj.value} key={obj.text}>
+                      <Radio value={obj.value} key={obj.text} color="error">
                         {obj.text}
                       </Radio>
                     );

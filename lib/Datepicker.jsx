@@ -29,7 +29,16 @@ const Calendar = ({ label }) => {
       }
       minDate={new Date()}
       filterDate={isWeekday}
-      customInput={<Input bordered size="sm" label={label} />}
+      customInput={
+        <Input
+          bordered
+          size="sm"
+          label={label}
+          fullWidth
+          css={{ $$inputLabelColor: "white" }}
+          style={{ width: "100%" }}
+        />
+      }
       portalId="tak"
       excludeTimes={true}
     />

@@ -1,12 +1,24 @@
 {
-  "title":"Kontakt",
+  "title": "Kontakt",
 
-  "text": "Tekst pl",
-  "formHeader":"Form header PL",
-  "formButton":"Wyślij",
+  "text": "Czy masz pytania, potrzebujesz dodatkowych informacji lub chciałbyś skorzystać z naszych usług transportowych? Jesteśmy tutaj, aby Ci pomóc! Nie czekaj, skontaktuj się z nami już dzisiaj i przekonaj się, dlaczego jesteśmy liderem w branży transportowej w swoim regionie.",
+  "formHeader": "Formularz kontaktowy",
+  "formButton": "Wyślij zapytanie",
   "formInputs": [
-    { "label": "label pl", "placeholder": "placeholder PL" },
-    { "label": "label pl", "placeholder": "placeholder PL" },
-    { "label": "label pl", "placeholder": "placeholder PL" }
+    {
+      "label": "Imie i nazwisko lub nazwa firmy",
+      "placeholder": "Jan Kowalski",
+      "type": "text"
+    },
+    {
+      "label": "Numer telefonu",
+      "placeholder": "123-456-789",
+      "type": "number"
+    },
+    {
+      "label": "Twoja wiadomosc",
+      "placeholder": "Chcialbym otrzymac wiecej informacji o...",
+      "type": "text"
+    }
   ]
 }

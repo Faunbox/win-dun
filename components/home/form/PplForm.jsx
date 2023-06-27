@@ -2,6 +2,7 @@ import { Checkbox, Grid, Input } from "@nextui-org/react";
 import { useTranslation } from "next-i18next";
 import Calendar from "../../../lib/Datepicker";
 import { useForm } from "../../../context/formContext";
+import GridForm from "./FormGrid";
 
 const PplForm = () => {
   const { emailContent, setEmailContent } = useForm();
@@ -18,7 +19,7 @@ const PplForm = () => {
     <Grid.Container gap={2} justify="center" alignItems="center">
       {t("pplSchema", { returnObjects: "true" }).map((obj) =>
         obj.type !== "date" ? (
-          <Grid key={obj.label}>
+          <GridForm key={obj.label}>
             {/* <Text>{obj.label}</Text> */}
             <Input
               key={obj.label}
@@ -30,15 +31,17 @@ const PplForm = () => {
               size="sm"
               bordered
               fullWidth
+              color="error"
               // required
               value={obj.name === "from" ? emailContent.from : null}
               placeholder="cokolwiek"
+              css={{ $$inputLabelColor: "white" }}
             />
-          </Grid>
+          </GridForm>
         ) : (
-          <Grid key={obj.label}>
+          <GridForm key={obj.label}>
             <Calendar key={obj.label} label={obj.label} />
-          </Grid>
+          </GridForm>
         )
       )}
       {/* <Spacer y={1} /> */}
@@ -57,7 +60,6 @@ const PplForm = () => {
       ></Checkbox>
       <Checkbox
         size="sm"
-        // css={{ zIndex: "-1" }}
         isSelected={emailContent.activate}
         aria-label="activate"
         isRequired={true}
@@ -67,7 +69,7 @@ const PplForm = () => {
             activate: !prevState.activate,
           }))
         }
-        css={{ zIndex: 0 }}
+        css={{ zIndex: 0, $$colorsText: "white" }}
       >
         {t("checkbox")}
       </Checkbox>

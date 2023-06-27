@@ -30,13 +30,17 @@ const Contact = () => {
         {t("title")}
       </Text>
       <Spacer y={1} />
-      <Grid.Container justify="space-around" alignItems="center">
+      <Grid.Container justify="space-around" alignItems="center" gap={2}>
         <Grid xs={12} sm={6} justify="center">
-          <Text>{t("text")}</Text>
+          <Text size={"x-large"}>{t("text")}</Text>
         </Grid>
         <Grid xs={12} sm={6}>
           <Card as="form" onSubmit={handleFormSubmit}>
-            <Card.Header>{t("formHeader")}</Card.Header>
+            <Card.Header css={{ textAlign: "center" }}>
+              <Text b size="x-large">
+                {t("formHeader")}
+              </Text>
+            </Card.Header>
             <Card.Body>
               {t("formInputs", { returnObjects: "true" }).map((obj, id) => (
                 <>
