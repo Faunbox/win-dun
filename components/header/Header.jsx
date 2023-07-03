@@ -4,7 +4,7 @@ import HeaderTopPanel from "./HeaderTopPanel";
 const Header = () => {
   return (
     <>
-      <HeaderTopPanel />
+      {/* <HeaderTopPanel /> */}
       <HeaderNavbar />
       </>
   );

@@ -4,37 +4,22 @@ import { useTheme as useNextTheme } from "next-themes";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { BsFillMoonFill, BsSunFill } from "react-icons/bs";
+import FlagsComponent from "./Flags";
 
 const HeaderTopPanel = () => {
   const { setTheme } = useNextTheme();
   const { isDark } = useTheme();
-  const { locales, locale, route } = useRouter();
+  const { locales, route } = useRouter();
 
   return (
     <Container>
       <Grid.Container
         alignItems="center"
-        justify="center"
+        justify="flex-end"
         direction="row"
-        css={{ margin: "5px 0 5px 0" }}
+        css={{ margin: "2px 0 2px 0" }}
       >
-        <Grid alignItems="center" direction="row" xs={0} sm={5}>
-          {locales.map((l) => (
-            <Link
-              key={l}
-              locale={l}
-              className={l !== "en" ? `fi fi-${l}` : `fi fi-gb`}
-              href={route}
-              size={"xs"}
-              style={{
-                margin: "20px",
-                borderRadius: "4px",
-                border: "1px solid black",
-              }}
-            ></Link>
-          ))}
-        </Grid>
-        <Grid xs={0} sm={2}>
+        {/* <Grid xs={0} sm={2}>
           <Switch
             checked={isDark}
             onChange={(e) => setTheme(e.target.checked ? "dark" : "light")}
@@ -42,7 +27,7 @@ const HeaderTopPanel = () => {
             iconOff={<BsSunFill color="orange" />}
             iconOn={<BsFillMoonFill />}
           />
-        </Grid>
+        </Grid> */}
         <Grid
           alignItems="center"
           justify="space-around"

@@ -11,7 +11,7 @@ const HeaderNavbar = () => {
   return (
     <Navbar
       // disableBlur={false}
-      variant="sticky"
+      variant="floating"
       disableShadow={true}
       containerCss={{
         maxWidth: "100vw",
@@ -24,7 +24,8 @@ const HeaderNavbar = () => {
         <Link href={"/"}>
           <Image
             src={
-              theme === "light" ? "/images/logo.png" : "/images/logo-dark.png"
+              "/images/logo.png"
+              // theme === "light" ? "/images/logo.png" : "/images/logo-dark.png"
             }
             alt="Wit-Dun express transport polska holandia"
             width={240}

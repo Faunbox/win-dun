@@ -1,4 +1,4 @@
-import { Button, Dropdown, Navbar, Text } from "@nextui-org/react";
+import { Dropdown, Navbar, Text } from "@nextui-org/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import {
@@ -9,6 +9,7 @@ import {
   NlNavbar,
   PlNavbar,
 } from "./navbar";
+import FlagsComponent from "./Flags";
 
 const HeaderDesktopNavbar = () => {
   const router = useRouter();
@@ -79,6 +80,7 @@ const HeaderDesktopNavbar = () => {
               ))}
           </Dropdown.Menu>
         </Dropdown>
+        <FlagsComponent />
       </Navbar.Content>
       {/* <Navbar.Content>
         <Navbar.Item>

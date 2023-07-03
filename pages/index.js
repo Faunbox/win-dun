@@ -1,4 +1,4 @@
-import { Container, Spacer, Text } from "@nextui-org/react";
+import { Spacer } from "@nextui-org/react";
 import Head from "next/head";
 import HeroSection from "../components/home/HeroSection";
 import HomeServices from "../components/home/HomeServices";

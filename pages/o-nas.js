@@ -1,4 +1,4 @@
-import { Container, Text } from "@nextui-org/react";
+import { Container, Spacer, Text } from "@nextui-org/react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
@@ -19,8 +19,10 @@ const About = () => {
       <Text>{t("description1")}</Text>
       <Text>{t("description2")}</Text>
       <Text>{t("description3")}</Text>
+      <Spacer y={1} />
       <Text>{t("description4")}</Text>
       <Text>{t("description5")}</Text>
+      <Spacer y={1} />
       <Text>{t("description6")}</Text>
       <Text>{t("description7")}</Text>
     </Container>

@@ -1,4 +1,4 @@
-import { Button, Card, Grid, Radio, Text } from "@nextui-org/react";
+import { Button, Card, Container, Grid, Radio, Text } from "@nextui-org/react";
 import ParcelForn from "./form/ParcelForm";
 import PplForm from "./form/PplForm";
 import { useTranslation } from "next-i18next";
@@ -31,96 +31,97 @@ const HeroSection = () => {
   //   navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
   return (
-    <Grid.Container
+    <Container
       css={{
-        minHeight: "80vh",
+        minHeight: "100vh",
         minWidth: "100vw",
-        backgroundImage: `url("/images/bg1.jpeg")`,
+        backgroundImage: `url("/images/bg2.jpg")`,
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "scroll",
         backgroundPosition: "center",
         backgroundSize: "cover",
-        margin: "0px auto",
+        margin: "0 auto",
       }}
+      display="flex"
       gap={2}
       justify="center"
       alignItems="center"
     >
       {/* <Grid xs={0} sm={1} md={2}></Grid> */}
-      <Grid xs={12} sm={6} md={6} justify="center">
-        {
-          <Text
-            h1
-            css={{
-              textGradient: "30deg, black, #AD1917 20%",
-            }}
+
+      <Card
+        css={{
+          borderRadius: "10px",
+          background: "rgba(50, 55, 50, 0.35)",
+          "@md": { py: "15px" },
+        }}
+        variant="bordered"
+        as="form"
+        onSubmit={handleSubmit}
+      >
+        <Grid.Container justify="center" alignItems="center">
+          <Grid
+            direction="column"
+            sm={6}
+            justify="center"
+            alignItems="center"
+            css={{ "@md": { my: "20px" } }}
           >
-            {t("homeDescription", { ns: "homePage" })}
-          </Text>
-        }
-      </Grid>
-      <Grid xs={12} sm={5} md={4}>
-        <Card
-          css={{
-            borderRadius: "10px",
-            "@dark": { background: "rgba(50, 55, 50, 0.7)" },
-            "@light": { background: "rgba(250, 0, 0, 0.7)" },
-          }}
-          variant="bordered"
-          as="form"
-          onSubmit={handleSubmit}
-        >
-          <Card.Header>
-            <Grid.Container alignItems="center" justify="center">
-              <Grid>
-                <Radio.Group
-                  orientation="horizontal"
-                  value={emailContent.what ? "A" : "B"}
-                  onChange={() =>
-                    setEmailContent((prevState) => ({
-                      ...prevState,
-                      what: !emailContent.what,
-                    }))
-                  }
-                  css={{ $$labelColor: "white" }}
-                >
-                  <Text size={"$lg"} css={{ px: "10px" }}>
-                    {t("reservation", { ns: "reservationForm" })}
-                  </Text>
-                  {t("reservationType", { returnObjects: true }).map((obj) => {
-                    return (
-                      <Radio value={obj.value} key={obj.text} color="error">
-                        {obj.text}
-                      </Radio>
-                    );
-                  })}
-                </Radio.Group>
-              </Grid>
-              {/* <Grid>
-                <Button light onPress={handleGeoClick} auto>
-                  <Text small>
-                    {t("localization")} <BsGeoAlt />
-                  </Text>
-                </Button>
-              </Grid> */}
-            </Grid.Container>
-          </Card.Header>
-          <Card.Divider />
-          <Card.Body css={{ height: "auto" }}>
-            {emailContent.what ? <PplForm /> : <ParcelForn />}
-          </Card.Body>
-          <Card.Divider />
-          <Card.Footer css={{ justifyContent: "flex-end" }}>
-            <Button
-              type="submit"
-              disabled={!emailContent.activate ? true : false}
+            <Grid xs={12} css={{ "@xs": { direction: "column" } }}>
+              <Radio.Group
+                orientation="horizontal"
+                value={emailContent.what ? "A" : "B"}
+                onChange={() =>
+                  setEmailContent((prevState) => ({
+                    ...prevState,
+                    what: !emailContent.what,
+                  }))
+                }
+                css={{ $$labelColor: "white" }}
+              >
+                <Text size={"$lg"} css={{ px: "10px" }}>
+                  {t("reservation", { ns: "reservationForm" })}
+                </Text>
+                {t("reservationType", { returnObjects: true }).map((obj) => {
+                  return (
+                    <Radio value={obj.value} key={obj.text} color="error">
+                      {obj.text}
+                    </Radio>
+                  );
+                })}
+              </Radio.Group>
+            </Grid>
+            <Grid>{emailContent.what ? <PplForm /> : <ParcelForn />}</Grid>
+            <Grid alignItems="flex-end">
+              <Button
+                type="submit"
+                disabled={!emailContent.activate ? true : false}
+                css={{ "@xs": { w: "100%" }, margin: "0 auto" }}
+              >
+                {t("button")}
+              </Button>
+            </Grid>
+          </Grid>
+          <Grid
+            direction="column"
+            sm={6}
+            justify="center"
+            alignItems="center"
+            css={{ my: "20px" }}
+          >
+            <Text
+              h1
+              css={{
+                p: "5px",
+                textGradient: "30deg, black, #AD1917 20%",
+              }}
             >
-              {t("button")}
-            </Button>
-          </Card.Footer>
-        </Card>
-      </Grid>
-    </Grid.Container>
+              {t("homeDescription", { ns: "homePage" })}
+            </Text>
+          </Grid>
+        </Grid.Container>
+      </Card>
+    </Container>
   );
 };
 

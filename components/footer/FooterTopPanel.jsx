@@ -20,7 +20,7 @@ const FooterTopPanel = () => {
     <>
       <Grid sm={12} md={3} justify="center" alignItems="center">
         <Image
-          src={theme === "light" ? "/images/logo.png" : "/images/logo-dark.png"}
+          src={ "/images/logo.png" }
           alt="logo"
           width={200}
           height={50}

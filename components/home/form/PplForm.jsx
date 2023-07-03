@@ -32,7 +32,7 @@ const PplForm = () => {
               bordered
               fullWidth
               color="error"
-              // required
+              required
               value={obj.name === "from" ? emailContent.from : null}
               placeholder="cokolwiek"
               css={{ $$inputLabelColor: "white" }}
@@ -69,7 +69,7 @@ const PplForm = () => {
             activate: !prevState.activate,
           }))
         }
-        css={{ zIndex: 0, $$colorsText: "white" }}
+        css={{ zIndex: 0, $$colorsText: "white", p:"5px" }}
       >
         {t("checkbox")}
       </Checkbox>
