@@ -2,6 +2,7 @@ import { Checkbox, Grid, Input, Text } from "@nextui-org/react";
 import Calendar from "../../../lib/Datepicker";
 import { useForm } from "../../../context/formContext";
 import { useTranslation } from "next-i18next";
+import GridForm from "./FormGrid";
 
 const ParcelForn = () => {
   const { emailContent, setEmailContent } = useForm();
@@ -18,7 +19,7 @@ const ParcelForn = () => {
     <Grid.Container gap={2} justify="center" alignItems="center">
       {t("parcelSchema", { returnObjects: "true" }).map((obj) =>
         obj.type !== "date" ? (
-          <Grid key={obj.label}>
+          <GridForm key={obj.label}>
             {/* <Text>{obj.label}</Text> */}
             <Input
               key={obj.label}
@@ -30,13 +31,14 @@ const ParcelForn = () => {
               size="sm"
               fullWidth
               bordered
-              // required
+              required
               value={obj.name === "from" ? emailContent.from : null}
               css={{
                 $$inputLabelColor: "white",
               }}
+              placeholder={obj.placeholder ? obj.placeholder : null}
             />
-          </Grid>
+          </GridForm>
         ) : (
           <Grid key={obj.label}>
             <Calendar key={obj.label} label={obj.label} />
@@ -69,7 +71,7 @@ const ParcelForn = () => {
             activate: !prevState.activate,
           }))
         }
-        css={{ zIndex: 0, $$inputLabelColor: "white" }}
+        css={{ zIndex: 0, $$colorsText: "white", p: "5px" }}
       >
         {t("checkbox")}
       </Checkbox>

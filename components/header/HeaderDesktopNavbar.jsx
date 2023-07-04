@@ -10,6 +10,7 @@ import {
   PlNavbar,
 } from "./navbar";
 import FlagsComponent from "./Flags";
+import FlagsDropdowns from "./FlagsDropdown";
 
 const HeaderDesktopNavbar = () => {
   const router = useRouter();
@@ -45,7 +46,7 @@ const HeaderDesktopNavbar = () => {
               </Link>
             </Navbar.Item>
           ))}
-        <Dropdown triggerType="menu">
+        <Dropdown triggerType="dialog">
           <Navbar.Item>
             <Dropdown.Button light>
               {router.locale === "pl" && (
@@ -80,7 +81,9 @@ const HeaderDesktopNavbar = () => {
               ))}
           </Dropdown.Menu>
         </Dropdown>
-        <FlagsComponent />
+
+        {/* <FlagsComponent /> */}
+        <FlagsDropdowns />
       </Navbar.Content>
       {/* <Navbar.Content>
         <Navbar.Item>

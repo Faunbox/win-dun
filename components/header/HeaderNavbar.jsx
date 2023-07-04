@@ -28,8 +28,9 @@ const HeaderNavbar = () => {
               // theme === "light" ? "/images/logo.png" : "/images/logo-dark.png"
             }
             alt="Wit-Dun express transport polska holandia"
-            width={240}
-            height={60}
+            width={180}
+            height={50}
+            
           />
         </Link>
       </Navbar.Brand>

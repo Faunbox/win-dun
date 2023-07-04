@@ -15,7 +15,13 @@ const FooterMiddlePanel = () => {
   const { locale } = useRouter();
 
   return (
-    <Grid sm={12} justify="space-around" alignItems="center" direction="row">
+    <Grid
+      sm={12}
+      justify="space-around"
+      alignItems="center"
+      direction="row"
+      css={{ textAlign: "center" }}
+    >
       <PrivacyPolitics />
       <Link href={"/regulamin"}>
         <Text>{locale === "pl" && TermsPl}</Text>

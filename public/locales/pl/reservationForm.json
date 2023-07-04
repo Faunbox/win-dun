@@ -8,35 +8,84 @@
     {
       "label": "Dokladny adres wyjazdu",
       "type": "text",
-      "name": "cityFrom"
+      "name": "cityFrom",
+      "placeholder": "Przykładowa 5/1 Kraków"
     },
-    { "label": "Dokladny adres przyjazdu", "type": "text", "name": "cityTo" },
-    { "label": "Data wyjazdu", "type": "date", "name": "date" },
-    { "label": "Ilośc osób", "type": "numer", "name": "ppl" },
-    { "label": "Imię i nazwisko", "type": "text", "name": "name" },
-    { "label": "Adres email", "type": "email", "name": "email" },
-    { "label": "Numer telefonu", "type": "numer", "name": "number" }
+    {
+      "label": "Dokladny adres przyjazdu",
+      "type": "text",
+      "name": "cityTo",
+      "placeholder": "Docelowa 18/5 Berlin"
+    },
+    {
+      "label": "Data wyjazdu",
+      "type": "date",
+      "name": "date",
+      "placeholder": "12/05/2023"
+    },
+    {
+      "label": "Ilośc osób",
+      "type": "numer",
+      "name": "ppl",
+      "placeholder": "1"
+    },
+    {
+      "label": "Imię i nazwisko",
+      "type": "text",
+      "name": "name",
+      "placeholder": "Jan Kowalski"
+    },
+    {
+      "label": "Adres email",
+      "type": "email",
+      "name": "email",
+      "placeholder": "przykladowy@gmail.com"
+    },
+    {
+      "label": "Numer telefonu",
+      "type": "numer",
+      "name": "number",
+      "placeholder": "123456789"
+    }
   ],
   "parcelSchema": [
     {
       "label": "Dokladny adres odbioru",
       "type": "text",
-      "name": "parcelFrom"
+      "name": "parcelFrom",
+      "placeholder": "Przykładowa 5/1 Kraków"
     },
     {
       "label": "Dokladny adres dostarczenia",
       "type": "text",
-      "name": "parcelTo"
+      "name": "parcelTo",
+      "placeholder": "Docelowa 18/5 Berlin"
     },
     {
       "label": "Wymiary paczki - wysokosc, szerokosc, dlugosc w centymetrach",
       "type": "text",
-      "name": "dimensions"
+      "name": "dimensions",
+      "placeholder": "40x40x20"
     },
-    { "label": "Waga paczki", "type": "text", "name": "weight" },
+    {
+      "label": "Waga paczki",
+      "type": "text",
+      "name": "weight",
+      "placeholder": "5kg"
+    },
     { "label": "Data wysylki", "type": "date", "name": "date" },
-    { "label": "Adres email", "type": "email", "name": "email" },
-    { "label": "Numer telefonu", "type": "numer", "name": "number" }
+    {
+      "label": "Adres email",
+      "type": "email",
+      "name": "email",
+      "placeholder": "przykladowy@gmail.com"
+    },
+    {
+      "label": "Numer telefonu",
+      "type": "numer",
+      "name": "number",
+      "placeholder": "123456789"
+    }
   ],
   "checkbox": "Wyrażam zgodę na przetważanie danych osobowych",
   "localization": "Pobierz lokalizacje",

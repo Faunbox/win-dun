@@ -3,6 +3,7 @@
   "navbar": [
     { "title": "About", "href": "/about" },
     { "title": "Gallery", "href": "/gallery" },
+    { "title": "Reservation", "href": "/reservation" },
     { "title": "Contact", "href": "/contact" }
   ]
 }

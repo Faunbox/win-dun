@@ -11,7 +11,7 @@ registerLocale("pl", pl);
 registerLocale("nl", nl);
 registerLocale("en", en);
 
-const Calendar = ({ label }) => {
+const Calendar = ({ label, placeholder }) => {
   const { locale } = useRouter();
   const { emailContent, setEmailContent } = useForm();
 
@@ -37,6 +37,7 @@ const Calendar = ({ label }) => {
           fullWidth
           css={{ $$inputLabelColor: "white" }}
           style={{ width: "100%" }}
+          placeholder={placeholder ? placeholder : null}
         />
       }
       portalId="tak"

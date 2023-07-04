@@ -23,7 +23,7 @@ const PrivacyPolicyModal = () => {
         css={{ background: "#333" }}
         {...bindings}
       >
-        <Modal.Header>
+        <Modal.Header css={{ textAlign: "center" }}>
           <Text id="modal-title" h2 css={{ color: "White" }}>
             Polityka prywatności
           </Text>

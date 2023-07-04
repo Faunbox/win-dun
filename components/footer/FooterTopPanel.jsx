@@ -70,7 +70,7 @@ const FooterTopPanel = () => {
           {/* Check for NL lng */}
           {router.locale === "nl" &&
             NlNavbar?.map((obj) => (
-              <Grid xs={6} sm={2} key={obj.href} justify="center">
+              <Grid xs={6} sm={2} key={obj.href} justify="center" alignItems="center">
                 <Link href={obj.href} key={obj.href}>
                   <Text>{obj.title}</Text>
                 </Link>

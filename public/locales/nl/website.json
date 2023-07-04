@@ -3,6 +3,7 @@
   "navbar": [
     { "title": "O nas", "href": "/O-nas" },
     { "title": "Galeria", "href": "/galeria" },
+    { "title": "Rezerwacja", "href": "/rezerwacja" },
     { "title": "Kontakt", "href": "/kontakt" }
   ]
 }

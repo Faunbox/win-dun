@@ -10,35 +10,89 @@
       "label": "Miejscowość wyjazdu NL",
       "type": "text",
       "value": "city",
-      "name": "cityFrom"
+      "name": "cityFrom",
+      "placeholder": "tak"
     },
-    { "label": "Miejscowość do NL", "type": "text", "name": "cityTo" },
-    { "label": "Data wyjazdu", "type": "date", "name": "date" },
-    { "label": "Ilośc osób", "type": "numer", "name": "ppl" },
-    { "label": "Imię i nazwisko", "type": "text", "name": "name" },
-    { "label": "Adres email NL", "type": "email", "name": "email" },
-    { "label": "Numer telefonu", "type": "numer", "name": "number" }
+    {
+      "label": "Miejscowość do NL",
+      "type": "text",
+      "name": "cityTo",
+      "placeholder": "tak"
+    },
+    {
+      "label": "Data wyjazdu",
+      "type": "date",
+      "name": "date",
+      "placeholder": "tak"
+    },
+    {
+      "label": "Ilośc osób",
+      "type": "numer",
+      "name": "ppl",
+      "placeholder": "tak"
+    },
+    {
+      "label": "Imię i nazwisko",
+      "type": "text",
+      "name": "name",
+      "placeholder": "tak"
+    },
+    {
+      "label": "Adres email NL",
+      "type": "email",
+      "name": "email",
+      "placeholder": "tak"
+    },
+    {
+      "label": "Numer telefonu",
+      "type": "numer",
+      "name": "number",
+      "placeholder": "tak"
+    }
   ],
   "parcelSchema": [
     {
       "label": "Dokladny adres odbioru NL",
       "type": "text",
-      "name": "parcelFrom"
+      "name": "parcelFrom",
+      "placeholder": "tak"
     },
     {
       "label": "Dokladny adres dostarczenia",
       "type": "text",
-      "name": "parcelTo"
+      "name": "parcelTo",
+      "placeholder": "tak"
     },
     {
       "label": "Wymiary paczki - wysokosc, szerokosc, dlugosc",
       "type": "text",
-      "name": "dimensions"
+      "name": "dimensions",
+      "placeholder": "tak"
     },
-    { "label": "Waga paczki", "type": "text", "name": "weight" },
-    { "label": "Data wysylki", "type": "date", "name": "date" },
-    { "label": "Adres email", "type": "email", "name": "email" },
-    { "label": "Numer telefonu", "type": "numer", "name": "number" }
+    {
+      "label": "Waga paczki",
+      "type": "text",
+      "name": "weight",
+      "placeholder": "tak"
+    },
+    {
+      "label": "Data wysylki",
+      "type": "date",
+      "name": "date",
+      "placeholder": "tak"
+    },
+    {
+      "label": "Adres email",
+      "type": "email",
+      "name": "email",
+      "placeholder": "tak"
+    },
+    {
+      "label": "Numer telefonu",
+      "type": "numer",
+      "name": "number",
+      "placeholder": "tak"
+    }
   ],
   "checkbox": "Zgoda NL",
   "localization": "Loc NL",

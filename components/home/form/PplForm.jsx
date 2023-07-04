@@ -34,13 +34,19 @@ const PplForm = () => {
               color="error"
               required
               value={obj.name === "from" ? emailContent.from : null}
-              placeholder="cokolwiek"
-              css={{ $$inputLabelColor: "white" }}
+              placeholder={obj.placeholder ? obj.placeholder : null}
+              css={{
+                $$inputLabelColor: "white",
+              }}
             />
           </GridForm>
         ) : (
           <GridForm key={obj.label}>
-            <Calendar key={obj.label} label={obj.label} />
+            <Calendar
+              key={obj.label}
+              label={obj.label}
+              placeholder={obj.placeholder}
+            />
           </GridForm>
         )
       )}
@@ -69,7 +75,7 @@ const PplForm = () => {
             activate: !prevState.activate,
           }))
         }
-        css={{ zIndex: 0, $$colorsText: "white", p:"5px" }}
+        css={{ zIndex: 0, $$colorsText: "white", p: "5px" }}
       >
         {t("checkbox")}
       </Checkbox>

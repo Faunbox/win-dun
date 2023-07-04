@@ -2,9 +2,10 @@ import { Spacer } from "@nextui-org/react";
 import Head from "next/head";
 import HeroSection from "../components/home/HeroSection";
 import HomeServices from "../components/home/HomeServices";
-import HomeWhy from "../components/home/HomeAbout";
+import HomeAbout from "../components/home/HomeAbout";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import HomeWhy from "../components/home/HomeWhy";
 
 export default function Home() {
   const { t } = useTranslation("website");
@@ -20,6 +21,7 @@ export default function Home() {
       <Spacer y={2} />
       <HomeWhy />
       <Spacer y={2} />
+      <HomeAbout />
     </>
   );
 }

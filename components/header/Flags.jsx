@@ -15,7 +15,6 @@ const FlagsComponent = () => {
             href={route}
             size={"xs"}
             style={{
-              margin: "5px",
               borderRadius: "4px",
               border: "1px solid black",
             }}

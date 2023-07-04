@@ -1,21 +1,21 @@
 export const EnNavbar = [
-  { title: "Home", href: "/" },
   { title: "About", href: "/about" },
   { title: "Gallery", href: "/gallery" },
+  { title: "Reservation", href: "/reservation" },
   { title: "Contact", href: "/contact" },
 ];
 
 export const NlNavbar = [
-  { title: "Home NL", href: "/" },
   { title: "About NL", href: "/about" },
   { title: "Gallery NL", href: "/gallery" },
+  { title: "Reservation NL", href: "/reservation" },
   { title: "Contact NL", href: "/contact" },
 ];
 
 export const PlNavbar = [
-  { title: "Strona główna", href: "/" },
   { title: "O nas", href: "/o-nas" },
   { title: "Galeria", href: "/galeria" },
+  { title: "Rezerwacja", href: "/rezerwacja" },
   { title: "Kontakt", href: "/kontakt" },
 ];
 

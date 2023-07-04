@@ -10,35 +10,89 @@
       "label": "Exact address from",
       "type": "text",
       "value": "city",
-      "name": "cityFrom"
+      "name": "cityFrom",
+      "placeholder": "tak"
     },
-    { "label": "Exact address to", "type": "text", "name": "cityTo" },
-    { "label": "Travel date", "type": "date", "name": "date" },
-    { "label": "Number of traveling people", "type": "numer", "name": "ppl" },
-    { "label": "Your name", "type": "text", "name": "name" },
-    { "label": "Email address", "type": "email", "name": "email" },
-    { "label": "Phone number", "type": "numer", "name": "number" }
+    {
+      "label": "Exact address to",
+      "type": "text",
+      "name": "cityTo",
+      "placeholder": "tak"
+    },
+    {
+      "label": "Travel date",
+      "type": "date",
+      "name": "date",
+      "placeholder": "tak"
+    },
+    {
+      "label": "Number of traveling people",
+      "type": "numer",
+      "name": "ppl",
+      "placeholder": "tak"
+    },
+    {
+      "label": "Your name",
+      "type": "text",
+      "name": "name",
+      "placeholder": "tak"
+    },
+    {
+      "label": "Email address",
+      "type": "email",
+      "name": "email",
+      "placeholder": "tak"
+    },
+    {
+      "label": "Phone number",
+      "type": "numer",
+      "name": "number",
+      "placeholder": "tak"
+    }
   ],
   "parcelSchema": [
     {
       "label": "Dokladny adres odbioru EN",
       "type": "text",
-      "name": "parcelFrom"
+      "name": "parcelFrom",
+      "placeholder": "tak"
     },
     {
       "label": "Dokladny adres dostarczenia",
       "type": "text",
-      "name": "parcelTo"
+      "name": "parcelTo",
+      "placeholder": "tak"
     },
     {
       "label": "Wymiary paczki - wysokosc, szerokosc, dlugosc",
       "type": "text",
-      "name": "dimensions"
+      "name": "dimensions",
+      "placeholder": "tak"
     },
-    { "label": "Waga paczki", "type": "text", "name": "weight" },
-    { "label": "Data wysylki", "type": "date", "name": "date" },
-    { "label": "Adres email", "type": "email", "name": "email" },
-    { "label": "Numer telefonu", "type": "numer", "name": "number" }
+    {
+      "label": "Waga paczki",
+      "type": "text",
+      "name": "weight",
+      "placeholder": "tak"
+    },
+    {
+      "label": "Data wysylki",
+      "type": "date",
+      "name": "date",
+      "placeholder": "tak"
+    },
+    {
+      "label": "Adres email",
+      "type": "email",
+      "name": "email",
+      "placeholder": "tak"
+    },
+    {
+      "label": "Numer telefonu",
+      "type": "numer",
+      "name": "number",
+      "placeholder": "tak"
+    }
   ],
   "checkbox": "Wyrażam zgodę En",
   "localization": "Loc EN",

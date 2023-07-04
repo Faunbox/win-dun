@@ -1,8 +1,7 @@
-import { Button, Card, Container, Grid, Radio, Text } from "@nextui-org/react";
-import ParcelForn from "./form/ParcelForm";
-import PplForm from "./form/PplForm";
+import { Button, Card, Container, Grid, Text } from "@nextui-org/react";
 import { useTranslation } from "next-i18next";
 import { useForm } from "../../context/formContext";
+import Link from "next/link";
 
 const HeroSection = () => {
   const { t } = useTranslation(["reservationForm", "homePage"]);
@@ -33,7 +32,7 @@ const HeroSection = () => {
   return (
     <Container
       css={{
-        minHeight: "100vh",
+        minHeight: "90vh",
         minWidth: "100vw",
         backgroundImage: `url("/images/bg2.jpg")`,
         backgroundRepeat: "no-repeat",
@@ -41,86 +40,63 @@ const HeroSection = () => {
         backgroundPosition: "center",
         backgroundSize: "cover",
         margin: "0 auto",
+        textAlign: "left",
+        "@xs": {
+          backgroundPosition: "left",
+        },
       }}
       display="flex"
-      gap={2}
-      justify="center"
+      justify="flex-start"
       alignItems="center"
     >
-      {/* <Grid xs={0} sm={1} md={2}></Grid> */}
-
-      <Card
-        css={{
-          borderRadius: "10px",
-          background: "rgba(50, 55, 50, 0.35)",
-          "@md": { py: "15px" },
-        }}
-        variant="bordered"
-        as="form"
-        onSubmit={handleSubmit}
+      <Grid.Container
+        gap={2}
+        css={{ py: "15px", w: "auto" }}
       >
-        <Grid.Container justify="center" alignItems="center">
-          <Grid
-            direction="column"
-            sm={6}
-            justify="center"
-            alignItems="center"
-            css={{ "@md": { my: "20px" } }}
-          >
-            <Grid xs={12} css={{ "@xs": { direction: "column" } }}>
-              <Radio.Group
-                orientation="horizontal"
-                value={emailContent.what ? "A" : "B"}
-                onChange={() =>
-                  setEmailContent((prevState) => ({
-                    ...prevState,
-                    what: !emailContent.what,
-                  }))
-                }
-                css={{ $$labelColor: "white" }}
+        <Grid css={{ textAlign: "left" }} xs={12} direction="column">
+          <Card css={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}>
+            <Card.Body>
+              <Text
+                h1
+                css={{
+                  my: "15px",
+                  fontWeight: "bold",
+                  textGradient: "50deg, #AD1917, black 80%",
+                }}
               >
-                <Text size={"$lg"} css={{ px: "10px" }}>
-                  {t("reservation", { ns: "reservationForm" })}
-                </Text>
-                {t("reservationType", { returnObjects: true }).map((obj) => {
-                  return (
-                    <Radio value={obj.value} key={obj.text} color="error">
-                      {obj.text}
-                    </Radio>
-                  );
-                })}
-              </Radio.Group>
-            </Grid>
-            <Grid>{emailContent.what ? <PplForm /> : <ParcelForn />}</Grid>
-            <Grid alignItems="flex-end">
-              <Button
-                type="submit"
-                disabled={!emailContent.activate ? true : false}
-                css={{ "@xs": { w: "100%" }, margin: "0 auto" }}
+                {t("homeDescription1", { ns: "homePage" })}
+              </Text>
+              <Text
+                h2
+                color="#AD1917"
+                css={{
+                  my: "15px",
+                  fontWeight: "bold",
+                  textGradient: "50deg, #AD1917, black 80%",
+                }}
               >
-                {t("button")}
-              </Button>
-            </Grid>
-          </Grid>
-          <Grid
-            direction="column"
-            sm={6}
-            justify="center"
-            alignItems="center"
-            css={{ my: "20px" }}
-          >
-            <Text
-              h1
-              css={{
-                p: "5px",
-                textGradient: "30deg, black, #AD1917 20%",
-              }}
-            >
-              {t("homeDescription", { ns: "homePage" })}
-            </Text>
-          </Grid>
-        </Grid.Container>
-      </Card>
+                {t("homeDescription2", { ns: "homePage" })}
+              </Text>
+              <Text
+                h2
+                color="#AD1917"
+                css={{
+                  my: "15px",
+                  fontWeight: "bold",
+                  textGradient: "50deg, #AD1917, grey 80%",
+                }}
+              >
+                {t("homeDescription3", { ns: "homePage" })}
+              </Text>
+            </Card.Body>
+          </Card>
+        </Grid>
+        <Grid justify="center" css={{ margin: "0 auto" }}>
+          <Link href={"/rezerwacja"} style={{ margin: "10px 0" }}>
+            <Button color={"error"}>Rezerwacja przejazdu</Button>
+          </Link>
+        </Grid>
+      </Grid.Container>
     </Container>
   );
 };

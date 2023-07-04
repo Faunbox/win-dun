@@ -21,7 +21,27 @@ body {
   left: 0;
   right: 0;
   width: 50%;
-  background: #ad1917;
+  background: #AD1917;
+  animation-name: slideIn;
+  animation-duration: 1s;
+}
+
+.why-text {
+  position: relative;
+  text-decoration: none;
+}
+
+.why-text::after {
+  content: "";
+  position: absolute;
+  display: inline;
+  height: 3px;
+  bottom: -3px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 50%;
+  background: black;
   animation-name: slideIn;
   animation-duration: 1s;
 }
