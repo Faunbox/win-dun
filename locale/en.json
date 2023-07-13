@@ -1,0 +1,209 @@
+{
+  "core": {
+    "website": "English description",
+    "navbar": [
+      { "title": "About", "href": "/about" },
+      { "title": "Gallery", "href": "/gallery" },
+      { "title": "Reservation", "href": "/reservation" },
+      { "title": "Contact", "href": "/contact" }
+    ]
+  },
+  "homePage": {
+    "homeDescription": "EN Jezdzimy w kazdy piatek, sobote i niedziele",
+    "nameServices": "Our services",
+    "services": [
+      {
+        "title": "Przewóz osób oraz zwierząt EN",
+        "photo": "",
+        "description": "Tak "
+      },
+      {
+        "title": "Przewóz listów, paczek oraz gabarytów EN",
+        "photo": "",
+        "description": "Tak"
+      },
+      {
+        "title": "Przeprowadzki EN",
+        "photo": "",
+        "description": "Tak"
+      }
+    ],
+    "nameAbout": "About us",
+    "aboutDescription": " ANGIELSKI '0P9O[==L[ [-gsjdfhgiush dfgiuhfdsiug hdsilufhg dsilhfg liusdhglisufdhgliufdsh glsidh fgli sudhfg lisdfhg isdfg, sjfdbgkjh ds,fb gkjhsdfbgkjh sdbfhkgj sdhfg"
+  },
+  "about": {
+    "title": "About our company",
+    "description1": "Jesteśmy dynamiczną i wszechstronną firmą specjalizującą się w profesjonalnych usługach transportowych. Nasze szerokie spektrum usług obejmuje przewóz osób, paczek oraz zwierząt, zapewniając naszym klientom kompleksowe rozwiązania.",
+    "description2": "Przykładamy ogromną wagę do zadowolenia naszych klientów i stawiamy na wysoką jakość naszych usług. Dzięki naszemu doświadczeniu oraz wykwalifikowanej i przyjaznej obsłudze, możesz mieć pewność, że Twoje potrzeby zostaną w pełni spełnione.",
+    "description3": "Jeśli chodzi o przewóz osób, oferujemy szeroki wybór opcji dostosowanych do różnych potrzeb. Niezależnie od tego, czy potrzebujesz transportu na lotnisko, podróżujesz służbowo czy organizujesz wycieczkę grupową, nasi profesjonalni kierowcy zapewnią Ci bezpieczną i komfortową podróż. Nasz tabor pojazdów jest nowoczesny, wyposażony w najnowsze technologie i regularnie poddawany konserwacji, aby zapewnić Ci nie tylko bezpieczeństwo, ale także wygodę i spokój podczas podróży.",
+    "description4": "W dziedzinie przewozu paczek, możesz polegać na naszej skuteczności i terminowości. Niezależnie od rozmiaru czy wagi przesyłki, nasza ekipa dokładnie zadba o jej bezpieczne zapakowanie i dostarczenie w wyznaczone miejsce. Świadczymy również usługi kurierskie, które zapewniają szybki i niezawodny transport Twoich paczek zarówno lokalnie, jak i międzynarodowo.",
+    "description5": "Ponadto, specjalizujemy się w przewozie zwierząt, dbając o ich komfort i bezpieczeństwo podczas podróży. Rozumiemy, jak ważne jest dla Ciebie, aby Twoje zwierzęta były traktowane z troską i szacunkiem. Nasza wykwalifikowana ekipa zapewni właściwe warunki i opiekę, aby Twoje zwierzęta czuły się spokojne i bezpieczne podczas transportu.",
+    "description6": "Naszą misją jest zapewnienie Ci nie tylko usług transportowych, ale także pełnej satysfakcji i poczucia bezpieczeństwa. Dlatego stawiamy na profesjonalizm, elastyczność i indywidualne podejście do każdego klienta. Twoje potrzeby są dla nas najważniejsze, dlatego skupiamy się na doskonaleniu naszych usług i ciągłym podnoszeniu jakości.",
+    "description7": "Zapraszamy do skorzystania z naszych usług transportowych i dołączenia do grona zadowolonych klientów. Skontaktuj się z nami już dzisiaj, aby omówić swoje potrzeby i otrzymać indywidualną ofertę. Jesteśmy gotowi podjąć się każdego wyzwania i zapewnić Ci niezawodne rozwiązania transportowe."
+  },
+  "gallery": "Gallery",
+  "contact": {
+    "title": "Contact",
+
+    "text": "Czy masz pytania, potrzebujesz dodatkowych informacji lub chciałbyś skorzystać z naszych usług transportowych? Jesteśmy tutaj, aby Ci pomóc! Nie czekaj, skontaktuj się z nami już dzisiaj i przekonaj się, dlaczego jesteśmy liderem w branży transportowej w swoim regionie.",
+    "formHeader": "Formularz kontaktowy",
+    "formButton": "Wyślij zapytanie",
+    "formInputs": [
+      {
+        "label": "Imie i nazwisko lub nazwa firmy",
+        "placeholder": "Jan Kowalski",
+        "type": "text"
+      },
+      {
+        "label": "Numer telefonu",
+        "placeholder": "123-456-789",
+        "type": "number"
+      },
+      {
+        "label": "Twoja wiadomosc",
+        "placeholder": "Chcialbym otrzymac wiecej informacji o...",
+        "type": "text"
+      }
+    ]
+  },
+  "reservationForm": {
+    "reservation": "Przewóz",
+    "reservationType": [
+      { "text": "Osób", "value": "A" },
+      { "text": "Paczek", "value": "B" }
+    ],
+    "pplSchema": [
+      {
+        "label": "Dokladny adres wyjazdu",
+        "type": "text",
+        "name": "cityFrom",
+        "placeholder": "Przykładowa 5/1 Kraków"
+      },
+      {
+        "label": "Dokladny adres przyjazdu",
+        "type": "text",
+        "name": "cityTo",
+        "placeholder": "Docelowa 18/5 Berlin"
+      },
+      {
+        "label": "Data wyjazdu",
+        "type": "date",
+        "name": "date",
+        "placeholder": "12/05/2023"
+      },
+      {
+        "label": "Ilośc osób",
+        "type": "numer",
+        "name": "ppl",
+        "placeholder": "1"
+      },
+      {
+        "label": "Imię i nazwisko",
+        "type": "text",
+        "name": "name",
+        "placeholder": "Jan Kowalski"
+      },
+      {
+        "label": "Adres email",
+        "type": "email",
+        "name": "email",
+        "placeholder": "przykladowy@gmail.com"
+      },
+      {
+        "label": "Numer telefonu",
+        "type": "numer",
+        "name": "number",
+        "placeholder": "123456789"
+      }
+    ],
+    "parcelSchema": [
+      {
+        "label": "Dokladny adres odbioru",
+        "type": "text",
+        "name": "parcelFrom",
+        "placeholder": "Przykładowa 5/1 Kraków"
+      },
+      {
+        "label": "Dokladny adres dostarczenia",
+        "type": "text",
+        "name": "parcelTo",
+        "placeholder": "Docelowa 18/5 Berlin"
+      },
+      {
+        "label": "Wymiary paczki - wysokosc, szerokosc, dlugosc w centymetrach",
+        "type": "text",
+        "name": "dimensions",
+        "placeholder": "40x40x20"
+      },
+      {
+        "label": "Waga paczki",
+        "type": "text",
+        "name": "weight",
+        "placeholder": "5kg"
+      },
+      { "label": "Data wysylki", "type": "date", "name": "date" },
+      {
+        "label": "Adres email",
+        "type": "email",
+        "name": "email",
+        "placeholder": "przykladowy@gmail.com"
+      },
+      {
+        "label": "Numer telefonu",
+        "type": "numer",
+        "name": "number",
+        "placeholder": "123456789"
+      }
+    ],
+    "checkbox": "Wyrażam zgodę na przetważanie danych osobowych",
+    "localization": "Pobierz lokalizacje",
+    "button": "Rezerwuj"
+  },
+  "faq": {
+    "title": "Najczęsciej zadawane pytania",
+    "questions": [
+      {
+        "question": "Czy jeździmy z adresu pod adres?",
+        "response": "Tak, wyjeżdżamy spod dowolnego adresu i dowozimy bezpośrednio pod wskazany adres."
+      },
+      {
+        "question": "Czy są przesiadki?",
+        "response": "Kursujemy 'od drzwi do drzwi' bez przesiadek. Komfort podrozojacych jest dla nas priorytetem"
+      },
+      {
+        "question": "Ile bagażu można z sobą zabrać?",
+        "response": "W cenie przejazdu przysługują bezpłatny bagaż - podręczny o wadze do 5kg oraz podstawowy waga do 40 kg lub 2 sztuki po 20kg max. Bagaz dodatkowy za dopłata"
+      },
+      {
+        "question": "Jak przygotowac zwierze do podrozy?",
+        "response": "Zwierzę powinno być umieszczone w odpowiednim pojemniku przeznaczonym do podróży, zabezpieczającym przed wyrządzeniem szkody pasażerom lub mieniu firmy. Pojemnik transportowy powinien się znajdować na siedzeniu przy właścicielu bądz w kabinie oddzielonej. Rozmiar pojemnika transportowego musi być dostosowany do wielkości zwierzęcia, nie może jednak przekraczać rozmiarów: wysokość 24 cm, głębokość 28 cm, szerokość 46 cm. "
+      },
+      {
+        "question": "Jaka jest cena przewozu zwierzat?",
+        "response": "Cena za przewóz zwierząt jest adekwatna do aktualnej ceny za przejazd pasażera - wysokość tej kwoty jest zależna od wybranej trasy."
+      }
+    ]
+  },
+  "luggage": {
+    "title": "Bagaż",
+    "description": "Jakiś opis jak przygotować paczkę lub gabaryt wraz ze zdjeciami"
+  },
+  "termsOfUse": {
+    "terms": [
+      "Pod pojęciem przewozu rozumie się przejazd osoby z adresu na adres. Z przewozu może korzystać każdy, kto posiada dokumenty uprawniające do przekraczania granicy. W przypadku osób nieletnich, potrzebne jest dodatkowo oświadczenie rodzica lub opiekuna prawnego o zgodzie na przejazd.",
+      "Zwierzęta mogą być przewożone pod warunkiem posiadania ważnej książeczki szczepień oraz paszportu i transportera.",
+      "Bilet można wykupić w jedną lub dwie strony, w miejsca z i do których kursujemy. Przy zamówieniu pasażer dostaje informację ustną o konieczności potwierdzenia przejazdu dzień przed wyjazdem do godziny 13.",
+      "Pasażer może zabrać ze sobą:",
+      "a) Jedną sztukę bagażu o wadze do 20 kg i o wymiarach standardowej walizki",
+      "b) Jedną sztukę małego bagażu o wymiarach pozwalających na swobodne umieszczenie bagażu pod siedzeniem. Rozmiar bagażu podręcznego nie powinien utrudniać swobody podróży pozostałym pasażerom.",
+      "W pojazdach obowiązuje całkowity zakaz palenia tytoniu, spożywania napojów alkoholowych oraz palenia e-papierosów.",
+      "W przypadku odbierania osób z adresu za granicą godzina powrotu ustalana jest telefonicznie dzień przed wyjazdem.",
+      "Z uwagi na specyfikę działalności nie istnieje regularny rozkład jazdy. Rozkład jazdy ustalany jest na bieżąco na podstawie rezerwacji dokonywanych telefonicznie lub za pośrednictwem strony internetowej.",
+      "Przewoźnik nie odpowiada za rzeczy pozostawione przez pasażera.",
+      "Przewoźnik ma prawo odmówić zabrania lub pozostawić pasażera na trasie w przypadku gdy pasażer:",
+      "a) zachowuje się w sposób uciążliwy dla pasażerów, jest agresywny, utrudnia pracę kierowcy oraz powoduje zagrożenie bezpieczeństwa przejazdu",
+      "b) jest w stanie nietrzeźwym lub pod wpływem środków odurzających",
+      "Wyjazd lub powrót niepotwierdzony przez pasażera w przeddzień ustalonego terminu (do godziny 13:00) jest równoznaczny z rezygnacją z przejazdu. Nie przysługują wówczas żadne roszczenia."
+    ]
+  }
+}
