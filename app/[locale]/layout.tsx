@@ -5,7 +5,8 @@ import { createTranslator, useLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { ReactNode } from "react";
 import { NavbarProvider } from "@/context/navbarContext";
-import Nav from '@/components/Navigation/Nav'
+import Nav from "@/components/Navigation/Nav";
+import Footer from "@/components/Footer/Footer";
 
 type Props = {
   children: ReactNode;
@@ -51,6 +52,7 @@ export default function LocaleLayout({ children, params }: Props) {
           </NavbarProvider>
 
           {children}
+          <Footer />
         </body>
       </NextIntlClientProvider>
     </html>
