@@ -46,11 +46,12 @@ const Nav = () => {
                 </li>
               )
             )}
-          {/* Locale */}
-          <li className="flex justify-end items-center ">
-            <NavDropdown />
-          </li>
+        {/* Locale */}
+            <li className="flex justify-end items-center ">
+          <NavDropdown />
+        </li>
         </ul>
+        
       </nav>
 
       {/* Mobile navbar */}

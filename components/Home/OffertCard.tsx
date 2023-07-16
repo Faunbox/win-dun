@@ -1,13 +1,17 @@
-const OffertCard = () => {
+const OffertCard = ({
+  title,
+  photo,
+  description,
+}: {
+  title: string;
+  photo: string;
+  description: string;
+}) => {
   return (
     <div className="flex justify-center items-center flex-col gap-5 p-4 border max-w-[250px] md:max-w-[320px]">
-      <h2 className="text-xl font-semibold">Lorem ipsum dolor sit amet.</h2>
-      <img src="https://picsum.photos/300/300?random" alt="" />
-      <p className="">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-        beatae architecto praesentium placeat officiis labore quos ipsam alias
-        cum! Tempore.
-      </p>
+      <h2 className="text-xl font-semibold">{title}</h2>
+      <img src={photo} alt="" />
+      <p className="">{description}</p>
     </div>
   );
 };

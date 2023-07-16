@@ -63,3 +63,65 @@ export const BfTravelNl = {
 export const Flags = {
   locale: [{ flag: "pl" }, { flag: "en" }, { flag: "nl" }],
 };
+
+export const OffertPL = [
+  {
+    title: "Przewóz osób oraz zwierząt",
+    photo: "https://picsum.photos/300/300?random",
+    description:
+      "Zapewniamy komfort, punktualność oraz bezpieczeństwo. Nasza wykwalifikowana kadra, doświadczenie oraz nowoczesny tabor pojazdów pozwala nam realizować transport na najwyższym poziomie.",
+  },
+  {
+    title: "Przewóz listów, paczek oraz gabarytów",
+    photo: "https://picsum.photos/300/300?random",
+    description:
+      "Możesz polegać na naszej skuteczności i terminowości. Nasz zespół zadba o bezpieczne i szybkie dostarczenie Twoich paczek w wyznaczone miejsce, bez względu na ich rozmiar czy wrażliwość",
+  },
+  {
+    title: "Przeprowadzki",
+    photo: "https://picsum.photos/300/300?random",
+    description:
+      "Zdajemy sobie sprawę, że przeprowadzka to ważne wydarzenie w życiu każdej osoby, dlatego naszym celem jest zapewnienie Ci bezpiecznej, sprawnie zorganizowanej i komfortowej przeprowadzki.",
+  },
+];
+
+export const OffertEN = [
+  {
+    title: "Przewóz osób oraz zwierząt",
+    photo: "https://picsum.photos/300/300?random",
+    description:
+      "Zapewniamy komfort, punktualność oraz bezpieczeństwo. Nasza wykwalifikowana kadra, doświadczenie oraz nowoczesny tabor pojazdów pozwala nam realizować transport na najwyższym poziomie.",
+  },
+  {
+    title: "Przewóz listów, paczek oraz gabarytów",
+    photo: "https://picsum.photos/300/300?random",
+    description:
+      "Możesz polegać na naszej skuteczności i terminowości. Nasz zespół zadba o bezpieczne i szybkie dostarczenie Twoich paczek w wyznaczone miejsce, bez względu na ich rozmiar czy wrażliwość",
+  },
+  {
+    title: "Przeprowadzki",
+    photo: "https://picsum.photos/300/300?random",
+    description:
+      "Zdajemy sobie sprawę, że przeprowadzka to ważne wydarzenie w życiu każdej osoby, dlatego naszym celem jest zapewnienie Ci bezpiecznej, sprawnie zorganizowanej i komfortowej przeprowadzki.",
+  },
+];
+export const OffertNL = [
+  {
+    title: "Przewóz osób oraz zwierząt",
+    photo: "https://picsum.photos/300/300?random",
+    description:
+      "Zapewniamy komfort, punktualność oraz bezpieczeństwo. Nasza wykwalifikowana kadra, doświadczenie oraz nowoczesny tabor pojazdów pozwala nam realizować transport na najwyższym poziomie.",
+  },
+  {
+    title: "Przewóz listów, paczek oraz gabarytów",
+    photo: "https://picsum.photos/300/300?random",
+    description:
+      "Możesz polegać na naszej skuteczności i terminowości. Nasz zespół zadba o bezpieczne i szybkie dostarczenie Twoich paczek w wyznaczone miejsce, bez względu na ich rozmiar czy wrażliwość",
+  },
+  {
+    title: "Przeprowadzki",
+    photo: "https://picsum.photos/300/300?random",
+    description:
+      "Zdajemy sobie sprawę, że przeprowadzka to ważne wydarzenie w życiu każdej osoby, dlatego naszym celem jest zapewnienie Ci bezpiecznej, sprawnie zorganizowanej i komfortowej przeprowadzki.",
+  },
+];

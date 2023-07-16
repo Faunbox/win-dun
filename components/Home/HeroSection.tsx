@@ -1,18 +1,19 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const HeroSection = () => {
+  const t = useTranslations("homePage");
+
   return (
     <div className="section-container bg-gray-50 min-h-screen">
       <div className="container flex flex-col md:flex-row justify-center items-center mx-auto align-middle md:p-5">
-        <aside className="flex flex-col gap-5 justify-center items-center w-full md:w-6/12 mx-auto">
-          <h1 className="text-7xl font-bold">Tekst głowny</h1>
-          <h2 className="text-2xl">
-            Tekst mniejszy Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Praesentium, blanditiis?
-          </h2>
+        <aside className="flex flex-col gap-4 justify-center items-center w-full md:w-6/12 mx-auto">
+          <h1 className="text-7xl font-bold">{t("homeDescription1")}</h1>
+          <h2 className="text-2xl">{t("homeDescription2")}</h2>
+          <h2 className="text-2xl">{t("homeDescription3")}</h2>
           <Link href={"/rezerwacja"} className="md:self-center">
             <button className="bg-red-700 p-4 shadow-lg text-white md:mt-4 animate-bounce">
-              Zarezerwuj
+              {t("heroButton")}
             </button>
           </Link>
         </aside>

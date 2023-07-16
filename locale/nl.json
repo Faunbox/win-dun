@@ -12,24 +12,11 @@
   "homePage": {
     "homeDescription1": "Przewozy osobowe do Niemiec i Holandii.",
     "homeDescription2": "W każdy piątek, sobotę i niedziele. Bezpiecznie i zawsze na czas",
+    "homeDescription3": "W każdy piątek, sobotę i niedziele. Bezpiecznie i zawsze na czas",
     "heroButton": "Zarezerwuj",
-    "services": [
-      {
-        "title": "Przewóz osób oraz zwierząt EN",
-        "photo": "",
-        "description": "Tak "
-      },
-      {
-        "title": "Przewóz listów, paczek oraz gabarytów EN",
-        "photo": "",
-        "description": "Tak"
-      },
-      {
-        "title": "Przeprowadzki EN",
-        "photo": "",
-        "description": "Tak"
-      }
-    ],
+    "nameServices": "Nasze usługi",
+    "whyOurCompany": "Dlaczego my?",
+
     "nameAbout": "About us",
     "aboutDescription": " ANGIELSKI '0P9O[==L[ [-gsjdfhgiush dfgiuhfdsiug hdsilufhg dsilhfg liusdhglisufdhgliufdsh glsidh fgli sudhfg lisdfhg isdfg, sjfdbgkjh ds,fb gkjhsdfbgkjh sdbfhkgj sdhfg"
   },
