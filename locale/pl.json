@@ -14,6 +14,7 @@
     "homeDescription2": "Przewozy osobowe do Niemiec i Holandii.",
     "homeDescription3": "W każdy piątek, sobotę i niedziele.",
     "heroButton": "Zarezerwuj",
+    "heroPhone": "Zadzwoń",
     "nameServices": "Nasze usługi",
     "whyOurCompany": "Dlaczego my?",
     "nameAbout": "O nas",
@@ -29,7 +30,7 @@
     "description6": "Naszą misją jest zapewnienie Ci nie tylko usług transportowych, ale także pełnej satysfakcji i poczucia bezpieczeństwa. Dlatego stawiamy na profesjonalizm, elastyczność i indywidualne podejście do każdego klienta. Twoje potrzeby są dla nas najważniejsze, dlatego skupiamy się na doskonaleniu naszych usług i ciągłym podnoszeniu jakości.",
     "description7": "Zapraszamy do skorzystania z naszych usług transportowych i dołączenia do grona zadowolonych klientów. Skontaktuj się z nami już dzisiaj, aby omówić swoje potrzeby i otrzymać indywidualną ofertę. Jesteśmy gotowi podjąć się każdego wyzwania i zapewnić Ci niezawodne rozwiązania transportowe."
   },
-  "gallery": "Galeria",
+  "gallery": { "title": "Galeria" },
   "contact": {
     "title": "Kontakt",
 

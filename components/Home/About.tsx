@@ -4,7 +4,7 @@ import RedButton from "../Typography/Button";
 const AboutHomeSection = () => {
   return (
     <section className="section-container flex-col bg-gray-50 py-8">
-      <div className="flex flex-col md:flex-row justify-around items-center gap-5 w-full">
+      <div className="container flex flex-col md:flex-row justify-around items-center gap-5 w-full">
         <div className="grid grid-rows-2 gap-4">
           <p className="text-2xl">
             Ponad <span className="font-bold text-3xl text-red-800">600</span>{" "}

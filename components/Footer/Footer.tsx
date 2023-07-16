@@ -1,6 +1,19 @@
+import { useLocale } from "next-intl";
 import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
+import {
+  BfTravelEn,
+  BfTravelNl,
+  BfTravelPL,
+  EnNavbar,
+  NlNavbar,
+  PlNavbar,
+} from "../Navigation/data";
+import NavLink from "../Navigation/NavLink";
+import FooterLink from "./FooterLink";
 
 const Footer = () => {
+  const locale = useLocale();
+
   return (
     <footer className="w-screen bg-gray-700 text-gray-100 flex justify-center items-center flex-col">
       <div className="container grid grid-rows-4 md:grid-rows-none md:grid-cols-2 lg:grid-cols-4 py-4">
@@ -20,23 +33,62 @@ const Footer = () => {
         </div>
         {/* Nav */}
         <div className="flex flex-col text-center">
-          <h3 className="py-4 text-lg">Nawigacja</h3>
+          <h3 className="py-4 text-lg font-semibold">Nawigacja</h3>
           <ul>
-            <li>tak</li>
-            <li>tak</li>
-            <li>TAK</li>
-            <li>TAK</li>
-            <li>Tak</li>
+            {locale === "pl" &&
+              PlNavbar?.map(
+                ({ href, title }: { href: string; title: string }) => (
+                  <li key={title}>
+                    <FooterLink href={href} title={title} />
+                  </li>
+                )
+              )}
+            {locale === "en" &&
+              EnNavbar?.map(
+                ({ href, title }: { href: string; title: string }) => (
+                  <li key={title}>
+                    <FooterLink href={href} title={title} />
+                  </li>
+                )
+              )}
+            {locale === "nl" &&
+              NlNavbar?.map(
+                ({ href, title }: { href: string; title: string }) => (
+                  <li key={title}>
+                    <FooterLink href={href} title={title} />
+                  </li>
+                )
+              )}
           </ul>
         </div>
         {/* Before travel */}
         <div className="flex flex-col text-center">
-          <h3 className="py-4 text-lg">Przed podróżą</h3>
+          <h3 className="py-4 text-lg font-semibold">Przed podróżą</h3>
           <ul>
-            <li>tak</li>
-            <li>nie</li>
-            <li>nie</li>
-            <li>tak</li>
+            {locale === "pl" &&
+              BfTravelPL?.menu?.map(
+                ({ name, href }: { name: string; href: string }) => (
+                  <li key={name}>
+                    <FooterLink href={href} title={name} />
+                  </li>
+                )
+              )}
+            {locale === "en" &&
+              BfTravelEn?.menu?.map(
+                ({ name, href }: { name: string; href: string }) => (
+                  <li key={name}>
+                    <FooterLink href={href} title={name} />
+                  </li>
+                )
+              )}
+            {locale === "nl" &&
+              BfTravelNl?.menu?.map(
+                ({ name, href }: { name: string; href: string }) => (
+                  <li key={name}>
+                    <FooterLink href={href} title={name} />
+                  </li>
+                )
+              )}
           </ul>
         </div>
         {/* Privacy + terms */}

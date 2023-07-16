@@ -1,4 +1,3 @@
-import Navigation from "@/components/Navigation/Navigation";
 import "./globals.css";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import { createTranslator, useLocale, NextIntlClientProvider } from "next-intl";

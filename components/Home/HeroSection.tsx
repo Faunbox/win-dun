@@ -8,14 +8,23 @@ const HeroSection = () => {
     <div className="section-container bg-gray-50 min-h-screen">
       <div className="container flex flex-col md:flex-row justify-center items-center mx-auto align-middle md:p-5">
         <aside className="flex flex-col gap-4 justify-center items-center w-full md:w-6/12 mx-auto">
-          <h1 className="text-7xl font-bold">{t("homeDescription1")}</h1>
-          <h2 className="text-2xl">{t("homeDescription2")}</h2>
-          <h2 className="text-2xl">{t("homeDescription3")}</h2>
-          <Link href={"/rezerwacja"} className="md:self-center">
-            <button className="bg-red-700 p-4 shadow-lg text-white md:mt-4 animate-bounce">
-              {t("heroButton")}
-            </button>
-          </Link>
+          <h1 className="mb-10 text-5xl md:text-7xl font-bold">
+            {t("homeDescription1")}
+          </h1>
+          <h2 className="text-xl md:text-2xl">{t("homeDescription2")}</h2>
+          <h2 className="text-xl md:text-2xl">{t("homeDescription3")}</h2>
+          <div className="flex flex-col md:flex-row justify-between gap-6 mt-6">
+            <Link href={"/rezerwacja"} className="md:self-center">
+              <button className="bg-red-700 p-4 shadow-lg text-white md:mt-2">
+                {t("heroButton")}
+              </button>
+            </Link>
+            <Link href={"phone:123456789"} className="md:self-center">
+              <button className="bg-red-700 p-4 shadow-lg text-white md:mt-2">
+                {t("heroPhone")}
+              </button>
+            </Link>
+          </div>
         </aside>
         <aside className="max-w-[50vw] w-full md:w-6/12 md:flex hidden items-center justify-center">
           <img

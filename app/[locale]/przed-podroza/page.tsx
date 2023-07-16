@@ -1,7 +1,7 @@
 import SectionHeader from "@/components/Typography/SectionHeader";
 import { useTranslations } from "next-intl";
 
-const Gallery = () => {
+const BeforeTravel = () => {
   const t = useTranslations("gallery");
 
   return (
@@ -11,4 +11,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default BeforeTravel;
