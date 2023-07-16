@@ -5,12 +5,14 @@
       { "title": "About", "href": "/about" },
       { "title": "Gallery", "href": "/gallery" },
       { "title": "Reservation", "href": "/reservation" },
-      { "title": "Contact", "href": "/contact" }
+      { "title": "Contact", "href": "/contact" },
+      { "title": "Before travel", "href": "/before-travel" }
     ]
   },
   "homePage": {
-    "homeDescription": "EN Jezdzimy w kazdy piatek, sobote i niedziele",
-    "nameServices": "Our services",
+    "homeDescription1": "Przewozy osobowe do Niemiec i Holandii.",
+    "homeDescription2": "W każdy piątek, sobotę i niedziele. Bezpiecznie i zawsze na czas",
+    "heroButton": "Zarezerwuj",
     "services": [
       {
         "title": "Przewóz osób oraz zwierząt EN",

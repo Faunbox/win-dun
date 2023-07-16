@@ -3,6 +3,7 @@ export const EnNavbar = [
   { title: "Gallery", href: "/gallery" },
   { title: "Reservation", href: "/reservation" },
   { title: "Contact", href: "/contact" },
+  { title: "Before Travel", href: "/before-travel" },
 ];
 
 export const NlNavbar = [
@@ -10,6 +11,7 @@ export const NlNavbar = [
   { title: "Gallery NL", href: "/gallery" },
   { title: "Reservation NL", href: "/reservation" },
   { title: "Contact NL", href: "/contact" },
+  { title: "BF travel NL", href: "/bftravel" },
 ];
 
 export const PlNavbar = [
@@ -17,6 +19,7 @@ export const PlNavbar = [
   { title: "Galeria", href: "/galeria" },
   { title: "Rezerwacja", href: "/rezerwacja" },
   { title: "Kontakt", href: "/kontakt" },
+  { title: "Przed podróżą", href: "/przed-podróżą" },
 ];
 
 export const BfTravelPL = {

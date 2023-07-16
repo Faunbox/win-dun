@@ -5,13 +5,15 @@
       { "title": "O nas", "href": "/o-nas" },
       { "title": "Galeria", "href": "/galeria" },
       { "title": "Rezerwacja", "href": "/rezerwacja" },
-      { "title": "Kontakt", "href": "/kontakt" }
+      { "title": "Kontakt", "href": "/kontakt" },
+      { "title": "Przed podróżą", "href": "/przed-podroza" }
+
     ]
   },
   "homePage": {
     "homeDescription1": "Przewozy osobowe do Niemiec i Holandii.",
-    "homeDescription2": "W każdy piątek, sobotę i niedziele.",
-    "homeDescription3": "Bezpiecznie i zawsze na czas",
+    "homeDescription2": "W każdy piątek, sobotę i niedziele. Bezpiecznie i zawsze na czas",
+    "heroButton": "Zarezerwuj",
 
     "nameServices": "Nasze usługi",
     "services": [

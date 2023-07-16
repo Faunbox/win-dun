@@ -3,11 +3,11 @@ import RedButton from "../Typography/Button";
 
 const Order = () => {
   return (
-    <section className="bg-gray-50 ">
-      <div className="container flex flex-col md:flex-row justify-around items-center">
+    <section className="bg-gray-50 flex justify-center align-middle items-center">
+      <div className="container flex flex-col md:flex-row justify-center items-center w-full align-middle">
         <div className="flex flex-col justify-center items-center p-4 text-center">
           <h3 className="text-xl">Zarezerwuj online</h3>
-          <img src="https://picsum.photos/300/400" alt="" />
+          <img src="https://picsum.photos/300/200" alt="" />
           <p className="m-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
             voluptatum obcaecati enim repudiandae tempora. Nemo quos vitae ipsa
@@ -20,7 +20,7 @@ const Order = () => {
         </div>
         <div className="flex flex-col justify-center items-center p-4 text-center   ">
           <h3 className="text-xl">Rezerwacja telefoniczna:</h3>
-          <img src="https://picsum.photos/300/400" alt="" />
+          <img src="https://picsum.photos/300/200" alt="" />
           <p className="m-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
             voluptatum obcaecati enim repudiandae tempora. Nemo quos vitae ipsa

@@ -2,14 +2,14 @@ import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <footer className="w-screen bg-gray-700 text-gray-100">
-      <div className="containter grid grid-rows-4 md:grid-rows-none md:grid-cols-4  py-4">
+    <footer className="w-screen bg-gray-700 text-gray-100 flex justify-center items-center flex-col">
+      <div className="container grid grid-rows-4 md:grid-rows-none md:grid-cols-2 lg:grid-cols-4 py-4">
         {/* Logo */}
         <div className="flex justify-center items-center flex-col">
           <img
             src="/images/logo-dark.png"
             alt="logo"
-            className="max-w-[300px]"
+            className="max-w-[300px] lg:max-w-[250px]"
           />
           {/* Socials */}
           <div className="flex flex-row justify-around w-full max-w-[300px] pt-10">
@@ -40,17 +40,13 @@ const Footer = () => {
           </ul>
         </div>
         {/* Privacy + terms */}
-        <div className="flex flex-col text-center justify-start items-center py-4">
+        <div className="flex flex-col text-center justify-between items-center py-4">
           <ul>
             <li className="py-2">Regulamin strony</li>
             <li className="py-2">Polityka prywatności</li>
           </ul>
+          <small>Created by Filip Sojecki</small>
         </div>
-      </div>
-
-      {/* Creator */}
-      <div className="text-center p-4">
-        <small>Created by Filip Sojecki</small>
       </div>
     </footer>
   );

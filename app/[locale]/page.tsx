@@ -1,5 +1,5 @@
 import AboutHomeSection from "@/components/Home/About";
-import HomeContact from "@/components/Home/Contact";
+import HomeBuses from "@/components/Home/Buses";
 import HeroSection from "@/components/Home/HeroSection";
 import OffertSection from "@/components/Home/Offert";
 import Order from "@/components/Home/Order";
@@ -12,7 +12,7 @@ export default function Home() {
       <OffertSection />
       <Why />
       <AboutHomeSection />
-      <HomeContact />
+      <HomeBuses />
       <Order />
     </>
   );

@@ -15,7 +15,7 @@ const Nav = () => {
   return (
     <header className="fixed container top-0 right-0 left-0 mx-auto min-w-[100vw] lg:justify-center lg:flex lg:items-center backdrop-blur-sm border-b-2">
       {/* Desktop navbar */}
-      <nav className="hidden lg:grid lg:grid-cols-3 container mx-10 my-5">
+      <nav className="hidden lg:grid lg:grid-cols-2 justify-center container mx-10 my-5">
         {/* Logo */}
         <Link href={"/"} className="">
           <img src="images/logo.png" alt="logo" className="max-w-[200px]" />
@@ -46,19 +46,11 @@ const Nav = () => {
                 </li>
               )
             )}
-          <li>
-            <select name="beforeTravel" id="beforeTravel">
-              <option value="">1</option>
-              <option value="">2</option>
-              <option value="">3</option>
-              <option value="">4</option>
-            </select>
+          {/* Locale */}
+          <li className="flex justify-end items-center ">
+            <NavDropdown />
           </li>
         </ul>
-        {/* Locale */}
-        <div className="flex justify-end items-center">
-          <NavDropdown />
-        </div>
       </nav>
 
       {/* Mobile navbar */}
@@ -75,12 +67,12 @@ const Nav = () => {
         </div>
         {/* Menu icon */}
         <button onClick={() => setMobileNavOpen(!mobileNavOpen)}>
-          <CgMenuRightAlt className="w-[30px] h-[30px]" />
+          <CgMenuRightAlt className="w-[30px] h-[30px] mr-5" />
         </button>
         <div
           className={`${
             mobileNavOpen ? "flex" : "hidden"
-          } h-screen w-screen absolute top-0 left-0 right-0 bg-slate-400 flex justify-center items-center align-middle gap-4 transition-all ease-in-out duration-1000 opacity-[${
+          } h-screen w-screen z-20 absolute top-0 left-0 right-0 bg-slate-400 flex justify-center items-center align-middle gap-4 transition-all ease-in-out duration-1000 opacity-[${
             mobileNavOpen ? "100" : "0"
           }]`}
         >
@@ -116,14 +108,6 @@ const Nav = () => {
                   </li>
                 )
               )}
-            <li>
-              <select name="beforeTravel" id="beforeTravel">
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
-              </select>
-            </li>
             <li>
               <select name="locale" id="locale">
                 <option value="">pl</option>
