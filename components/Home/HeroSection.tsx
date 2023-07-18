@@ -5,7 +5,7 @@ const HeroSection = () => {
   const t = useTranslations("homePage");
 
   return (
-    <div className="section-container bg-gray-50 min-h-screen">
+    <div className="section-container bg-gray-100 min-h-screen">
       <div className="container flex flex-col md:flex-row justify-center items-center mx-auto align-middle md:p-5">
         <aside className="flex flex-col gap-4 justify-center items-center w-full md:w-6/12 mx-auto">
           <h1 className="mb-10 text-5xl md:text-7xl font-bold">
@@ -28,9 +28,9 @@ const HeroSection = () => {
         </aside>
         <aside className="max-w-[50vw] w-full md:w-6/12 md:flex hidden items-center justify-center">
           <img
-            src={"https://picsum.photos/300/400"}
+            src={"/images/droga.png"}
             alt="tak"
-            width={300}
+            width={800}
             height={400}
           />
         </aside>

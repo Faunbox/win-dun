@@ -2,8 +2,7 @@ import { useTranslations } from "next-intl";
 import SectionHeader from "../Typography/SectionHeader";
 
 const Why = () => {
-
-const t = useTranslations("homePage")
+  const t = useTranslations("homePage");
 
   return (
     <section className="section-container bg-gradient-to-b from-gray-300 to-gray-50 p-4 pb-12">
@@ -38,9 +37,9 @@ const t = useTranslations("homePage")
           </div>
           <div className="mx-auto p-4 md:p-0">
             <img
-              src={"https://picsum.photos/300/400"}
+              src={"images/why-bus.png"}
               alt="tak"
-              width={300}
+              width={500}
               height={400}
             />
           </div>

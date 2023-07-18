@@ -5,7 +5,7 @@ import { BsUsbPlug } from "react-icons/bs";
 
 const HomeBuses = () => {
   return (
-    <section className="flex flex-col bg-gray-300 justify-center items-center">
+    <section className="flex flex-col bg-gray-300 justify-center items-center py-4">
       <div className="container text-center p-4">
         <SectionHeader>Nasze busy posiadają:</SectionHeader>
         <ul className="flex flex-col md:flex-row justify-around gap-4">

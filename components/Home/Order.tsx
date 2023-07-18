@@ -3,33 +3,41 @@ import RedButton from "../Typography/Button";
 
 const Order = () => {
   return (
-    <section className="bg-gray-50 flex justify-center align-middle items-center">
+    <section className="bg-gray-50 flex justify-center align-middle items-center py-4">
       <div className="container flex flex-col md:flex-row justify-center items-center w-full align-middle">
-        <div className="flex flex-col justify-center items-center p-4 text-center">
-          <h3 className="text-xl">Zarezerwuj online</h3>
-          <img src="https://picsum.photos/300/200" alt="" />
-          <p className="m-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-            voluptatum obcaecati enim repudiandae tempora. Nemo quos vitae ipsa
-            reiciendis. Distinctio quisquam necessitatibus commodi obcaecati
-            fugit incidunt autem quos maiores atque?
+        <div className="flex flex-col">
+          <h2>Kontakt</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
+            vero sed minima quam earum dolorum magni commodi aperiam architecto
+            sequi.
           </p>
-          <Link href={"/rezerwacja"}>
-            <RedButton>Umów przez internet</RedButton>
-          </Link>
+          <div>
+            <p>Telefon</p>
+            <p>Email</p>
+            <p>Cośtam</p>
+          </div>
         </div>
-        <div className="flex flex-col justify-center items-center p-4 text-center   ">
-          <h3 className="text-xl">Rezerwacja telefoniczna:</h3>
-          <img src="https://picsum.photos/300/200" alt="" />
-          <p className="m-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-            voluptatum obcaecati enim repudiandae tempora. Nemo quos vitae ipsa
-            reiciendis. Distinctio quisquam necessitatibus commodi obcaecati
-            fugit incidunt autem quos maiores atque?
-          </p>
-          <Link href={"phone:123456789"}>
-            <RedButton>Zadzwoń</RedButton>
-          </Link>
+        <div>
+          <input
+            type="text"
+            placeholder="Twoje imię"
+            className="border-0 border-b-2 bg-transparent shadow-xl"
+          />
+          <input
+            type="text"
+            placeholder="Twój email"
+            className="border-0 border-b-2 bg-transparent shadow-xl"
+          />
+          <textarea
+            placeholder="Imie"
+            className="border-0 border-b-2 bg-transparent shadow-xl"
+          />
+          <label>
+            Zaakceptuj
+            <input type="checkbox" name="" id="" />
+          </label>
+          <button>Wyślij</button>
         </div>
       </div>
     </section>

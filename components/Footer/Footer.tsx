@@ -15,7 +15,7 @@ const Footer = () => {
   const locale = useLocale();
 
   return (
-    <footer className="w-screen bg-gray-700 text-gray-100 flex justify-center items-center flex-col">
+    <footer className="w-screen bg-gray-700 text-gray-100 flex justify-center items-center flex-col pb-4">
       <div className="container grid grid-rows-4 md:grid-rows-none md:grid-cols-2 lg:grid-cols-4 py-4">
         {/* Logo */}
         <div className="flex justify-center items-center flex-col">
@@ -25,15 +25,15 @@ const Footer = () => {
             className="max-w-[300px] lg:max-w-[250px]"
           />
           {/* Socials */}
-          <div className="flex flex-row justify-around w-full max-w-[300px] pt-10">
+          <div className="flex flex-row justify-around w-full max-w-[300px] pt-4">
             <SiFacebook className="scale-125 hover:scale-150 transition-transform duration-500" />
             <SiInstagram className="scale-125 hover:scale-150 transition-transform duration-500" />
             <SiTwitter className="scale-125 hover:scale-150 transition-transform duration-500" />
           </div>
         </div>
         {/* Nav */}
-        <div className="flex flex-col text-center">
-          <h3 className="py-4 text-lg font-semibold">Nawigacja</h3>
+        <div className="flex flex-col text-center justify-center">
+          {/* <h3 className="py-1 text-lg font-semibold">Nawigacja</h3> */}
           <ul>
             {locale === "pl" &&
               PlNavbar?.map(
@@ -62,8 +62,8 @@ const Footer = () => {
           </ul>
         </div>
         {/* Before travel */}
-        <div className="flex flex-col text-center">
-          <h3 className="py-4 text-lg font-semibold">Przed podróżą</h3>
+        <div className="flex flex-col text-center justify-between">
+          {/* <h3 className="py-4 text-lg font-semibold">Przed podróżą</h3> */}
           <ul>
             {locale === "pl" &&
               BfTravelPL?.menu?.map(
@@ -94,10 +94,10 @@ const Footer = () => {
         {/* Privacy + terms */}
         <div className="flex flex-col text-center justify-between items-center py-4">
           <ul>
-            <li className="py-2">Regulamin strony</li>
-            <li className="py-2">Polityka prywatności</li>
+            <li className="py-1">Regulamin strony</li>
+            <li className="py-1">Polityka prywatności</li>
           </ul>
-          <small>Created by Filip Sojecki</small>
+          <small className="pt-6">Created by Filip Sojecki</small>
         </div>
       </div>
     </footer>
