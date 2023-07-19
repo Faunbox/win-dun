@@ -9,7 +9,7 @@ const OffertSection = () => {
   const locale = useLocale();
 
   return (
-    <section className="section-container bg-gray-300 min-h-[60vh] p-4">
+    <section className="section-container bg-gray-300 min-h-[40vh] p-4">
       <div className="container flex flex-col md:p-4 justify-center items-center">
         <SectionHeader>{t("nameServices")}</SectionHeader>
         <div className="grid grid-rows-3 flex-col md:grid-rows-none md:grid-cols-3 gap-10 justify-center items-start md:justify-around">

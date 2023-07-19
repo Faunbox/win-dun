@@ -7,13 +7,13 @@ const HeroSection = () => {
   return (
     <div className="section-container bg-gray-100 min-h-screen">
       <div className="container flex flex-col md:flex-row justify-center items-center mx-auto align-middle md:p-5">
-        <aside className="flex flex-col gap-4 justify-center items-center w-full md:w-6/12 mx-auto">
+        <aside className="flex flex-col md:gap-4 justify-center items-center w-full md:w-6/12 mx-auto">
           <h1 className="mb-10 text-5xl md:text-7xl font-bold">
             {t("homeDescription1")}
           </h1>
           <h2 className="text-xl md:text-2xl">{t("homeDescription2")}</h2>
           <h2 className="text-xl md:text-2xl">{t("homeDescription3")}</h2>
-          <div className="flex flex-col md:flex-row justify-between gap-6 mt-6">
+          <div className="flex flex-row md:flex-row justify-between gap-6 mt-6">
             <Link href={"/rezerwacja"} className="md:self-center">
               <button className="bg-red-700 p-4 shadow-lg text-white md:mt-2">
                 {t("heroButton")}

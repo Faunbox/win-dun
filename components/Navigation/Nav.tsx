@@ -6,7 +6,7 @@ import NavLink from "./NavLink";
 import { useLocale } from "next-intl";
 import Link from "next/link";
 import NavDropdown from "./NavDropdown";
-import RedButton from "../Typography/Button";
+import RedButton from "../Typography/GreenButton";
 import NavButton from "./NavButton";
 
 const Nav = () => {
@@ -31,7 +31,7 @@ const Nav = () => {
                     <NavLink href={href} title={title} />
                   ) : (
                     <NavButton>
-                      <NavLink href={href} title={title} color="white"/>
+                      <NavLink href={href} title={title} color="white" />
                     </NavButton>
                   )}
                 </li>
