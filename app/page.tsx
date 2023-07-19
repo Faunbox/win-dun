@@ -26,10 +26,10 @@ export default function Home() {
               <div className="flex flex-row gap-2 items-center">
                 <BsFillTelephoneInboundFill />
                 <a
-                  href="phone:123 "
+                  href="phone:505216526 "
                   className="cursor-pointer text-red-800 text-2xl"
                 >
-                  123
+                  +48 505 216 526
                 </a>
               </div>
               <div className="flex flex-row gap-2 items-center">
