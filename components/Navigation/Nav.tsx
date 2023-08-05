@@ -2,24 +2,32 @@
 import { useState } from "react";
 import { EnNavbar, NlNavbar, PlNavbar } from "./data";
 import { CgMenuRightAlt, CgPushRight } from "react-icons/cg";
+import { BiPhoneOutgoing } from "react-icons/bi";
 import NavLink from "./NavLink";
 import { useLocale } from "next-intl";
 import Link from "next/link";
 import NavDropdown from "./NavDropdown";
 import RedButton from "../Typography/GreenButton";
 import NavButton from "./NavButton";
+import Image from "next/image";
 
 const Nav = () => {
   const locale = useLocale();
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (
-    <header className="fixed container top-0 right-0 left-0 mx-auto min-w-[100vw] lg:justify-center lg:flex lg:items-center backdrop-blur-sm border-b-2">
+    <header className="sticky container top-0 right-0 left-0 mx-auto min-w-[100vw] lg:justify-center lg:flex lg:items-center backdrop-blur-sm border-b-2">
       {/* Desktop navbar */}
       <nav className="hidden lg:grid lg:grid-cols-2 justify-center container mx-10 my-5">
         {/* Logo */}
         <Link href={"/"} className="">
-          <img src="images/logo.png" alt="logo" className="max-w-[200px]" />
+          <Image
+            src="/images/logo.png"
+            alt="logo"
+            width={200}
+            height={52}
+            className="max-w-[200px]"
+          />
         </Link>
         {/* Menu links */}
         <ul className="flex flex-row justify-around items-center">
@@ -41,7 +49,13 @@ const Nav = () => {
             EnNavbar?.map(
               ({ href, title }: { href: string; title: string }) => (
                 <li key={title}>
-                  <NavLink href={href} title={title} />
+                  {title !== "Reservation" ? (
+                    <NavLink href={href} title={title} />
+                  ) : (
+                    <NavButton>
+                      <NavLink href={href} title={title} color="white" />
+                    </NavButton>
+                  )}
                 </li>
               )
             )}
@@ -49,11 +63,21 @@ const Nav = () => {
             NlNavbar?.map(
               ({ href, title }: { href: string; title: string }) => (
                 <li key={title}>
-                  <NavLink href={href} title={title} />
+                  {title !== "Reservation NL" ? (
+                    <NavLink href={href} title={title} />
+                  ) : (
+                    <NavButton>
+                      <NavLink href={href} title={title} color="white" />
+                    </NavButton>
+                  )}
                 </li>
               )
             )}
           {/* Locale */}
+          <li className="flex items-center justify-center gap-1">
+            <BiPhoneOutgoing color="green" size={20} />
+            <a href="phone:12345678">12345678</a>
+          </li>
           <li className="flex justify-end items-center ">
             <NavDropdown />
           </li>

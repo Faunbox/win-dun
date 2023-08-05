@@ -2,8 +2,8 @@
   "core": {
     "website": "PL description",
     "navbar": [
-      { "title": "O nas", "href": "/o-nas" },
-      { "title": "Galeria", "href": "/galeria" },
+      { "title": "Start", "href": "/" },
+      { "title": "Flota", "href": "/galeria" },
       { "title": "Rezerwacja", "href": "/rezerwacja" },
       { "title": "Kontakt", "href": "/kontakt" },
       { "title": "Przed podróżą", "href": "/przed-podroza" }
@@ -13,8 +13,8 @@
     "homeDescription1": "Bezpiecznie i zawsze na czas.",
     "homeDescription2": "Przewozy osobowe do Niemiec i Holandii.",
     "homeDescription3": "W każdy piątek, sobotę i niedziele.",
-    "heroButton": "Zarezerwuj",
-    "heroPhone": "Zadzwoń",
+    "heroButton": "Zarezerwuj przejazd",
+    "heroPhone": "Wyślij paczkę",
     "nameServices": "Nasze usługi",
     "whyOurCompany": "Dlaczego my?",
     "nameAbout": "O nas",
@@ -30,7 +30,7 @@
     "description6": "Naszą misją jest zapewnienie Ci nie tylko usług transportowych, ale także pełnej satysfakcji i poczucia bezpieczeństwa. Dlatego stawiamy na profesjonalizm, elastyczność i indywidualne podejście do każdego klienta. Twoje potrzeby są dla nas najważniejsze, dlatego skupiamy się na doskonaleniu naszych usług i ciągłym podnoszeniu jakości.",
     "description7": "Zapraszamy do skorzystania z naszych usług transportowych i dołączenia do grona zadowolonych klientów. Skontaktuj się z nami już dzisiaj, aby omówić swoje potrzeby i otrzymać indywidualną ofertę. Jesteśmy gotowi podjąć się każdego wyzwania i zapewnić Ci niezawodne rozwiązania transportowe."
   },
-  "gallery": { "title": "Galeria" },
+  "gallery": { "title": "Flota" },
   "contact": {
     "title": "Kontakt",
     "text": "Czy masz pytania, potrzebujesz dodatkowych informacji lub chciałbyś skorzystać z naszych usług transportowych? Jesteśmy tutaj, aby Ci pomóc! Nie czekaj, skontaktuj się z nami już dzisiaj i przekonaj się, dlaczego jesteśmy liderem w branży transportowej w swoim regionie.",

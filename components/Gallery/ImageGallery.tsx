@@ -1,0 +1,62 @@
+const ImageGallery = () => {
+  return (
+    <div className="flex flex-wrap gap-4 w-full justify-center items-center my-10">
+      <img
+        src={"https://picsum.photos/200/300"}
+        alt="buses"
+        width={200}
+        height={300}
+      ></img>
+      <img
+        src={"https://picsum.photos/200/300"}
+        alt="buses"
+        width={200}
+        height={300}
+      ></img>
+      <img
+        src={"https://picsum.photos/200/300"}
+        alt="buses"
+        width={200}
+        height={300}
+      ></img>
+       <img
+        src={"https://picsum.photos/200/300"}
+        alt="buses"
+        width={200}
+        height={300}
+      ></img>
+      <img
+        src={"https://picsum.photos/200/300"}
+        alt="buses"
+        width={200}
+        height={300}
+      ></img>
+      <img
+        src={"https://picsum.photos/200/300"}
+        alt="buses"
+        width={200}
+        height={300}
+      ></img>
+       <img
+        src={"https://picsum.photos/200/300"}
+        alt="buses"
+        width={200}
+        height={300}
+      ></img>
+      <img
+        src={"https://picsum.photos/200/300"}
+        alt="buses"
+        width={200}
+        height={300}
+      ></img>
+      <img
+        src={"https://picsum.photos/200/300"}
+        alt="buses"
+        width={200}
+        height={300}
+      ></img>
+    </div>
+  );
+};
+
+export default ImageGallery;
