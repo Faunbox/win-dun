@@ -1,15 +1,16 @@
 import { useTranslations } from "next-intl";
 import SectionHeader from "../Typography/SectionHeader";
+import Image from "next/image";
 
 const Why = () => {
   const t = useTranslations("homePage");
 
   return (
-    <section className="section-container bg-gradient-to-b from-gray-300 to-gray-50 p-4 pb-12">
-      <div className="flex flex-col container w-11/12 bg-gray-50 mx-auto md:p-4 justify-center items-center align-middle">
+    <section className="section-container bg-gradient-to-b from-gray-300 to-gray-50 p-4 ">
+      <div className="flex flex-col container w-11/12 bg-gray-50 mx-auto py-12 md:p-4 justify-center items-center align-middle">
         <SectionHeader>{t("whyOurCompany")}</SectionHeader>
-        <div className="grid grid-rows-3 md:grid-cols-3 md:grid-rows-none items-center">
-          <div className="flex flex-col gap-4 px-4 md:px-4">
+        <div className="grid md:grid-rows-none lg:grid-cols-4 items-center">
+          <div className="flex flex-col gap-2 px-4">
             <div className="">
               <h2>Tekst numer jeden</h2>
               <p>
@@ -35,12 +36,12 @@ const Why = () => {
               </p>
             </div>
           </div>
-          <div className="mx-auto p-4 md:p-0">
-            <img
-              src={"images/why-bus.png"}
+          <div className="mx-auto p-4 md:p-0 lg:col-span-2">
+            <Image
+              src={"/images/why-bus.png"}
               alt="tak"
-              width={500}
-              height={400}
+              width={600}
+              height={500}
             />
           </div>
           <div className="flex flex-col gap-4 px-4 md:px-4">

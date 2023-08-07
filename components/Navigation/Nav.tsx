@@ -16,9 +16,9 @@ const Nav = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (
-    <header className="sticky container top-0 right-0 left-0 mx-auto min-w-[100vw] lg:justify-center lg:flex lg:items-center backdrop-blur-sm border-b-2">
+    <header className="sticky container top-0 right-0 left-0 mx-auto min-w-[100vw] lg:justify-center lg:flex lg:items-center backdrop-blur-sm border-b-2 z-50">
       {/* Desktop navbar */}
-      <nav className="hidden lg:grid lg:grid-cols-2 justify-center container mx-10 my-5">
+      <nav className="hidden lg:grid lg:grid-cols-6 justify-between container mx-10 my-5">
         {/* Logo */}
         <Link href={"/"} className="">
           <Image
@@ -30,7 +30,7 @@ const Nav = () => {
           />
         </Link>
         {/* Menu links */}
-        <ul className="flex flex-row justify-around items-center">
+        <ul className="flex flex-row justify-end items-center col-span-5 gap-4">
           {locale === "pl" &&
             PlNavbar?.map(
               ({ href, title }: { href: string; title: string }) => (

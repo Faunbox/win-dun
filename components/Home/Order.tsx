@@ -4,12 +4,44 @@ import SectionHeader from "../Typography/SectionHeader";
 import { useState } from "react";
 import axios from "axios";
 
+interface Input {
+  name: string;
+  email: string;
+  message: string;
+}
+
 const Order = () => {
   const [isCheckd, setIsCheckd] = useState(false);
+  const [inputInfo, setInputInfo] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleOnChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    setInputInfo((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-    await axios.post("/api/contact").then((msg) => alert(msg.data.message));
+    const { name, email, message }: Input = inputInfo;
+    await axios({
+      method: "post",
+      url: "/api/contact",
+      data: { name, email, message },
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((msg) => alert(msg.data.message))
+      .catch((error) => alert(error));
   };
 
   return (
@@ -39,6 +71,7 @@ const Order = () => {
                   required
                   name="name"
                   className="border-0 border-b-2 bg-transparent shadow-sm w-full"
+                  onChange={handleOnChange}
                 />
               </div>
               <div className="flex flex-col justify-center items-center w-full md:w-[50%]">
@@ -47,7 +80,9 @@ const Order = () => {
                   type="email"
                   required
                   name="email"
+                  autoComplete="on"
                   placeholder="jan.kowalski@poczta.pl"
+                  onChange={handleOnChange}
                   className="border-0 border-b-2 bg-transparent shadow-sm w-full"
                 />
               </div>
@@ -58,6 +93,7 @@ const Order = () => {
                 name="message"
                 id="message"
                 placeholder="Treść wiadomości"
+                onChange={handleOnChange}
                 className="border-0 border-b-2 bg-transparent shadow-sm w-full focus:border-red-800"
               />
             </div>

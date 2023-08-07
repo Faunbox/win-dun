@@ -1,20 +1,47 @@
-import type { NextApiRequest } from "next";
 import { NextResponse } from "next/server";
+import sgMail from "@sendgrid/mail";
 
-export async function POST(req: NextApiRequest) {
-  console.log(req.body);
-  let message;
-  try {
-    message = "tak";
-    return new NextResponse(JSON.stringify({ message }), {
-      status: 200,
-      headers: { "content-type": "application/json" },
+interface mail {
+  to: string;
+  from: string;
+  subject: string;
+  text: string;
+  html: string;
+}
+
+type ResponseData = {
+  status?: string;
+  message?: string;
+};
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY || "");
+
+export async function POST(req: Request) {
+  let response: ResponseData = {};
+  const data = await req.json();
+
+  const msg: mail = {
+    to: data?.email, // Change to your recipient
+    from: "sojecki.f@gmail.com", // Change to your verified sender
+    subject: "Wiadomośc z formularza kontaktowego",
+    text: data?.message,
+    html: `<strong>${data?.message}</strong>`,
+  };
+
+  await sgMail
+    .send(msg)
+    .then(() => {
+      response = {
+        status: "success",
+        message: "Wiadomość wysłana",
+      };
+    })
+    .catch((error) => {
+      response = {
+        status: "error",
+        message: `Message failed to send with error, ${error}`,
+      };
     });
-  } catch (error) {
-    message = "Fail";
-    return new NextResponse(
-      JSON.stringify({ success: false, message: "authentication failed" }),
-      { status: 402, headers: { "content-type": "application/json" } }
-    );
-  }
+
+  return new NextResponse(JSON.stringify(response));
 }
