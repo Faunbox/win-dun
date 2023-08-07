@@ -21,6 +21,10 @@ async function getMessages(locale: string) {
   }
 }
 
+export function generateStaticParams() {
+  return [{ locale: "pl" }, { locale: "en" }, { locale: "nl" }];
+}
+
 export async function generateMetadata({ params: { locale } }: Props) {
   const messages = await getMessages(locale);
 
@@ -34,7 +38,7 @@ export async function generateMetadata({ params: { locale } }: Props) {
   };
 }
 
-export default function LocaleLayout({ children, params }: Props) {
+export default async function LocaleLayout({ children, params }: Props) {
   const locale = useLocale();
 
   // Show a 404 error if the user requests an unknown locale
@@ -42,9 +46,16 @@ export default function LocaleLayout({ children, params }: Props) {
     notFound();
   }
 
+  let messages;
+  try {
+    messages = (await import(`../../locale/${locale}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
+
   return (
     <html lang={locale}>
-      <NextIntlClientProvider locale={locale}>
+      <NextIntlClientProvider locale={locale} messages={messages}>
         <body className="relative">
           <Providers>
             <NavbarProvider>

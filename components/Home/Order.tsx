@@ -69,6 +69,7 @@ const Order = () => {
                 <Input
                   type="text"
                   name="name"
+                  id="name"
                   variant="underlined"
                   placeholder="Jan Kowalski"
                   label="Imię i nazwisko"
@@ -82,6 +83,7 @@ const Order = () => {
                 <Input
                   type="email"
                   name="email"
+                  id="email"
                   variant="underlined"
                   placeholder="jan.kowalski@email.com"
                   label="Adres email"
