@@ -1,5 +1,6 @@
 import "./globals.css";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
+import { Providers } from "./providers";
 import { createTranslator, useLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { ReactNode } from "react";
@@ -45,13 +46,15 @@ export default function LocaleLayout({ children, params }: Props) {
     <html lang={locale}>
       <NextIntlClientProvider locale={locale}>
         <body className="relative">
-          <NavbarProvider>
-            {/* <Navigation /> */}
-            <Nav />
-          </NavbarProvider>
+          <Providers>
+            <NavbarProvider>
+              {/* <Navigation /> */}
+              <Nav />
+            </NavbarProvider>
 
-          {children}
-          <Footer />
+            {children}
+            <Footer />
+          </Providers>
         </body>
       </NextIntlClientProvider>
     </html>

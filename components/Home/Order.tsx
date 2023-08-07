@@ -3,6 +3,8 @@ import Link from "next/link";
 import SectionHeader from "../Typography/SectionHeader";
 import { useState } from "react";
 import axios from "axios";
+import { Button } from "@nextui-org/button";
+import { Input, Textarea } from "@nextui-org/react";
 
 interface Input {
   name: string;
@@ -64,37 +66,43 @@ const Order = () => {
           <form className="flex flex-col px-4 gap-4" onSubmit={handleSubmit}>
             <div className="md:flex md:flex-row md:gap-4">
               <div className="flex flex-col justify-center items-center w-full md:w-[50%]">
-                <label>Imię</label>
-                <input
+                <Input
                   type="text"
-                  placeholder="Jan Kowalski"
-                  required
                   name="name"
-                  className="border-0 border-b-2 bg-transparent shadow-sm w-full"
+                  variant="underlined"
+                  placeholder="Jan Kowalski"
+                  label="Imię i nazwisko"
+                  isRequired={true}
+                  autoComplete="on"
                   onChange={handleOnChange}
+                  className=""
                 />
               </div>
               <div className="flex flex-col justify-center items-center w-full md:w-[50%]">
-                <label>Email</label>
-                <input
+                <Input
                   type="email"
-                  required
                   name="email"
+                  variant="underlined"
+                  placeholder="jan.kowalski@email.com"
+                  label="Adres email"
+                  isRequired={true}
                   autoComplete="on"
-                  placeholder="jan.kowalski@poczta.pl"
                   onChange={handleOnChange}
-                  className="border-0 border-b-2 bg-transparent shadow-sm w-full"
+                  className="border-red-500"
                 />
               </div>
             </div>
             <div className="flex flex-col justify-center items-center w-full ">
-              <label htmlFor="message">Wiadomość</label>
-              <textarea
-                name="message"
-                id="message"
+              <Textarea
+                isRequired={true}
+                type="text"
+                variant="underlined"
+                label={"Treść wiadomości"}
+                labelPlacement="outside"
                 placeholder="Treść wiadomości"
+                className="w-full"
+                name="message"
                 onChange={handleOnChange}
-                className="border-0 border-b-2 bg-transparent shadow-sm w-full focus:border-red-800"
               />
             </div>
             <div className="flex flex-row justify-center items-center">
@@ -112,13 +120,15 @@ const Order = () => {
                 oferty)
               </label>
             </div>
-            <button
+            <Button
               type="submit"
-              disabled={!isCheckd}
-              className="disabled:bg-green-200 bg-green-600 mx-auto text-white disabled:text-black p-4 hover:scale-110 transition-transform duration-500"
+              isDisabled={!isCheckd}
+              color="secondary"
+              radius="none"
+              className="mx-auto text-white disabled:text-black p-4 hover:scale-110 transition-transform duration-500"
             >
               Wyślij
-            </button>
+            </Button>
           </form>
         </div>
       </div>

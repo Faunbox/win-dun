@@ -9,6 +9,16 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/contact",
+        destination: "/kontakt",
+        permanent: true,
+        locale: true,
+      },
+    ];
+  },
 };
 
 const withNextIntl = require("next-intl/plugin")(

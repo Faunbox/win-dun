@@ -20,16 +20,33 @@ export async function POST(req: Request) {
   let response: ResponseData = {};
   const data = await req.json();
 
-  const msg: mail = {
-    to: data?.email, // Change to your recipient
-    from: "sojecki.f@gmail.com", // Change to your verified sender
-    subject: "Wiadomośc z formularza kontaktowego",
+  const msgToCompany: mail = {
+    to: "kontakt@wit-dun.eu", // Change to your recipient
+    from: "kontakt@wit-dun.eu", // Change to your verified sender
+    subject: "Wiadomośc z formularza kontaktowego od " + data?.name,
     text: data?.message,
-    html: `<strong>${data?.message}</strong>`,
+    html: `<div>
+    <h1>Wiadomość od: ${data.name}</h1>
+    <h2>Adres email: ${data.email}</h2>
+    <p>Wiadomość: ${data.message}</p>
+    </div>`,
+  };
+
+  const msgToPerson: mail = {
+    to: data?.email, // Change to your recipient
+    from: "kontakt@wit-dun.eu", // Change to your verified sender
+    subject: "Potwierdzenie wysłania wiadomości",
+    text: data?.message,
+    html: `<div>
+    <h1>Potwierdzenie wysłania wiadomości ze strony www.wit-dun.eu</h1>
+    <h2>Wiadomość od: ${data.name}</h2>
+    <h3>Adres email: ${data.email}</h3>
+    <p>Wiadomość: ${data.message}</p>
+    </div>`,
   };
 
   await sgMail
-    .send(msg)
+    .send(msgToCompany)
     .then(() => {
       response = {
         status: "success",
@@ -42,6 +59,8 @@ export async function POST(req: Request) {
         message: `Message failed to send with error, ${error}`,
       };
     });
+
+  await sgMail.send(msgToPerson);
 
   return new NextResponse(JSON.stringify(response));
 }
