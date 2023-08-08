@@ -75,8 +75,8 @@ const Nav = () => {
             )}
           {/* Locale */}
           <li className="flex items-center justify-center gap-1">
-            <BiPhoneOutgoing color="green" size={20} />
-            <a href="phone:12345678">12345678</a>
+            <BiPhoneOutgoing color="green" size={25} />
+            <a href="phone:12345678" className="text-lg font-semibold">12345678</a>
           </li>
           <li className="flex justify-end items-center ">
             <NavDropdown />

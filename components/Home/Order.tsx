@@ -70,9 +70,11 @@ const Order = () => {
                   type="text"
                   name="name"
                   id="name"
-                  variant="underlined"
+                  variant="bordered"
+                  labelPlacement="outside"
                   placeholder="Jan Kowalski"
                   label="Imię i nazwisko"
+                  radius="none"
                   isRequired={true}
                   autoComplete="on"
                   onChange={handleOnChange}
@@ -84,7 +86,10 @@ const Order = () => {
                   type="email"
                   name="email"
                   id="email"
-                  variant="underlined"
+                  variant="bordered"
+                  radius="none"
+
+                  labelPlacement="outside"
                   placeholder="jan.kowalski@email.com"
                   label="Adres email"
                   isRequired={true}
@@ -98,7 +103,9 @@ const Order = () => {
               <Textarea
                 isRequired={true}
                 type="text"
-                variant="underlined"
+                variant="bordered"
+                radius="none"
+
                 label={"Treść wiadomości"}
                 labelPlacement="outside"
                 placeholder="Treść wiadomości"
@@ -116,10 +123,7 @@ const Order = () => {
               />
               <label htmlFor="checkbox">
                 Wyrażam zgodę na przetwarzanie podanych w formularzu kontaktowym
-                danych w celu nawiązania kontaktu, odpowiedzi na zadane pytania
-                i przesłanie oferty środkami komunikacji elektronicznej (zgoda
-                konieczna dla odpowiedzi na zadane pytania i wysłania żądanej
-                oferty)
+                danych w celu nawiązania kontaktu.
               </label>
             </div>
             <Button

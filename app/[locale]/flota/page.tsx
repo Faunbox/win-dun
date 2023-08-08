@@ -8,7 +8,7 @@ const Gallery = () => {
 
   return (
     <>
-      <div className="bg-gray-50 min-h-screen flex-col justify-center items-center text-center px-4">
+      <div className="bg-gray-50 flex flex-col text-center justify-center items-center p-4 w-screen">
         <SectionHeader>{t("title")}</SectionHeader>
         <div className="flex flex-col md:flex-row gap-2 justify-center items-center">
           {/* Text about buses */}

@@ -7,13 +7,13 @@ const Faq = () => {
   const t = useTranslations("faq");
 
   return (
-    <div className="container flex flex-col justify-center items-center gap-2">
-      <h2 className="text-xl font-semibold">{t("title")}</h2>
-      <p className="m-4">
+    <div className="container flex flex-col justify-center items-center gap-2 m-4">
+      <h2 className="text-xl font-semibold uppercase mt-6">{t("title")}</h2>
+      <p className="m-4 font-light">
         Poniżej przedstawiamy odpowiedzi na najczęsciej zadawane pytania. Jeżeli
         nie znalazłeś satysfakcjonującej Cię odpowiedzi, zapraszamy do kontaktu!
       </p>
-      <div className="w-screen md:max-w-[75vw]">
+      <div className="w-full flex justify-center items-center">
         <div className="w-full m-4">
           <Accordion variant="bordered">
             <AccordionItem

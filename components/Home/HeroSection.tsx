@@ -10,16 +10,18 @@ const HeroSection = () => {
   return (
     <div className="section-container bg-gray-100 ">
       <div className="container flex flex-col md:flex-row justify-center items-start mx-auto align-middle relative px-4 py-10 lg:py-0">
-        <aside className="flex flex-col md:gap-4 justify-center items-center w-full md:w-6/12 mx-auto lg:absolute md:top-10 md:left-32 -z-1">
-          <h1 className="mb-10 text-5xl md:text-7xl font-bold">
+        <aside className="flex flex-col  justify-center items-center w-full md:w-6/12 mx-auto lg:absolute md:top-44 md:left-32 -z-1">
+          <h1 className="text-2xl md:text-4xl font-bold uppercase border-b-1 border-black">
             {t("homeDescription1")}
           </h1>
-          <h2 className="text-xl md:text-2xl font-bold">
-            {t("homeDescription2")}
-          </h2>
-          <h2 className="text-xl md:text-2xl font-bold">
-            {t("homeDescription3")}
-          </h2>
+          <div className="flex flex-col">
+            <h2 className="text-md md:text-lg font-light uppercase">
+              {t("homeDescription2")}
+            </h2>
+            <h2 className="text-md md:text-lg font-light uppercase">
+              {t("homeDescription3")}
+            </h2>
+          </div>
           <div className="flex flex-col md:flex-row items-center lg:justify-between gap-6 mt-8 md:mt-6">
             <Link href={"/rezerwacja"} className="md:self-center">
               <button className="bg-red-700 p-2 md:p-4 shadow-lg text-white md:mt-2 flex justify-center items-center gap-2">

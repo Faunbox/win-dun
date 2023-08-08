@@ -13,3 +13,10 @@ html {
   align-items: center;
   text-align: center;
 }
+
+.flex-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
