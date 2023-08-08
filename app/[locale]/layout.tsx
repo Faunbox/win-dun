@@ -4,7 +4,7 @@ import { Providers } from "./providers";
 import { createTranslator, useLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { ReactNode } from "react";
-import { NavbarProvider } from "@/context/navbarContext";
+import { FormProvider } from "@/context/formContext";
 import Nav from "@/components/Navigation/Nav";
 import Footer from "@/components/Footer/Footer";
 
@@ -19,10 +19,6 @@ async function getMessages(locale: string) {
   } catch (error) {
     notFound();
   }
-}
-
-export function generateStaticParams() {
-  return [{ locale: "pl" }, { locale: "en" }, { locale: "nl" }];
 }
 
 export async function generateMetadata({ params: { locale } }: Props) {
@@ -58,10 +54,10 @@ export default async function LocaleLayout({ children, params }: Props) {
       <NextIntlClientProvider locale={locale} messages={messages}>
         <body className="relative">
           <Providers>
-            <NavbarProvider>
+            <FormProvider>
               {/* <Navigation /> */}
               <Nav />
-            </NavbarProvider>
+            </FormProvider>
 
             {children}
             <Footer />

@@ -122,15 +122,15 @@ const Nav = () => {
             {locale === "pl" &&
               PlNavbar?.map(
                 ({ href, title }: { href: string; title: string }) => (
-                  <li key={title} className="my-4">
-                    <NavLink href={href} title={title} />
+                  <li key={title} className="my-4" onClick={() => setMobileNavOpen(!mobileNavOpen)}>
+                    <NavLink href={href} title={title}/>
                   </li>
                 )
               )}
             {locale === "en" &&
               EnNavbar?.map(
                 ({ href, title }: { href: string; title: string }) => (
-                  <li key={title} className="my-4">
+                  <li key={title} className="my-4" onClick={() => setMobileNavOpen(!mobileNavOpen)}>
                     <NavLink href={href} title={title} />
                   </li>
                 )
@@ -138,7 +138,7 @@ const Nav = () => {
             {locale === "nl" &&
               NlNavbar?.map(
                 ({ href, title }: { href: string; title: string }) => (
-                  <li key={title} className="my-4">
+                  <li key={title} className="my-4" onClick={() => setMobileNavOpen(!mobileNavOpen)}>
                     <NavLink href={href} title={title} />
                   </li>
                 )

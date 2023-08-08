@@ -18,7 +18,7 @@ const HowToReserve = () => {
             </p>
             <Link
               href="/rezerwacja"
-              className="bg-transparent mr-auto hover:bg-red-700 text-red-700 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-red-700 hover:border-transparent"
+              className="bg-transparent mr-auto hover:bg-red-700 text-red-700 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-red-700 hover:border-transparent self-end"
             >
               Zarezerwuj przejazd
             </Link>
