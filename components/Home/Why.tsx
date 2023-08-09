@@ -42,6 +42,7 @@ const Why = () => {
               alt="tak"
               width={600}
               height={500}
+              className="hover:scale-110 duration-700"
             />
           </div>
           <div className="flex flex-col gap-4 px-4 md:px-4">

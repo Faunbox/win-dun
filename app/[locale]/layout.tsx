@@ -1,5 +1,6 @@
 import "./globals.css";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
+import "react-datepicker/dist/react-datepicker.css";
 import { Providers } from "./providers";
 import { createTranslator, useLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
@@ -7,6 +8,7 @@ import { ReactNode } from "react";
 import { FormProvider } from "@/context/formContext";
 import Nav from "@/components/Navigation/Nav";
 import Footer from "@/components/Footer/Footer";
+import CallCloud from "@/components/Navigation/CallCloud";
 
 type Props = {
   children: ReactNode;
@@ -57,11 +59,12 @@ export default async function LocaleLayout({ children, params }: Props) {
             <FormProvider>
               {/* <Navigation /> */}
               <Nav />
-            </FormProvider>
 
-            {children}
+              {children}
+            </FormProvider>
             <Footer />
           </Providers>
+          <CallCloud />
         </body>
       </NextIntlClientProvider>
     </html>

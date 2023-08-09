@@ -6,7 +6,7 @@ import { Button } from "@nextui-org/button";
 import { useTranslations } from "next-intl";
 
 const Contact = () => {
-  const t = useTranslations("gallery");
+  const t = useTranslations("quater");
 
   return (
     <div className="bg-gray-50 flex flex-col text-center justify-center items-center p-4 w-screen">
@@ -16,7 +16,7 @@ const Contact = () => {
       </h2>
       <div className="flex flex-col md:flex-row justify-around items-center w-screen container md:px-20 ">
         <CompanyData />
-        <ContactForm />
+        <ContactForm width="quater"/>
       </div>
       <Faq />
     </div>

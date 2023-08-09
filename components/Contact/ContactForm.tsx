@@ -4,7 +4,7 @@ import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { Textarea } from "@nextui-org/react";
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RiMailSendLine } from "react-icons/ri";
 
 interface Input {
@@ -13,13 +13,25 @@ interface Input {
   message: string;
 }
 
-const ContactForm = () => {
+interface Variants {
+  full: string;
+  quater: string;
+}
+
+const ContactForm = ({ width }: { width: string }) => {
   const [isCheckd, setIsCheckd] = useState(false);
   const [inputInfo, setInputInfo] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  useEffect(() => console.log(width), []);
+
+  const widthVariants: Variants = {
+    quater: "md:w-8/12",
+    full: "md:w-full",
+  };
 
   const handleOnChange = (
     e:
@@ -47,7 +59,11 @@ const ContactForm = () => {
       .catch((error) => alert(error));
   };
   return (
-    <div className="flex flex-col w-full md:w-8/12 p-4 ">
+    <div
+      className={`flex flex-col w-full ${
+        widthVariants[width as keyof typeof widthVariants]
+      } p-4`}
+    >
       <h2 className="m-4 font-bold text-2xl border-b-1 self-center border-black uppercase">
         Formularz kontaktowy
       </h2>

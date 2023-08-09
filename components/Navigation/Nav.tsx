@@ -74,9 +74,11 @@ const Nav = () => {
               )
             )}
           {/* Locale */}
-          <li className="flex items-center justify-center gap-1">
+          <li className="flex items-center justify-center gap-1  hover:scale-110 transition-transform duration-300">
             <BiPhoneOutgoing color="green" size={25} />
-            <a href="phone:12345678" className="text-lg font-semibold">12345678</a>
+            <a href="phone:+48505216526" className="text-lg font-semibold">
+            505 216 526
+            </a>
           </li>
           <li className="flex justify-end items-center ">
             <NavDropdown />
@@ -122,15 +124,23 @@ const Nav = () => {
             {locale === "pl" &&
               PlNavbar?.map(
                 ({ href, title }: { href: string; title: string }) => (
-                  <li key={title} className="my-4" onClick={() => setMobileNavOpen(!mobileNavOpen)}>
-                    <NavLink href={href} title={title}/>
+                  <li
+                    key={title}
+                    className="my-4"
+                    onClick={() => setMobileNavOpen(!mobileNavOpen)}
+                  >
+                    <NavLink href={href} title={title} />
                   </li>
                 )
               )}
             {locale === "en" &&
               EnNavbar?.map(
                 ({ href, title }: { href: string; title: string }) => (
-                  <li key={title} className="my-4" onClick={() => setMobileNavOpen(!mobileNavOpen)}>
+                  <li
+                    key={title}
+                    className="my-4"
+                    onClick={() => setMobileNavOpen(!mobileNavOpen)}
+                  >
                     <NavLink href={href} title={title} />
                   </li>
                 )
@@ -138,7 +148,11 @@ const Nav = () => {
             {locale === "nl" &&
               NlNavbar?.map(
                 ({ href, title }: { href: string; title: string }) => (
-                  <li key={title} className="my-4" onClick={() => setMobileNavOpen(!mobileNavOpen)}>
+                  <li
+                    key={title}
+                    className="my-4"
+                    onClick={() => setMobileNavOpen(!mobileNavOpen)}
+                  >
                     <NavLink href={href} title={title} />
                   </li>
                 )

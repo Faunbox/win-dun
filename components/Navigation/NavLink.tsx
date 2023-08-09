@@ -1,3 +1,4 @@
+import { Button } from "@nextui-org/react";
 import Link from "next/link";
 
 type Props = {
@@ -8,13 +9,10 @@ type Props = {
 
 const NavLink = ({ href, title, color }: Props) => {
   return (
-    <Link
-      href={href}
-      className={`text-xl lg:text-md font-light leading-6 hover:scale-125 transition-transform duration-300 ${
-        !color ? "text-gray-900" : "text-white"
-      }`}
-    >
-      {title}
+    <Link href={href} className={`text-xl lg:text-md font-light`}>
+      <p className="hover:scale-110 transition-transform duration-500">
+        {title}
+      </p>
     </Link>
   );
 };
