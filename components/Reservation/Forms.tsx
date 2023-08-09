@@ -1,10 +1,10 @@
 import PackageForm from "./Package";
 import PeopleForm from "./People";
 
-const Forms = (props: { state: string }) => {
+const Forms = ({ state }: { state: string }) => {
   return (
     <div className="flex flex-col justify-center items-center container">
-      {props.state === "people" ? <PeopleForm /> : <PackageForm />}
+      {state === "people" ? <PeopleForm /> : <PackageForm />}
     </div>
   );
 };
