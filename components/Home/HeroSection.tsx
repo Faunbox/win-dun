@@ -9,9 +9,9 @@ const HeroSection = () => {
   const t = useTranslations("homePage");
 
   return (
-    <div className="section-container bg-gray-100 ">
-      <div className="container bg-[url('/images/hero9.jpg')] flex flex-col md:flex-row justify-center items-start mx-auto align-middle relative px-4 py-10 lg:py-0">
-        <aside className="flex flex-col  justify-center items-center w-full md:w-6/12 mx-auto lg:absolute md:top-[45%] md:left-[50%] -translate-x-1/2 -z-1 text-gray-50">
+    <div className="section-container bg-[url('/images/hero9.jpg')] w-screen h-screen bg-right ">
+      <div className="container  flex flex-col md:flex-row justify-center items-start mx-auto align-middle relative px-4 py-10 lg:py-0">
+        <aside className="flex flex-col  justify-center items-center w-full md:w-6/12 mx-auto absolute top-[45%] left-[50%] -translate-x-1/2 -z-1 text-gray-50">
           <h1 className="text-xl md:text-3xl font-bold uppercase border-b-1 border-black ">
             {t("homeDescription1")}
           </h1>
@@ -50,16 +50,16 @@ const HeroSection = () => {
             </Link>
           </div>
         </aside>
-        <aside className="max-w-[100vw] w-full md:w-12/12 lg:flex hidden justify-end">
+        {/* <aside className="max-w-[100vw] w-full md:w-12/12 lg:flex hidden justify-end">
           <Image
             src={"/images/hero9.jpg"}
             alt="tak"
             width={1200}
             height={600}
             quality={100}
-            className="w-screen h-screen object-cover"
+            className="w-screen h-screen object-center md:object-cover "
           />
-        </aside>
+        </aside> */}
       </div>
     </div>
   );
