@@ -93,8 +93,8 @@ const ContactForm = ({ width }: { width: string }) => {
               variant="bordered"
               labelPlacement="outside"
               radius="none"
-              placeholder="jan.kowalski@email.com"
-              label="Adres email"
+              placeholder="jan.kowalski@email.com / 543 210 987"
+              label="Adres email / telefon"
               isRequired={true}
               autoComplete="on"
               onChange={handleOnChange}

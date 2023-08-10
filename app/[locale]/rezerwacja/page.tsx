@@ -12,9 +12,9 @@ const Reservation = () => {
   const [selected, setSelected] = useState<string>("people");
 
   return (
-    <div className="bg-gray-50 flex flex-col text-center justify-center items-center p-4 w-screen ">
+    <div className="bg-[url('/images/stripe.svg')] flex flex-col text-center justify-center items-center p-4 w-screen ">
       <SectionHeader>Rezerwacja przejazdu</SectionHeader>
-      <div className="flex flex-row p-4 border-1 border-black gap-4">
+      <div className="flex flex-row p-4 border-1 border-black gap-4 z-10 bg-gray-50">
         <RadioGroup
           label="Wybierz odpowiedni formularz"
           color="secondary"
@@ -32,8 +32,7 @@ const Reservation = () => {
           </Radio>
         </RadioGroup>
       </div>
-      <div className="bg-gradient-to-b from-gray-100 to-gray-50 w-9/12 mt-8">
-
+      <div className=" w-9/12 mt-8  ">
         <Forms state={selected} />
       </div>
     </div>

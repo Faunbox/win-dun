@@ -1,5 +1,6 @@
 import SectionHeader from "../Typography/SectionHeader";
 import ContactForm from "../Contact/ContactForm";
+import { BsMessenger, BsTelephoneOutbound, BsWhatsapp } from "react-icons/bs";
 
 const Order = () => {
   return (
@@ -17,6 +18,12 @@ const Order = () => {
         </div>
         <div className="flex flex-col w-full py-4">
           <ContactForm width="full" />
+          <p>lub</p>
+          <div className="flex flex-row items-center justify-center gap-6 mt-4">
+            <BsTelephoneOutbound size={25} />
+            <BsMessenger size={25} />
+            <BsWhatsapp size={25} />
+          </div>
         </div>
       </div>
     </section>

@@ -7,14 +7,14 @@ const HowToReserve = () => {
         <div className="container mx-auto flex flex-col items-start md:flex-row my-4 md:my-4">
           <div className="flex flex-col w-full sticky md:top-28 lg:w-1/3 mt-2 md:mt-12 px-8">
             <p className="ml-2 text-red-700 uppercase tracking-loose">
-              Working Process
+              Informacja
             </p>
             <p className="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">
-              Working Process of Fest
+              Jak zarezerwować przejazd?
             </p>
             <p className="text-sm md:text-base text-black-50 mb-4">
-              Here’s your guide to the tech fest 2021 process. Go through all
-              the steps to know the exact process of the fest.
+              Przedstawiamy krótki poradnik w jaki sposób zarezerwować przejazd
+              lub wysłać paczkę przez nasz forumlarz rezerwacyjny
             </p>
             <Link
               href="/rezerwacja"
@@ -31,42 +31,45 @@ const HowToReserve = () => {
                 <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                   <div className="order-1 w-5/12"></div>
                   <div className="order-1 w-5/12 px-1 py-4 text-right">
-                    <p className="mb-3 text-base text-black">1-6 May, 2021</p>
+                    <p className="mb-3 text-base text-black">Krok 1</p>
                     <h4 className="mb-3 mr-3 font-bold text-lg md:text-xl">
-                      Registration
+                      Wypełnienie forumalrza
                     </h4>
                     <p className="text-sm md:text-base leading-snug text-black text-opacity-100">
-                      Pick your favourite event(s) and register in that event by
-                      filling the form corresponding to that event. Its that
-                      easy
+                      Wypełnij pola formularza, upewniając się, że dane są
+                      prawidłowe. W przeciwnym razie nasi pracownicy mogą nie
+                      zarezerwować waszego przejazdu! Aby mieć pewność, zalecamy
+                      jak najszybszą rezerwację, nie później niż 3 dni przed
+                      planowanym wyjazdem
                     </p>
                   </div>
                 </div>
                 <div className="mb-8 flex justify-between items-center w-full right-timeline">
                   <div className="order-1 w-5/12"></div>
                   <div className="order-1  w-5/12 px-1 py-4 text-left">
-                    <p className="mb-3 text-base text-black">6-9 May, 2021</p>
+                    <p className="mb-3 text-base text-black">Krok 2</p>
                     <h4 className="mb-3 font-bold text-lg md:text-xl">
-                      Participation
+                      Potwierdzenie terminu
                     </h4>
                     <p className="text-sm md:text-base leading-snug text-black text-opacity-100">
-                      Participate online. The links for your registered events
-                      will be sent to you via email and whatsapp groups. Use
-                      those links and show your talent.
+                      Na wysłany formularz odpowiadamy mailowo do 24h - w
+                      odpowiedzni znajdziecie Państwo cenę za przejazd, czy są
+                      wolne miejsca, numer konta bankowego.
                     </p>
                   </div>
                 </div>
                 <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                   <div className="order-1 w-5/12"></div>
                   <div className="order-1 w-5/12 px-1 py-4 text-right">
-                    <p className="mb-3 text-base text-black"> 10 May, 2021</p>
+                    <p className="mb-3 text-base text-black"> Krok 3</p>
                     <h4 className="mb-3 font-bold text-lg md:text-xl">
-                      Result Declaration
+                      Opłata za przejazd
                     </h4>
                     <p className="text-sm md:text-base leading-snug text-black text-opacity-100">
-                      The ultimate genius will be revealed by our judging panel
-                      on 10th May, 2021 and the resukts will be announced on the
-                      whatsapp groups and will be mailed to you.
+                      Po otrzymaniu informacji zwrotnej należy opłacić przejazd
+                      oraz w odpowiedzi na maila przesłać potwierdzenie
+                      przelewu. Tytuł przelewu powinien zawierać Imię i nazwisko
+                      oraz datę przejazdu.
                     </p>
                   </div>
                 </div>
@@ -75,14 +78,13 @@ const HowToReserve = () => {
                   <div className="order-1 w-5/12"></div>
 
                   <div className="order-1  w-5/12 px-1 py-4">
-                    <p className="mb-3 text-base text-black">12 May, 2021</p>
+                    <p className="mb-3 text-base text-black">Krok 4.</p>
                     <h4 className="mb-3 font-bold  text-lg md:text-xl text-left">
-                      Prize Distribution
+                      Wyjazd
                     </h4>
-                    <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                      The winners will be contacted by our team for their
-                      addresses and the winning goodies will be sent at their
-                      addresses.
+                    <p className="text-sm md:text-base leading-snug text-black text-opacity-100">
+                      Zjawienie się minimum 15min przed planowaną godziną
+                      odjazdu.
                     </p>
                   </div>
                 </div>

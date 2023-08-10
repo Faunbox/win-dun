@@ -16,8 +16,9 @@ export const NlNavbar = [
 
 export const PlNavbar = [
   { title: "Start", href: "/" },
-  { title: "Flota", href: "/flota" },
+  // { title: "Flota", href: "/flota" },
   { title: "Przed podróżą", href: "/przed-podroza" },
+  { title: "Regulamin", href: "/flota" },
   { title: "Kontakt", href: "/kontakt" },
   { title: "Rezerwacja", href: "/rezerwacja" },
 ];
