@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import sgMail from "@sendgrid/mail";
-import { log } from "console";
 
 interface mail {
   to: string;
@@ -20,31 +19,47 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY || "");
 export async function POST(req: Request) {
   let response: ResponseData = {};
   const data = await req.json();
+
   console.log(data);
-  
 
   const msgToCompany: mail = {
     to: "kontakt@wit-dun.eu", // Change to your recipient
     from: "kontakt@wit-dun.eu", // Change to your verified sender
-    subject: "Wiadomośc z formularza kontaktowego od " + data?.name,
+    subject: data.topic,
     text: data?.message,
     html: `<div>
-    <h1>Wiadomość od: ${data.name}</h1>
-    <h2>Adres email: ${data.email}</h2>
-    <p>Wiadomość: ${data.message}</p>
+    <h1>Wiadomość od: ${data?.name}</h1>
+    <h2>Adres email: ${data?.email}</h2>
+    <p>Wiadomość: ${data?.message}</p>
     </div>`,
   };
 
   const msgToPerson: mail = {
     to: data?.email, // Change to your recipient
     from: "kontakt@wit-dun.eu", // Change to your verified sender
-    subject: "Potwierdzenie wysłania wiadomości",
+    subject: `${data.topic} na dzień ${data?.date.slice(0, 10)}`,
     text: data?.message,
     html: `<div>
-    <h1>Potwierdzenie wysłania wiadomości ze strony www.wit-dun.eu</h1>
-    <h2>Wiadomość od: ${data.name}</h2>
-    <h3>Adres email: ${data.email}</h3>
-    <p>Wiadomość: ${data.message}</p>
+    <h1>Potwierdzenie rezerwacji z formularza</h1>
+    <h2>Imie i nazwisko: ${data?.name + " " + data?.surname}</h2>
+    ${data?.number !== 0 ? "<h2>Ilość osób: " + data?.number + "</h2>" : null}
+    ${
+      data?.weight !== 1
+        ? "<h2>Szacunkowa waga: " + data?.weight + "kg" + "</h2>"
+        : null
+    }
+    <h2>Adres odbioru: ${
+      data?.country + " " + data?.city + " " + data?.street
+    }</h2>
+    ${
+      data?.message !== ""
+        ? "<h2>Wiadomość dodatkowa: " + data?.message + "</h2>"
+        : null
+    }
+    <h3>Adres email i numer telefonu: ${data?.email + " / " + data?.phone}</h3>
+    <h2>Adres Docelowy: ${
+      data?.countryToGo + " " + data?.cityToGo + " " + data?.streetToGo
+    }</h2>
     </div>`,
   };
 

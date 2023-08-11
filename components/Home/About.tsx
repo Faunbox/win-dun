@@ -1,5 +1,6 @@
 import Link from "next/link";
 import RedButton from "../Typography/GreenButton";
+import { Button } from "@nextui-org/button";
 
 const AboutHomeSection = () => {
   return (
@@ -16,7 +17,12 @@ const AboutHomeSection = () => {
           </p>
         </div>
         <Link href={"/o-nas"}>
-          <RedButton>Dowiedz się więcej {"->"}</RedButton>
+          <Button
+          type="submit"
+          color="success"
+          radius="none"
+          className="mx-auto w-full max-w-[300px] text-white disabled:text-black p-6 hover:scale-110 transition-transform duration-500"
+        >Dowiedz się więcej {"->"}</Button>
         </Link>
       </div>
     </section>

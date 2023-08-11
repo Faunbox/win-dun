@@ -4,7 +4,7 @@ import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { Textarea } from "@nextui-org/react";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { RiMailSendLine } from "react-icons/ri";
 
 interface Input {
@@ -25,8 +25,6 @@ const ContactForm = ({ width }: { width: string }) => {
     email: "",
     message: "",
   });
-
-  useEffect(() => console.log(width), []);
 
   const widthVariants: Variants = {
     quater: "md:w-8/12",
@@ -131,7 +129,7 @@ const ContactForm = ({ width }: { width: string }) => {
         <Button
           type="submit"
           isDisabled={!isCheckd}
-          color="secondary"
+          color="success"
           radius="none"
           className="mx-auto w-full max-w-[300px] text-white disabled:text-black p-4 hover:scale-110 transition-transform duration-500"
         >

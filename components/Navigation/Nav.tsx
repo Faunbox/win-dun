@@ -16,7 +16,7 @@ const Nav = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (
-    <header className="sticky container top-0 right-0 left-0 mx-auto min-w-[100vw] lg:justify-center lg:flex lg:items-center backdrop-blur-sm border-b-2 z-50">
+    <header className="fixed container top-0 right-0 left-0 mx-auto min-w-[100vw] lg:justify-center lg:flex lg:items-center backdrop-blur-sm bg-gray-700 bg-opacity-40 z-50">
       {/* Desktop navbar */}
       <nav className="hidden lg:grid lg:grid-cols-6 justify-between container mx-10 my-5">
         {/* Logo */}
@@ -74,13 +74,13 @@ const Nav = () => {
               )
             )}
           {/* Locale */}
-          <li className="flex items-center justify-center gap-1  hover:scale-110 transition-transform duration-300">
-            <BiPhoneOutgoing color="green" size={25} />
-            <a href="phone:+48505216526" className="text-lg font-semibold">
+          <li className="flex items-center justify-center gap-1 hover:scale-110 transition-transform duration-300 mix-blend-difference">
+            <BiPhoneOutgoing color="#994F3B" size={25} />
+            <a href="phone:+48505216526" className="text-lg font-semibold text-white mix-blend-saturation">
             505 216 526
             </a>
           </li>
-          <li className="flex justify-end items-center ">
+          <li className="flex justify-end items-center ">   
             <NavDropdown />
           </li>
         </ul>

@@ -16,9 +16,9 @@ const Footer = () => {
   const locale = useLocale();
 
   return (
-    <footer className="w-full text-gray-100 bg-gray-800 body-font relative">
-      <div className="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
-        <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
+    <footer className="w-full text-gray-100 bg-[#171213] body-font relative">
+      <div className="container flex flex-col lg:flex-row flex-wrap lg:flex-nowrap px-5 py-10 lg:py-18 mx-auto md:items-center lg:items-start ">
+        <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left md:mb-10">
           <a className="flex items-center justify-center font-medium text-gray-300 title-font md:justify-start">
             <Image
               src="/images/logo-dark.png"
@@ -32,7 +32,7 @@ const Footer = () => {
             Transport Holandia, Niemcy
           </p>
           <div className="mt-4 w-64">
-            <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-around">
+            <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-around gap-20">
               <a className="text-gray-100 cursor-pointer hover:text-gray-300">
                 <svg
                   fill="currentColor"

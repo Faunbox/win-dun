@@ -6,7 +6,7 @@ import Calendar from "../lib/Datepicker";
 import axios from "axios";
 import { useForm, InputType } from "@/context/formContext";
 
-const PeopleForm = () => {
+const BigForm = () => {
   const { peopleForm, setPeopleForm } = useForm();
 
   const handleOnChange = (
@@ -29,16 +29,16 @@ const PeopleForm = () => {
       city,
       street,
       country,
-      numer,
       date,
       phone,
+      weight,
       message,
       countryToGo,
       cityToGo,
       streetToGo,
     }: InputType = peopleForm;
 
-    const topic = "Rezerwacja przejazdu"
+    const topic = "Rezerwacja przewozu gabarytów";
 
     await axios({
       method: "post",
@@ -50,14 +50,14 @@ const PeopleForm = () => {
         city,
         street,
         country,
-        numer,
         date,
+        weight,
         phone,
         message,
         countryToGo,
         cityToGo,
         streetToGo,
-        topic
+        topic,
       },
       headers: {
         "Content-Type": "application/json",
@@ -148,13 +148,14 @@ const PeopleForm = () => {
               />
               <Input
                 type="number"
-                name="numer"
-                id="numer"
+                name="weight"
+                id="weight"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="1"
+                placeholder="200kg"
+                endContent={"kg"}
                 radius="none"
-                label="Ilość osób"
+                label="Szacunkowa waga"
                 isRequired={true}
                 autoComplete="on"
                 onChange={handleOnChange}
@@ -273,4 +274,4 @@ const PeopleForm = () => {
   );
 };
 
-export default PeopleForm;
+export default BigForm;

@@ -29,21 +29,21 @@ const Calendar = ({ label, placeholder }) => {
       }
       minDate={new Date()}
       filterDate={isWeekday}
-      customInput={
-        <Input
-          type="date"
-          name="date"
-          id="date"
-          variant="bordered"
-          labelPlacement="outside"
-          // placeholder={placeholder ? placeholder : null}
-          radius="none"
-          label={label}
-          isRequired={true}
-          className="w-full"
-        />
-      }
-      portalId="tak"
+      // customInput={
+      //   <Input
+      //     type="date"
+      //     name="date"
+      //     id="date"
+      //     variant="bordered"
+      //     labelPlacement="outside"
+      //     // placeholder={placeholder ? placeholder : null}
+      //     radius="none"
+      //     label={label}
+      //     isRequired={true}
+      //     className="w-full"
+      //   />
+      // }
+      // portalId="tak"
       excludeTimes={true}
     />
   );

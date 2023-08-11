@@ -22,8 +22,8 @@ module.exports = {
       themes: {
         light: {
           colors: {
-            primary: "#AD1917",
-            secondary: "#12A150",
+            primary: "#D5B1A5",
+            secondary: "#BF8070",
           },
         },
       },

@@ -9,7 +9,7 @@ const Contact = () => {
   const t = useTranslations("quater");
 
   return (
-    <div className="bg-gray-50 flex flex-col text-center justify-center items-center p-4 w-screen">
+    <div className="bg-gray-50 flex flex-col text-center mt-20 justify-center items-center p-4 w-screen">
       <SectionHeader>Kontakt</SectionHeader>
       <h2 className="text-xl font-light mb-5">
         Masz pytanie na które nie znalazłeś odpowiedzi?

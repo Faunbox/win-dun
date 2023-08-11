@@ -1,6 +1,6 @@
 import SectionHeader from "../Typography/SectionHeader";
 import { MdAirlineSeatReclineNormal } from "react-icons/md";
-import { PiPlugBold } from "react-icons/pi";
+import { BiWind } from "react-icons/bi";
 import { BsUsbPlug } from "react-icons/bs";
 
 const HomeBuses = () => {
@@ -14,8 +14,8 @@ const HomeBuses = () => {
             <p className="text-xl font-bold">Komfortowe siedzenia</p>
           </li>
           <li className="flex flex-col justify-center items-center gap-4">
-            <PiPlugBold size={70} className="text-red-800" />
-            <p className="text-xl font-bold ">Gniazda 230V</p>
+            <BiWind size={70} className="text-red-800" />
+            <p className="text-xl font-bold ">Klimatyzacja</p>
           </li>
           <li className="flex flex-col justify-center items-center gap-4">
             <BsUsbPlug size={70} className="text-red-800" />

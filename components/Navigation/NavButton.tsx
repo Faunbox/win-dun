@@ -1,10 +1,11 @@
+import { Button } from "@nextui-org/button";
 import { ReactNode } from "react";
 
 const NavButton = ({ children }: { children: ReactNode }) => {
   return (
-    <button className="bg-red-700 text-white p-3 -z-10 ">
+    <Button radius="none" color="primary" className=" text-black p-4">
       {children}
-    </button>
+    </Button>
   );
 };
 

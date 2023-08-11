@@ -9,10 +9,10 @@ const HeroSection = () => {
   const t = useTranslations("homePage");
 
   return (
-    <div className="section-container bg-[url('/images/hero9.jpg')] w-screen h-screen bg-right ">
+    <div className="section-container bg-[url('/images/hero10.jpg')] w-screen h-screen bg-right ">
       <div className="container  flex flex-col md:flex-row justify-center items-start mx-auto align-middle relative px-4 py-10 lg:py-0">
         <aside className="flex flex-col  justify-center items-center w-full md:w-6/12 mx-auto absolute top-[45%] left-[50%] -translate-x-1/2 -z-1 text-gray-50">
-          <h1 className="text-xl md:text-3xl font-bold uppercase border-b-1 border-black ">
+          <h1 className="text-xl md:text-3xl font-bold uppercase  border-black ">
             {t("homeDescription1")}
           </h1>
           <div className="flex flex-col">
@@ -28,6 +28,7 @@ const HeroSection = () => {
               <Button
                 disabled={true}
                 color="primary"
+                variant="light"
                 radius="none"
                 size="lg"
                 className="text-white my-1 md:my-8 w-full max-w-[300px] p-2 md:p-4"
@@ -39,8 +40,9 @@ const HeroSection = () => {
             <Link href={"/rezerwacja"} className="md:self-center">
               <Button
                 disabled={true}
-                color="secondary"
+                color="primary"
                 radius="none"
+                variant="light"
                 size="lg"
                 className="text-white my-1 md:my-8 w-full max-w-[300px] p-2 md:p-4"
               >

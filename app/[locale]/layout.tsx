@@ -1,6 +1,8 @@
 import "./globals.css";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import "react-datepicker/dist/react-datepicker.css";
+import "react-multi-carousel/lib/styles.css";
+
 import { Providers } from "./providers";
 import { createTranslator, useLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
