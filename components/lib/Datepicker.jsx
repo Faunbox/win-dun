@@ -24,6 +24,7 @@ const Calendar = ({ label, placeholder }) => {
       inline
       locale={locale}
       selected={peopleForm.date}
+      value={peopleForm.date}
       onChange={(e) =>
         setPeopleForm((prevState) => ({ ...prevState, date: e }))
       }

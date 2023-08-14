@@ -20,7 +20,6 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY || "");
 export async function POST(req: Request) {
   let response: ResponseData = {};
   const data = await req.json();
-  console.log(data);
   
 
   const msgToCompany: mail = {

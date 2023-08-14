@@ -5,9 +5,12 @@ import { Textarea } from "@nextui-org/react";
 import Calendar from "../lib/Datepicker";
 import axios from "axios";
 import { useForm, InputType } from "@/context/formContext";
+import { createPdf } from "../lib/React-pdf";
+import { useRef } from "react";
 
 const PackageForm = () => {
   const { peopleForm, setPeopleForm } = useForm();
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleOnChange = (
     e:
@@ -40,31 +43,23 @@ const PackageForm = () => {
       streetToGo,
     }: InputType = peopleForm;
 
+    const formData = new FormData(formRef.current!);
     const topic = "Rezerwacja przewozu paczek lub listów";
+    formData.append("topic", topic);
+    const formType = "package";
+    formData.append("formType", formType);
+    const pdf = await createPdf();
+    formData.append("pdf", pdf, pdf.name);
+    console.log(Object.fromEntries(formData));
 
     await axios({
       method: "post",
       url: "/api/reservation",
       data: {
-        name,
-        surname,
-        email,
-        city,
-        weight,
-        street,
-        country,
-        date,
-        phone,
-        message,
-        nameToGo,
-        surnameToGo,
-        countryToGo,
-        cityToGo,
-        streetToGo,
-        topic,
+        formData
       },
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "multipart/form-data",
       },
     })
       .then((msg) => alert(msg.data.message))
@@ -72,7 +67,7 @@ const PackageForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} ref={formRef}>
       <div className="flex flex-col md:flex-row gap-4 mt-16">
         <section className="flex flex-col md:flex-row gap-2 md:gap-4 w-full items-center justify-center">
           <div className="flex flex-col gap-2 md:gap-4">
@@ -89,6 +84,7 @@ const PackageForm = () => {
                 label="Imię"
                 isRequired={true}
                 autoComplete="on"
+                value={peopleForm.name}
                 onChange={handleOnChange}
                 className=""
               />
@@ -103,6 +99,7 @@ const PackageForm = () => {
                 label="Nazwisko"
                 isRequired={true}
                 autoComplete="on"
+                value={peopleForm.surname}
                 onChange={handleOnChange}
                 className=""
               />
@@ -119,6 +116,7 @@ const PackageForm = () => {
                 label="Miejscowość"
                 isRequired={true}
                 autoComplete="on"
+                value={peopleForm.city}
                 onChange={handleOnChange}
                 className=""
               />
@@ -133,6 +131,7 @@ const PackageForm = () => {
                 label="Ulica"
                 isRequired={true}
                 autoComplete="on"
+                value={peopleForm.street}
                 onChange={handleOnChange}
                 className=""
               />
@@ -147,6 +146,7 @@ const PackageForm = () => {
                 label="Kraj"
                 isRequired={true}
                 autoComplete="on"
+                value={peopleForm.country}
                 onChange={handleOnChange}
                 className=""
               />
@@ -162,6 +162,7 @@ const PackageForm = () => {
                 label="Szacunkowa waga"
                 isRequired={true}
                 autoComplete="on"
+                value={peopleForm.weight}
                 onChange={handleOnChange}
                 className=""
               />
@@ -181,6 +182,7 @@ const PackageForm = () => {
                     label="Numer telefonu"
                     isRequired={true}
                     autoComplete="on"
+                    value={peopleForm.phone}
                     onChange={handleOnChange}
                     className=""
                   />
@@ -195,6 +197,7 @@ const PackageForm = () => {
                     label="Adres email"
                     isRequired={true}
                     autoComplete="on"
+                    value={peopleForm.email}
                     onChange={handleOnChange}
                     className=""
                   />
@@ -208,6 +211,7 @@ const PackageForm = () => {
                   placeholder="Dwie paczki i list"
                   radius="none"
                   label="Dodatkowe informacje"
+                  value={peopleForm.message}
                   onChange={handleOnChange}
                   fullWidth
                 />
@@ -230,6 +234,7 @@ const PackageForm = () => {
                     label="Imie osoby odbierającej"
                     isRequired={true}
                     autoComplete="on"
+                    value={peopleForm.nameToGo}
                     onChange={handleOnChange}
                     className=""
                   />
@@ -244,6 +249,7 @@ const PackageForm = () => {
                     label="Nazwisko osoby odbierającej"
                     isRequired={true}
                     autoComplete="on"
+                    value={peopleForm.surnameToGo}
                     onChange={handleOnChange}
                     className=""
                   />
@@ -260,6 +266,7 @@ const PackageForm = () => {
                     label="Kraj"
                     isRequired={true}
                     autoComplete="on"
+                    value={peopleForm.countryToGo}
                     onChange={handleOnChange}
                     className=""
                   />
@@ -274,6 +281,7 @@ const PackageForm = () => {
                     label="Miejscowość"
                     isRequired={true}
                     autoComplete="on"
+                    value={peopleForm.cityToGo}
                     onChange={handleOnChange}
                     className=""
                   />
@@ -288,6 +296,7 @@ const PackageForm = () => {
                     label="Ulica"
                     isRequired={true}
                     autoComplete="on"
+                    value={peopleForm.streetToGo}
                     onChange={handleOnChange}
                     className=""
                   />

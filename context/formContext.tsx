@@ -25,6 +25,7 @@ export interface InputType {
   countryToGo: string;
   cityToGo: string;
   streetToGo: string;
+  pdf?: React.JSX.Element;
 }
 
 export type StateContextType = {
@@ -32,14 +33,15 @@ export type StateContextType = {
   setPeopleForm: Dispatch<SetStateAction<InputType>>;
 };
 
-const FormContext = createContext<null | StateContextType>(null);
+const FormContext = createContext<StateContextType | any>(
+  {} as StateContextType
+);
 
 export function useForm() {
   return useContext(FormContext);
 }
 
 export function FormProvider({ children }: { children: ReactNode }) {
-  const [form, setForm] = useState("people");
   const [peopleForm, setPeopleForm] = useState<InputType>({
     name: "",
     surname: "",
@@ -47,7 +49,7 @@ export function FormProvider({ children }: { children: ReactNode }) {
     city: "",
     street: "",
     country: "",
-    numer: 0,
+    numer: 1,
     weight: 1,
     date: new Date(),
     phone: 1,
