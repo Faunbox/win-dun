@@ -49,7 +49,7 @@ const PackageForm = () => {
     const formType = "package";
     formData.append("formType", formType);
     const pdf = await createPdf();
-    formData.append("pdf", pdf, pdf.name);
+    formData.append("pdf", pdf);
     console.log(Object.fromEntries(formData));
 
     await axios({

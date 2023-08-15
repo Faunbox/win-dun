@@ -2,6 +2,7 @@ import SectionHeader from "../Typography/SectionHeader";
 import { MdAirlineSeatReclineNormal } from "react-icons/md";
 import { BiWind } from "react-icons/bi";
 import { BsUsbPlug } from "react-icons/bs";
+import Slider from "./Slider";
 
 const HomeBuses = () => {
   return (
@@ -23,13 +24,10 @@ const HomeBuses = () => {
           </li>
           <li className="flex flex-col justify-center items-center gap-4">
             <MdAirlineSeatReclineNormal size={70} className="text-red-800" />
-            <p className="text-xl font-bold ">Gniazda safd</p>
-          </li>
-          <li className="flex flex-col justify-center items-center gap-4">
-            <MdAirlineSeatReclineNormal size={70} className="text-red-800" />
-            <p className="text-xl font-bold ">Coś</p>
+            <p className="text-xl font-bold ">Duża powierzchnia ładunkowa</p>
           </li>
         </ul>
+        <Slider />
       </div>
     </section>
   );

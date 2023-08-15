@@ -16,13 +16,13 @@ const AboutHomeSection = () => {
             spędzonych na awarii pojazdu
           </p>
         </div>
-        <Link href={"/o-nas"}>
+        <Link href={"/kontakt"}>
           <Button
           type="submit"
           color="success"
           radius="none"
           className="mx-auto w-full max-w-[300px] text-white disabled:text-black p-6 hover:scale-110 transition-transform duration-500"
-        >Dowiedz się więcej {"->"}</Button>
+        >Zamów przejazd {"->"}</Button>
         </Link>
       </div>
     </section>

@@ -1,24 +1,24 @@
 export const EnNavbar = [
-  { title: "About", href: "/about" },
-  { title: "Gallery", href: "/gallery" },
+  { title: "Home", href: "/en" },
   { title: "Before Travel", href: "/before-travel" },
+  { title: "Terms", href: "/terms" },
   { title: "Contact", href: "/contact" },
   { title: "Reservation", href: "/reservation" },
 ];
 
 export const NlNavbar = [
-  { title: "About NL", href: "/about" },
-  { title: "Gallery NL", href: "/gallery" },
-  { title: "BF travel NL", href: "/bftravel" },
+  { title: "Home NL", href: "/nl" },
+  { title: "Before Travel NL", href: "/before-travel" },
+  { title: "Terms NL", href: "/terms" },
   { title: "Contact NL", href: "/contact" },
-  { title: "Reservation NL", href: "/reservation" },
+  { title: "Reservation NL", href: "/reservation" }
 ];
 
 export const PlNavbar = [
   { title: "Start", href: "/" },
   // { title: "Flota", href: "/flota" },
   { title: "Przed podróżą", href: "/przed-podroza" },
-  { title: "Regulamin", href: "/flota" },
+  { title: "Regulamin", href: "/regulamin" },
   { title: "Kontakt", href: "/kontakt" },
   { title: "Rezerwacja", href: "/rezerwacja" },
 ];
