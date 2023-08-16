@@ -1,6 +1,7 @@
 {
   "core": {
     "website": "PL description",
+    "keywords": "",
     "navbar": [
       { "title": "Start", "href": "/" },
       { "title": "Flota", "href": "/galeria" },
@@ -161,26 +162,23 @@
     "question5": "Jaka jest cena przewozu zwierzat?",
     "response5": "Cena za przewóz zwierząt jest adekwatna do aktualnej ceny za przejazd pasażera - wysokość tej kwoty jest zależna od wybranej trasy."
   },
-  "luggage": {
-    "title": "Bagaż",
-    "description": "Jakiś opis jak przygotować paczkę lub gabaryt wraz ze zdjeciami"
-  },
   "termsOfUse": {
-    "terms": [
-      "Pod pojęciem przewozu rozumie się przejazd osoby z adresu na adres. Z przewozu może korzystać każdy, kto posiada dokumenty uprawniające do przekraczania granicy. W przypadku osób nieletnich, potrzebne jest dodatkowo oświadczenie rodzica lub opiekuna prawnego o zgodzie na przejazd.",
-      "Zwierzęta mogą być przewożone pod warunkiem posiadania ważnej książeczki szczepień oraz paszportu i transportera.",
-      "Bilet można wykupić w jedną lub dwie strony, w miejsca z i do których kursujemy. Przy zamówieniu pasażer dostaje informację ustną o konieczności potwierdzenia przejazdu dzień przed wyjazdem do godziny 13.",
-      "Pasażer może zabrać ze sobą:",
-      "a) Jedną sztukę bagażu o wadze do 20 kg i o wymiarach standardowej walizki",
-      "b) Jedną sztukę małego bagażu o wymiarach pozwalających na swobodne umieszczenie bagażu pod siedzeniem. Rozmiar bagażu podręcznego nie powinien utrudniać swobody podróży pozostałym pasażerom.",
-      "W pojazdach obowiązuje całkowity zakaz palenia tytoniu, spożywania napojów alkoholowych oraz palenia e-papierosów.",
-      "W przypadku odbierania osób z adresu za granicą godzina powrotu ustalana jest telefonicznie dzień przed wyjazdem.",
-      "Z uwagi na specyfikę działalności nie istnieje regularny rozkład jazdy. Rozkład jazdy ustalany jest na bieżąco na podstawie rezerwacji dokonywanych telefonicznie lub za pośrednictwem strony internetowej.",
-      "Przewoźnik nie odpowiada za rzeczy pozostawione przez pasażera.",
-      "Przewoźnik ma prawo odmówić zabrania lub pozostawić pasażera na trasie w przypadku gdy pasażer:",
-      "a) zachowuje się w sposób uciążliwy dla pasażerów, jest agresywny, utrudnia pracę kierowcy oraz powoduje zagrożenie bezpieczeństwa przejazdu",
-      "b) jest w stanie nietrzeźwym lub pod wpływem środków odurzających",
-      "Wyjazd lub powrót niepotwierdzony przez pasażera w przeddzień ustalonego terminu (do godziny 13:00) jest równoznaczny z rezygnacją z przejazdu. Nie przysługują wówczas żadne roszczenia."
-    ]
+    "title": "Regulamin przejazdów",
+    "terms": {
+      "1": "1) Pod pojęciem przewozu rozumie się przejazd osoby z adresu na adres. Z przewozu może korzystać każdy, kto posiada dokumenty uprawniające do przekraczania granicy. W przypadku osób nieletnich, potrzebne jest dodatkowo oświadczenie rodzica lub opiekuna prawnego o zgodzie na przejazd.",
+      "2": "2) Zwierzęta mogą być przewożone pod warunkiem posiadania ważnej książeczki szczepień oraz paszportu i transportera.",
+      "3": "3) Bilet można wykupić w jedną lub dwie strony, w miejsca z i do których kursujemy. Przy zamówieniu pasażer dostaje informację ustną o konieczności potwierdzenia przejazdu dzień przed wyjazdem do godziny 13.",
+      "Luggage": "4) Pasażer może zabrać ze sobą:",
+      "Luggage1": "4a) Jedną sztukę bagażu o wadze do 20 kg i o wymiarach standardowej walizki",
+      "Luggage2": "4b) Jedną sztukę małego bagażu o wymiarach pozwalających na swobodne umieszczenie bagażu pod siedzeniem. Rozmiar bagażu podręcznego nie powinien utrudniać swobody podróży pozostałym pasażerom.",
+      "4": "5) W pojazdach obowiązuje całkowity zakaz palenia tytoniu, spożywania napojów alkoholowych oraz palenia e-papierosów.",
+      "5": "6) W przypadku odbierania osób z adresu za granicą godzina powrotu ustalana jest telefonicznie dzień przed wyjazdem.",
+      "6": "7) Z uwagi na specyfikę działalności nie istnieje regularny rozkład jazdy. Rozkład jazdy ustalany jest na bieżąco na podstawie rezerwacji dokonywanych telefonicznie lub za pośrednictwem strony internetowej.",
+      "7": "8) Przewoźnik nie odpowiada za rzeczy pozostawione przez pasażera.",
+      "Negative": "9) Przewoźnik ma prawo odmówić zabrania lub pozostawić pasażera na trasie w przypadku gdy pasażer:",
+      "Negative1": "9a) zachowuje się w sposób uciążliwy dla pasażerów, jest agresywny, utrudnia pracę kierowcy oraz powoduje zagrożenie bezpieczeństwa przejazdu",
+      "Negative2": "9b) jest w stanie nietrzeźwym lub pod wpływem środków odurzających",
+      "8": "10) Wyjazd lub powrót niepotwierdzony przez pasażera w przeddzień ustalonego terminu (do godziny 13:00) jest równoznaczny z rezygnacją z przejazdu. Nie przysługują wówczas żadne roszczenia."
+    }
   }
 }
