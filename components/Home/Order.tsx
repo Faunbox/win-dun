@@ -20,9 +20,18 @@ const Order = () => {
           <ContactForm width="full" />
           <p>lub</p>
           <div className="flex flex-row items-center justify-center gap-6 mt-4">
-            <BsTelephoneOutbound size={25} />
-            <BsMessenger size={25} />
-            <BsWhatsapp size={25} />
+            <a href="tel:+48505216526">
+              <BsTelephoneOutbound size={25} />
+            </a>
+            <a href="https://m.me/107516904418538" target={"_blank"}>
+              <BsMessenger size={25} />
+            </a>
+            <a
+              href="https://api.whatsapp.com/send?phone=505216526"
+              target={"_blank"}
+            >
+              <BsWhatsapp size={25} />
+            </a>
           </div>
         </div>
       </div>

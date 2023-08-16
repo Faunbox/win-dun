@@ -3,6 +3,7 @@ import HomeBuses from "@/components/Home/Buses";
 import HeroSection from "@/components/Home/HeroSection";
 import OffertSection from "@/components/Home/Offert";
 import Order from "@/components/Home/Order";
+import Slider from "@/components/Home/Slider";
 import Why from "@/components/Home/Why";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Why />
       <AboutHomeSection />
       <HomeBuses />
+      <Slider />
       <Order />
     </>
   );

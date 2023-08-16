@@ -6,11 +6,11 @@ const Slider = () => {
   const [ref] = useKeenSlider<HTMLDivElement>(
     {
       breakpoints: {
-        "(min-width: 400px)": {
-          slides: { perView: 2, spacing: 5 },
+        "(min-width: 735px)": {
+          slides: { perView: 2 },
         },
         "(min-width: 1000px)": {
-          slides: { perView: 3, spacing: 10 },
+          slides: { perView: 3 },
         },
       },
       slides: { perView: 1 },
@@ -49,27 +49,35 @@ const Slider = () => {
   );
 
   return (
-    <div ref={ref} className="keen-slider">
+    <div ref={ref} className="keen-slider container my-20">
       <div className="keen-slider__slide">
         <Image src="/images/paczki.jpg" alt="paczki" width={600} height={400} />
       </div>
-      <div className="keen-slider__slide">
+      <div className="keen-slider__slide min-h-[80vh]">
         <Image
           src="/images/pakowanie.jpg"
           alt="paczki"
           width={600}
           height={400}
+          className="h-full w-full"
         />
       </div>
-      <div className="keen-slider__slide">
-        <Image src="/images/paczki.jpg" alt="paczki" width={600} height={400} />
-      </div>
-      <div className="keen-slider__slide">
+      <div className="keen-slider__slide min-h-[80vh]">
         <Image
-          src="/images/pakowanie.jpg"
+          src="/images/paczki.jpg"
           alt="paczki"
           width={600}
           height={400}
+          className="h-full w-full"
+        />
+      </div>
+      <div className="keen-slider__slide min-h-[80vh]">
+        <Image
+          src="/images/zwierze.jpg"
+          alt="paczki"
+          width={600}
+          height={400}
+          className="h-full w-full"
         />
       </div>
     </div>

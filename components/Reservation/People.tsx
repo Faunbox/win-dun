@@ -38,7 +38,7 @@ const PeopleForm = () => {
       streetToGo,
     }: InputType = peopleForm;
 
-    const topic = "Rezerwacja przejazdu"
+    const topic = "Rezerwacja przejazdu";
 
     await axios({
       method: "post",
@@ -57,7 +57,7 @@ const PeopleForm = () => {
         countryToGo,
         cityToGo,
         streetToGo,
-        topic
+        topic,
       },
       headers: {
         "Content-Type": "application/json",
@@ -69,11 +69,11 @@ const PeopleForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="flex flex-col md:flex-row gap-4 mt-16">
-        <aside className="flex flex-col md:flex-row gap-2 md:gap-4 w-full ">
-          <div className="flex flex-col gap-2 md:gap-4">
-            <h3 className="font-light text-lg">Twoje dane</h3>
-            <div className="flex flex-row gap-2 md:gap-4">
+      <div className="flex flex-col sm:flex-row gap-4 mt-4 sm:mt-16">
+        <aside className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full ">
+          <div className="flex flex-col gap-2 sm:gap-4">
+            <h3 className="font-light text-lg my-4">Twoje dane</h3>
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
               <Input
                 type="text"
                 name="name"
@@ -103,7 +103,7 @@ const PeopleForm = () => {
                 className=""
               />
             </div>
-            <div className="flex flex-row gap-2 md:gap-4">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
               <Input
                 type="text"
                 name="city"
@@ -161,10 +161,10 @@ const PeopleForm = () => {
                 className=""
               />
             </div>
-            <div className="flex flex-row gap-2 md:gap-4 justify-around mt-5">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-around mt-5">
               <Calendar label={"label"} placeholder={"placeholder"} />
-              <div className="flex flex-col gap-2 md:gap-4 justify-center items-start">
-                <div className="flex flex-row gap-2 md:gap-4">
+              <div className="flex flex-col gap-2 sm:gap-4 justify-center items-center sm:items-start">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
                   <Input
                     type="number"
                     name="phone"
@@ -209,10 +209,10 @@ const PeopleForm = () => {
               </div>
             </div>
 
-            <div className="flex flex-row gap-2 md:gap-4"></div>
-            <div className="flex flex-col gap-2 md:gap-4 mt-8">
+            {/* <div className="flex flex-row gap-2 sm:gap-4"></div> */}
+            <div className="flex flex-col gap-2 sm:gap-4 mt-8 items-center  ">
               <h3 className="font-light text-lg">Twoje miejsce docelowe</h3>
-              <div className="flex flex-row gap-2 md:gap-4">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
                 <Input
                   type="text"
                   name="countryToGo"

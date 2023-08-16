@@ -27,7 +27,7 @@ const HomeBuses = () => {
             <p className="text-xl font-bold ">Duża powierzchnia ładunkowa</p>
           </li>
         </ul>
-        <Slider />
+        
       </div>
     </section>
   );

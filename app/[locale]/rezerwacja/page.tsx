@@ -36,7 +36,7 @@ const Reservation = () => {
           </Radio>
         </RadioGroup>
       </div>
-      <div className=" w-9/12 mt-8  bg-gray-50 bg-opacity-70 border-1 border-black">
+      <div className="w-full lg:w-9/12 mt-8  bg-gray-50 bg-opacity-70 border-1 border-black items-center px-4">
         <Forms state={selected} />
       </div>
     </div>
