@@ -11,9 +11,8 @@ const OffertSection = () => {
   return (
     <section className="section-container bg-gray-300 min-h-[40vh] py-10">
       <div className="container flex flex-col md:p-4 justify-center items-center">
-        <SectionHeader>{t("nameServices")}</SectionHeader>
+        <SectionHeader>{t("services.title")}</SectionHeader>
         <div className="grid grid-flow-row md:grid-cols-3 gap-5 md:gap-10 my-2 justify-center items-start md:justify-around">
-          
           {locale === "pl" &&
             OffertPL?.map(
               ({

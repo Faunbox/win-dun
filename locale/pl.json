@@ -16,8 +16,51 @@
     "homeDescription3": "W każdy piątek, sobotę i niedziele.",
     "heroButton": "Zarezerwuj przejazd",
     "heroPhone": "Wyślij paczkę",
-    "nameServices": "Nasze usługi",
-    "whyOurCompany": "Dlaczego my?",
+    "services": {
+      "title": "Nasze usługi",
+      "header1": "Przewóz osób oraz zwierząt",
+      "description1": "Zapewniamy komfort, punktualność oraz bezpieczeństwo. Nasza wykwalifikowana kadra, doświadczenie oraz nowoczesny tabor pojazdów pozwala nam realizować transport na najwyższym poziomie.",
+      "header2": "Przewóz listów, paczek oraz gabarytów",
+      "description2": "Możesz polegać na naszej skuteczności i terminowości. Nasz zespół zadba o bezpieczne i szybkie dostarczenie Twoich paczek w wyznaczone miejsce, bez względu na ich rozmiar czy wrażliwość",
+      "header3": "Przeprowadzki",
+      "description3": "Zdajemy sobie sprawę, że przeprowadzka to ważne wydarzenie w życiu każdej osoby, dlatego naszym celem jest zapewnienie Ci bezpiecznej, sprawnie zorganizowanej i komfortowej przeprowadzki."
+    },
+    "whyOurCompany": {
+      "title": "Dlaczego my?",
+      "texts": {
+        "header1": "Header 1",
+        "description1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
+        "header2": "Header 2",
+        "description2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
+
+        "header3": "Header 3",
+        "description3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
+
+        "header4": "Header 4",
+        "description4": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
+
+        "header5": "Header 5",
+        "description5": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
+
+        "header6": "Header 6",
+        "description6": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro."
+      }
+    },
+    "about": {
+      "text1": "Ponad",
+      "span1": "600",
+      "text2": "wyjazdów od drzwi do drzwi",
+      "span2": "0",
+      "text3": "minut spędzonych na awarii pojazdu",
+      "button": "Zamów przejazd"
+    },
+    "bus": {
+      "title":"NASZE BUSY POSIADAJĄ",
+      "text1": "Komfortowe siedzenia",
+      "text2": "Klimatyzacja",
+      "text3": "Gniazda USB",
+      "text4": "Duża powierzchnia ładunkowa"
+    },
     "nameAbout": "O nas",
     "aboutDescription": "Jesteśmy dynamiczną firmą, która specjalizuje się w kompleksowych usługach transportowych. Od lat świadczymy profesjonalne usługi przewozu osób, paczek oraz zwierząt, zapewniając naszym klientom bezpieczne i komfortowe podróże. Nasz priorytet to zadowolenie i satysfakcja naszych klientów. Dlatego dbamy o każdy detal naszych usług, gwarantując wysoką jakość i niezawodność. Nasza wykwalifikowana kadra, doświadczenie oraz nowoczesny tabor pojazdów pozwala nam realizować transport na najwyższym poziomie."
   },
@@ -31,124 +74,25 @@
     "description6": "Naszą misją jest zapewnienie Ci nie tylko usług transportowych, ale także pełnej satysfakcji i poczucia bezpieczeństwa. Dlatego stawiamy na profesjonalizm, elastyczność i indywidualne podejście do każdego klienta. Twoje potrzeby są dla nas najważniejsze, dlatego skupiamy się na doskonaleniu naszych usług i ciągłym podnoszeniu jakości.",
     "description7": "Zapraszamy do skorzystania z naszych usług transportowych i dołączenia do grona zadowolonych klientów. Skontaktuj się z nami już dzisiaj, aby omówić swoje potrzeby i otrzymać indywidualną ofertę. Jesteśmy gotowi podjąć się każdego wyzwania i zapewnić Ci niezawodne rozwiązania transportowe."
   },
-  "gallery": { "title": "Flota" },
   "beforeTravel": { "title": "Przed podróżą" },
   "contact": {
     "title": "Kontakt",
     "text": "Czy masz pytania, potrzebujesz dodatkowych informacji lub chciałbyś skorzystać z naszych usług transportowych? Jesteśmy tutaj, aby Ci pomóc! Nie czekaj, skontaktuj się z nami już dzisiaj i przekonaj się, dlaczego jesteśmy liderem w branży transportowej w swoim regionie.",
     "formHeader": "Formularz kontaktowy",
-    "formButton": "Wyślij zapytanie",
-    "formInputs": [
-      {
-        "label": "Imie i nazwisko lub nazwa firmy",
-        "placeholder": "Jan Kowalski",
-        "type": "text"
-      },
-      {
-        "label": "Numer telefonu",
-        "placeholder": "123-456-789",
-        "type": "number"
-      },
-      {
-        "label": "Twoja wiadomosc",
-        "placeholder": "Chcialbym otrzymac wiecej informacji o...",
-        "type": "text"
-      }
-    ]
+    "formButton": "Wyślij wiadomość",
+    "rodo": "Wyrażam zgodę na przetwarzanie podanych w formularzu kontaktowym danych w celu nawiązania kontaktu",
+    "formInputs": {
+      "label1": "Imie i nazwisko",
+      "placeholder1": "Jan Kowalski",
+
+      "label2": "Adres email / telefon",
+      "placeholder2": "123-456-789",
+
+      "label3": "Twoja wiadomosc",
+      "placeholder3": "Chcialbym otrzymac wiecej informacji o..."
+    }
   },
-  "reservationForm": {
-    "reservation": "Przewóz",
-    "reservationType": [
-      { "text": "Osób", "value": "A" },
-      { "text": "Paczek", "value": "B" }
-    ],
-    "pplSchema": [
-      {
-        "label": "Dokladny adres wyjazdu",
-        "type": "text",
-        "name": "cityFrom",
-        "placeholder": "Przykładowa 5/1 Kraków"
-      },
-      {
-        "label": "Dokladny adres przyjazdu",
-        "type": "text",
-        "name": "cityTo",
-        "placeholder": "Docelowa 18/5 Berlin"
-      },
-      {
-        "label": "Data wyjazdu",
-        "type": "date",
-        "name": "date",
-        "placeholder": "12/05/2023"
-      },
-      {
-        "label": "Ilośc osób",
-        "type": "numer",
-        "name": "ppl",
-        "placeholder": "1"
-      },
-      {
-        "label": "Imię i nazwisko",
-        "type": "text",
-        "name": "name",
-        "placeholder": "Jan Kowalski"
-      },
-      {
-        "label": "Adres email",
-        "type": "email",
-        "name": "email",
-        "placeholder": "przykladowy@gmail.com"
-      },
-      {
-        "label": "Numer telefonu",
-        "type": "numer",
-        "name": "number",
-        "placeholder": "123456789"
-      }
-    ],
-    "parcelSchema": [
-      {
-        "label": "Dokladny adres odbioru",
-        "type": "text",
-        "name": "parcelFrom",
-        "placeholder": "Przykładowa 5/1 Kraków"
-      },
-      {
-        "label": "Dokladny adres dostarczenia",
-        "type": "text",
-        "name": "parcelTo",
-        "placeholder": "Docelowa 18/5 Berlin"
-      },
-      {
-        "label": "Wymiary paczki - wysokosc, szerokosc, dlugosc w centymetrach",
-        "type": "text",
-        "name": "dimensions",
-        "placeholder": "40x40x20"
-      },
-      {
-        "label": "Waga paczki",
-        "type": "text",
-        "name": "weight",
-        "placeholder": "5kg"
-      },
-      { "label": "Data wysylki", "type": "date", "name": "date" },
-      {
-        "label": "Adres email",
-        "type": "email",
-        "name": "email",
-        "placeholder": "przykladowy@gmail.com"
-      },
-      {
-        "label": "Numer telefonu",
-        "type": "numer",
-        "name": "number",
-        "placeholder": "123456789"
-      }
-    ],
-    "checkbox": "Wyrażam zgodę na przetważanie danych osobowych",
-    "localization": "Pobierz lokalizacje",
-    "button": "Rezerwuj"
-  },
+
   "faq": {
     "title": "Najczęsciej zadawane pytania",
     "question1": "Czy jeździmy z adresu pod adres?",

@@ -8,32 +8,20 @@ const Why = () => {
   return (
     <section className="section-container bg-gradient-to-b from-gray-300 to-gray-50 p-4 ">
       <div className="flex flex-col container w-11/12 bg-gray-50 mx-auto py-12 md:p-4 justify-center items-center align-middle">
-        <SectionHeader>{t("whyOurCompany")}</SectionHeader>
+        <SectionHeader>{t("whyOurCompany.title")}</SectionHeader>
         <div className="grid md:grid-rows-none lg:grid-cols-4 items-center">
           <div className="flex flex-col gap-2 px-4">
             <div className="">
-              <h2>Tekst numer jeden</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-                cupiditate debitis dolorem harum doloremque eaque eos, nesciunt
-                possimus commodi porro.
-              </p>
+              <h2>{t("whyOurCompany.texts.header1")}</h2>
+              <p>{t("whyOurCompany.texts.description1")}</p>
             </div>
             <div>
-              <h2>Tekst numer jeden</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-                cupiditate debitis dolorem harum doloremque eaque eos, nesciunt
-                possimus commodi porro.
-              </p>
+              <h2>{t("whyOurCompany.texts.header2")}</h2>
+              <p>{t("whyOurCompany.texts.description2")}</p>
             </div>
             <div>
-              <h2>Tekst numer jeden</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-                cupiditate debitis dolorem harum doloremque eaque eos, nesciunt
-                possimus commodi porro.
-              </p>
+              <h2>{t("whyOurCompany.texts.header3")}</h2>
+              <p>{t("whyOurCompany.texts.description3")}</p>
             </div>
           </div>
           <div className="mx-auto p-4 md:p-0 lg:col-span-2">
@@ -47,28 +35,16 @@ const Why = () => {
           </div>
           <div className="flex flex-col gap-4 px-4 md:px-4">
             <div>
-              <h2>Tekst numer jeden</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-                cupiditate debitis dolorem harum doloremque eaque eos, nesciunt
-                possimus commodi porro.
-              </p>
+              <h2>{t("whyOurCompany.texts.header4")}</h2>
+              <p>{t("whyOurCompany.texts.description4")}</p>
             </div>
             <div>
-              <h2>Tekst numer jeden</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-                cupiditate debitis dolorem harum doloremque eaque eos, nesciunt
-                possimus commodi porro.
-              </p>
+              <h2>{t("whyOurCompany.texts.header5")}</h2>
+              <p>{t("whyOurCompany.texts.description5")}</p>
             </div>
             <div>
-              <h2>Tekst numer jeden</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-                cupiditate debitis dolorem harum doloremque eaque eos, nesciunt
-                possimus commodi porro.
-              </p>
+              <h2>{t("whyOurCompany.texts.header6")}</h2>
+              <p>{t("whyOurCompany.texts.description6")}</p>
             </div>
           </div>
         </div>

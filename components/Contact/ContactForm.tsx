@@ -6,6 +6,7 @@ import { Textarea } from "@nextui-org/react";
 import axios from "axios";
 import { useState } from "react";
 import { RiMailSendLine } from "react-icons/ri";
+import { useTranslations } from "next-intl";
 
 interface Input {
   name: string;
@@ -19,6 +20,8 @@ interface Variants {
 }
 
 const ContactForm = ({ width }: { width: string }) => {
+  const t = useTranslations("contact");
+
   const [isCheckd, setIsCheckd] = useState(false);
   const [inputInfo, setInputInfo] = useState({
     name: "",
@@ -63,7 +66,7 @@ const ContactForm = ({ width }: { width: string }) => {
       } p-4`}
     >
       <h2 className="m-4 font-bold text-2xl border-b-1 self-center border-black uppercase">
-        Formularz kontaktowy
+        {t("formHeader")}
       </h2>
       <form className="flex flex-col px-4 gap-4" onSubmit={handleSubmit}>
         <div className="md:flex md:flex-row md:gap-4">
@@ -74,9 +77,9 @@ const ContactForm = ({ width }: { width: string }) => {
               id="name"
               variant="bordered"
               labelPlacement="outside"
-              placeholder="Jan Kowalski"
+              placeholder={t("formInputs.placeholder1")}
               radius="none"
-              label="Imię i nazwisko"
+              label={t("formInputs.label1")}
               isRequired={true}
               autoComplete="on"
               onChange={handleOnChange}
@@ -91,8 +94,8 @@ const ContactForm = ({ width }: { width: string }) => {
               variant="bordered"
               labelPlacement="outside"
               radius="none"
-              placeholder="jan.kowalski@email.com / 543 210 987"
-              label="Adres email / telefon"
+              placeholder={t("formInputs.placeholder2")}
+              label={t("formInputs.label2")}
               isRequired={true}
               autoComplete="on"
               onChange={handleOnChange}
@@ -107,8 +110,8 @@ const ContactForm = ({ width }: { width: string }) => {
             variant="bordered"
             radius="none"
             labelPlacement="outside"
-            label={"Treść wiadomości"}
-            placeholder="Treść wiadomości"
+            label={t("formInputs.label3")}
+            placeholder={t("formInputs.placeholder3")}
             className="w-full"
             name="message"
             onChange={handleOnChange}
@@ -121,10 +124,7 @@ const ContactForm = ({ width }: { width: string }) => {
             id="checkbox"
             onChange={() => setIsCheckd(!isCheckd)}
           />
-          <label htmlFor="checkbox">
-            Wyrażam zgodę na przetwarzanie podanych w formularzu kontaktowym
-            danych w celu nawiązania kontaktu.
-          </label>
+          <label htmlFor="checkbox">{t("rodo")}</label>
         </div>
         <Button
           type="submit"
@@ -134,7 +134,7 @@ const ContactForm = ({ width }: { width: string }) => {
           className="mx-auto w-full max-w-[300px] text-white disabled:text-black p-4 hover:scale-110 transition-transform duration-500"
         >
           <RiMailSendLine size={20} />
-          Wyślij wiadomość
+          {t("formButton")}
         </Button>
       </form>
     </div>
