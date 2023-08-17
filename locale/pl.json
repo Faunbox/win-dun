@@ -163,26 +163,48 @@
       "8": "10) Wyjazd lub powrót niepotwierdzony przez pasażera w przeddzień ustalonego terminu (do godziny 13:00) jest równoznaczny z rezygnacją z przejazdu. Nie przysługują wówczas żadne roszczenia."
     }
   },
+  "reservation": {
+    "title": "Rezerwacja przejazdu",
+    "chooseForm": "Wybierz odpowiedni formularz",
+    "formsRadio": {
+      "ppl": "Osoby",
+      "package": "Paczki",
+      "big": "Przeprowadzki"
+    },
+    "forms": {
+      "title1": "Twoje dane",
+      "title2": "Twoje miejsce docelowe",
+      "people": {},
+      "package": {},
+      "big": {}
+    }
+  },
+
   "footer": {
     "logoDesc": "Transport Holandia, Niemcy",
     "segments": {
       "1": {
-        "header": "PRZEJAZD",
-        "link1": "Regulamin",
-        "link2": "Polityka prywatności",
-        "link3": "Rezerwacja przejazdu"
-      },
-      "2": {
         "header": "TRANSPORTY",
         "link1": "Transport Polska-Holandia",
         "link2": "Transport Polska-Niemcy",
         "link3": "Przewozy osób i paczek"
       },
+      "2": {
+        "header": "PRZEJAZD",
+        "link1": "Regulamin",
+        "link2": "Polityka prywatności",
+        "link3": "Rezerwacja przejazdu"
+      },
       "3": {
         "header": "MENU",
-        "link1": "Transport Polska-Holandia",
-        "link2": "Transport Polska-Niemcy",
-        "link3": "Przewozy osób i paczek"
+        "link1": "Start",
+        "link2": "Przed podróżą",
+        "link3": "Regulamin",
+        "link4": "Kontakt"
+      },
+      "4": {
+        "header": "KONTAKT",
+        "link1": "Formularz kontaktowy"
       }
     }
   }
