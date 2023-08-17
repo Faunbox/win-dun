@@ -55,7 +55,7 @@
       "button": "Zamów przejazd"
     },
     "bus": {
-      "title":"NASZE BUSY POSIADAJĄ",
+      "title": "NASZE BUSY POSIADAJĄ",
       "text1": "Komfortowe siedzenia",
       "text2": "Klimatyzacja",
       "text3": "Gniazda USB",
@@ -74,9 +74,44 @@
     "description6": "Naszą misją jest zapewnienie Ci nie tylko usług transportowych, ale także pełnej satysfakcji i poczucia bezpieczeństwa. Dlatego stawiamy na profesjonalizm, elastyczność i indywidualne podejście do każdego klienta. Twoje potrzeby są dla nas najważniejsze, dlatego skupiamy się na doskonaleniu naszych usług i ciągłym podnoszeniu jakości.",
     "description7": "Zapraszamy do skorzystania z naszych usług transportowych i dołączenia do grona zadowolonych klientów. Skontaktuj się z nami już dzisiaj, aby omówić swoje potrzeby i otrzymać indywidualną ofertę. Jesteśmy gotowi podjąć się każdego wyzwania i zapewnić Ci niezawodne rozwiązania transportowe."
   },
-  "beforeTravel": { "title": "Przed podróżą" },
+  "beforeTravel": {
+    "title": "Przed podróżą",
+    "howTo": "Jak zarezerwować przejazd?",
+    "info": "INFORMACJA",
+    "instruction": "Przedstawiamy krótki poradnik w jaki sposób zarezerwować przejazd lub wysłać paczkę przez nasz forumlarz rezerwacyjny",
+    "button": "Zarezerwój swój przejazd",
+    "steps": {
+      "1": {
+        "topHeader": "Krok 1",
+        "header": "Wypełnienie forumalrza",
+        "desc": "Wypełnij pola formularza, upewniając się, że dane są prawidłowe. W przeciwnym razie nasi pracownicy mogą nie zarezerwować waszego przejazdu! Aby mieć pewność, zalecamy jak najszybszą rezerwację, nie później niż 3 dni przed planowanym wyjazdem"
+      },
+      "2": {
+        "topHeader": "Krok 2",
+        "header": "Potwierdzenie terminu",
+        "desc": "Na wysłany formularz odpowiadamy mailowo do 24h - w odpowiedzni znajdziecie Państwo cenę za przejazd, czy są wolne miejsca, numer konta bankowego."
+      },
+      "3": {
+        "topHeader": "Krok 3",
+        "header": "Opłata za przejazd",
+        "desc": "Po otrzymaniu informacji zwrotnej należy opłacić przejazd oraz w odpowiedzi na maila przesłać potwierdzenie przelewu. Tytuł przelewu powinien zawierać Imię i nazwisko oraz datę przejazdu."
+      },
+      "4": {
+        "topHeader": "Krok 4",
+        "header": "Wyjazd",
+        "desc": "Zjawienie się minimum 15min przed planowaną godziną odjazdu, która jest uzgadniana telefonicznie w dniu wyjazdu."
+      }
+    },
+    "package": {
+      "luggageTitle": "Jak przygotować paczkę do wysyłki ?",
+      "luggageDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia reiciendis a natus officia reprehenderit autem voluptas debitis. Dicta praesentium iste, obcaecati alias eaque debitis quam dolore, atque eveniet blanditiis beatae.",
+      "luggageInfo": "Tekst o wielkości bagażu i wadze",
+      "button": "Zarezerwuj paczkę"
+    }
+  },
   "contact": {
     "title": "Kontakt",
+    "companyDataTitle": "DANE FIRMY",
     "text": "Czy masz pytania, potrzebujesz dodatkowych informacji lub chciałbyś skorzystać z naszych usług transportowych? Jesteśmy tutaj, aby Ci pomóc! Nie czekaj, skontaktuj się z nami już dzisiaj i przekonaj się, dlaczego jesteśmy liderem w branży transportowej w swoim regionie.",
     "formHeader": "Formularz kontaktowy",
     "formButton": "Wyślij wiadomość",
@@ -95,16 +130,19 @@
 
   "faq": {
     "title": "Najczęsciej zadawane pytania",
-    "question1": "Czy jeździmy z adresu pod adres?",
-    "response1": "Tak, wyjeżdżamy spod dowolnego adresu i dowozimy bezpośrednio pod wskazany adres.",
-    "question2": "Czy są przesiadki?",
-    "response2": "Kursujemy 'od drzwi do drzwi' bez przesiadek. Komfort podrozojacych jest dla nas priorytetem",
-    "question3": "Ile bagażu można z sobą zabrać?",
-    "response3": "W cenie przejazdu przysługują bezpłatny bagaż - podręczny o wadze do 5kg oraz podstawowy waga do 40 kg lub 2 sztuki po 20kg max. Bagaz dodatkowy za dopłata",
-    "question4": "Jak przygotowac zwierze do podrozy?",
-    "response4": "Zwierzę powinno być umieszczone w odpowiednim pojemniku przeznaczonym do podróży, zabezpieczającym przed wyrządzeniem szkody pasażerom lub mieniu firmy. Pojemnik transportowy powinien się znajdować na siedzeniu przy właścicielu bądz w kabinie oddzielonej. Rozmiar pojemnika transportowego musi być dostosowany do wielkości zwierzęcia, nie może jednak przekraczać rozmiarów: wysokość 24 cm, głębokość 28 cm, szerokość 46 cm. ",
-    "question5": "Jaka jest cena przewozu zwierzat?",
-    "response5": "Cena za przewóz zwierząt jest adekwatna do aktualnej ceny za przejazd pasażera - wysokość tej kwoty jest zależna od wybranej trasy."
+    "desc": "Poniżej przedstawiamy odpowiedzi na najczęsciej zadawane pytania. Jeżeli nie znalazłeś satysfakcjonującej Cię odpowiedzi, zapraszamy do kontaktu!",
+    "qna": {
+      "question1": "Czy jeździmy z adresu pod adres?",
+      "response1": "Tak, wyjeżdżamy spod dowolnego adresu i dowozimy bezpośrednio pod wskazany adres.",
+      "question2": "Czy są przesiadki?",
+      "response2": "Kursujemy 'od drzwi do drzwi' bez przesiadek. Komfort podrozojacych jest dla nas priorytetem",
+      "question3": "Ile bagażu można z sobą zabrać?",
+      "response3": "W cenie przejazdu przysługują bezpłatny bagaż - podręczny o wadze do 5kg oraz podstawowy waga do 40 kg lub 2 sztuki po 20kg max. Bagaz dodatkowy za dopłata",
+      "question4": "Jak przygotowac zwierze do podrozy?",
+      "response4": "Zwierzę powinno być umieszczone w odpowiednim pojemniku przeznaczonym do podróży, zabezpieczającym przed wyrządzeniem szkody pasażerom lub mieniu firmy. Pojemnik transportowy powinien się znajdować na siedzeniu przy właścicielu bądz w kabinie oddzielonej. Rozmiar pojemnika transportowego musi być dostosowany do wielkości zwierzęcia, nie może jednak przekraczać rozmiarów: wysokość 24 cm, głębokość 28 cm, szerokość 46 cm. ",
+      "question5": "Jaka jest cena przewozu zwierzat?",
+      "response5": "Cena za przewóz zwierząt jest adekwatna do aktualnej ceny za przejazd pasażera - wysokość tej kwoty jest zależna od wybranej trasy."
+    }
   },
   "termsOfUse": {
     "title": "Regulamin przejazdów",
@@ -123,6 +161,29 @@
       "Negative1": "9a) zachowuje się w sposób uciążliwy dla pasażerów, jest agresywny, utrudnia pracę kierowcy oraz powoduje zagrożenie bezpieczeństwa przejazdu",
       "Negative2": "9b) jest w stanie nietrzeźwym lub pod wpływem środków odurzających",
       "8": "10) Wyjazd lub powrót niepotwierdzony przez pasażera w przeddzień ustalonego terminu (do godziny 13:00) jest równoznaczny z rezygnacją z przejazdu. Nie przysługują wówczas żadne roszczenia."
+    }
+  },
+  "footer": {
+    "logoDesc": "Transport Holandia, Niemcy",
+    "segments": {
+      "1": {
+        "header": "PRZEJAZD",
+        "link1": "Regulamin",
+        "link2": "Polityka prywatności",
+        "link3": "Rezerwacja przejazdu"
+      },
+      "2": {
+        "header": "TRANSPORTY",
+        "link1": "Transport Polska-Holandia",
+        "link2": "Transport Polska-Niemcy",
+        "link3": "Przewozy osób i paczek"
+      },
+      "3": {
+        "header": "MENU",
+        "link1": "Transport Polska-Holandia",
+        "link2": "Transport Polska-Niemcy",
+        "link3": "Przewozy osób i paczek"
+      }
     }
   }
 }
