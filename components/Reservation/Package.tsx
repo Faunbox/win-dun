@@ -48,18 +48,16 @@ const PackageForm = () => {
     formData.append("topic", topic);
     const formType = "package";
     formData.append("formType", formType);
-    const pdf = await createPdf();
+    const pdf = await createPdf;
     formData.append("pdf", pdf);
     console.log(Object.fromEntries(formData));
 
     await axios({
-      method: "post",
+      method: "POST",
       url: "/api/reservation",
-      data: {
-        formData
-      },
+      data: formData,
       headers: {
-        "Content-Type": "multipart/form-data",
+        "Content-Type": "multipart/form-data;base64",
       },
     })
       .then((msg) => alert(msg.data.message))
@@ -168,7 +166,7 @@ const PackageForm = () => {
               />
             </div>
             <div className="flex flex-row gap-2 md:gap-4 justify-around mt-5">
-              <Calendar label={"label"} placeholder={"placeholder"} />
+              <Calendar />
               <div className="flex flex-col gap-2 md:gap-4 justify-center items-start">
                 <div className="flex flex-row gap-2 md:gap-4">
                   <Input

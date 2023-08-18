@@ -25,7 +25,7 @@ export interface InputType {
   countryToGo: string;
   cityToGo: string;
   streetToGo: string;
-  pdf?: React.JSX.Element;
+  pdf?: Blob;
 }
 
 export type StateContextType = {

@@ -1,27 +1,46 @@
-"use client";
-//@ts-expect-error
-import html2pdf from "html2pdf.js/dist/html2pdf";
-import ReactDOMServer from "react-dom/server";
+import React from "react";
+import {
+  Page,
+  Text,
+  View,
+  Document,
+  StyleSheet,
+  pdf,
+} from "@react-pdf/renderer";
+// import ReactPDF from "@react-pdf/renderer";
 
-var opt = {
-  margin: 3,
-  filename: "package.pdf",
-  jsPDF: { unit: "mm", format: "letter", orientation: "l" },
-};
+// Create styles
+const styles = StyleSheet.create({
+  page: {
+    flexDirection: "row",
+  },
+  section: {
+    margin: 10,
+    padding: 10,
+    flexGrow: 1,
+  },
+});
 
-const JsxToHtmlElement = () => {
-  return (
-    <html>
-      <body>
-        <h1>JSX to PDF Convert Example</h1>
-        <h2 style={{ marginBottom: "25px" }}>Hello React</h2>
-      </body>
-    </html>
-  );
-};
+// Create Document Component
+export const MyDocument = (
+  <Document>
+    <Page size="A4" style={styles.page}>
+      <View style={styles.section}>
+        <Text>Section #1</Text>
+      </View>
+      <View style={styles.section}>
+        <Text>Section #2</Text>
+      </View>
+    </Page>
+    <Page size="A4" style={styles.page}>
+      <View style={styles.section}>
+        <Text>Section #3</Text>
+      </View>
+      <View style={styles.section}>
+        <Text>Section #4</Text>
+      </View>
+    </Page>
+  </Document>
+);
 
-export const createPdf = async () => {
-  const pdf = ReactDOMServer.renderToString(JsxToHtmlElement());
-
-  return await html2pdf().set(opt).from(pdf).output();
-};
+export const createPdf = pdf(MyDocument).toBlob();

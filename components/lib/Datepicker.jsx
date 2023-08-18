@@ -3,14 +3,13 @@ import DatePicker, { registerLocale } from "react-datepicker";
 import pl from "date-fns/locale/pl";
 import nl from "date-fns/locale/nl";
 import en from "date-fns/locale/en-GB";
-import { Input } from "@nextui-org/input";
 import { useForm } from "@/context/formContext";
 import { useLocale } from "next-intl";
 registerLocale("pl", pl);
 registerLocale("nl", nl);
 registerLocale("en", en);
 
-const Calendar = ({ label, placeholder }) => {
+const Calendar = () => {
   const locale = useLocale();
   const { peopleForm, setPeopleForm } = useForm();
 
@@ -23,28 +22,12 @@ const Calendar = ({ label, placeholder }) => {
     <DatePicker
       inline
       locale={locale}
-      selected={peopleForm.date}
-      value={peopleForm.date}
-      onChange={(e) =>
-        setPeopleForm((prevState) => ({ ...prevState, date: e }))
-      }
+      onChange={(e) => {
+        setPeopleForm((prevState) => ({ ...prevState, date: e }));
+      }}
       minDate={new Date()}
+      value={peopleForm.date}
       filterDate={isWeekday}
-      // customInput={
-      //   <Input
-      //     type="date"
-      //     name="date"
-      //     id="date"
-      //     variant="bordered"
-      //     labelPlacement="outside"
-      //     // placeholder={placeholder ? placeholder : null}
-      //     radius="none"
-      //     label={label}
-      //     isRequired={true}
-      //     className="w-full"
-      //   />
-      // }
-      // portalId="tak"
       excludeTimes={true}
     />
   );

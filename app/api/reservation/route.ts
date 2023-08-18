@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
 import sgMail from "@sendgrid/mail";
+import { blob } from "stream/consumers";
 interface mail {
   to: string;
   from: string;
-  subject: string;
-  text: string;
+  subject: string | File;
+  text: string | File;
   html: string;
   attachments?: any;
   pdf?: any;
@@ -17,15 +18,26 @@ type ResponseData = {
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY || "");
 
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
+
 export async function POST(req: Request) {
   let response: ResponseData = {};
 
-  const data = await req.json();
+  const form = await req.formData();
+  const data = Object.fromEntries(form);
+  const { pdf } = data;
+  //@ts-expect-error
+  const buffer = Buffer.from(await pdf.text());
+  const base64 = buffer.toString("base64");
 
   const msgToCompany: mail = {
     to: "faunbox2@gmail.com", // Change to your recipient
     from: "kontakt@wit-dun.eu", // Change to your verified sender
-    subject: data.topic,
+    subject: data?.topic,
     text: data?.topic,
 
     html: `<div>
@@ -39,22 +51,26 @@ export async function POST(req: Request) {
     // to: data?.email, // Change to your recipient
     to: "faunbox2@gmail.com", // Change to your recipient
     from: "kontakt@wit-dun.eu", // Change to your verified sender
-    subject: `${data.topic} na dzień ${data?.date.slice(0, 10)}`,
+    subject: `${data.topic} na dzień `,
     text: data?.topic,
-    // attachments: [
-    //   {
-    //     filename: "package.jpeg",
-    //     content: data?.pdf,
-    //     type: "application/jpeg",
-    //     disposition: "attachment",
-    //     contentId: "package",
-    //   },
-    // ],
+    attachments: [
+      {
+        filename: "package.pdf",
+        content: base64,
+        type: "application/pdf",
+        disposition: "attachment",
+      },
+    ],
     html: `<div>
     <h1>Potwierdzenie rezerwacji z formularza</h1>
     <h2>Imie i nazwisko: ${data?.name + " " + data?.surname}</h2>
-    ${data?.number !== 0 ? "<h2>Ilość osób: " + data?.number + "</h2>" : null}
     ${
+      //@ts-expect-error
+      data?.number !== 0 ? "<h2>Ilość osób: " + data?.number + "</h2>" : null
+    }
+    ${
+      //@ts-expect-error
+
       data?.weight !== 1
         ? "<h2>Szacunkowa waga: " + data?.weight + "kg" + "</h2>"
         : null
@@ -75,16 +91,24 @@ export async function POST(req: Request) {
   };
 
   const msgToPerson: mail = {
+    //@ts-expect-error
+
     to: data?.email, // Change to your recipient
     from: "kontakt@wit-dun.eu", // Change to your verified sender
-    subject: `${data.topic} na dzień ${data?.date.slice(0, 10)}`,
+    subject: `${data.topic} na dzień `,
     text: data?.topic,
 
     html: `<div>
     <h1>Potwierdzenie rezerwacji z formularza</h1>
     <h2>Imie i nazwisko: ${data?.name + " " + data?.surname}</h2>
-    ${data?.number !== 0 ? "<h2>Ilość osób: " + data?.number + "</h2>" : null}
     ${
+      //@ts-expect-error
+
+      data?.number !== 0 ? "<h2>Ilość osób: " + data?.number + "</h2>" : null
+    }
+    ${
+      //@ts-expect-error
+
       data?.weight !== 1
         ? "<h2>Szacunkowa waga: " + data?.weight + "kg" + "</h2>"
         : null
@@ -105,6 +129,8 @@ export async function POST(req: Request) {
   };
 
   await sgMail
+    //@ts-expect-error
+
     .send(msgToCompany)
     .then(() => {
       response = {
@@ -120,8 +146,12 @@ export async function POST(req: Request) {
     });
 
   data.formType === "package"
-    ? await sgMail.send(msgWithAtachment)
-    : await sgMail.send(msgToPerson);
+    ? //@ts-expect-error
+
+      await sgMail.send(msgWithAtachment)
+    : //@ts-expect-error
+
+      await sgMail.send(msgToPerson);
 
   return new NextResponse(JSON.stringify(response));
 }

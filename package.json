@@ -24,6 +24,7 @@
     "eslint-config-next": "13.4.8",
     "flag-icons": "^6.7.0",
     "form-data": "^4.0.0",
+    "formdata-node": "^5.0.1",
     "framer-motion": "^10.15.0",
     "html2pdf.js": "^0.10.1",
     "keen-slider": "^6.8.6",
