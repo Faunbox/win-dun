@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import sgMail from "@sendgrid/mail";
-import { blob } from "stream/consumers";
+import { btoa } from "buffer";
 interface mail {
   to: string;
   from: string;
@@ -29,10 +29,8 @@ export async function POST(req: Request) {
 
   const form = await req.formData();
   const data = Object.fromEntries(form);
-  const { pdf } = data;
-  //@ts-expect-error
-  const buffer = Buffer.from(await pdf.text());
-  const base64 = buffer.toString("base64");
+  //@ts-ignore
+  const pdf = btoa(data.pdf);
 
   const msgToCompany: mail = {
     to: "faunbox2@gmail.com", // Change to your recipient
@@ -56,7 +54,7 @@ export async function POST(req: Request) {
     attachments: [
       {
         filename: "package.pdf",
-        content: base64,
+        content: pdf,
         type: "application/pdf",
         disposition: "attachment",
       },

@@ -48,7 +48,8 @@ const PackageForm = () => {
     formData.append("topic", topic);
     const formType = "package";
     formData.append("formType", formType);
-    const pdf = await createPdf;
+    const pdf = await createPdf();
+    //@ts-ignore
     formData.append("pdf", pdf);
     console.log(Object.fromEntries(formData));
 
