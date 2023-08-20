@@ -25,7 +25,7 @@ export interface InputType {
   countryToGo: string;
   cityToGo: string;
   streetToGo: string;
-  pdf?: string;
+  pdf?: File;
 }
 
 export type StateContextType = {

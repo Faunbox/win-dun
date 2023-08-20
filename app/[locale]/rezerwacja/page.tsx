@@ -8,7 +8,7 @@ import { useState } from "react";
 
 
 const Reservation = () => {
-  const t = useTranslations("gallery");
+  // const t = useTranslations("gallery");
 
   const [selected, setSelected] = useState<string>("people");
 

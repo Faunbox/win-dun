@@ -23,6 +23,7 @@ const PackageForm = () => {
     }));
   };
 
+  let file;
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     const {
@@ -48,9 +49,22 @@ const PackageForm = () => {
     formData.append("topic", topic);
     const formType = "package";
     formData.append("formType", formType);
-    const pdf = await createPdf();
+    const pdf = await createPdf(peopleForm);
+
+    const blob2Base64 = (): Promise<string> => {
+      return new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        //@ts-ignore
+        reader.readAsDataURL(pdf);
+        reader.onload = () => resolve(reader.result!.toString().replace(/^data:(.*,)?/, ""));
+        reader.onerror = (error) => reject(error);
+      });
+    };
+    
+    file = await blob2Base64();
+
     //@ts-ignore
-    formData.append("pdf", pdf);
+    formData.append("pdf", file);
     console.log(Object.fromEntries(formData));
 
     await axios({
@@ -314,6 +328,7 @@ const PackageForm = () => {
       >
         Zarezerwuj paczkę
       </Button>
+      {file ? <iframe src={file}></iframe> : null}
     </form>
   );
 };

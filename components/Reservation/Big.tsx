@@ -163,7 +163,7 @@ const BigForm = () => {
               />
             </div>
             <div className="flex flex-row gap-2 md:gap-4 justify-around mt-5">
-              <Calendar label={"label"} placeholder={"placeholder"} />
+              <Calendar />
               <div className="flex flex-col gap-2 md:gap-4 justify-center items-start">
                 <div className="flex flex-row gap-2 md:gap-4">
                   <Input

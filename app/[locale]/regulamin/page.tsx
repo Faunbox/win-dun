@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl";
 const About = () => {
   const t = useTranslations("termsOfUse");
 
-  console.log(t("terms"));
 
   return (
     <div className="bg-gray-50 flex flex-col text-center justify-center items-center mt-20 p-4 w-screen">

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import sgMail from "@sendgrid/mail";
-import { btoa } from "buffer";
+import fs from "fs";
+
 interface mail {
   to: string;
   from: string;
@@ -18,19 +19,19 @@ type ResponseData = {
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY || "");
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+// export const config = {
+//   api: {
+//     bodyParser: false,
+//   },
+// };
 
 export async function POST(req: Request) {
   let response: ResponseData = {};
 
   const form = await req.formData();
   const data = Object.fromEntries(form);
+  const pdf = data.pdf;
   //@ts-ignore
-  const pdf = btoa(data.pdf);
 
   const msgToCompany: mail = {
     to: "faunbox2@gmail.com", // Change to your recipient

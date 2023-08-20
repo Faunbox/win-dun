@@ -14,6 +14,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "noImplicitAny": false,
     "plugins": [
       {
         "name": "next"
@@ -23,6 +24,16 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "i18n.js", "context/formContext.tsx", "components/Navigation/NavFlagsDropdown.tsx", "components/Home/Offert.jsx", "components/lib/Datepicker.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "i18n.js",
+    "context/formContext.tsx",
+    "components/Navigation/NavFlagsDropdown.tsx",
+    "components/Home/Offert.jsx",
+    "components/lib/Datepicker.jsx"
+  ],
   "exclude": ["node_modules"]
 }
