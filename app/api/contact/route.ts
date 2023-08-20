@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import sgMail from "@sendgrid/mail";
-import { log } from "console";
 
 interface mail {
   to: string;
@@ -15,12 +14,14 @@ type ResponseData = {
   message?: string;
 };
 
+//TODO: Poprawić wysyłanie numeru telefonu w wiadomosci email
+
 sgMail.setApiKey(process.env.SENDGRID_API_KEY || "");
 
 export async function POST(req: Request) {
   let response: ResponseData = {};
   const data = await req.json();
-  
+  console.log(parseInt(data.phone), typeof parseInt(data.phone));
 
   const msgToCompany: mail = {
     to: "kontakt@wit-dun.eu", // Change to your recipient
@@ -30,7 +31,8 @@ export async function POST(req: Request) {
     html: `<div>
     <h1>Wiadomość od: ${data.name}</h1>
     <h2>Adres email: ${data.email}</h2>
-    <p>Wiadomość: ${data.message}</p>
+    <h2>Wiadomość: ${data.message}</h2>
+    <h2>Telefon: ${data.phone.lenght > 6 ? "Nie podano" : data?.phone}</h2>
     </div>`,
   };
 
@@ -42,8 +44,9 @@ export async function POST(req: Request) {
     html: `<div>
     <h1>Potwierdzenie wysłania wiadomości ze strony www.wit-dun.eu</h1>
     <h2>Wiadomość od: ${data.name}</h2>
-    <h3>Adres email: ${data.email}</h3>
-    <p>Wiadomość: ${data.message}</p>
+    <h2>Adres email: ${data.email}</h2>
+    <h2>Telefon: ${data.phone.lenght < 6 ? "Nie podano" : data?.phone}</h2>
+    <h2>Wiadomość: ${data.message}</h2>
     </div>`,
   };
 
@@ -58,7 +61,7 @@ export async function POST(req: Request) {
     .catch((error) => {
       response = {
         status: "error",
-        message: `Message failed to send with error, ${error}`,
+        message: `Wstąpił błąd podczas wysyłania. Spróbuj ponownie później`,
       };
     });
 

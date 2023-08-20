@@ -120,11 +120,14 @@
       "label1": "Imie i nazwisko",
       "placeholder1": "Jan Kowalski",
 
-      "label2": "Adres email / telefon",
-      "placeholder2": "123-456-789",
+      "label2": "Adres email",
+      "placeholder2": "jan.kowalski@mail.com",
 
-      "label3": "Twoja wiadomosc",
-      "placeholder3": "Chcialbym otrzymac wiecej informacji o..."
+      "label3": "Numer telefonu",
+      "placeholder3": "123-456-789",
+
+      "label4": "Twoja wiadomosc",
+      "placeholder4": "Chcialbym otrzymac wiecej informacji o..."
     }
   },
 

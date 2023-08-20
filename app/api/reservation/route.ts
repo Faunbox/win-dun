@@ -1,16 +1,5 @@
 import { NextResponse } from "next/server";
 import sgMail from "@sendgrid/mail";
-import fs from "fs";
-
-interface mail {
-  to: string;
-  from: string;
-  subject: string | File;
-  text: string | File;
-  html: string;
-  attachments?: any;
-  pdf?: any;
-}
 
 type ResponseData = {
   status?: string;
@@ -19,26 +8,18 @@ type ResponseData = {
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY || "");
 
-// export const config = {
-//   api: {
-//     bodyParser: false,
-//   },
-// };
-
 export async function POST(req: Request) {
   let response: ResponseData = {};
 
   const form = await req.formData();
   const data = Object.fromEntries(form);
   const pdf = data.pdf;
-  //@ts-ignore
 
-  const msgToCompany: mail = {
+  const msgToCompany = {
     to: "faunbox2@gmail.com", // Change to your recipient
     from: "kontakt@wit-dun.eu", // Change to your verified sender
     subject: data?.topic,
     text: data?.topic,
-
     html: `<div>
     <h1>Wiadomość od: ${data?.name}</h1>
     <h2>Adres email: ${data?.email}</h2>
@@ -46,11 +27,11 @@ export async function POST(req: Request) {
     </div>`,
   };
 
-  const msgWithAtachment: mail = {
+  const msgWithAtachment = {
     // to: data?.email, // Change to your recipient
     to: "faunbox2@gmail.com", // Change to your recipient
     from: "kontakt@wit-dun.eu", // Change to your verified sender
-    subject: `${data.topic} na dzień `,
+    subject: `${data.topic} na dzień ${data.date}`,
     text: data?.topic,
     attachments: [
       {
@@ -63,14 +44,9 @@ export async function POST(req: Request) {
     html: `<div>
     <h1>Potwierdzenie rezerwacji z formularza</h1>
     <h2>Imie i nazwisko: ${data?.name + " " + data?.surname}</h2>
+    ${data?.number !== "0" ? "<h2>Ilość osób: " + data?.number + "</h2>" : null}
     ${
-      //@ts-expect-error
-      data?.number !== 0 ? "<h2>Ilość osób: " + data?.number + "</h2>" : null
-    }
-    ${
-      //@ts-expect-error
-
-      data?.weight !== 1
+      data?.weight !== "1"
         ? "<h2>Szacunkowa waga: " + data?.weight + "kg" + "</h2>"
         : null
     }
@@ -89,32 +65,18 @@ export async function POST(req: Request) {
     </div>`,
   };
 
-  const msgToPerson: mail = {
-    //@ts-expect-error
-
+  const msgToPerson = {
     to: data?.email, // Change to your recipient
     from: "kontakt@wit-dun.eu", // Change to your verified sender
-    subject: `${data.topic} na dzień `,
+    subject: `Potwierdzenie rezerwacji`,
     text: data?.topic,
-
     html: `<div>
     <h1>Potwierdzenie rezerwacji z formularza</h1>
     <h2>Imie i nazwisko: ${data?.name + " " + data?.surname}</h2>
-    ${
-      //@ts-expect-error
-
-      data?.number !== 0 ? "<h2>Ilość osób: " + data?.number + "</h2>" : null
-    }
-    ${
-      //@ts-expect-error
-
-      data?.weight !== 1
-        ? "<h2>Szacunkowa waga: " + data?.weight + "kg" + "</h2>"
-        : null
-    }
-    <h2>Adres odbioru: ${
-      data?.country + " " + data?.city + " " + data?.street
-    }</h2>
+    ${data?.number !== "0" ? "<h2>Ilość osób: " + data?.number + "</h2>" : null}
+        <h2>Adres odbioru: ${
+          data?.country + " " + data?.city + " " + data?.street
+        }</h2>
     ${
       data?.message !== ""
         ? "<h2>Wiadomość dodatkowa: " + data?.message + "</h2>"
@@ -124,12 +86,12 @@ export async function POST(req: Request) {
     <h2>Adres Docelowy: ${
       data?.countryToGo + " " + data?.cityToGo + " " + data?.streetToGo
     }</h2>
+    <h2>Data wyjazdu ${data.date}</h2>
     </div>`,
   };
 
   await sgMail
     //@ts-expect-error
-
     .send(msgToCompany)
     .then(() => {
       response = {
@@ -146,10 +108,8 @@ export async function POST(req: Request) {
 
   data.formType === "package"
     ? //@ts-expect-error
-
       await sgMail.send(msgWithAtachment)
     : //@ts-expect-error
-
       await sgMail.send(msgToPerson);
 
   return new NextResponse(JSON.stringify(response));

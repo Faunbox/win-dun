@@ -16,7 +16,7 @@ export interface InputType {
   country: string;
   numer?: number;
   weight?: number;
-  date: Date | number;
+  date: Date | string;
   phone: number;
   email: string;
   message?: string;

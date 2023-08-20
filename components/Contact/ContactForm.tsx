@@ -12,6 +12,7 @@ interface Input {
   name: string;
   email: string;
   message: string;
+  phone: number | string;
 }
 
 interface Variants {
@@ -27,7 +28,9 @@ const ContactForm = ({ width }: { width: string }) => {
     name: "",
     email: "",
     message: "",
+    phone: "",
   });
+  const [disableButton, setDisableButton] = useState(false);
 
   const widthVariants: Variants = {
     quater: "md:w-8/12",
@@ -47,17 +50,19 @@ const ContactForm = ({ width }: { width: string }) => {
 
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-    const { name, email, message }: Input = inputInfo;
+    const { name, email, message, phone }: Input = inputInfo;
+    setDisableButton(true);
     await axios({
       method: "post",
       url: "/api/contact",
-      data: { name, email, message },
+      data: { name, email, message, phone },
       headers: {
         "Content-Type": "application/json",
       },
     })
       .then((msg) => alert(msg.data.message))
-      .catch((error) => alert(error));
+      .catch((error) => alert(error))
+      .finally(() => setIsCheckd(false));
   };
   return (
     <div
@@ -69,34 +74,52 @@ const ContactForm = ({ width }: { width: string }) => {
         {t("formHeader")}
       </h2>
       <form className="flex flex-col px-4 gap-4" onSubmit={handleSubmit}>
-        <div className="md:flex md:flex-row md:gap-4">
-          <div className="flex flex-col justify-center items-center w-full md:w-[50%]">
-            <Input
-              type="text"
-              name="name"
-              id="name"
-              variant="bordered"
-              labelPlacement="outside"
-              placeholder={t("formInputs.placeholder1")}
-              radius="none"
-              label={t("formInputs.label1")}
-              isRequired={true}
-              autoComplete="on"
-              onChange={handleOnChange}
-              className=""
-            />
+        <div className="flex flex-col xl:flex-row gap-2 md:gap-4">
+          <div className="flex flex-col lg:flex-row gap-4 xl:w-full">
+            <div className="flex flex-col justify-center items-center w-full xl:w-[50%]">
+              <Input
+                type="text"
+                name="name"
+                id="name"
+                variant="bordered"
+                labelPlacement="outside"
+                placeholder={t("formInputs.placeholder1")}
+                radius="none"
+                label={t("formInputs.label1")}
+                isRequired={true}
+                autoComplete="on"
+                onChange={handleOnChange}
+                className=""
+              />
+            </div>
+            <div className="flex flex-col justify-center items-center w-full xl:w-[50%]">
+              <Input
+                type="email"
+                name="email"
+                id="email"
+                variant="bordered"
+                labelPlacement="outside"
+                radius="none"
+                placeholder={t("formInputs.placeholder2")}
+                label={t("formInputs.label2")}
+                isRequired={true}
+                autoComplete="on"
+                onChange={handleOnChange}
+                className="border-red-500"
+              />
+            </div>
           </div>
-          <div className="flex flex-col justify-center items-center w-full md:w-[50%]">
+          <div className="flex flex-col justify-center items-center w-full xl:w-[50%]">
             <Input
-              type="email"
-              name="email"
-              id="email"
+              type="number"
+              name="phone"
+              id="phone"
               variant="bordered"
               labelPlacement="outside"
               radius="none"
-              placeholder={t("formInputs.placeholder2")}
-              label={t("formInputs.label2")}
-              isRequired={true}
+              minLength={6}
+              placeholder={t("formInputs.placeholder3")}
+              label={t("formInputs.label3")}
               autoComplete="on"
               onChange={handleOnChange}
               className="border-red-500"
@@ -110,8 +133,8 @@ const ContactForm = ({ width }: { width: string }) => {
             variant="bordered"
             radius="none"
             labelPlacement="outside"
-            label={t("formInputs.label3")}
-            placeholder={t("formInputs.placeholder3")}
+            label={t("formInputs.label4")}
+            placeholder={t("formInputs.placeholder4")}
             className="w-full"
             name="message"
             onChange={handleOnChange}
@@ -122,13 +145,14 @@ const ContactForm = ({ width }: { width: string }) => {
             type="checkbox"
             name="checkbox"
             id="checkbox"
+            disabled={disableButton}
             onChange={() => setIsCheckd(!isCheckd)}
           />
           <label htmlFor="checkbox">{t("rodo")}</label>
         </div>
         <Button
           type="submit"
-          isDisabled={!isCheckd}
+          // isDisabled={!isCheckd || disableButton ? true : false}
           color="success"
           radius="none"
           className="mx-auto w-full max-w-[300px] text-white disabled:text-black p-4 hover:scale-110 transition-transform duration-500"

@@ -6,7 +6,7 @@ import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
 
 const CompanyData = () => {
   return (
-    <div className="flex flex-col w-full md:w-4/12 justify-center items-center bg-gradient-to-b from-gray-200 to-gray-50">
+    <div className="flex flex-col w-full md:w-4/12 justify-center items-center p-4 bg-gradient-to-b from-gray-200 to-gray-50">
       <h2 className="m-4 text-2xl font-bold justify-self-start border-b-1 self-center border-black uppercase">
         Dane firmy
       </h2>

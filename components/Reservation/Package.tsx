@@ -23,32 +23,17 @@ const PackageForm = () => {
     }));
   };
 
-  let file;
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-    const {
-      name,
-      surname,
-      email,
-      city,
-      street,
-      country,
-      date,
-      phone,
-      weight,
-      message,
-      nameToGo,
-      surnameToGo,
-      countryToGo,
-      cityToGo,
-      streetToGo,
-    }: InputType = peopleForm;
-
+    
+    //Create form data obj from jsx form
     const formData = new FormData(formRef.current!);
     const topic = "Rezerwacja przewozu paczek lub listów";
     formData.append("topic", topic);
     const formType = "package";
     formData.append("formType", formType);
+
+    //Create pdf Blob
     const pdf = await createPdf(peopleForm);
 
     const blob2Base64 = (): Promise<string> => {
@@ -61,11 +46,9 @@ const PackageForm = () => {
       });
     };
     
-    file = await blob2Base64();
+    const file = await blob2Base64();
 
-    //@ts-ignore
     formData.append("pdf", file);
-    console.log(Object.fromEntries(formData));
 
     await axios({
       method: "POST",
@@ -328,7 +311,6 @@ const PackageForm = () => {
       >
         Zarezerwuj paczkę
       </Button>
-      {file ? <iframe src={file}></iframe> : null}
     </form>
   );
 };
