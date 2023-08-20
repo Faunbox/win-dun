@@ -14,6 +14,16 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        wave: {
+          "0%": { borderColor: "black", color: "black" },
+          "50%": { borderColor: "white", color: "white" },
+          "100%": { borderColor: "black", color: "black" },
+        },
+      },
+      animation: {
+        "waving-hand": "wave 4s ease-in infinite",
+      },
     },
   },
   plugins: [

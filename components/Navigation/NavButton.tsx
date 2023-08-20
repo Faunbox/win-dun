@@ -3,7 +3,12 @@ import { ReactNode } from "react";
 
 const NavButton = ({ children }: { children: ReactNode }) => {
   return (
-    <Button radius="none" color="primary" className=" text-black p-4">
+    <Button
+      radius="none"
+      variant="bordered"
+      color="primary"
+      className=" text-black p-4"
+    >
       {children}
     </Button>
   );

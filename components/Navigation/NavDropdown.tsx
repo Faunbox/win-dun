@@ -13,7 +13,7 @@ const NavDropdown = () => {
         data-dropdown-toggle="dropdownHover"
         data-dropdown-trigger="hover"
         onClick={() => setOpen(!open)}
-        className="hover:bg-[#D5B1A5] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center relative"
+        className="focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center relative"
         type="button"
       >
         <TfiWorld size={20} color="white"/>

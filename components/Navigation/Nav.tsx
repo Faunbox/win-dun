@@ -22,7 +22,7 @@ const Nav = () => {
         {/* Logo */}
         <Link href={"/"} className="">
           <Image
-            src="/images/logo.png"
+            src="/images/logo-dark.png"
             alt="logo"
             width={200}
             height={52}
@@ -30,7 +30,7 @@ const Nav = () => {
           />
         </Link>
         {/* Menu links */}
-        <ul className="flex flex-row justify-end items-center col-span-5 gap-4">
+        <ul className="flex flex-row justify-end items-center col-span-5 gap-4 text-white">
           {locale === "pl" &&
             PlNavbar?.map(
               ({ href, title }: { href: string; title: string }) => (
@@ -75,12 +75,15 @@ const Nav = () => {
             )}
           {/* Locale */}
           <li className="flex items-center justify-center gap-1 hover:scale-110 transition-transform duration-300 mix-blend-difference">
-            <BiPhoneOutgoing color="#994F3B" size={25} />
-            <a href="phone:+48505216526" className="text-lg font-semibold text-white mix-blend-saturation">
-            505 216 526
+            <BiPhoneOutgoing color="#F7B750" size={25} />
+            <a
+              href="phone:+48505216526"
+              className="text-lg font-semibold text-white mix-blend-saturation animate-bounce"
+            >
+              505 216 526
             </a>
           </li>
-          <li className="flex justify-end items-center ">   
+          <li className="flex justify-end items-center ">
             <NavDropdown />
           </li>
         </ul>
@@ -95,10 +98,12 @@ const Nav = () => {
         {/* Logo */}
         <div>
           <Link href={"/"}>
-            <img
-              src="/images/logo.png"
+            <Image
+              src="/images/logo-dark.png"
               alt="logo"
-              className="max-w-[150px] sm:max-w-[200px]"
+              width={200}
+              height={52}
+              className="max-w-[200px]"
             />
           </Link>
         </div>
