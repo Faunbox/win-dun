@@ -7,7 +7,7 @@ const NavButton = ({ children }: { children: ReactNode }) => {
       radius="none"
       variant="bordered"
       color="primary"
-      className=" text-black p-4"
+      className=" text-black p-4 border-white"
     >
       {children}
     </Button>

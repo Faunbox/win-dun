@@ -25,7 +25,7 @@ const PackageForm = () => {
 
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-    
+
     //Create form data obj from jsx form
     const formData = new FormData(formRef.current!);
     const topic = "Rezerwacja przewozu paczek lub listów";
@@ -45,7 +45,7 @@ const PackageForm = () => {
         reader.onerror = (error) => reject(error);
       });
     };
-    
+
     const file = await blob2Base64();
 
     formData.append("pdf", file);

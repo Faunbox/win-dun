@@ -15,9 +15,13 @@ interface PdfProps {
 
 var opt = {
   margin: 3,
-  image: { type: "jpg", quality: 0.95 },
+  image: { type: "png", quality: 0.98 },
   filename: "package.pdf",
-  jsPDF: { unit: "mm", format: "A4", orientation: "l" },
+  html2canvas: {
+    scale: 1,
+    useCORS: true,
+  },
+  jsPDF: { unit: "mm", format: [150, 75], orientation: "l" },
 };
 
 const JsxToHtmlElement = (
@@ -31,10 +35,73 @@ const JsxToHtmlElement = (
 ) => {
   return (
     <html>
-      <body>
-        <p>Nadawca: {name} {surname}</p>
-        <h1>Nadawca: {nameToGo} {surnameToGo}</h1>
-        <h2 style={{ marginBottom: "25px" }}>Adres: {countryToGo} {cityToGo} {streetToGo}</h2>
+      <body
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          height: "100%",
+          width: "100%",
+        }}
+      >
+        <div
+          style={{
+            marginTop: "20px",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "left",
+              marginRight: "20px",
+            }}
+          >
+            <p>Nadawca:</p>
+            <p style={{ fontWeight: "bold" }}>
+              {name} {surname}
+            </p>
+          </div>
+          <img
+            src="/images/logo.png"
+            alt="Logo Wit-dun Express"
+            width={200}
+            height={52}
+          />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "flex-end",
+            alignItems: "end",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              marginTop: "60px",
+            }}
+          >
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <h1>Nadawca:</h1>
+              <h1 style={{ fontWeight: "bold" }}>
+                {nameToGo} {surnameToGo}
+              </h1>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <h2>Adres:</h2>
+              <h2 style={{ marginBottom: "25px", fontWeight: "bold" }}>
+                {countryToGo} {cityToGo} {streetToGo}
+              </h2>
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );
