@@ -21,9 +21,23 @@ export async function POST(req: Request) {
     subject: data?.topic,
     text: data?.topic,
     html: `<div>
-    <h1>Wiadomość od: ${data?.name}</h1>
-    <h2>Adres email: ${data?.email}</h2>
-    <p>Wiadomość: ${data?.message}</p>
+    <h1>Potwierdzenie rezerwacji z formularza</h1>
+    <h2>Rezerwacja na dzień: ${data.date}</h2>
+    <h2>Imie i nazwisko: ${data?.name + " " + data?.surname}</h2>
+    ${data?.number !== "0" ? "<h2>Ilość osób: " + data?.number + "</h2>" : null}
+        <h2>Adres odbioru: ${
+          data?.country + " " + data?.city + " " + data?.street
+        }</h2>
+    ${
+      data?.message !== ""
+        ? "<h2>Wiadomość dodatkowa: " + data?.message + "</h2>"
+        : "<p>Brak</p>"
+    }
+    <h3>Adres email i numer telefonu: ${data?.email + " / " + data?.phone}</h3>
+    <h2>Adres Docelowy: ${
+      data?.countryToGo + " " + data?.cityToGo + " " + data?.streetToGo
+    }</h2>
+    <h2>Data wyjazdu ${data.date}</h2>
     </div>`,
   };
 
@@ -44,7 +58,7 @@ export async function POST(req: Request) {
     html: `<div>
     <h1>Potwierdzenie rezerwacji z formularza</h1>
     <h2>Imie i nazwisko: ${data?.name + " " + data?.surname}</h2>
-    ${data?.number !== "0" ? "<h2>Ilość osób: " + data?.number + "</h2>" : null}
+    ${data?.number !== "0" ? "<h2>Ilość osób: " + data?.number + "</h2>" : ""}
     ${
       data?.weight !== "1"
         ? "<h2>Szacunkowa waga: " + data?.weight + "kg" + "</h2>"
@@ -72,6 +86,7 @@ export async function POST(req: Request) {
     text: data?.topic,
     html: `<div>
     <h1>Potwierdzenie rezerwacji z formularza</h1>
+    <h2>Rezerwacja na dzień: ${data.date.slice}</h2>
     <h2>Imie i nazwisko: ${data?.name + " " + data?.surname}</h2>
     ${data?.number !== "0" ? "<h2>Ilość osób: " + data?.number + "</h2>" : null}
         <h2>Adres odbioru: ${
@@ -80,13 +95,13 @@ export async function POST(req: Request) {
     ${
       data?.message !== ""
         ? "<h2>Wiadomość dodatkowa: " + data?.message + "</h2>"
-        : null
+        : "<p>Brak</p>"
     }
     <h3>Adres email i numer telefonu: ${data?.email + " / " + data?.phone}</h3>
     <h2>Adres Docelowy: ${
       data?.countryToGo + " " + data?.cityToGo + " " + data?.streetToGo
     }</h2>
-    <h2>Data wyjazdu ${data.date}</h2>
+    <h2>Data wyjazdu ${data.date  }</h2>
     </div>`,
   };
 

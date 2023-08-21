@@ -23,10 +23,14 @@ const Calendar = () => {
       inline
       locale={locale}
       onChange={(e) => {
-        setPeopleForm((prevState) => ({ ...prevState, date: e }));
+        setPeopleForm((prevState) => ({
+          ...prevState,
+          date: e.toISOString().slice(0, 10),
+        }));
       }}
       minDate={new Date()}
       value={peopleForm.date}
+      strictParsing
       filterDate={isWeekday}
       excludeTimes={true}
     />

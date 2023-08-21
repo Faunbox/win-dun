@@ -89,7 +89,7 @@ const JsxToHtmlElement = (
             }}
           >
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <h1>Nadawca:</h1>
+              <h1>Odbiorca:</h1>
               <h1 style={{ fontWeight: "bold" }}>
                 {nameToGo} {surnameToGo}
               </h1>

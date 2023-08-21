@@ -152,7 +152,7 @@ const ContactForm = ({ width }: { width: string }) => {
         </div>
         <Button
           type="submit"
-          // isDisabled={!isCheckd || disableButton ? true : false}
+          isDisabled={!isCheckd || disableButton ? true : false}
           color="success"
           radius="none"
           className="mx-auto w-full max-w-[300px] text-white disabled:text-black p-4 hover:scale-110 transition-transform duration-500"

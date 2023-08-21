@@ -6,10 +6,14 @@ import Calendar from "../lib/Datepicker";
 import axios from "axios";
 import { useForm, InputType } from "@/context/formContext";
 import { createPdf } from "../lib/React-pdf";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 const PackageForm = () => {
+  const t = useTranslations("contact");
   const { peopleForm, setPeopleForm } = useForm();
+  const [isCheckd, setIsCheckd] = useState(false);
+  const [disableButton, setDisableButton] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleOnChange = (
@@ -25,13 +29,14 @@ const PackageForm = () => {
 
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-
+    setDisableButton(true);
     //Create form data obj from jsx form
     const formData = new FormData(formRef.current!);
     const topic = "Rezerwacja przewozu paczek lub listów";
     formData.append("topic", topic);
     const formType = "package";
     formData.append("formType", formType);
+    formData.append("date", peopleForm.date);
 
     //Create pdf Blob
     const pdf = await createPdf(peopleForm);
@@ -41,7 +46,8 @@ const PackageForm = () => {
         const reader = new FileReader();
         //@ts-ignore
         reader.readAsDataURL(pdf);
-        reader.onload = () => resolve(reader.result!.toString().replace(/^data:(.*,)?/, ""));
+        reader.onload = () =>
+          resolve(reader.result!.toString().replace(/^data:(.*,)?/, ""));
         reader.onerror = (error) => reject(error);
       });
     };
@@ -302,15 +308,28 @@ const PackageForm = () => {
           </div>
         </section>
       </div>
-      <Button
-        disabled={true}
-        color="secondary"
-        radius="none"
-        type="submit"
-        className="text-white my-8 w-full max-w-[300px]"
-      >
-        Zarezerwuj paczkę
-      </Button>
+      <div className="flex flex-col jusity-center items-center">
+        <div className="flex flex-row justify-center items-center">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="checkbox"
+            disabled={disableButton}
+            onChange={() => setIsCheckd(!isCheckd)}
+          />
+          <label htmlFor="checkbox">{t("rodo")}</label>
+        </div>
+
+        <Button
+          isDisabled={!isCheckd || disableButton ? true : false}
+          color="secondary"
+          radius="none"
+          type="submit"
+          className="text-white my-8 w-full max-w-[300px]"
+        >
+          Zarezerwuj paczkę
+        </Button>
+      </div>
     </form>
   );
 };
