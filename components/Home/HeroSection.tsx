@@ -24,7 +24,7 @@ const HeroSection = () => {
             </h2>
           </div>
           <div className="flex flex-col md:flex-row items-center lg:justify-between gap-7 mt-8 md:mt-10">
-            <Link href={"/rezerwacja"}>
+            <Link href={"/rezerwacja?type=people"}>
               <Button
                 disabled={true}
                 color="primary"
@@ -37,7 +37,7 @@ const HeroSection = () => {
                 {t("heroButton")}
               </Button>
             </Link>
-            <Link href={"/rezerwacja"}>
+            <Link href={"/rezerwacja?type=package"}>
               <Button
                 disabled={true}
                 color="primary"

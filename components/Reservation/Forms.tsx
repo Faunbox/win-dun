@@ -7,7 +7,7 @@ const Forms = ({ state }: { state: string }) => {
     <div className="flex flex-col justify-center items-center container">
       {state === "people" && <PeopleForm />}
       {state === "package" && <PackageForm />}
-      {state === "big" && <BigForm />}
+      {state === "large" && <BigForm />}
     </div>
   );
 };

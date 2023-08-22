@@ -8,6 +8,7 @@ import { useForm, InputType } from "@/context/formContext";
 import { createPdf } from "../lib/React-pdf";
 import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import { useSearchParams } from "next/navigation";
 
 const PackageForm = () => {
   const t = useTranslations("contact");
@@ -15,6 +16,7 @@ const PackageForm = () => {
   const [isCheckd, setIsCheckd] = useState(false);
   const [disableButton, setDisableButton] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
+  const searchParams = useSearchParams();
 
   const handleOnChange = (
     e:
@@ -30,6 +32,7 @@ const PackageForm = () => {
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     setDisableButton(true);
+
     //Create form data obj from jsx form
     const formData = new FormData(formRef.current!);
     const topic = "Rezerwacja przewozu paczek lub listów";
@@ -56,10 +59,13 @@ const PackageForm = () => {
 
     formData.append("pdf", file);
 
+    const param = searchParams.get("type");
+
     await axios({
       method: "POST",
       url: "/api/reservation",
       data: formData,
+      params: { type: param },
       headers: {
         "Content-Type": "multipart/form-data;base64",
       },

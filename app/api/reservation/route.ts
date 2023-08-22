@@ -10,10 +10,12 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY || "");
 
 export async function POST(req: Request) {
   let response: ResponseData = {};
+  console.log(req.url.search);
 
   const form = await req.formData();
   const data = Object.fromEntries(form);
-  const pdf = data.pdf;
+  const pdf = data.pdf; 
+  
 
   const msgToCompany = {
     to: "faunbox2@gmail.com", // Change to your recipient
@@ -101,31 +103,31 @@ export async function POST(req: Request) {
     <h2>Adres Docelowy: ${
       data?.countryToGo + " " + data?.cityToGo + " " + data?.streetToGo
     }</h2>
-    <h2>Data wyjazdu ${data.date  }</h2>
+    <h2>Data wyjazdu ${data.date}</h2>
     </div>`,
   };
 
-  await sgMail
-    //@ts-expect-error
-    .send(msgToCompany)
-    .then(() => {
-      response = {
-        status: "success",
-        message: "Wiadomość wysłana",
-      };
-    })
-    .catch((error) => {
-      response = {
-        status: "error",
-        message: `Message failed to send with error, ${error}`,
-      };
-    });
+  // await sgMail
+  //   //@ts-expect-error
+  //   .send(msgToCompany)
+  //   .then(() => {
+  //     response = {
+  //       status: "success",
+  //       message: "Wiadomość wysłana",
+  //     };
+  //   })
+  //   .catch((error) => {
+  //     response = {
+  //       status: "error",
+  //       message: `Message failed to send with error, ${error}`,
+  //     };
+  //   });
 
-  data.formType === "package"
-    ? //@ts-expect-error
-      await sgMail.send(msgWithAtachment)
-    : //@ts-expect-error
-      await sgMail.send(msgToPerson);
+  // data.formType === "package"
+  //   ? //@ts-expect-error
+  //     await sgMail.send(msgWithAtachment)
+  //   : //@ts-expect-error
+  //     await sgMail.send(msgToPerson);
 
   return new NextResponse(JSON.stringify(response));
 }
