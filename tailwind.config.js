@@ -22,7 +22,7 @@ module.exports = {
         },
       },
       animation: {
-        "waving-hand": "wave 4s ease-in infinite",
+        "waving-hand": "wave 3s ease-in infinite",
       },
     },
   },

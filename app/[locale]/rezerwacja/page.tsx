@@ -4,13 +4,14 @@ import Forms from "@/components/Reservation/Forms";
 import SectionHeader from "@/components/Typography/SectionHeader";
 import { Radio, RadioGroup } from "@nextui-org/radio";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
-
 
 const Reservation = () => {
   // const t = useTranslations("gallery");
 
   const [selected, setSelected] = useState<string>("people");
+  const router = useRouter();
 
   return (
     <div className="bg-[url('/images/stripe.svg')] flex flex-col text-center justify-center items-center mt-20 p-4 w-screen ">
@@ -25,13 +26,28 @@ const Reservation = () => {
           onValueChange={setSelected}
           className="items-center"
         >
-          <Radio value="people">
+          <Radio
+            value="people"
+            onClick={() => {
+              router.replace("?type=people");
+            }}
+          >
             <p className="text-sm font-light">Osoby</p>
           </Radio>
-          <Radio value="package">
+          <Radio
+            value="package"
+            onClick={() => {
+              router.replace("?type=package");
+            }}
+          >
             <p className="text-sm font-light">Paczka</p>
           </Radio>
-          <Radio value="big">
+          <Radio
+            value="big"
+            onClick={() => {
+              router.replace("?type=large");
+            }}
+          >
             <p className="text-sm font-light">Gabaryty</p>
           </Radio>
         </RadioGroup>

@@ -5,9 +5,15 @@ import { Textarea } from "@nextui-org/react";
 import Calendar from "../lib/Datepicker";
 import axios from "axios";
 import { useForm, InputType } from "@/context/formContext";
+import { useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 const PeopleForm = () => {
+  const t = useTranslations("contact");
   const { peopleForm, setPeopleForm } = useForm();
+  const [isCheckd, setIsCheckd] = useState(false);
+  const [disableButton, setDisableButton] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleOnChange = (
     e:
@@ -22,45 +28,21 @@ const PeopleForm = () => {
 
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-    const {
-      name,
-      surname,
-      email,
-      city,
-      street,
-      country,
-      numer,
-      date,
-      phone,
-      message,
-      countryToGo,
-      cityToGo,
-      streetToGo,
-    }: InputType = peopleForm;
-
+    setDisableButton(true);
+    //Create form data obj from jsx form
+    const formData = new FormData(formRef.current!);
     const topic = "Rezerwacja przejazdu";
+    formData.append("topic", topic);
+    const formType = "package";
+    formData.append("formType", formType);
+    formData.append("date", peopleForm.date);
 
     await axios({
       method: "post",
       url: "/api/reservation",
-      data: {
-        name,
-        surname,
-        email,
-        city,
-        street,
-        country,
-        numer,
-        date,
-        phone,
-        message,
-        countryToGo,
-        cityToGo,
-        streetToGo,
-        topic,
-      },
+      data: formData,
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "multipart/form-data",
       },
     })
       .then((msg) => alert(msg.data.message))
@@ -68,7 +50,7 @@ const PeopleForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} ref={formRef}>
       <div className="flex flex-col sm:flex-row gap-4 mt-4 sm:mt-16">
         <aside className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full ">
           <div className="flex flex-col gap-2 sm:gap-4">
@@ -85,6 +67,7 @@ const PeopleForm = () => {
                 label="Imię"
                 isRequired={true}
                 autoComplete="on"
+                value={peopleForm.name}
                 onChange={handleOnChange}
                 className=""
               />
@@ -99,6 +82,7 @@ const PeopleForm = () => {
                 label="Nazwisko"
                 isRequired={true}
                 autoComplete="on"
+                value={peopleForm.surname}
                 onChange={handleOnChange}
                 className=""
               />
@@ -114,6 +98,7 @@ const PeopleForm = () => {
                 radius="none"
                 label="Miejscowość"
                 isRequired={true}
+                value={peopleForm.city}
                 autoComplete="on"
                 onChange={handleOnChange}
                 className=""
@@ -128,6 +113,7 @@ const PeopleForm = () => {
                 radius="none"
                 label="Ulica"
                 isRequired={true}
+                value={peopleForm.street}
                 autoComplete="on"
                 onChange={handleOnChange}
                 className=""
@@ -139,6 +125,7 @@ const PeopleForm = () => {
                 variant="bordered"
                 labelPlacement="outside"
                 placeholder="Polska"
+                value={peopleForm.country}
                 radius="none"
                 label="Kraj"
                 isRequired={true}
@@ -154,6 +141,7 @@ const PeopleForm = () => {
                 labelPlacement="outside"
                 placeholder="1"
                 radius="none"
+                value={peopleForm.number}
                 label="Ilość osób"
                 isRequired={true}
                 autoComplete="on"
@@ -174,6 +162,7 @@ const PeopleForm = () => {
                     placeholder="543 210 987"
                     radius="none"
                     label="Numer telefonu"
+                    value={peopleForm.phone}
                     isRequired={true}
                     autoComplete="on"
                     onChange={handleOnChange}
@@ -188,6 +177,7 @@ const PeopleForm = () => {
                     placeholder="jan.kowalski@gmail.com"
                     radius="none"
                     label="Adres email"
+                    value={peopleForm.email}
                     isRequired={true}
                     autoComplete="on"
                     onChange={handleOnChange}
@@ -199,6 +189,7 @@ const PeopleForm = () => {
                   name="message"
                   id="message"
                   variant="bordered"
+                  value={peopleForm.message}
                   labelPlacement="outside"
                   placeholder="Dodatkowa torba podręczna"
                   radius="none"
@@ -224,6 +215,7 @@ const PeopleForm = () => {
                   label="Kraj"
                   isRequired={true}
                   autoComplete="on"
+                  value={peopleForm.countryToGo}
                   onChange={handleOnChange}
                   className=""
                 />
@@ -238,6 +230,7 @@ const PeopleForm = () => {
                   label="Miejscowość"
                   isRequired={true}
                   autoComplete="on"
+                  value={peopleForm.cityToGo}
                   onChange={handleOnChange}
                   className=""
                 />
@@ -252,6 +245,7 @@ const PeopleForm = () => {
                   label="Ulica"
                   isRequired={true}
                   autoComplete="on"
+                  value={peopleForm.streetToGo}
                   onChange={handleOnChange}
                   className=""
                 />
@@ -260,15 +254,28 @@ const PeopleForm = () => {
           </div>
         </aside>
       </div>
-      <Button
-        disabled={true}
-        color="secondary"
-        radius="none"
-        type="submit"
-        className="text-white my-8 w-full max-w-[300px]"
-      >
-        Zarezerwuj przejazd
-      </Button>
+      <div className="flex flex-col jusity-center items-center">
+        <div className="flex flex-row justify-center items-center">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="checkbox"
+            disabled={disableButton}
+            onChange={() => setIsCheckd(!isCheckd)}
+          />
+          <label htmlFor="checkbox">{t("rodo")}</label>
+        </div>
+
+        <Button
+          isDisabled={!isCheckd || disableButton ? true : false}
+          color="secondary"
+          radius="none"
+          type="submit"
+          className="text-white my-8 w-full max-w-[300px]"
+        >
+          Zarezerwuj paczkę
+        </Button>
+      </div>
     </form>
   );
 };

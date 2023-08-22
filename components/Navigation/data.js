@@ -3,7 +3,7 @@ export const EnNavbar = [
   { title: "Before Travel", href: "/before-travel" },
   { title: "Terms", href: "/terms" },
   { title: "Contact", href: "/contact" },
-  { title: "Reservation", href: "/reservation" },
+  { title: "Reservation", href: "/reservation?type=people" },
 ];
 
 export const NlNavbar = [
@@ -11,7 +11,7 @@ export const NlNavbar = [
   { title: "Before Travel NL", href: "/before-travel" },
   { title: "Terms NL", href: "/terms" },
   { title: "Contact NL", href: "/contact" },
-  { title: "Reservation NL", href: "/reservation" }
+  { title: "Reservation NL", href: "/reservation" },
 ];
 
 export const PlNavbar = [
@@ -20,7 +20,7 @@ export const PlNavbar = [
   { title: "Przed podróżą", href: "/przed-podroza" },
   { title: "Regulamin", href: "/regulamin" },
   { title: "Kontakt", href: "/kontakt" },
-  { title: "Rezerwacja", href: "/rezerwacja" },
+  { title: "Rezerwacja", href: "/rezerwacja?type=people" },
 ];
 
 export const BfTravelPL = {
