@@ -7,6 +7,7 @@ import axios from "axios";
 import { useForm, InputType } from "@/context/formContext";
 import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import { useSearchParams } from "next/navigation";
 
 const PeopleForm = () => {
   const t = useTranslations("contact");
@@ -14,6 +15,7 @@ const PeopleForm = () => {
   const [isCheckd, setIsCheckd] = useState(false);
   const [disableButton, setDisableButton] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
+  const searchParams = useSearchParams();
 
   const handleOnChange = (
     e:
@@ -37,10 +39,13 @@ const PeopleForm = () => {
     formData.append("formType", formType);
     formData.append("date", peopleForm.date);
 
+    const param = searchParams.get("type");
+
     await axios({
       method: "post",
       url: "/api/reservation",
       data: formData,
+      params: { type: param },
       headers: {
         "Content-Type": "multipart/form-data",
       },

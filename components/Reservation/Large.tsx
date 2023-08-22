@@ -5,9 +5,17 @@ import { Textarea } from "@nextui-org/react";
 import Calendar from "../lib/Datepicker";
 import axios from "axios";
 import { useForm, InputType } from "@/context/formContext";
+import { useTranslations } from "next-intl";
+import { useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 const BigForm = () => {
+  const t = useTranslations("contact");
   const { peopleForm, setPeopleForm } = useForm();
+  const [isCheckd, setIsCheckd] = useState(false);
+  const [disableButton, setDisableButton] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  const searchParams = useSearchParams();
 
   const handleOnChange = (
     e:
@@ -22,45 +30,24 @@ const BigForm = () => {
 
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-    const {
-      name,
-      surname,
-      email,
-      city,
-      street,
-      country,
-      date,
-      phone,
-      weight,
-      message,
-      countryToGo,
-      cityToGo,
-      streetToGo,
-    }: InputType = peopleForm;
-
+    setDisableButton(true);
+    //Create form data obj from jsx form
+    const formData = new FormData(formRef.current!);
     const topic = "Rezerwacja przewozu gabarytów";
+    formData.append("topic", topic);
+    const formType = "large";
+    formData.append("formType", formType);
+    formData.append("date", peopleForm.date);
+
+    const param = searchParams.get("type");
 
     await axios({
       method: "post",
       url: "/api/reservation",
-      data: {
-        name,
-        surname,
-        email,
-        city,
-        street,
-        country,
-        date,
-        weight,
-        phone,
-        message,
-        countryToGo,
-        cityToGo,
-        streetToGo,
-        topic,
-      },
+      data: formData,
+      params: { type: param },
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "multipart/form-data",
       },
     })
       .then((msg) => alert(msg.data.message))
@@ -85,6 +72,7 @@ const BigForm = () => {
                 label="Imię"
                 isRequired={true}
                 autoComplete="on"
+                value={peopleForm.name}
                 onChange={handleOnChange}
                 className=""
               />
@@ -99,6 +87,7 @@ const BigForm = () => {
                 label="Nazwisko"
                 isRequired={true}
                 autoComplete="on"
+                value={peopleForm.surname}
                 onChange={handleOnChange}
                 className=""
               />
@@ -115,6 +104,7 @@ const BigForm = () => {
                 label="Miejscowość"
                 isRequired={true}
                 autoComplete="on"
+                value={peopleForm.city}
                 onChange={handleOnChange}
                 className=""
               />
@@ -127,6 +117,7 @@ const BigForm = () => {
                 placeholder="Losowa 52"
                 radius="none"
                 label="Ulica"
+                value={peopleForm.street}
                 isRequired={true}
                 autoComplete="on"
                 onChange={handleOnChange}
@@ -141,6 +132,7 @@ const BigForm = () => {
                 placeholder="Polska"
                 radius="none"
                 label="Kraj"
+                value={peopleForm.country}
                 isRequired={true}
                 autoComplete="on"
                 onChange={handleOnChange}
@@ -155,6 +147,7 @@ const BigForm = () => {
                 placeholder="200kg"
                 endContent={"kg"}
                 radius="none"
+                value={peopleForm.weight}
                 label="Szacunkowa waga"
                 isRequired={true}
                 autoComplete="on"
@@ -177,6 +170,7 @@ const BigForm = () => {
                     label="Numer telefonu"
                     isRequired={true}
                     autoComplete="on"
+                    value={peopleForm.phone}
                     onChange={handleOnChange}
                     className=""
                   />
@@ -186,6 +180,7 @@ const BigForm = () => {
                     id="email"
                     variant="bordered"
                     labelPlacement="outside"
+                    value={peopleForm.email}
                     placeholder="jan.kowalski@gmail.com"
                     radius="none"
                     label="Adres email"
@@ -201,6 +196,7 @@ const BigForm = () => {
                   id="message"
                   variant="bordered"
                   labelPlacement="outside"
+                  value={peopleForm.message}
                   placeholder="Dodatkowa torba podręczna"
                   radius="none"
                   label="Dodatkowe informacje"
@@ -225,6 +221,7 @@ const BigForm = () => {
                   label="Kraj"
                   isRequired={true}
                   autoComplete="on"
+                  value={peopleForm.countryToGo}
                   onChange={handleOnChange}
                   className=""
                 />
@@ -239,6 +236,7 @@ const BigForm = () => {
                   label="Miejscowość"
                   isRequired={true}
                   autoComplete="on"
+                  value={peopleForm.cityToGo}
                   onChange={handleOnChange}
                   className=""
                 />
@@ -253,6 +251,7 @@ const BigForm = () => {
                   label="Ulica"
                   isRequired={true}
                   autoComplete="on"
+                  value={peopleForm.streetToGo}
                   onChange={handleOnChange}
                   className=""
                 />
@@ -261,15 +260,28 @@ const BigForm = () => {
           </div>
         </aside>
       </div>
-      <Button
-        disabled={true}
-        color="secondary"
-        radius="none"
-        type="submit"
-        className="text-white my-8 w-full max-w-[300px]"
-      >
-        Zarezerwuj przejazd
-      </Button>
+      <div className="flex flex-col jusity-center items-center">
+        <div className="flex flex-row justify-center items-center">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="checkbox"
+            disabled={disableButton}
+            onChange={() => setIsCheckd(!isCheckd)}
+          />
+          <label htmlFor="checkbox">{t("rodo")}</label>
+        </div>
+
+        <Button
+          isDisabled={!isCheckd || disableButton ? true : false}
+          color="secondary"
+          radius="none"
+          type="submit"
+          className="text-white my-8 w-full max-w-[300px]"
+        >
+          Zarezerwuj transport
+        </Button>
+      </div>
     </form>
   );
 };

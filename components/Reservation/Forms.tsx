@@ -1,4 +1,4 @@
-import BigForm from "./Big";
+import BigForm from "./Large";
 import PackageForm from "./Package";
 import PeopleForm from "./People";
 
