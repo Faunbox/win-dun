@@ -55,7 +55,7 @@ const BigForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} ref={formRef}>
       <div className="flex flex-col md:flex-row gap-4 mt-16">
         <aside className="flex flex-col md:flex-row gap-2 md:gap-4 w-full ">
           <div className="flex flex-col gap-2 md:gap-4">
