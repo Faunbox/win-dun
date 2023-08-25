@@ -120,11 +120,14 @@
       "label1": "Imie i nazwisko",
       "placeholder1": "Jan Kowalski",
 
-      "label2": "Adres email / telefon",
-      "placeholder2": "123-456-789",
+      "label2": "Adres email",
+      "placeholder2": "jan.kowalski@mail.com",
 
-      "label3": "Twoja wiadomosc",
-      "placeholder3": "Chcialbym otrzymac wiecej informacji o..."
+      "label3": "Numer telefonu",
+      "placeholder3": "123-456-789",
+
+      "label4": "Twoja wiadomosc",
+      "placeholder4": "Chcialbym otrzymac wiecej informacji o..."
     }
   },
 
@@ -165,18 +168,46 @@
   },
   "reservation": {
     "title": "Rezerwacja przejazdu",
-    "chooseForm": "Wybierz odpowiedni formularz",
-    "formsRadio": {
-      "ppl": "Osoby",
-      "package": "Paczki",
-      "big": "Przeprowadzki"
+    "formLabel": "Wybierz odpowiedni formularz",
+    "radioPeople": "Osoby",
+    "radioPackage": "Paczka",
+    "radioLarge": "Gabaryty",
+    "formTitle": "Twoje dane",
+    "formTitleToGo": "Twoje miejsce docelowe",
+    "buttons": {
+      "formButtonPackage": "Zarezerwuj paczkę",
+      "formButtonPeople": "Zarezerwuj przejazd",
+      "formButtonLarge": "Zarezerwuj przewóz"
     },
-    "forms": {
-      "title1": "Twoje dane",
-      "title2": "Twoje miejsce docelowe",
-      "people": {},
-      "package": {},
-      "big": {}
+    "inputs": {
+      "inputNameLabel": "Imię",
+      "inputNamePlaceholder": "Jan",
+      "inputSurnameLabel": "Nazwisko",
+      "inputSurnamePlaceholder": "Kowalski",
+      "inputCityLabel": "Miejscowość",
+      "inputCityPlaceholder": "Katowice",
+      "inputStreetLabel": "Ulica",
+      "inputStreetPlaceholder": "Losowa 52",
+      "inputCountryLabel": "Kraj",
+      "inputCountryPlaceholder": "Polska",
+      "inputNumberLabel": "Ilość osób",
+      "inputNumberPlaceholder": "Wpisz liczbę osób",
+      "inputPhoneLabel": "Numer telefonu",
+      "inputPhonePlaceholder": "543 210 987",
+      "inputEmailLabel": "Adres email",
+      "inputEmailPlaceholder": "jan.kowalski@gmail.com",
+      "inputMessageLabel": "Dodatkowe informacje",
+      "inputMessagePlaceholder": "Dodatkowa torba podręczna",
+      "inputNameToGoLabel": "Imie osoby odbierającej",
+      "inputNameToGoPlaceholder": "Finn",
+      "inputSurnameToGoLabel": "Nazwisko osoby odbierającej",
+      "inputSurnameToGoPlaceholder": "De Jong",
+      "inputCountryToGoLabel": "Kraj",
+      "inputCountryToGoPlaceholder": "Holandia",
+      "inputCityToGoLabel": "Miejscowość",
+      "inputCityToGoPlaceholder": "Amsterdam",
+      "inputStreetToGoLabel": "Ulica",
+      "inputStreetToGoPlaceholder": "Kerkstraat 1017"
     }
   },
 

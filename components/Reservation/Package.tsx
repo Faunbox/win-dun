@@ -12,6 +12,7 @@ import { useSearchParams } from "next/navigation";
 
 const PackageForm = () => {
   const t = useTranslations("contact");
+  const tr = useTranslations("reservation");
   const { peopleForm, setPeopleForm } = useForm();
   const [isCheckd, setIsCheckd] = useState(false);
   const [disableButton, setDisableButton] = useState(false);
@@ -79,7 +80,7 @@ const PackageForm = () => {
       <div className="flex flex-col md:flex-row gap-4 mt-16">
         <section className="flex flex-col md:flex-row gap-2 md:gap-4 w-full items-center justify-center">
           <div className="flex flex-col gap-2 md:gap-4">
-            <h3 className="font-light text-lg">Twoje dane</h3>
+            <h3 className="font-light text-lg">{tr("formTitle")}</h3>
             <div className="flex flex-row gap-2 md:gap-4">
               <Input
                 type="text"
@@ -87,9 +88,9 @@ const PackageForm = () => {
                 id="name"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="Jan"
                 radius="none"
-                label="Imię"
+                label={tr("inputs.inputNameLabel")}
+                placeholder={tr("inputs.inputNamePlaceholder")}
                 isRequired={true}
                 autoComplete="on"
                 value={peopleForm.name}
@@ -102,9 +103,9 @@ const PackageForm = () => {
                 id="surname"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="Kowalski"
                 radius="none"
-                label="Nazwisko"
+                label={tr("inputs.inputSurnameLabel")}
+                placeholder={tr("inputs.inputSurnamePlaceholder")}
                 isRequired={true}
                 autoComplete="on"
                 value={peopleForm.surname}
@@ -119,9 +120,9 @@ const PackageForm = () => {
                 id="city"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="Katowice"
                 radius="none"
-                label="Miejscowość"
+                label={tr("inputs.inputCityLabel")}
+                placeholder={tr("inputs.inputCityPlaceholder")}
                 isRequired={true}
                 autoComplete="on"
                 value={peopleForm.city}
@@ -134,9 +135,9 @@ const PackageForm = () => {
                 id="street"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="Losowa 52"
                 radius="none"
-                label="Ulica"
+                label={tr("inputs.inputStreetLabel")}
+                placeholder={tr("inputs.inputStreetPlaceholder")}
                 isRequired={true}
                 autoComplete="on"
                 value={peopleForm.street}
@@ -149,9 +150,9 @@ const PackageForm = () => {
                 id="country"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="Polska"
                 radius="none"
-                label="Kraj"
+                label={tr("inputs.inputCountryLabel")}
+                placeholder={tr("inputs.inputCountryPlaceholder")}
                 isRequired={true}
                 autoComplete="on"
                 value={peopleForm.country}
@@ -164,10 +165,10 @@ const PackageForm = () => {
                 id="weight"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="20kg"
                 endContent={"kg"}
                 radius="none"
-                label="Szacunkowa waga"
+                label={tr("inputs.inputNumberLabel")}
+                placeholder={tr("inputs.inputNumberPlaceholder")}
                 isRequired={true}
                 autoComplete="on"
                 value={peopleForm.weight}
@@ -185,9 +186,9 @@ const PackageForm = () => {
                     id="phone"
                     variant="bordered"
                     labelPlacement="outside"
-                    placeholder="543 210 987"
                     radius="none"
-                    label="Numer telefonu"
+                    label={tr("inputs.inputPhoneLabel")}
+                    placeholder={tr("inputs.inputPhonePlaceholder")}
                     isRequired={true}
                     autoComplete="on"
                     value={peopleForm.phone}
@@ -200,9 +201,9 @@ const PackageForm = () => {
                     id="email"
                     variant="bordered"
                     labelPlacement="outside"
-                    placeholder="jan.kowalski@gmail.com"
                     radius="none"
-                    label="Adres email"
+                    label={tr("inputs.inputEmailLabel")}
+                    placeholder={tr("inputs.inputEmailPlaceholder")}
                     isRequired={true}
                     autoComplete="on"
                     value={peopleForm.email}
@@ -216,9 +217,9 @@ const PackageForm = () => {
                   id="message"
                   variant="bordered"
                   labelPlacement="outside"
-                  placeholder="Dwie paczki i list"
                   radius="none"
-                  label="Dodatkowe informacje"
+                  label={tr("inputs.inputMessageLabel")}
+                  placeholder={tr("inputs.inputMessagePlaceholder")}
                   value={peopleForm.message}
                   onChange={handleOnChange}
                   fullWidth
@@ -228,7 +229,7 @@ const PackageForm = () => {
 
             <div className="flex flex-row gap-2 md:gap-4"></div>
             <div className="flex flex-col gap-2 md:gap-4 mt-8">
-              <h3 className="font-light text-lg">Twoje miejsce docelowe</h3>
+              <h3 className="font-light text-lg">{tr("formTitleToGo")}</h3>
               <div className="flex flex-col gap-2 md:gap-4">
                 <div className="flex flex-row gap-2 md:gap-4">
                   <Input
@@ -237,9 +238,9 @@ const PackageForm = () => {
                     id="nameToGo"
                     variant="bordered"
                     labelPlacement="outside"
-                    placeholder="Lech"
                     radius="none"
-                    label="Imie osoby odbierającej"
+                    label={tr("inputs.inputNameToGoLabel")}
+                    placeholder={tr("inputs.inputNameToGoPlaceholder")}
                     isRequired={true}
                     autoComplete="on"
                     value={peopleForm.nameToGo}
@@ -252,9 +253,9 @@ const PackageForm = () => {
                     id="surnameToGo"
                     variant="bordered"
                     labelPlacement="outside"
-                    placeholder="Nowak"
                     radius="none"
-                    label="Nazwisko osoby odbierającej"
+                    label={tr("inputs.inputSurnameToGoLabel")}
+                    placeholder={tr("inputs.inputSurnameToGoPlaceholder")}
                     isRequired={true}
                     autoComplete="on"
                     value={peopleForm.surnameToGo}
@@ -269,9 +270,9 @@ const PackageForm = () => {
                     id="countryToGo"
                     variant="bordered"
                     labelPlacement="outside"
-                    placeholder="Holandia"
                     radius="none"
-                    label="Kraj"
+                    label={tr("inputs.inputCountryToGoLabel")}
+                    placeholder={tr("inputs.inputCountryToGoPlaceholder")}
                     isRequired={true}
                     autoComplete="on"
                     value={peopleForm.countryToGo}
@@ -284,9 +285,9 @@ const PackageForm = () => {
                     id="cityToGo"
                     variant="bordered"
                     labelPlacement="outside"
-                    placeholder="Amsterdam"
                     radius="none"
-                    label="Miejscowość"
+                    label={tr("inputs.inputCityToGoLabel")}
+                    placeholder={tr("inputs.inputCityToGoPlaceholder")}
                     isRequired={true}
                     autoComplete="on"
                     value={peopleForm.cityToGo}
@@ -299,9 +300,9 @@ const PackageForm = () => {
                     id="streetToGo"
                     variant="bordered"
                     labelPlacement="outside"
-                    placeholder="Losowa 52"
                     radius="none"
-                    label="Ulica"
+                    label={tr("inputs.inputStreetToGoLabel")}
+                    placeholder={tr("inputs.inputStreetToGoPlaceholder")}
                     isRequired={true}
                     autoComplete="on"
                     value={peopleForm.streetToGo}
@@ -333,7 +334,7 @@ const PackageForm = () => {
           type="submit"
           className="text-white my-8 w-full max-w-[300px]"
         >
-          Zarezerwuj paczkę
+          {tr("buttons.formButtonPackage")}
         </Button>
       </div>
     </form>

@@ -11,6 +11,8 @@ import { useSearchParams } from "next/navigation";
 
 const PeopleForm = () => {
   const t = useTranslations("contact");
+  const tr = useTranslations("reservation");
+
   const { peopleForm, setPeopleForm } = useForm();
   const [isCheckd, setIsCheckd] = useState(false);
   const [disableButton, setDisableButton] = useState(false);
@@ -59,7 +61,7 @@ const PeopleForm = () => {
       <div className="flex flex-col sm:flex-row gap-4 mt-4 sm:mt-16">
         <aside className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full ">
           <div className="flex flex-col gap-2 sm:gap-4">
-            <h3 className="font-light text-lg my-4">Twoje dane</h3>
+            <h3 className="font-light text-lg my-4">{tr("formTitle")}</h3>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
               <Input
                 type="text"
@@ -67,9 +69,9 @@ const PeopleForm = () => {
                 id="name"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="Jan"
                 radius="none"
-                label="Imię"
+                label={tr("inputs.inputNameLabel")}
+                placeholder={tr("inputs.inputNamePlaceholder")}
                 isRequired={true}
                 autoComplete="on"
                 value={peopleForm.name}
@@ -82,9 +84,9 @@ const PeopleForm = () => {
                 id="surname"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="Kowalski"
                 radius="none"
-                label="Nazwisko"
+                label={tr("inputs.inputSurnameLabel")}
+                placeholder={tr("inputs.inputSurnamePlaceholder")}
                 isRequired={true}
                 autoComplete="on"
                 value={peopleForm.surname}
@@ -99,9 +101,9 @@ const PeopleForm = () => {
                 id="city"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="Katowice"
                 radius="none"
-                label="Miejscowość"
+                label={tr("inputs.inputCityLabel")}
+                placeholder={tr("inputs.inputCityPlaceholder")}
                 isRequired={true}
                 value={peopleForm.city}
                 autoComplete="on"
@@ -114,9 +116,9 @@ const PeopleForm = () => {
                 id="street"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="Losowa 52"
                 radius="none"
-                label="Ulica"
+                label={tr("inputs.inputStreetLabel")}
+                placeholder={tr("inputs.inputStreetPlaceholder")}
                 isRequired={true}
                 value={peopleForm.street}
                 autoComplete="on"
@@ -129,10 +131,10 @@ const PeopleForm = () => {
                 id="country"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="Polska"
                 value={peopleForm.country}
                 radius="none"
-                label="Kraj"
+                label={tr("inputs.inputCountryLabel")}
+                placeholder={tr("inputs.inputCountryPlaceholder")}
                 isRequired={true}
                 autoComplete="on"
                 onChange={handleOnChange}
@@ -144,10 +146,10 @@ const PeopleForm = () => {
                 id="numer"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="1"
                 radius="none"
                 value={peopleForm.number}
-                label="Ilość osób"
+                label={tr("inputs.inputNumberLabel")}
+                placeholder={tr("inputs.inputNumberPlaceholder")}
                 isRequired={true}
                 autoComplete="on"
                 onChange={handleOnChange}
@@ -164,9 +166,9 @@ const PeopleForm = () => {
                     id="phone"
                     variant="bordered"
                     labelPlacement="outside"
-                    placeholder="543 210 987"
                     radius="none"
-                    label="Numer telefonu"
+                    label={tr("inputs.inputPhoneLabel")}
+                    placeholder={tr("inputs.inputPhonePlaceholder")}
                     value={peopleForm.phone}
                     isRequired={true}
                     autoComplete="on"
@@ -179,9 +181,9 @@ const PeopleForm = () => {
                     id="email"
                     variant="bordered"
                     labelPlacement="outside"
-                    placeholder="jan.kowalski@gmail.com"
                     radius="none"
-                    label="Adres email"
+                    label={tr("inputs.inputEmailLabel")}
+                    placeholder={tr("inputs.inputEmailPlaceholder")}
                     value={peopleForm.email}
                     isRequired={true}
                     autoComplete="on"
@@ -196,9 +198,9 @@ const PeopleForm = () => {
                   variant="bordered"
                   value={peopleForm.message}
                   labelPlacement="outside"
-                  placeholder="Dodatkowa torba podręczna"
                   radius="none"
-                  label="Dodatkowe informacje"
+                  label={tr("inputs.inputMessageLabel")}
+                  placeholder={tr("inputs.inputMessagePlaceholder")}
                   onChange={handleOnChange}
                   fullWidth
                 />
@@ -215,9 +217,9 @@ const PeopleForm = () => {
                   id="countryToGo"
                   variant="bordered"
                   labelPlacement="outside"
-                  placeholder="Holandia"
                   radius="none"
-                  label="Kraj"
+                  label={tr("inputs.inputCountryToGoLabel")}
+                  placeholder={tr("inputs.inputCountryToGoPlaceholder")}
                   isRequired={true}
                   autoComplete="on"
                   value={peopleForm.countryToGo}
@@ -230,9 +232,9 @@ const PeopleForm = () => {
                   id="cityToGo"
                   variant="bordered"
                   labelPlacement="outside"
-                  placeholder="Amsterdam"
                   radius="none"
-                  label="Miejscowość"
+                  label={tr("inputs.inputCityToGoLabel")}
+                  placeholder={tr("inputs.inputCityToGoPlaceholder")}
                   isRequired={true}
                   autoComplete="on"
                   value={peopleForm.cityToGo}
@@ -245,9 +247,9 @@ const PeopleForm = () => {
                   id="streetToGo"
                   variant="bordered"
                   labelPlacement="outside"
-                  placeholder="Losowa 52"
                   radius="none"
-                  label="Ulica"
+                  label={tr("inputs.inputStreetToGoLabel")}
+                  placeholder={tr("inputs.inputStreetToGoPlaceholder")}
                   isRequired={true}
                   autoComplete="on"
                   value={peopleForm.streetToGo}
@@ -278,7 +280,7 @@ const PeopleForm = () => {
           type="submit"
           className="text-white my-8 w-full max-w-[300px]"
         >
-          Zarezerwuj paczkę
+          {tr("buttons.formButtonPeople")}
         </Button>
       </div>
     </form>

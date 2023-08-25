@@ -17,7 +17,7 @@ export interface InputType {
   numer?: number;
   weight?: number;
   date: Date | string;
-  phone: number;
+  phone: number | string;
   email: string;
   message?: string;
   nameToGo?: string;
@@ -52,7 +52,7 @@ export function FormProvider({ children }: { children: ReactNode }) {
     numer: 1,
     weight: 1,
     date: new Date(),
-    phone: 1,
+    phone: "543 210 987",
     message: "",
     countryToGo: "",
     cityToGo: "",
