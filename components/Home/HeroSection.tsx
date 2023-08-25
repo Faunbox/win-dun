@@ -11,40 +11,39 @@ const HeroSection = () => {
   return (
     <div className="section-container bg-[url('/images/hero10.jpg')] w-screen h-screen bg-right bg-no-repeat">
       <div className="container  flex flex-col md:flex-row justify-center items-start mx-auto align-middle relative px-4 py-10 lg:py-0">
-        <aside className="flex flex-col justify-center items-center md:justify-start w-full md:w-6/12 mx-auto md:absolute md:top-[40%] md:left-[30%] md:-translate-x-1/2 md:-translate-y-2/4 -z-1 text-gray-50">
-          <h1 className="text-xl md:text-3xl font-bold uppercase px-2 border-black ">
+        <aside className="flex flex-col justify-center items-center md:justify-start w-full md:w-6/12 mx-auto md:absolute md:top-[30%] md:left-[30%] md:-translate-x-1/2 md:-translate-y-2/4 -z-1 text-gray-50 mt-4">
+          <h1 className="text-xl md:text-6xl font-bold  px-2 border-black ">
             {t("homeDescription1")}
           </h1>
           <div className="flex flex-col">
-            {/* <h2 className="text-md md:text-lg font-light uppercase">
+            {/* <h2 className="text-md md:text-lg font-light ">
               {t("homeDescription2")}
             </h2> */}
-            <h2 className="text-md md:text-lg font-light uppercase">
+            <h2 className="text-md md:text-2xl font-light pt-4">
               {t("homeDescription3")}
             </h2>
           </div>
-          <div className="flex flex-col md:flex-row items-center lg:justify-between gap-7 mt-8 md:mt-10">
-            <Link href={"/rezerwacja?type=people"}>
+          <div className="flex flex-col md:flex-row items-center lg:justify-between gap-6 md:gap-20 mt-8 md:mt-10">
+            <Link href={t("heroButtonLink")}>
               <Button
                 disabled={true}
                 color="primary"
-                variant="bordered"
                 radius="none"
                 size="lg"
-                className="text-white my-1 md:my-8 w-full max-w-[300px] p-2 md:p-4 text-lg hover:scale-110"
+                className="text-white my-1 md:my-8 w-full max-w-[300px] p-2 md:p-4 text-lg border-b-1 hover:scale-105 ease-in-out bg bg-transparent"
               >
                 <BsPersonCheck />
                 {t("heroButton")}
               </Button>
             </Link>
-            <Link href={"/rezerwacja?type=package"}>
+            <Link href={t("heroPhoneLink")}>
               <Button
                 disabled={true}
                 color="primary"
                 radius="none"
-                variant="bordered"
+                // variant="bordered"
                 size="lg"
-                className="text-white my-1 md:my-8 w-full max-w-[300px] p-2 md:p-4 text-lg hover:scale-110"
+                className="text-white my-1 md:my-8 w-full max-w-[300px] p-2 md:p-4 text-lg border-b-1 hover:scale-105 ease-in-out bg bg-transparent"
               >
                 <GoPackageDependents />
                 {t("heroPhone")}

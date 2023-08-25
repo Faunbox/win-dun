@@ -15,7 +15,9 @@
     "homeDescription2": "Usługi transportowe do Niemiec i Holandii.",
     "homeDescription3": "W każdy piątek, sobotę i niedziele.",
     "heroButton": "Zarezerwuj przejazd",
+    "heroButtonLink": "/nl",
     "heroPhone": "Wyślij paczkę",
+    "heroPhoneLink": "/nl",
     "services": {
       "title": "Nasze usługi",
       "header1": "Przewóz osób oraz zwierząt",
@@ -52,7 +54,8 @@
       "text2": "wyjazdów od drzwi do drzwi",
       "span2": "0",
       "text3": "minut spędzonych na awarii pojazdu",
-      "button": "Zamów przejazd"
+      "button": "Zamów przejazd",
+      "link": "/rezerwacja=?type=people"
     },
     "bus": {
       "title": "NASZE BUSY POSIADAJĄ",
@@ -106,7 +109,8 @@
       "luggageTitle": "Jak przygotować paczkę do wysyłki ?",
       "luggageDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia reiciendis a natus officia reprehenderit autem voluptas debitis. Dicta praesentium iste, obcaecati alias eaque debitis quam dolore, atque eveniet blanditiis beatae.",
       "luggageInfo": "Tekst o wielkości bagażu i wadze",
-      "button": "Zarezerwuj paczkę"
+      "button": "Zarezerwuj paczkę",
+      "buttonLink": "/nl/reservation?type=package"
     }
   },
   "contact": {

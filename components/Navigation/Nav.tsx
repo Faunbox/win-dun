@@ -7,7 +7,6 @@ import NavLink from "./NavLink";
 import { useLocale } from "next-intl";
 import Link from "next/link";
 import NavDropdown from "./NavDropdown";
-import RedButton from "../Typography/GreenButton";
 import NavButton from "./NavButton";
 import Image from "next/image";
 
@@ -16,9 +15,9 @@ const Nav = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (
-    <header className="fixed container top-0 right-0 left-0 mx-auto min-w-[100vw] lg:justify-center lg:flex lg:items-center backdrop-blur-sm bg-gray-700 bg-opacity-40 z-50">
+    <header className="fixed container top-0 right-0 left-0 p-1 mx-auto min-w-[100vw] lg:justify-center lg:flex lg:items-center backdrop-blur-sm bg-gray-700 bg-opacity-40 z-50">
       {/* Desktop navbar */}
-      <nav className="hidden lg:grid lg:grid-cols-6 justify-between container mx-10 my-5">
+      <nav className="hidden lg:grid lg:grid-cols-6 justify-between container mx-10">
         {/* Logo */}
         <Link href={"/"} className="">
           <Image
@@ -38,9 +37,7 @@ const Nav = () => {
                   {title !== "Rezerwacja" ? (
                     <NavLink href={href} title={title} />
                   ) : (
-                    <NavButton>
                       <NavLink href={href} title={title} color="white" />
-                    </NavButton>
                   )}
                 </li>
               )
@@ -78,7 +75,7 @@ const Nav = () => {
             <BiPhoneOutgoing color="#F7B750" size={25} />
             <a
               href="phone:+48505216526"
-              className="text-lg font-semibold text-white mix-blend-saturation animate-bounce"
+              className="text-lg font-light text-white mix-blend-saturation animate-bounce duration-[2000ms]"
             >
               505 216 526
             </a>

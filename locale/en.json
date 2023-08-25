@@ -11,63 +11,66 @@
     ]
   },
   "homePage": {
-    "homeDescription1": "Usługi transportowe do Niemiec i Holandii.",
-    "homeDescription2": "Usługi transportowe do Niemiec i Holandii.",
-    "homeDescription3": "W każdy piątek, sobotę i niedziele.",
-    "heroButton": "Zarezerwuj przejazd",
-    "heroPhone": "Wyślij paczkę",
+    "homeDescription1": "Transport services to Germany and the Netherlands.",
+    "homeDescription2": "Transport services to Germany and the Netherlands.",
+    "homeDescription3": "Each friday, saturday and sunday",
+    "heroButton": "Book a ride",
+    "heroButtonLink": "/en/reservation?type=people",
+    "heroPhone": "Send the package",
+    "heroPhoneLink": "/en/reservation?type=package",
     "services": {
-      "title": "Nasze usługi",
-      "header1": "Przewóz osób oraz zwierząt",
-      "description1": "Zapewniamy komfort, punktualność oraz bezpieczeństwo. Nasza wykwalifikowana kadra, doświadczenie oraz nowoczesny tabor pojazdów pozwala nam realizować transport na najwyższym poziomie.",
-      "header2": "Przewóz listów, paczek oraz gabarytów",
-      "description2": "Możesz polegać na naszej skuteczności i terminowości. Nasz zespół zadba o bezpieczne i szybkie dostarczenie Twoich paczek w wyznaczone miejsce, bez względu na ich rozmiar czy wrażliwość",
-      "header3": "Przeprowadzki",
-      "description3": "Zdajemy sobie sprawę, że przeprowadzka to ważne wydarzenie w życiu każdej osoby, dlatego naszym celem jest zapewnienie Ci bezpiecznej, sprawnie zorganizowanej i komfortowej przeprowadzki."
+      "title": "Services",
+      "header2": "Transport of people and animals",
+      "description2": "We provide comfort, punctuality and safety. Our qualified staff, experience and modern fleet of vehicles allow us to carry out transport at the highest level.",
+      "header1": "Transportation of letters, parcels and larger items",
+      "description1": "You can rely on our efficiency and timeliness. Our team will take care of safe and quick delivery of your parcels to the designated place, regardless of their size or sensitivity.",
+      "header3": "Removals",
+      "description3": "We realize that moving is an important event in the life of every person, which is why our goal is to provide you with a safe, efficiently organized and comfortable move."
     },
     "whyOurCompany": {
-      "title": "Dlaczego my?",
+      "title": "Why us?",
       "texts": {
-        "header1": "Header 1",
+        "header1": "Header En1",
         "description1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
-        "header2": "Header 2",
+        "header2": "Header En2",
         "description2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
 
-        "header3": "Header 3",
+        "header3": "Header EN3",
         "description3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
 
-        "header4": "Header 4",
+        "header4": "Header EN4",
         "description4": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
 
-        "header5": "Header 5",
+        "header5": "Header EN5",
         "description5": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
 
-        "header6": "Header 6",
+        "header6": "HeaderEN6",
         "description6": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro."
       }
     },
     "about": {
-      "text1": "Ponad",
+      "text1": "Over",
       "span1": "600",
-      "text2": "wyjazdów od drzwi do drzwi",
+      "text2": "door-to-door trips",
       "span2": "0",
-      "text3": "minut spędzonych na awarii pojazdu",
-      "button": "Zamów przejazd"
+      "text3": "minutes spent on breakdowns of our vehicles",
+      "button": "Order a ride",
+      "link": "/en/reservation?type=people"
     },
     "bus": {
-      "title": "NASZE BUSY POSIADAJĄ",
-      "text1": "Komfortowe siedzenia",
-      "text2": "Klimatyzacja",
-      "text3": "Gniazda USB",
-      "text4": "Duża powierzchnia ładunkowa"
+      "title": "OUR BUSES HAVE",
+      "text1": "Comfortable seats",
+      "text2": "Air conditioning",
+      "text3": "USB Ports",
+      "text4": "Large cargo area"
     },
-    "nameAbout": "O nas",
+    "nameAbout": "About us",
     "aboutDescription": "Jesteśmy dynamiczną firmą, która specjalizuje się w kompleksowych usługach transportowych. Od lat świadczymy profesjonalne usługi przewozu osób, paczek oraz zwierząt, zapewniając naszym klientom bezpieczne i komfortowe podróże. Nasz priorytet to zadowolenie i satysfakcja naszych klientów. Dlatego dbamy o każdy detal naszych usług, gwarantując wysoką jakość i niezawodność. Nasza wykwalifikowana kadra, doświadczenie oraz nowoczesny tabor pojazdów pozwala nam realizować transport na najwyższym poziomie."
   },
   "about": {
-    "title": "O naszej firmie",
-    "description1": "Jesteśmy dynamiczną i wszechstronną firmą specjalizującą się w profesjonalnych usługach transportowych. Nasze szerokie spektrum usług obejmuje przewóz osób, paczek oraz zwierząt, zapewniając naszym klientom kompleksowe rozwiązania.",
-    "description2": "Przykładamy ogromną wagę do zadowolenia naszych klientów i stawiamy na wysoką jakość naszych usług. Dzięki naszemu doświadczeniu oraz wykwalifikowanej i przyjaznej obsłudze, możesz mieć pewność, że Twoje potrzeby zostaną w pełni spełnione.",
+    "title": "About or company",
+    "description1": "We are a dynamic and versatile company specializing in professional transport services. Our wide range of services includes the transport of people, parcels and animals, providing our customers with comprehensive solutions.",
+    "description2": "We attach great importance to the satisfaction of our clients and we focus on the high quality of our services. Thanks to our experience and qualified and friendly service, you can be sure that your needs will be fully met.",
     "description3": "Jeśli chodzi o przewóz osób, oferujemy szeroki wybór opcji dostosowanych do różnych potrzeb. Niezależnie od tego, czy potrzebujesz transportu na lotnisko, podróżujesz służbowo czy organizujesz wycieczkę grupową, nasi profesjonalni kierowcy zapewnią Ci bezpieczną i komfortową podróż. Nasz tabor pojazdów jest nowoczesny, wyposażony w najnowsze technologie i regularnie poddawany konserwacji, aby zapewnić Ci nie tylko bezpieczeństwo, ale także wygodę i spokój podczas podróży.",
     "description4": "W dziedzinie przewozu paczek, możesz polegać na naszej skuteczności i terminowości. Niezależnie od rozmiaru czy wagi przesyłki, nasza ekipa dokładnie zadba o jej bezpieczne zapakowanie i dostarczenie w wyznaczone miejsce. Świadczymy również usługi kurierskie, które zapewniają szybki i niezawodny transport Twoich paczek zarówno lokalnie, jak i międzynarodowo.",
     "description5": "Ponadto, specjalizujemy się w przewozie zwierząt, dbając o ich komfort i bezpieczeństwo podczas podróży. Rozumiemy, jak ważne jest dla Ciebie, aby Twoje zwierzęta były traktowane z troską i szacunkiem. Nasza wykwalifikowana ekipa zapewni właściwe warunki i opiekę, aby Twoje zwierzęta czuły się spokojne i bezpieczne podczas transportu.",
@@ -75,76 +78,78 @@
     "description7": "Zapraszamy do skorzystania z naszych usług transportowych i dołączenia do grona zadowolonych klientów. Skontaktuj się z nami już dzisiaj, aby omówić swoje potrzeby i otrzymać indywidualną ofertę. Jesteśmy gotowi podjąć się każdego wyzwania i zapewnić Ci niezawodne rozwiązania transportowe."
   },
   "beforeTravel": {
-    "title": "Przed podróżą",
-    "howTo": "Jak zarezerwować przejazd?",
-    "info": "INFORMACJA",
-    "instruction": "Przedstawiamy krótki poradnik w jaki sposób zarezerwować przejazd lub wysłać paczkę przez nasz forumlarz rezerwacyjny",
-    "button": "Zarezerwój swój przejazd",
+    "title": "Before travel",
+    "howTo": "How to book a ride?",
+    "info": "INFORMATION",
+    "instruction": "We present a short guide on how to book a ride or send a package through our booking form",
+    "button": "Reserve your ride",
+    "link": "/en/reseravion?type=people",
     "steps": {
       "1": {
-        "topHeader": "Krok 1",
-        "header": "Wypełnienie forumalrza",
-        "desc": "Wypełnij pola formularza, upewniając się, że dane są prawidłowe. W przeciwnym razie nasi pracownicy mogą nie zarezerwować waszego przejazdu! Aby mieć pewność, zalecamy jak najszybszą rezerwację, nie później niż 3 dni przed planowanym wyjazdem"
+        "topHeader": "Step 1",
+        "header": "Filling out the form",
+        "desc": "Fill out the form fields, making sure the details are correct. Otherwise, our employees may not book your ride! To be sure, we recommend booking as soon as possible, no later than 3 days before the planned departure"
       },
       "2": {
-        "topHeader": "Krok 2",
-        "header": "Potwierdzenie terminu",
-        "desc": "Na wysłany formularz odpowiadamy mailowo do 24h - w odpowiedzni znajdziecie Państwo cenę za przejazd, czy są wolne miejsca, numer konta bankowego."
+        "topHeader": "Step 2",
+        "header": "Appointment confirmation",
+        "desc": "We respond to the sent form within 24 hours - in the response you will find the price for the ride, whether there are free places, and the bank account number."
       },
       "3": {
-        "topHeader": "Krok 3",
-        "header": "Opłata za przejazd",
-        "desc": "Po otrzymaniu informacji zwrotnej należy opłacić przejazd oraz w odpowiedzi na maila przesłać potwierdzenie przelewu. Tytuł przelewu powinien zawierać Imię i nazwisko oraz datę przejazdu."
+        "topHeader": "Step 3",
+        "header": "Fare",
+        "desc": "After receiving the feedback, pay for the journey and send the transfer confirmation in response to the e-mail. The title of the transfer should include your name and date of travel."
       },
       "4": {
-        "topHeader": "Krok 4",
-        "header": "Wyjazd",
-        "desc": "Zjawienie się minimum 15min przed planowaną godziną odjazdu, która jest uzgadniana telefonicznie w dniu wyjazdu."
+        "topHeader": "Step 4",
+        "header": "Trip",
+        "desc": "Appear at least 15 minutes before the scheduled departure time, which is agreed by phone on the day of departure."
       }
     },
     "package": {
-      "luggageTitle": "Jak przygotować paczkę do wysyłki ?",
+      "luggageTitle": "How to prepare a package for shipping?",
       "luggageDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia reiciendis a natus officia reprehenderit autem voluptas debitis. Dicta praesentium iste, obcaecati alias eaque debitis quam dolore, atque eveniet blanditiis beatae.",
       "luggageInfo": "Tekst o wielkości bagażu i wadze",
-      "button": "Zarezerwuj paczkę"
+      "button": "Reserve a package",
+      "buttonLink": "/en/reservation?type=package"
     }
   },
   "contact": {
-    "title": "Kontakt",
-    "companyDataTitle": "DANE FIRMY",
-    "text": "Czy masz pytania, potrzebujesz dodatkowych informacji lub chciałbyś skorzystać z naszych usług transportowych? Jesteśmy tutaj, aby Ci pomóc! Nie czekaj, skontaktuj się z nami już dzisiaj i przekonaj się, dlaczego jesteśmy liderem w branży transportowej w swoim regionie.",
-    "formHeader": "Formularz kontaktowy",
-    "formButton": "Wyślij wiadomość",
-    "rodo": "Wyrażam zgodę na przetwarzanie podanych w formularzu kontaktowym danych w celu nawiązania kontaktu",
+    "title": "Contact",
+    "companyDataTitle": "COMPANY'S DATA",
+    "text": "Do you have questions, need additional information or would you like to use our transport services? We are here to help you! Don't wait, contact us today and see why we are the leader in the transport industry in your region.",
+    "formHeader": "Contact form",
+    "formButton": "Send a message",
+    "rodo": "I consent to the processing of the data provided in the contact form in order to make contact",
     "formInputs": {
-      "label1": "Imie i nazwisko",
-      "placeholder1": "Jan Kowalski",
+      "label1": "Name and surname",
+      "placeholder1": "John Smith",
 
-      "label2": "Adres email",
-      "placeholder2": "jan.kowalski@mail.com",
+      "label2": "Email address",
+      "placeholder2": "john.smith@mail.com",
 
-      "label3": "Numer telefonu",
+      "label3": "Phone number",
       "placeholder3": "123-456-789",
 
-      "label4": "Twoja wiadomosc",
-      "placeholder4": "Chcialbym otrzymac wiecej informacji o..."
+      "label4": "Message",
+      "placeholder4": "I would like to receive more information about..."
     }
   },
 
   "faq": {
-    "title": "Najczęsciej zadawane pytania",
-    "desc": "Poniżej przedstawiamy odpowiedzi na najczęsciej zadawane pytania. Jeżeli nie znalazłeś satysfakcjonującej Cię odpowiedzi, zapraszamy do kontaktu!",
+    "title": "Frequently Asked Questions",
+    "desc": "Below, you will find answers to the most frequently asked questions. If you have not found a satisfactory answer, please contact us!",
     "qna": {
-      "question1": "Czy jeździmy z adresu pod adres?",
-      "response1": "Tak, wyjeżdżamy spod dowolnego adresu i dowozimy bezpośrednio pod wskazany adres.",
-      "question2": "Czy są przesiadki?",
-      "response2": "Kursujemy 'od drzwi do drzwi' bez przesiadek. Komfort podrozojacych jest dla nas priorytetem",
-      "question3": "Ile bagażu można z sobą zabrać?",
-      "response3": "W cenie przejazdu przysługują bezpłatny bagaż - podręczny o wadze do 5kg oraz podstawowy waga do 40 kg lub 2 sztuki po 20kg max. Bagaz dodatkowy za dopłata",
-      "question4": "Jak przygotowac zwierze do podrozy?",
-      "response4": "Zwierzę powinno być umieszczone w odpowiednim pojemniku przeznaczonym do podróży, zabezpieczającym przed wyrządzeniem szkody pasażerom lub mieniu firmy. Pojemnik transportowy powinien się znajdować na siedzeniu przy właścicielu bądz w kabinie oddzielonej. Rozmiar pojemnika transportowego musi być dostosowany do wielkości zwierzęcia, nie może jednak przekraczać rozmiarów: wysokość 24 cm, głębokość 28 cm, szerokość 46 cm. ",
-      "question5": "Jaka jest cena przewozu zwierzat?",
-      "response5": "Cena za przewóz zwierząt jest adekwatna do aktualnej ceny za przejazd pasażera - wysokość tej kwoty jest zależna od wybranej trasy."
+      "question1": "Are we driving from address to address?",
+      "response1": "Yes, we leave from any address and deliver directly to the address you specify.",
+      "question2": "Are there interchanges?",
+      "response2": "We run 'door to door' without interchanges. The comfort of travelers is our priority",
+      "question3": "How much luggage can you take with you?",
+      "response3": "The price includes free luggage - hand luggage up to 5 kg and basic luggage - up to 40 kg or 2 pieces of 20 kg max. Additional baggage for an additional fee",
+      "question4": "How to prepare an animal for travel?",
+      "response4": "The animal should be placed in a suitable container intended for travel, protecting against causing damage to passengers or company property. The transport container should be placed on the seat next to the owner or in a separate cabin. The size of the transport container must be adapted to the size of the animal, but must not exceed the following dimensions: height 24 cm, depth 28 cm, width 46 cm. ",
+      "question5": "What is the price of transporting animals?",
+      "response5": "The price for the transport of animals is adequate to the current price for the passenger's journey - depends on the selected route."
     }
   },
   "termsOfUse": {
@@ -167,75 +172,75 @@
     }
   },
   "reservation": {
-    "title": "Rezerwacja przejazdu",
-    "formLabel": "Wybierz odpowiedni formularz",
-    "radioPeople": "Osoby",
-    "radioPackage": "Paczka",
-    "radioLarge": "Gabaryty",
-    "formTitle": "Twoje dane",
-    "formTitleToGo": "Twoje miejsce docelowe",
+    "title": "Travel reservation",
+    "formLabel": "Please select the appropriate form",
+    "radioPeople": "Persons",
+    "radioPackage": "Package",
+    "radioLarge": "Larger items",
+    "formTitle": "Your details",
+    "formTitleToGo": "Your destination",
     "buttons": {
-      "formButtonPackage": "Zarezerwuj paczkę",
-      "formButtonPeople": "Zarezerwuj przejazd",
-      "formButtonLarge": "Zarezerwuj przewóz"
+      "formButtonPackage": "Reserve a package",
+      "formButtonPeople": "Book a ride",
+      "formButtonLarge": "Book your transfer"
     },
     "inputs": {
-      "inputNameLabel": "Imię",
-      "inputNamePlaceholder": "Jan",
-      "inputSurnameLabel": "Nazwisko",
-      "inputSurnamePlaceholder": "Kowalski",
-      "inputCityLabel": "Miejscowość",
+      "inputNameLabel": "Name",
+      "inputNamePlaceholder": "John",
+      "inputSurnameLabel": "Surname",
+      "inputSurnamePlaceholder": "Smith",
+      "inputCityLabel": "City",
       "inputCityPlaceholder": "Katowice",
-      "inputStreetLabel": "Ulica",
+      "inputStreetLabel": "Street",
       "inputStreetPlaceholder": "Losowa 52",
-      "inputCountryLabel": "Kraj",
+      "inputCountryLabel": "Country",
       "inputCountryPlaceholder": "Polska",
-      "inputNumberLabel": "Ilość osób",
-      "inputNumberPlaceholder": "Wpisz liczbę osób",
-      "inputPhoneLabel": "Numer telefonu",
+      "inputNumberLabel": "Number of persons",
+      "inputNumberPlaceholder": "Enter the number of people",
+      "inputPhoneLabel": "Phone number",
       "inputPhonePlaceholder": "543 210 987",
-      "inputEmailLabel": "Adres email",
-      "inputEmailPlaceholder": "jan.kowalski@gmail.com",
-      "inputMessageLabel": "Dodatkowe informacje",
-      "inputMessagePlaceholder": "Dodatkowa torba podręczna",
-      "inputNameToGoLabel": "Imie osoby odbierającej",
+      "inputEmailLabel": "Email address",
+      "inputEmailPlaceholder": "john.smith@gmail.com",
+      "inputMessageLabel": "Additional information",
+      "inputMessagePlaceholder": "Extra handbag",
+      "inputNameToGoLabel": "Recipient's name",
       "inputNameToGoPlaceholder": "Finn",
-      "inputSurnameToGoLabel": "Nazwisko osoby odbierającej",
+      "inputSurnameToGoLabel": "Recipient's surname",
       "inputSurnameToGoPlaceholder": "De Jong",
-      "inputCountryToGoLabel": "Kraj",
+      "inputCountryToGoLabel": "Country",
       "inputCountryToGoPlaceholder": "Holandia",
-      "inputCityToGoLabel": "Miejscowość",
+      "inputCityToGoLabel": "City",
       "inputCityToGoPlaceholder": "Amsterdam",
-      "inputStreetToGoLabel": "Ulica",
+      "inputStreetToGoLabel": "Street",
       "inputStreetToGoPlaceholder": "Kerkstraat 1017"
     }
   },
 
   "footer": {
-    "logoDesc": "Transport Holandia, Niemcy",
+    "logoDesc": "Transport Netherlands, Germany",
     "segments": {
       "1": {
-        "header": "TRANSPORTY",
-        "link1": "Transport Polska-Holandia",
-        "link2": "Transport Polska-Niemcy",
-        "link3": "Przewozy osób i paczek"
+        "header": "TRANSPORT",
+        "link1": "Transport Poland-Netherlands",
+        "link2": "Transport Poland-Germany",
+        "link3": "Transport of people and parcels"
       },
       "2": {
-        "header": "PRZEJAZD",
-        "link1": "Regulamin",
-        "link2": "Polityka prywatności",
-        "link3": "Rezerwacja przejazdu"
+        "header": "TRAVEL",
+        "link1": "Terms and Conditions",
+        "link2": "Privacy policy",
+        "link3": "Travel reservation"
       },
       "3": {
         "header": "MENU",
         "link1": "Start",
-        "link2": "Przed podróżą",
-        "link3": "Regulamin",
-        "link4": "Kontakt"
+        "link2": "Before Travel",
+        "link3": "Terms and Conditions",
+        "link4": "Contact"
       },
       "4": {
-        "header": "KONTAKT",
-        "link1": "Formularz kontaktowy"
+        "header": "CONTACT",
+        "link1": "Contact form"
       }
     }
   }

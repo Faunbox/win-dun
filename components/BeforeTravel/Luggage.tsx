@@ -4,22 +4,26 @@ import Link from "next/link";
 
 const Luggage = () => {
   const t = useTranslations("beforeTravel");
+  let hoverState = false
+
+  const handleMouseOver = () => {
+    hoverState = true
+  }
 
   return (
     <div className="container flex flex-col-reverse lg:flex-row my-20">
-      <div className="w-full h-full lg:w-6/12 contrast-50 hover:contrast-100 duration-300 ease-in-out">
-        <Image
-          src="/images/pakowanie.jpg"
-          alt=""
-          width={600}
-          height={400}
-          className="w-full h-full object-center relative"
-        />
-        <Link
-          href="/rezerwacja"
-          className=" absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-2xl md:text-3xl font-light hover:text-4xl duration-500 bg-gray-100 bg-opacity-70 p-4 "
-        >
-          {t("package.button")}
+      <div className="w-full h-full lg:w-6/12 contrast-50 duration-300 ease-in-out">
+        <Link href={t("link")}>
+          <Image
+            src="/images/pakowanie.jpg"
+            alt=""
+            width={600}
+            height={400}
+            className="w-full h-full object-center relative"
+          />
+          <button className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-2xl md:text-3xl font-light hover:text-4xl duration-500 bg-gray-100 bg-opacity-70 p-4 ">
+            {t("package.button")}
+          </button>
         </Link>
       </div>
       <div className="w-full lg:w-6/12 flex flex-col bg-gray-200">

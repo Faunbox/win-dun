@@ -1,19 +1,11 @@
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
-import {
-  BfTravelEn,
-  BfTravelNl,
-  BfTravelPL,
-  EnNavbar,
-  NlNavbar,
-  PlNavbar,
-} from "../Navigation/data";
-import NavLink from "../Navigation/NavLink";
-import FooterLink from "./FooterLink";
+
 import Image from "next/image";
 
 const Footer = () => {
   const locale = useLocale();
+  const t = useTranslations("footer")
 
   return (
     <footer className="w-full text-gray-100 bg-[#171213] body-font relative">
@@ -29,7 +21,7 @@ const Footer = () => {
             />
           </a>
           <p className="mt-2 text-sm text-gray-100">
-            Transport Holandia, Niemcy
+            {t("logoDesc")}
           </p>
           <div className="mt-4 w-64">
             <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-around gap-20">
@@ -77,83 +69,83 @@ const Footer = () => {
         <div className="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">
           <div className="w-full px-4 lg:w-1/4 md:w-1/2">
             <h2 className="mb-3 text-md font-medium tracking-widest text-gray-300 uppercase title-font">
-              Przejazd
+            {t("segments.2.header")}
             </h2>
             <nav className="mb-10 list-none">
               <li className="mt-3">
                 <a className="text-gray-100 cursor-pointer hover:text-gray-300">
-                  Regulamin
+                {t("segments.2.link1")}
                 </a>
               </li>
               <li className="mt-3">
                 <a className="text-gray-100 cursor-pointer hover:text-gray-300">
-                  Polityka prywatności
+                {t("segments.2.link2")}
                 </a>
               </li>
               <li className="mt-3">
                 <a className="text-gray-100 cursor-pointer hover:text-gray-300">
-                  ZAREZERWUJ
+                {t("segments.2.link3")}
                 </a>
               </li>
             </nav>
           </div>
           <div className="w-full px-4 lg:w-1/4 md:w-1/2">
             <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-300 uppercase title-font">
-              Transporty
+            {t("segments.1.header")}
             </h2>
             <nav className="mb-10 list-none">
               <li className="mt-3">
                 <a className="text-gray-100 cursor-pointer hover:text-gray-300">
-                  Transport Polska-Holandia
+                {t("segments.1.link1")}
                 </a>
               </li>
               <li className="mt-3">
                 <a className="text-gray-100 cursor-pointer hover:text-gray-300">
-                  Transport Polska-Niemcy
+                {t("segments.2.link2")}
                 </a>
               </li>
               <li className="mt-3">
                 <a className="text-gray-100 cursor-pointer hover:text-gray-300">
-                  Przewozy osób i paczek
+                {t("segments.2.link3")}
                 </a>
               </li>
             </nav>
           </div>
           <div className="w-full px-4 lg:w-1/4 md:w-1/2">
             <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-300 uppercase title-font">
-              Menu
+            {t("segments.3.header")}
             </h2>
             <nav className="mb-10 list-none">
               <li className="mt-3">
                 <a className="text-gray-100 cursor-pointer hover:text-gray-300">
-                  Start
+                {t("segments.3.link1")}
                 </a>
               </li>
               <li className="mt-3">
                 <a className="text-gray-100 cursor-pointer hover:text-gray-300">
-                  Flota
+                {t("segments.3.link2")}
                 </a>
               </li>
               <li className="mt-3">
                 <a className="text-gray-100 cursor-pointer hover:text-gray-300">
-                  Przed podróżą
+                {t("segments.3.link3")}
                 </a>
               </li>
               <li className="mt-3">
                 <a className="text-gray-100 cursor-pointer hover:text-gray-300">
-                  Kontakt
+                {t("segments.3.link4")}
                 </a>
               </li>
             </nav>
           </div>
           <div className="w-full px-4 lg:w-1/4 md:w-1/2">
             <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-300 uppercase title-font">
-              Kontakt
+            {t("segments.4.header")}
             </h2>
             <nav className="mb-10 list-none">
               <li className="mt-3">
                 <a className="text-gray-100 cursor-pointer hover:text-gray-300">
-                  Formularz kontaktowy
+                {t("segments.4.link1")}
                 </a>
               </li>
               <li className="mt-3">

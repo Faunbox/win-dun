@@ -262,7 +262,7 @@ const PeopleForm = () => {
         </aside>
       </div>
       <div className="flex flex-col jusity-center items-center">
-        <div className="flex flex-row justify-center items-center">
+        <div className="flex flex-row justify-center items-center mt-8">
           <input
             type="checkbox"
             name="checkbox"

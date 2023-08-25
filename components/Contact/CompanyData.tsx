@@ -3,12 +3,16 @@ import { MdOutlineEmail, MdOutlineGpsFixed } from "react-icons/md";
 import { BiPhoneOutgoing } from "react-icons/bi";
 import { BsInfoCircle } from "react-icons/bs";
 import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
+import { useTranslations } from "next-intl";
 
 const CompanyData = () => {
+
+  const t = useTranslations("contact")
+
   return (
     <div className="flex flex-col w-full md:w-4/12 justify-center items-center p-4 bg-gradient-to-b from-gray-200 to-gray-50">
       <h2 className="m-4 text-2xl font-bold justify-self-start border-b-1 self-center border-black uppercase">
-        Dane firmy
+        {t("companyDataTitle")}
       </h2>
       <ul className="list-none flex flex-col gap-2 justify-start items-start mx-auto">
         <li className="flex-icon">

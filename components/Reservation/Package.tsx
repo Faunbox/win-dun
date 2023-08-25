@@ -43,7 +43,7 @@ const PackageForm = () => {
     formData.append("date", peopleForm.date);
 
     //Create pdf Blob
-    const pdf = await createPdf(peopleForm);
+    const pdf = await createPdf(peopleForm)
 
     const blob2Base64 = (): Promise<string> => {
       return new Promise<string>((resolve, reject) => {
@@ -77,11 +77,11 @@ const PackageForm = () => {
 
   return (
     <form onSubmit={handleSubmit} ref={formRef}>
-      <div className="flex flex-col md:flex-row gap-4 mt-16">
-        <section className="flex flex-col md:flex-row gap-2 md:gap-4 w-full items-center justify-center">
-          <div className="flex flex-col gap-2 md:gap-4">
-            <h3 className="font-light text-lg">{tr("formTitle")}</h3>
-            <div className="flex flex-row gap-2 md:gap-4">
+      <div className="flex flex-col sm:flex-row gap-4 mt-4 sm:mt-16">
+        <aside className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full ">
+          <div className="flex flex-col gap-2 sm:gap-4 w-full">
+            <h3 className="font-light text-lg my-4">{tr("formTitle")}</h3>
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
               <Input
                 type="text"
                 name="name"
@@ -113,7 +113,7 @@ const PackageForm = () => {
                 className=""
               />
             </div>
-            <div className="flex flex-row gap-2 md:gap-4">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
               <Input
                 type="text"
                 name="city"
@@ -159,7 +159,7 @@ const PackageForm = () => {
                 onChange={handleOnChange}
                 className=""
               />
-              <Input
+              {/* <Input
                 type="number"
                 name="weight"
                 id="weight"
@@ -167,19 +167,19 @@ const PackageForm = () => {
                 labelPlacement="outside"
                 endContent={"kg"}
                 radius="none"
-                label={tr("inputs.inputNumberLabel")}
-                placeholder={tr("inputs.inputNumberPlaceholder")}
+                label={tr("inputs.inputWeightLabel")}
+                placeholder={tr("inputs.inputWeightPlaceholder")}
                 isRequired={true}
                 autoComplete="on"
                 value={peopleForm.weight}
                 onChange={handleOnChange}
                 className=""
-              />
+              /> */}
             </div>
-            <div className="flex flex-row gap-2 md:gap-4 justify-around mt-5">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-around mt-5">
               <Calendar />
-              <div className="flex flex-col gap-2 md:gap-4 justify-center items-start">
-                <div className="flex flex-row gap-2 md:gap-4">
+              <div className="flex flex-col gap-2 sm:gap-4 justify-center items-center sm:items-start">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
                   <Input
                     type="number"
                     name="phone"
@@ -227,11 +227,11 @@ const PackageForm = () => {
               </div>
             </div>
 
-            <div className="flex flex-row gap-2 md:gap-4"></div>
-            <div className="flex flex-col gap-2 md:gap-4 mt-8">
+            {/* <div className="flex flex-row gap-2 md:gap-4"></div> */}
+            <div className="flex flex-col gap-2 sm:gap-4 mt-8 items-center  ">
               <h3 className="font-light text-lg">{tr("formTitleToGo")}</h3>
-              <div className="flex flex-col gap-2 md:gap-4">
-                <div className="flex flex-row gap-2 md:gap-4">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
+                <div className="flex flex-col sm:flex-row gap-2 md:gap-4">
                   <Input
                     type="text"
                     name="nameToGo"
@@ -263,7 +263,7 @@ const PackageForm = () => {
                     className=""
                   />
                 </div>
-                <div className="flex flex-row gap-2 md:gap-4">
+                <div className="flex flex-col sm:flex-row gap-2 md:gap-4">
                   <Input
                     type="text"
                     name="countryToGo"
@@ -313,9 +313,9 @@ const PackageForm = () => {
               </div>
             </div>
           </div>
-        </section>
+        </aside>
       </div>
-      <div className="flex flex-col jusity-center items-center">
+      <div className="flex flex-col jusity-center items-center mt-8">
         <div className="flex flex-row justify-center items-center">
           <input
             type="checkbox"

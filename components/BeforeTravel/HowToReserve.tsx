@@ -20,7 +20,7 @@ const HowToReserve = () => {
               {t("instruction")}
             </p>
             <Link
-              href="/rezerwacja"
+              href={t("link")}
               className="bg-transparent mr-auto hover:bg-red-700 text-red-700 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-red-700 hover:border-transparent self-end"
             >
               {t("button")}
@@ -63,7 +63,7 @@ const HowToReserve = () => {
                       {t("steps.2.header")}
                     </h4>
                     <p className="text-sm md:text-base leading-snug text-black text-opacity-100">
-                      {t("steps.1.desc")}
+                      {t("steps.2.desc")}
                     </p>
                   </div>
                 </div>
@@ -82,7 +82,7 @@ const HowToReserve = () => {
                   </div>
                 </div>
 
-                <div className="mb-8 flex justify-between items-center w-full right-timeline">
+                <div className="mb-8 flex justify-between items-start w-full right-timeline">
                   <div className="order-1 w-5/12"></div>
                   <div className="order-1  w-5/12 px-1 py-4">
                     <p className="mb-3 text-base text-black">
@@ -91,7 +91,7 @@ const HowToReserve = () => {
                     <h4 className="mb-3 font-bold  text-lg md:text-xl text-left">
                       {t("steps.4.header")}
                     </h4>
-                    <p className="text-sm md:text-base leading-snug text-black text-opacity-100">
+                    <p className="text-sm md:text-base leading-snug text-black text-opacity-100 text-left">
                       {t("steps.4.desc")}
                     </p>
                   </div>

@@ -22,7 +22,7 @@ const AboutHomeSection = () => {
             {t("about.text3")}
           </p>
         </div>
-        <Link href={"/kontakt"}>
+        <Link href={t("about.link")}>
           <Button
             type="submit"
             color="success"

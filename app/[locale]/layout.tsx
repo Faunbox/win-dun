@@ -11,11 +11,17 @@ import { FormProvider } from "@/context/formContext";
 import Nav from "@/components/Navigation/Nav";
 import Footer from "@/components/Footer/Footer";
 import CallCloud from "@/components/Navigation/CallCloud";
+import { Inter } from 'next/font/google'
 
 type Props = {
   children: ReactNode;
   params: { locale: string };
 };
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 async function getMessages(locale: string) {
   try {
@@ -53,8 +59,10 @@ export default async function LocaleLayout({ children, params }: Props) {
     notFound();
   }
 
+ 
+
   return (
-    <html lang={locale}>
+    <html lang={locale} className={inter.className}>
       <NextIntlClientProvider locale={locale} messages={messages}>
         <body className="relative">
           <Providers>

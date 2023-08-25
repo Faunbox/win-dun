@@ -11,6 +11,7 @@ import { useSearchParams } from "next/navigation";
 
 const BigForm = () => {
   const t = useTranslations("contact");
+  const tr = useTranslations("reservation");
   const { peopleForm, setPeopleForm } = useForm();
   const [isCheckd, setIsCheckd] = useState(false);
   const [disableButton, setDisableButton] = useState(false);
@@ -56,20 +57,20 @@ const BigForm = () => {
 
   return (
     <form onSubmit={handleSubmit} ref={formRef}>
-      <div className="flex flex-col md:flex-row gap-4 mt-16">
-        <aside className="flex flex-col md:flex-row gap-2 md:gap-4 w-full ">
-          <div className="flex flex-col gap-2 md:gap-4">
-            <h3 className="font-light text-lg">Twoje dane</h3>
-            <div className="flex flex-row gap-2 md:gap-4">
+      <div className="flex flex-col sm:flex-row gap-4 mt-4 sm:mt-16">
+        <aside className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full ">
+          <div className="flex flex-col gap-2 sm:gap-4 w-full">
+            <h3 className="font-light text-lg my-4">{tr("formTitle")}</h3>
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
               <Input
                 type="text"
                 name="name"
                 id="name"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="Jan"
                 radius="none"
-                label="Imię"
+                label={tr("inputs.inputNameLabel")}
+                placeholder={tr("inputs.inputNamePlaceholder")}
                 isRequired={true}
                 autoComplete="on"
                 value={peopleForm.name}
@@ -82,9 +83,9 @@ const BigForm = () => {
                 id="surname"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="Kowalski"
                 radius="none"
-                label="Nazwisko"
+                label={tr("inputs.inputSurnameLabel")}
+                placeholder={tr("inputs.inputSurnamePlaceholder")}
                 isRequired={true}
                 autoComplete="on"
                 value={peopleForm.surname}
@@ -92,16 +93,16 @@ const BigForm = () => {
                 className=""
               />
             </div>
-            <div className="flex flex-row gap-2 md:gap-4">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
               <Input
                 type="text"
                 name="city"
                 id="city"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="Katowice"
                 radius="none"
-                label="Miejscowość"
+                label={tr("inputs.inputCityLabel")}
+                placeholder={tr("inputs.inputCityPlaceholder")}
                 isRequired={true}
                 autoComplete="on"
                 value={peopleForm.city}
@@ -114,12 +115,12 @@ const BigForm = () => {
                 id="street"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="Losowa 52"
                 radius="none"
-                label="Ulica"
-                value={peopleForm.street}
+                label={tr("inputs.inputStreetLabel")}
+                placeholder={tr("inputs.inputStreetPlaceholder")}
                 isRequired={true}
                 autoComplete="on"
+                value={peopleForm.street}
                 onChange={handleOnChange}
                 className=""
               />
@@ -129,45 +130,45 @@ const BigForm = () => {
                 id="country"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="Polska"
                 radius="none"
-                label="Kraj"
-                value={peopleForm.country}
+                label={tr("inputs.inputCountryLabel")}
+                placeholder={tr("inputs.inputCountryPlaceholder")}
                 isRequired={true}
                 autoComplete="on"
+                value={peopleForm.country}
                 onChange={handleOnChange}
                 className=""
               />
-              <Input
+              {/* <Input
                 type="number"
                 name="weight"
                 id="weight"
                 variant="bordered"
                 labelPlacement="outside"
-                placeholder="200kg"
                 endContent={"kg"}
                 radius="none"
-                value={peopleForm.weight}
-                label="Szacunkowa waga"
+                label={tr("inputs.inputWeightLabel")}
+                placeholder={tr("inputs.inputWeightPlaceholder")}
                 isRequired={true}
                 autoComplete="on"
+                value={peopleForm.weight}
                 onChange={handleOnChange}
                 className=""
-              />
+              /> */}
             </div>
-            <div className="flex flex-row gap-2 md:gap-4 justify-around mt-5">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-around mt-5">
               <Calendar />
-              <div className="flex flex-col gap-2 md:gap-4 justify-center items-start">
-                <div className="flex flex-row gap-2 md:gap-4">
+              <div className="flex flex-col gap-2 sm:gap-4 justify-center items-center sm:items-start">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
                   <Input
                     type="number"
                     name="phone"
                     id="phone"
                     variant="bordered"
                     labelPlacement="outside"
-                    placeholder="543 210 987"
                     radius="none"
-                    label="Numer telefonu"
+                    label={tr("inputs.inputPhoneLabel")}
+                    placeholder={tr("inputs.inputPhonePlaceholder")}
                     isRequired={true}
                     autoComplete="on"
                     value={peopleForm.phone}
@@ -180,12 +181,12 @@ const BigForm = () => {
                     id="email"
                     variant="bordered"
                     labelPlacement="outside"
-                    value={peopleForm.email}
-                    placeholder="jan.kowalski@gmail.com"
                     radius="none"
-                    label="Adres email"
+                    label={tr("inputs.inputEmailLabel")}
+                    placeholder={tr("inputs.inputEmailPlaceholder")}
                     isRequired={true}
                     autoComplete="on"
+                    value={peopleForm.email}
                     onChange={handleOnChange}
                     className=""
                   />
@@ -196,71 +197,72 @@ const BigForm = () => {
                   id="message"
                   variant="bordered"
                   labelPlacement="outside"
-                  value={peopleForm.message}
-                  placeholder="Dodatkowa torba podręczna"
                   radius="none"
-                  label="Dodatkowe informacje"
+                  label={tr("inputs.inputMessageLabel")}
+                  placeholder={tr("inputs.inputMessagePlaceholder")}
+                  value={peopleForm.message}
                   onChange={handleOnChange}
                   fullWidth
                 />
               </div>
             </div>
 
-            <div className="flex flex-row gap-2 md:gap-4"></div>
-            <div className="flex flex-col gap-2 md:gap-4 mt-8">
-              <h3 className="font-light text-lg">Twoje miejsce docelowe</h3>
-              <div className="flex flex-row gap-2 md:gap-4">
-                <Input
-                  type="text"
-                  name="countryToGo"
-                  id="countryToGo"
-                  variant="bordered"
-                  labelPlacement="outside"
-                  placeholder="Holandia"
-                  radius="none"
-                  label="Kraj"
-                  isRequired={true}
-                  autoComplete="on"
-                  value={peopleForm.countryToGo}
-                  onChange={handleOnChange}
-                  className=""
-                />
-                <Input
-                  type="text"
-                  name="cityToGo"
-                  id="cityToGo"
-                  variant="bordered"
-                  labelPlacement="outside"
-                  placeholder="Amsterdam"
-                  radius="none"
-                  label="Miejscowość"
-                  isRequired={true}
-                  autoComplete="on"
-                  value={peopleForm.cityToGo}
-                  onChange={handleOnChange}
-                  className=""
-                />
-                <Input
-                  type="text"
-                  name="streetToGo"
-                  id="streetToGo"
-                  variant="bordered"
-                  labelPlacement="outside"
-                  placeholder="Losowa 52"
-                  radius="none"
-                  label="Ulica"
-                  isRequired={true}
-                  autoComplete="on"
-                  value={peopleForm.streetToGo}
-                  onChange={handleOnChange}
-                  className=""
-                />
+            {/* <div className="flex flex-row gap-2 md:gap-4"></div> */}
+            <div className="flex flex-col gap-2 sm:gap-4 mt-8 items-center  ">
+              <h3 className="font-light text-lg">{tr("formTitleToGo")}</h3>
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
+                
+                  <Input
+                    type="text"
+                    name="countryToGo"
+                    id="countryToGo"
+                    variant="bordered"
+                    labelPlacement="outside"
+                    radius="none"
+                    label={tr("inputs.inputCountryToGoLabel")}
+                    placeholder={tr("inputs.inputCountryToGoPlaceholder")}
+                    isRequired={true}
+                    autoComplete="on"
+                    value={peopleForm.countryToGo}
+                    onChange={handleOnChange}
+                    className=""
+                  />
+                  <Input
+                    type="text"
+                    name="cityToGo"
+                    id="cityToGo"
+                    variant="bordered"
+                    labelPlacement="outside"
+                    radius="none"
+                    label={tr("inputs.inputCityToGoLabel")}
+                    placeholder={tr("inputs.inputCityToGoPlaceholder")}
+                    isRequired={true}
+                    autoComplete="on"
+                    value={peopleForm.cityToGo}
+                    onChange={handleOnChange}
+                    className=""
+                  />
+                  <Input
+                    type="text"
+                    name="streetToGo"
+                    id="streetToGo"
+                    variant="bordered"
+                    labelPlacement="outside"
+                    radius="none"
+                    label={tr("inputs.inputStreetToGoLabel")}
+                    placeholder={tr("inputs.inputStreetToGoPlaceholder")}
+                    isRequired={true}
+                    autoComplete="on"
+                    value={peopleForm.streetToGo}
+                    onChange={handleOnChange}
+                    className=""
+                  />
               </div>
             </div>
           </div>
         </aside>
       </div>
-      <div className="flex flex-col jusity-center items-center">
+      <div className="flex flex-col jusity-center items-center mt-8">
         <div className="flex flex-row justify-center items-center">
           <input
             type="checkbox"
@@ -279,7 +281,7 @@ const BigForm = () => {
           type="submit"
           className="text-white my-8 w-full max-w-[300px]"
         >
-          Zarezerwuj transport
+          {tr("buttons.formButtonPackage")}
         </Button>
       </div>
     </form>
