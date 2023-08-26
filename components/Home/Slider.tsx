@@ -49,7 +49,10 @@ const Slider = () => {
   );
 
   return (
-    <div ref={ref} className="keen-slider container my-20">
+    <div
+      ref={ref}
+      className="keen-slider container my-20 "
+    >
       <div className="keen-slider__slide">
         <Image src="/images/paczki.jpg" alt="paczki" width={600} height={400} />
       </div>

@@ -1,7 +1,7 @@
 import "./globals.css";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import "react-datepicker/dist/react-datepicker.css";
-import 'keen-slider/keen-slider.min.css'
+import "keen-slider/keen-slider.min.css";
 
 import { Providers } from "./providers";
 import { createTranslator, useLocale, NextIntlClientProvider } from "next-intl";
@@ -11,7 +11,8 @@ import { FormProvider } from "@/context/formContext";
 import Nav from "@/components/Navigation/Nav";
 import Footer from "@/components/Footer/Footer";
 import CallCloud from "@/components/Navigation/CallCloud";
-import { Inter } from 'next/font/google'
+import { Inter } from "next/font/google";
+import dynamic from "next/dynamic";
 
 type Props = {
   children: ReactNode;
@@ -19,8 +20,12 @@ type Props = {
 };
 
 const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const CookieConsent = dynamic(() => import('@/components/Navigation/Cookie'), {
+  ssr: false,
 })
 
 async function getMessages(locale: string) {
@@ -59,12 +64,11 @@ export default async function LocaleLayout({ children, params }: Props) {
     notFound();
   }
 
- 
-
   return (
     <html lang={locale} className={inter.className}>
       <NextIntlClientProvider locale={locale} messages={messages}>
         <body className="relative">
+          <CookieConsent />
           <Providers>
             <FormProvider>
               {/* <Navigation /> */}

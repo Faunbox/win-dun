@@ -10,6 +10,11 @@
       { "title": "Przed podróżą", "href": "/przed-podroza" }
     ]
   },
+  "coockies": {
+    "header": "Your privacy matters to us",
+    "desc": "We use cookies to improve your browsing experience and to analyze website traffic. By clicking the 'Accept' button, you consent to our use of cookies.",
+    "button": "Accept"
+  },
   "homePage": {
     "homeDescription1": "Transport services to Germany and the Netherlands.",
     "homeDescription2": "Transport services to Germany and the Netherlands.",

@@ -167,7 +167,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-gray-700">
+      <div className="bg-[#171213]">
         <div className="container px-5 py-4 mx-auto">
           <p className="text-sm text-gray-300 capitalize xl:text-center">
             © 2023 All rights reserved{" "}

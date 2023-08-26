@@ -71,11 +71,11 @@ const Nav = () => {
               )
             )}
           {/* Locale */}
-          <li className="flex items-center justify-center gap-1 hover:scale-110 transition-transform duration-300 mix-blend-difference">
+          <li className="flex items-center justify-center gap-1 hover:scale-110 transition-transform duration-300">
             <BiPhoneOutgoing color="#F7B750" size={25} />
             <a
               href="phone:+48505216526"
-              className="text-lg font-light text-white mix-blend-saturation animate-bounce duration-[2000ms]"
+              className="text-sm font-light text-white animate-bounce duration-3s"
             >
               505 216 526
             </a>

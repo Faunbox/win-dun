@@ -10,6 +10,11 @@
       { "title": "Przed podróżą", "href": "/przed-podroza" }
     ]
   },
+  "coockies": {
+    "header": "Liczy się dla nas Twoja prywatność",
+    "desc": "Używamy plików cookie, aby poprawić jakość przeglądania oraz analizować ruch na stronie. Kliknięcie przycisku „Akceptuję” oznacza zgodę na wykorzystywanie przez nas plików cookie.",
+    "button": "Akceptuję"
+  },
   "homePage": {
     "homeDescription1": "Usługi Transportowe Niemcy i Holandia",
     "homeDescription2": "Usługi Transportowe Do Niemiec i Holandii",
@@ -20,10 +25,10 @@
     "heroPhoneLink": "/rezerwacja?type=package",
     "services": {
       "title": "Nasze usługi",
-      "header2": "Przewóz osób oraz zwierząt",
-      "description2": "Zapewniamy komfort, punktualność oraz bezpieczeństwo. Nasza wykwalifikowana kadra, doświadczenie oraz nowoczesny tabor pojazdów pozwala nam realizować transport na najwyższym poziomie.",
       "header1": "Przewóz listów, paczek oraz gabarytów",
       "description1": "Możesz polegać na naszej skuteczności i terminowości. Nasz zespół zadba o bezpieczne i szybkie dostarczenie Twoich paczek w wyznaczone miejsce, bez względu na ich rozmiar czy wrażliwość",
+      "header2": "Przewóz osób oraz zwierząt",
+      "description2": "Zapewniamy komfort, punktualność oraz bezpieczeństwo. Nasza wykwalifikowana kadra, doświadczenie oraz nowoczesny tabor pojazdów pozwala nam realizować transport na najwyższym poziomie.",
       "header3": "Przeprowadzki",
       "description3": "Zdajemy sobie sprawę, że przeprowadzka to ważne wydarzenie w życiu każdej osoby, dlatego naszym celem jest zapewnienie Ci bezpiecznej, sprawnie zorganizowanej i komfortowej przeprowadzki."
     },

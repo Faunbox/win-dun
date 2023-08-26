@@ -9,7 +9,7 @@ type Props = {
 
 const NavLink = ({ href, title, color }: Props) => {
   return (
-    <Link href={href} className={`text-md lg:text-md font-normal text-white`}>
+    <Link href={href} className={`text-sm lg:text-md font-normal text-white`}>
       <p className="hover:scale-110 transition-transform duration-500 uppercase">
         {title}
       </p>
