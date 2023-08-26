@@ -3,7 +3,7 @@ import DatePicker, { registerLocale } from "react-datepicker";
 import pl from "date-fns/locale/pl";
 import nl from "date-fns/locale/nl";
 import en from "date-fns/locale/en-GB";
-import { useForm } from "@/context/formContext";
+import { useFormContext } from "@/context/formContext";
 import { useLocale } from "next-intl";
 registerLocale("pl", pl);
 registerLocale("nl", nl);
@@ -11,7 +11,7 @@ registerLocale("en", en);
 
 const Calendar = () => {
   const locale = useLocale();
-  const { peopleForm, setPeopleForm } = useForm();
+  const { peopleForm, setPeopleForm } = useFormContext();
 
   const isWeekday = (date) => {
     const day = date.getDay();

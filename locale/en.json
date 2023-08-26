@@ -158,22 +158,22 @@
     }
   },
   "termsOfUse": {
-    "title": "Regulamin przejazdów",
+    "title": "Travel regulations",
     "terms": {
-      "1": "1) Pod pojęciem przewozu rozumie się przejazd osoby z adresu na adres. Z przewozu może korzystać każdy, kto posiada dokumenty uprawniające do przekraczania granicy. W przypadku osób nieletnich, potrzebne jest dodatkowo oświadczenie rodzica lub opiekuna prawnego o zgodzie na przejazd.",
-      "2": "2) Zwierzęta mogą być przewożone pod warunkiem posiadania ważnej książeczki szczepień oraz paszportu i transportera.",
-      "3": "3) Bilet można wykupić w jedną lub dwie strony, w miejsca z i do których kursujemy. Przy zamówieniu pasażer dostaje informację ustną o konieczności potwierdzenia przejazdu dzień przed wyjazdem do godziny 13.",
-      "Luggage": "4) Pasażer może zabrać ze sobą:",
-      "Luggage1": "4a) Jedną sztukę bagażu o wadze do 20 kg i o wymiarach standardowej walizki",
-      "Luggage2": "4b) Jedną sztukę małego bagażu o wymiarach pozwalających na swobodne umieszczenie bagażu pod siedzeniem. Rozmiar bagażu podręcznego nie powinien utrudniać swobody podróży pozostałym pasażerom.",
-      "4": "5) W pojazdach obowiązuje całkowity zakaz palenia tytoniu, spożywania napojów alkoholowych oraz palenia e-papierosów.",
-      "5": "6) W przypadku odbierania osób z adresu za granicą godzina powrotu ustalana jest telefonicznie dzień przed wyjazdem.",
-      "6": "7) Z uwagi na specyfikę działalności nie istnieje regularny rozkład jazdy. Rozkład jazdy ustalany jest na bieżąco na podstawie rezerwacji dokonywanych telefonicznie lub za pośrednictwem strony internetowej.",
-      "7": "8) Przewoźnik nie odpowiada za rzeczy pozostawione przez pasażera.",
-      "Negative": "9) Przewoźnik ma prawo odmówić zabrania lub pozostawić pasażera na trasie w przypadku gdy pasażer:",
-      "Negative1": "9a) zachowuje się w sposób uciążliwy dla pasażerów, jest agresywny, utrudnia pracę kierowcy oraz powoduje zagrożenie bezpieczeństwa przejazdu",
-      "Negative2": "9b) jest w stanie nietrzeźwym lub pod wpływem środków odurzających",
-      "8": "10) Wyjazd lub powrót niepotwierdzony przez pasażera w przeddzień ustalonego terminu (do godziny 13:00) jest równoznaczny z rezygnacją z przejazdu. Nie przysługują wówczas żadne roszczenia."
+      "1": "1) Transport is understood as the journey of a person from address to address. Anyone who has documents entitling them to cross the border can use the transport. In the case of minors, a parent or legal guardian's statement of consent to travel is additionally required.",
+      "2": "2) Animals may be transported provided that they have a valid vaccination book, passport and carrier.",
+      "3": "3) The ticket can be purchased one-way or two-way, to the places from and to which we run. When ordering, the passenger receives verbal information about the need to confirm the journey the day before departure by 1 p.m.",
+      "Luggage": "4) The passenger can take with him:",
+      "Luggage1": "4a) One piece of baggage up to 20 kg and the size of a standard suitcase",
+      "Luggage2": "4b) One piece of small baggage that is large enough to fit comfortably under the seat. The size of the hand luggage should not hinder the freedom of travel for other passengers.",
+      "4": "5) Smoking, consuming alcoholic beverages and smoking e-cigarettes are strictly prohibited in the vehicles.",
+      "5": "6) In the case of picking up people from an address abroad, the return time is arranged by phone the day before departure.",
+      "6": "7) Due to the specificity of the business, there is no regular timetable. The timetable is set on an ongoing basis based on reservations made by phone or via the website.",
+      "7": "8) The carrier is not responsible for items left by the passenger.",
+      "Negative": "9) The carrier has the right to refuse to take or leave a passenger on the route if the passenger:",
+      "Negative1": "9a) He behaves in a way that is a nuisance for passengers, is aggressive, makes the driver's work difficult and poses a threat to the safety of the crossing",
+      "Negative2": "9b) Is under the influence of alcohol or drugs",
+      "8": "10) Departure or return not confirmed by the passenger on the day before the agreed date (until 1:00 p.m.) is equivalent to resignation from the journey. No claims are then made."
     }
   },
   "reservation": {
@@ -228,24 +228,33 @@
         "header": "TRANSPORT",
         "link1": "Transport Poland-Netherlands",
         "link2": "Transport Poland-Germany",
-        "link3": "Transport of people and parcels"
+        "link3": "Transport of people and parcels",
+        "a1": "/en/reservation?type=people",
+        "a2": "/en/reservation?type=people",
+        "a3": "/en/reservation?type=people"
       },
       "2": {
         "header": "TRAVEL",
         "link1": "Terms and Conditions",
         "link2": "Privacy policy",
-        "link3": "Travel reservation"
+        "link3": "Travel reservation",
+        "a1": "/en/terms",
+        "a2": "/en/privacy",
+        "a3": "/en/reservation?type=people"
       },
       "3": {
         "header": "MENU",
         "link1": "Start",
         "link2": "Before Travel",
         "link3": "Terms and Conditions",
-        "link4": "Contact"
+        "link4": "Contact",
+        "a1": "/en/",
+        "a2": "/en/before-travel",
+        "a3": "/en/terms",
+        "a4": "/contact"
       },
       "4": {
-        "header": "CONTACT",
-        "link1": "Contact form"
+        "header": "CONTACT"
       }
     }
   }

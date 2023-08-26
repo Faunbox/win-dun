@@ -4,7 +4,7 @@ import { Button } from "@nextui-org/button";
 import { Textarea } from "@nextui-org/react";
 import Calendar from "../lib/Datepicker";
 import axios from "axios";
-import { useForm, InputType } from "@/context/formContext";
+import { useFormContext, InputType } from "@/context/formContext";
 import { useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
@@ -12,7 +12,7 @@ import { useSearchParams } from "next/navigation";
 const BigForm = () => {
   const t = useTranslations("contact");
   const tr = useTranslations("reservation");
-  const { peopleForm, setPeopleForm } = useForm();
+  const { peopleForm, setPeopleForm } = useFormContext();
   const [isCheckd, setIsCheckd] = useState(false);
   const [disableButton, setDisableButton] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
@@ -211,52 +211,51 @@ const BigForm = () => {
             <div className="flex flex-col gap-2 sm:gap-4 mt-8 items-center  ">
               <h3 className="font-light text-lg">{tr("formTitleToGo")}</h3>
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
-                
-                  <Input
-                    type="text"
-                    name="countryToGo"
-                    id="countryToGo"
-                    variant="bordered"
-                    labelPlacement="outside"
-                    radius="none"
-                    label={tr("inputs.inputCountryToGoLabel")}
-                    placeholder={tr("inputs.inputCountryToGoPlaceholder")}
-                    isRequired={true}
-                    autoComplete="on"
-                    value={peopleForm.countryToGo}
-                    onChange={handleOnChange}
-                    className=""
-                  />
-                  <Input
-                    type="text"
-                    name="cityToGo"
-                    id="cityToGo"
-                    variant="bordered"
-                    labelPlacement="outside"
-                    radius="none"
-                    label={tr("inputs.inputCityToGoLabel")}
-                    placeholder={tr("inputs.inputCityToGoPlaceholder")}
-                    isRequired={true}
-                    autoComplete="on"
-                    value={peopleForm.cityToGo}
-                    onChange={handleOnChange}
-                    className=""
-                  />
-                  <Input
-                    type="text"
-                    name="streetToGo"
-                    id="streetToGo"
-                    variant="bordered"
-                    labelPlacement="outside"
-                    radius="none"
-                    label={tr("inputs.inputStreetToGoLabel")}
-                    placeholder={tr("inputs.inputStreetToGoPlaceholder")}
-                    isRequired={true}
-                    autoComplete="on"
-                    value={peopleForm.streetToGo}
-                    onChange={handleOnChange}
-                    className=""
-                  />
+                <Input
+                  type="text"
+                  name="countryToGo"
+                  id="countryToGo"
+                  variant="bordered"
+                  labelPlacement="outside"
+                  radius="none"
+                  label={tr("inputs.inputCountryToGoLabel")}
+                  placeholder={tr("inputs.inputCountryToGoPlaceholder")}
+                  isRequired={true}
+                  autoComplete="on"
+                  value={peopleForm.countryToGo}
+                  onChange={handleOnChange}
+                  className=""
+                />
+                <Input
+                  type="text"
+                  name="cityToGo"
+                  id="cityToGo"
+                  variant="bordered"
+                  labelPlacement="outside"
+                  radius="none"
+                  label={tr("inputs.inputCityToGoLabel")}
+                  placeholder={tr("inputs.inputCityToGoPlaceholder")}
+                  isRequired={true}
+                  autoComplete="on"
+                  value={peopleForm.cityToGo}
+                  onChange={handleOnChange}
+                  className=""
+                />
+                <Input
+                  type="text"
+                  name="streetToGo"
+                  id="streetToGo"
+                  variant="bordered"
+                  labelPlacement="outside"
+                  radius="none"
+                  label={tr("inputs.inputStreetToGoLabel")}
+                  placeholder={tr("inputs.inputStreetToGoPlaceholder")}
+                  isRequired={true}
+                  autoComplete="on"
+                  value={peopleForm.streetToGo}
+                  onChange={handleOnChange}
+                  className=""
+                />
               </div>
             </div>
           </div>

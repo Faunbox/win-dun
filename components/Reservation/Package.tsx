@@ -4,7 +4,7 @@ import { Button } from "@nextui-org/button";
 import { Textarea } from "@nextui-org/react";
 import Calendar from "../lib/Datepicker";
 import axios from "axios";
-import { useForm, InputType } from "@/context/formContext";
+import { useFormContext, InputType } from "@/context/formContext";
 import { createPdf } from "../lib/React-pdf";
 import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
@@ -13,7 +13,7 @@ import { useSearchParams } from "next/navigation";
 const PackageForm = () => {
   const t = useTranslations("contact");
   const tr = useTranslations("reservation");
-  const { peopleForm, setPeopleForm } = useForm();
+  const { peopleForm, setPeopleForm } = useFormContext();
   const [isCheckd, setIsCheckd] = useState(false);
   const [disableButton, setDisableButton] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);

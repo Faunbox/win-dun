@@ -4,11 +4,6 @@ import Link from "next/link";
 
 const Luggage = () => {
   const t = useTranslations("beforeTravel");
-  let hoverState = false
-
-  const handleMouseOver = () => {
-    hoverState = true
-  }
 
   return (
     <div className="container flex flex-col-reverse lg:flex-row my-20">

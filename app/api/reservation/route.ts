@@ -12,6 +12,7 @@ export async function POST(req: NextRequest) {
   let response: ResponseData = {};
 
   const form = await req.formData();
+  console.log(form);
   const data = Object.fromEntries(form);
   const pdf = data.pdf;
   const typeParam = req.nextUrl.searchParams.get("type");

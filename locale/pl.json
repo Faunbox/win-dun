@@ -225,29 +225,41 @@
 
   "footer": {
     "logoDesc": "Transport Holandia, Niemcy",
+    "facebook": "",
+    "instagram": "",
+    "twitter": "",
     "segments": {
       "1": {
         "header": "TRANSPORTY",
         "link1": "Transport Polska-Holandia",
         "link2": "Transport Polska-Niemcy",
-        "link3": "Przewozy osób i paczek"
+        "link3": "Przewozy osób i paczek",
+        "a1": "/rezerwacja?type=people",
+        "a2": "/rezerwacja?type=people",
+        "a3": "/rezerwacja?type=people"
       },
       "2": {
         "header": "PRZEJAZD",
         "link1": "Regulamin",
         "link2": "Polityka prywatności",
-        "link3": "Rezerwacja przejazdu"
+        "link3": "Rezerwacja przejazdu",
+        "a1": "/regulamin",
+        "a2": "/polityka-prywatności",
+        "a3": "/rezerwacja?type=people"
       },
       "3": {
         "header": "MENU",
         "link1": "Start",
         "link2": "Przed podróżą",
         "link3": "Regulamin",
-        "link4": "Kontakt"
+        "link4": "Kontakt",
+        "a1": "/",
+        "a2": "/przed-podroza",
+        "a3": "/regulamin",
+        "a4": "/kontakt"
       },
       "4": {
-        "header": "KONTAKT",
-        "link1": "Formularz kontaktowy"
+        "header": "KONTAKT"
       }
     }
   }

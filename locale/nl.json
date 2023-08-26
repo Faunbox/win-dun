@@ -222,24 +222,35 @@
         "header": "TRANSPORTY",
         "link1": "Transport Polska-Holandia",
         "link2": "Transport Polska-Niemcy",
-        "link3": "Przewozy osób i paczek"
+        "link3": "Przewozy osób i paczek",
+        "a1": "",
+        "a2": "",
+        "a3": ""
       },
       "2": {
         "header": "PRZEJAZD",
         "link1": "Regulamin",
         "link2": "Polityka prywatności",
-        "link3": "Rezerwacja przejazdu"
+        "link3": "Rezerwacja przejazdu",
+        "a1": "",
+        "a2": "",
+        "a3": ""
       },
       "3": {
         "header": "MENU",
         "link1": "Start",
         "link2": "Przed podróżą",
         "link3": "Regulamin",
-        "link4": "Kontakt"
+        "link4": "Kontakt",
+        "a1": "",
+        "a2": "",
+        "a3": "",
+        "a4": ""
       },
       "4": {
         "header": "KONTAKT",
-        "link1": "Formularz kontaktowy"
+        "link1": "Formularz kontaktowy",
+        "a1": ""
       }
     }
   }

@@ -14,7 +14,7 @@ export interface InputType {
   city: string;
   street: string;
   country: string;
-  numer?: number;
+  number?: number;
   weight?: number;
   date: Date | string;
   phone: number | string;
@@ -37,7 +37,7 @@ const FormContext = createContext<StateContextType | any>(
   {} as StateContextType
 );
 
-export function useForm() {
+export function useFormContext() {
   return useContext(FormContext);
 }
 
@@ -49,7 +49,7 @@ export function FormProvider({ children }: { children: ReactNode }) {
     city: "",
     street: "",
     country: "",
-    numer: 1,
+    number: 1,
     weight: 1,
     date: new Date(),
     phone: "543 210 987",
