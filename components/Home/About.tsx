@@ -1,22 +1,32 @@
 import Link from "next/link";
 import { Button } from "@nextui-org/button";
 import { useTranslations } from "next-intl";
+import { Space_Mono } from "next/font/google";
 
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["700"],
+});
 const AboutHomeSection = () => {
   const t = useTranslations("homePage");
   return (
-    <section className="section-container flex-col py-20">
-      <div className="container flex flex-col md:flex-row justify-around items-center gap-5 w-full px-2">
+    <section className="section-container md:flex-row py-8">
+      <div className="w-0 md:w-6/12"></div>
+      <div className="flex flex-col justify-around items-center gap-5 w-full md:w-6/12 px-2">
         <div className="grid grid-rows-2 gap-4">
           <p className="text-2xl">
             {t("about.text1")}{" "}
-            <span className="font-bold text-3xl text-red-800">
+            <span
+              className={`font-bold text-3xl text-red-800 ${spaceMono.className}`}
+            >
               {t("about.span1")}
             </span>{" "}
             {t("about.text2")}
           </p>
           <p className="text-2xl">
-            <span className="font-bold text-3xl text-red-800">
+            <span
+              className={`font-bold text-3xl text-red-800 ${spaceMono.className}`}
+            >
               {t("about.span2")}
             </span>{" "}
             {t("about.text3")}

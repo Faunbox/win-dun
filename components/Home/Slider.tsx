@@ -12,6 +12,9 @@ const Slider = () => {
         "(min-width: 1000px)": {
           slides: { perView: 3 },
         },
+        "(min-width: 1240px)": {
+          slides: { perView: 4 },
+        },
       },
       slides: { perView: 1 },
       loop: true,
@@ -74,6 +77,15 @@ const Slider = () => {
       <div className="keen-slider__slide min-h-[80vh]">
         <Image
           src="/images/zwierze.jpg"
+          alt="paczki"
+          width={600}
+          height={400}
+          className="h-full w-full"
+        />
+      </div>
+      <div className="keen-slider__slide min-h-[80vh]">
+        <Image
+          src="/images/pakowanie.jpg"
           alt="paczki"
           width={600}
           height={400}

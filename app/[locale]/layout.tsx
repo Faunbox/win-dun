@@ -65,15 +65,13 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
 
   return (
-    <html lang={locale} className={inter.className}>
+    <html lang={locale} className={`${inter.className} bg-white`}>
       <NextIntlClientProvider locale={locale} messages={messages}>
         <body className="relative bg-white">
           <CookieConsent />
           <Providers>
             <FormProvider>
-              {/* <Navigation /> */}
               <Nav />
-
               {children}
             </FormProvider>
             <Footer />

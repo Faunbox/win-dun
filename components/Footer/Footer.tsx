@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="w-full text-gray-100 bg-[#171213] body-font relative">
       <div className="container flex flex-col lg:flex-row flex-wrap lg:flex-nowrap px-5 py-10 lg:py-18 mx-auto md:items-center lg:items-start ">
-        <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left md:mb-10">
+        <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:mb-10">
           <Link
             href={"/"}
             hrefLang={locale}
@@ -26,7 +26,7 @@ const Footer = () => {
             />
           </Link>
           <p className="mt-6 text-sm text-gray-100">{t("logoDesc")}</p>
-          <div className="m-4 w-64">
+          <div className="mt-8 w-64">
             <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-around gap-20">
               <Link
                 href={""}
@@ -238,7 +238,7 @@ const Footer = () => {
       </div>
       <div className="bg-[#171213]">
         <div className="container px-5 py-4 mx-auto">
-          <p className="text-sm text-gray-300 capitalize xl:text-center">
+          <p className="text-sm text-gray-300 capitalize text-center">
             © 2023 All rights reserved{" "}
           </p>
         </div>

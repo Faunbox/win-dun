@@ -63,7 +63,7 @@
       "link": "/rezerwacja=?type=people"
     },
     "bus": {
-      "title": "NASZE BUSY POSIADAJĄ",
+      "title": "Nasze busy posiadają",
       "text1": "Komfortowe siedzenia",
       "text2": "Klimatyzacja",
       "text3": "Gniazda USB",
@@ -85,7 +85,7 @@
   "beforeTravel": {
     "title": "Przed podróżą",
     "howTo": "Jak zarezerwować przejazd?",
-    "info": "INFORMACJA",
+    "info": "Informacja",
     "instruction": "Przedstawiamy krótki poradnik w jaki sposób zarezerwować przejazd lub wysłać paczkę przez nasz forumlarz rezerwacyjny",
     "button": "Zarezerwój swój przejazd",
     "link": "/rezerwacja?type=people",
@@ -121,7 +121,7 @@
   },
   "contact": {
     "title": "Kontakt",
-    "companyDataTitle": "DANE FIRMY",
+    "companyDataTitle": "Dane firmy",
     "text": "Czy masz pytania, potrzebujesz dodatkowych informacji lub chciałbyś skorzystać z naszych usług transportowych? Jesteśmy tutaj, aby Ci pomóc! Nie czekaj, skontaktuj się z nami już dzisiaj i przekonaj się, dlaczego jesteśmy liderem w branży transportowej w swoim regionie.",
     "formHeader": "Formularz kontaktowy",
     "formButton": "Wyślij wiadomość",
@@ -230,7 +230,7 @@
     "twitter": "",
     "segments": {
       "1": {
-        "header": "TRANSPORTY",
+        "header": "Transporty",
         "link1": "Transport Polska-Holandia",
         "link2": "Transport Polska-Niemcy",
         "link3": "Przewozy osób i paczek",
@@ -239,7 +239,7 @@
         "a3": "/rezerwacja?type=people"
       },
       "2": {
-        "header": "PRZEJAZD",
+        "header": "Przejazd",
         "link1": "Regulamin",
         "link2": "Polityka prywatności",
         "link3": "Rezerwacja przejazdu",
@@ -248,7 +248,7 @@
         "a3": "/rezerwacja?type=people"
       },
       "3": {
-        "header": "MENU",
+        "header": "Menu",
         "link1": "Start",
         "link2": "Przed podróżą",
         "link3": "Regulamin",
@@ -259,7 +259,7 @@
         "a4": "/kontakt"
       },
       "4": {
-        "header": "KONTAKT"
+        "header": "Kontakt"
       }
     }
   }

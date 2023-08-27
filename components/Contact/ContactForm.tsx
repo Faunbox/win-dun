@@ -70,7 +70,7 @@ const ContactForm = ({ width }: { width: string }) => {
         widthVariants[width as keyof typeof widthVariants]
       } p-4`}
     >
-      <h2 className="m-4 font-bold text-2xl border-b-1 self-center border-black uppercase mb-8">
+      <h2 className="m-4 font-bold text-2xl border-b-1 self-center border-white mb-8">
         {t("formHeader")}
       </h2>
       <form className="flex flex-col px-4 gap-4" onSubmit={handleSubmit}>
@@ -92,7 +92,7 @@ const ContactForm = ({ width }: { width: string }) => {
                 onChange={handleOnChange}
                 className="text-inherit"
                 classNames={{
-                  label: ["text-white"],
+                  label: ["text-white mix-blend-difference"],
                 }}
               />
             </div>

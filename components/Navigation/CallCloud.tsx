@@ -12,7 +12,11 @@ const LinkElement = ({
   target?: string | null;
 }) => {
   return (
-    <Link href={href} className="hover:scale-110" target={target ? target : ""}>
+    <Link
+      href={href}
+      className="hover:scale-110 text-white"
+      target={target ? target : ""}
+    >
       {children}
     </Link>
   );
@@ -20,7 +24,7 @@ const LinkElement = ({
 
 const CallCloud = () => {
   return (
-    <div className="fixed bottom-[48%] right-0 flex z-50 mix-blend-luminosity">
+    <div className="fixed bottom-[48%] right-0 flex mix-blend-difference">
       <div className="flex flex-col h-full justify-around items-center gap-5 p-4">
         <LinkElement href="tel:+48505216526">
           <BsTelephoneOutbound size={25} />
