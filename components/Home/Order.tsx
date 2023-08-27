@@ -1,19 +1,29 @@
+import Image from "next/image";
 import ContactForm from "../Contact/ContactForm";
 import { BsMessenger, BsTelephoneOutbound, BsWhatsapp } from "react-icons/bs";
 
 const Order = () => {
   return (
-    <section className=" section-container p-4 py-20 flex-col">
+    <section className=" section-container p-4 py-20 text-white bg-[#171213] flex-col">
       {/* <SectionHeader>Kontakt</SectionHeader> */}
       <div className="container w-full flex flex-col md:flex-row gap-4 md:justify-around px-4">
         <div className="flex flex-col w-full md:max-w-[50%] justify-center items-center text-center gap-4">
-          <iframe
+          {/* <iframe
             src="https://www.google.com/maps/d/embed?mid=1kTuo__lzH_8vQC9LyxqivG9D-QgCumw&ehbc=2E312F"
             width="640"
             height="480"
             loading="lazy"
             className="w-full"
-          ></iframe>
+          ></iframe> */}
+          <div className="flex flex-col">
+            <h2 className="text-xl mb-4">Obsługiwane województwa</h2>
+            <Image
+              src={"/images/pl.svg"}
+              alt="mapa polski"
+              width={550}
+              height={600}
+            />
+          </div>
         </div>
         <div className="flex flex-col w-full py-4">
           <ContactForm width="full" />

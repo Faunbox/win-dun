@@ -27,26 +27,23 @@ const DesktopNav = () => {
       {/* Menu links */}
       <ul className="flex flex-row justify-end items-center col-span-5 gap-4 text-white">
         {locale === "pl" &&
-          PlNavbar?.map(({ href, title }: { href: string; title: string }) => {return (
+          PlNavbar?.map(({ href, title }: { href: string; title: string }) => {
+            return (
               <li key={title}>
-                {title !== "Rezerwacja" && (
-                  <NavLink href={href} title={title}  />
-                )}
+                <NavLink href={href} title={title} />
               </li>
             );
           })}
         {locale === "en" &&
           EnNavbar?.map(({ href, title }: { href: string; title: string }) => (
             <li key={title}>
-              {title !== "Reservation" && <NavLink href={href} title={title} />}
+              <NavLink href={href} title={title} />
             </li>
           ))}
         {locale === "nl" &&
           NlNavbar?.map(({ href, title }: { href: string; title: string }) => (
             <li key={title}>
-              {title !== "Reservation NL" && (
-                <NavLink href={href} title={title} />
-              )}
+              <NavLink href={href} title={title} />
             </li>
           ))}
         {/* Locale */}

@@ -60,7 +60,7 @@ const PeopleForm = () => {
     <form onSubmit={handleSubmit} ref={formRef}>
       <div className="flex flex-col sm:flex-row gap-4 mt-4 sm:mt-16">
         <aside className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full ">
-          <div className="flex flex-col gap-2 sm:gap-4">
+          <div className="flex flex-col gap-2 sm:gap-4 w-full">
             <h3 className="font-light text-lg my-4">{tr("formTitle")}</h3>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
               <Input
@@ -68,6 +68,7 @@ const PeopleForm = () => {
                 name="name"
                 id="name"
                 variant="bordered"
+                color="secondary"
                 labelPlacement="outside"
                 radius="none"
                 label={tr("inputs.inputNameLabel")}
@@ -76,7 +77,9 @@ const PeopleForm = () => {
                 autoComplete="on"
                 value={peopleForm.name}
                 onChange={handleOnChange}
-                className=""
+                classNames={{
+                  inputWrapper: ["border-black"],
+                }}
               />
               <Input
                 type="text"
@@ -91,7 +94,7 @@ const PeopleForm = () => {
                 autoComplete="on"
                 value={peopleForm.surname}
                 onChange={handleOnChange}
-                className=""
+                className="border-black"
               />
             </div>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
@@ -275,7 +278,7 @@ const PeopleForm = () => {
 
         <Button
           isDisabled={!isCheckd || disableButton ? true : false}
-          color="secondary"
+          color="primary"
           radius="none"
           type="submit"
           className="text-white my-8 w-full max-w-[300px]"

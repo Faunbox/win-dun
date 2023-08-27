@@ -83,13 +83,17 @@ const ContactForm = ({ width }: { width: string }) => {
                 id="name"
                 variant="bordered"
                 labelPlacement="outside"
+                color="primary"
                 placeholder={t("formInputs.placeholder1")}
                 radius="none"
                 label={t("formInputs.label1")}
                 isRequired={true}
                 autoComplete="on"
                 onChange={handleOnChange}
-                className=""
+                className="text-inherit"
+                classNames={{
+                  label: ["text-white"],
+                }}
               />
             </div>
             <div className="flex flex-col justify-center items-center w-full xl:w-[50%]">
@@ -100,12 +104,16 @@ const ContactForm = ({ width }: { width: string }) => {
                 variant="bordered"
                 labelPlacement="outside"
                 radius="none"
+                color="primary"
                 placeholder={t("formInputs.placeholder2")}
                 label={t("formInputs.label2")}
                 isRequired={true}
                 autoComplete="on"
                 onChange={handleOnChange}
-                className="border-red-500"
+                className="text-inherit"
+                classNames={{
+                  label: ["text-white"],
+                }}
               />
             </div>
           </div>
@@ -116,13 +124,17 @@ const ContactForm = ({ width }: { width: string }) => {
               id="phone"
               variant="bordered"
               labelPlacement="outside"
+              color="primary"
               radius="none"
               minLength={6}
               placeholder={t("formInputs.placeholder3")}
               label={t("formInputs.label3")}
               autoComplete="on"
               onChange={handleOnChange}
-              className="border-red-500"
+              className="text-inherit"
+              classNames={{
+                label: ["text-white"],
+              }}
             />
           </div>
         </div>
@@ -133,11 +145,15 @@ const ContactForm = ({ width }: { width: string }) => {
             variant="bordered"
             radius="none"
             labelPlacement="outside"
+            color="primary"
             label={t("formInputs.label4")}
             placeholder={t("formInputs.placeholder4")}
-            className="w-full"
+            className="w-full text-inherit"
             name="message"
             onChange={handleOnChange}
+            classNames={{
+              label: ["text-white"],
+            }}
           />
         </div>
         <div className="flex flex-row justify-center items-center">
@@ -153,9 +169,9 @@ const ContactForm = ({ width }: { width: string }) => {
         <Button
           type="submit"
           isDisabled={!isCheckd || disableButton ? true : false}
-          color="success"
-          radius="none"
-          className="mx-auto w-full max-w-[300px] text-white disabled:text-black p-4 hover:scale-110 transition-transform duration-500"
+          color="primary"
+          radius="lg"
+          className="mx-auto w-full max-w-[300px] text-black disabled:text-black p-4 hover:scale-110 transition-transform duration-500"
         >
           <RiMailSendLine size={20} />
           {t("formButton")}
