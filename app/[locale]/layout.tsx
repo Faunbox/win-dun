@@ -24,9 +24,9 @@ const inter = Inter({
   display: "swap",
 });
 
-const CookieConsent = dynamic(() => import('@/components/Navigation/Cookie'), {
+const CookieConsent = dynamic(() => import("@/components/Navigation/Cookie"), {
   ssr: false,
-})
+});
 
 async function getMessages(locale: string) {
   try {
@@ -67,7 +67,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={inter.className}>
       <NextIntlClientProvider locale={locale} messages={messages}>
-        <body className="relative">
+        <body className="relative bg-white">
           <CookieConsent />
           <Providers>
             <FormProvider>

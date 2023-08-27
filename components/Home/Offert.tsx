@@ -1,4 +1,3 @@
-
 import SectionHeader from "../Typography/SectionHeader";
 import OffertCard from "./OffertCard";
 import { useTranslations } from "next-intl";
@@ -6,16 +5,16 @@ import { useTranslations } from "next-intl";
 const OffertSection = () => {
   const t = useTranslations("homePage");
   const images = [
-    "/images/bus.jpg",
-    "/images/zwierze.jpg",
-    "/images/paczki.jpg",
+    "/images/paczka-bus.jpg",
+    "/images/kotek.jpg",
+    "/images/paczka2.jpg",
   ];
 
   return (
-    <section className="section-container bg-gray-300 min-h-[40vh] py-10">
+    <section className="section-container min-h-[40vh] pb-10">
       <div className="container flex flex-col md:p-4 justify-center items-center">
         <SectionHeader>{t("services.title")}</SectionHeader>
-        <div className="grid grid-flow-row md:grid-cols-3 gap-5 md:gap-14 my-2 justify-center items-start md:justify-around">
+        <div className="grid grid-flow-row md:grid-cols-3 gap-5 md:gap-14 my-4 justify-center items-start md:justify-around">
           {images.map((obj, index) => (
             <OffertCard
               key={index}

@@ -20,12 +20,17 @@ module.exports = {
           "50%": { borderColor: "white", color: "white" },
           "100%": { borderColor: "black", color: "black" },
         },
+        hithere: {
+          "30%": { transform: "scale(1.05)" },
+          "40%, 60%": { transform: "rotate(-5deg) scale(1.1)" },
+          "50%": { transform: "rotate(5deg) scale(1.1)" },
+          "70%": { transform: "rotate(0deg) scale(1.1)" },
+          "100%": { transform: "scale(1)" },
+        },
       },
       animation: {
         "waving-hand": "wave 10s ease-in infinite",
-      },
-      animationDuration: {
-        "3s": "3s",
+        hithere: "hithere 4s ease infinite",
       },
     },
   },
@@ -35,7 +40,7 @@ module.exports = {
       themes: {
         light: {
           colors: {
-            primary: "#D5B1A5",
+            primary: "#fde047",
             secondary: "#BF8070",
           },
         },

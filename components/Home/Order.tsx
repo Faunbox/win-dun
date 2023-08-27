@@ -1,10 +1,9 @@
-import SectionHeader from "../Typography/SectionHeader";
 import ContactForm from "../Contact/ContactForm";
 import { BsMessenger, BsTelephoneOutbound, BsWhatsapp } from "react-icons/bs";
 
 const Order = () => {
   return (
-    <section className="bg-gray-100 section-container p-4 py-20 flex-col">
+    <section className=" section-container p-4 py-20 flex-col">
       {/* <SectionHeader>Kontakt</SectionHeader> */}
       <div className="container w-full flex flex-col md:flex-row gap-4 md:justify-around px-4">
         <div className="flex flex-col w-full md:max-w-[50%] justify-center items-center text-center gap-4">

@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@nextui-org/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Cookies from "js-cookie";
 import { useTranslations } from "next-intl";
 

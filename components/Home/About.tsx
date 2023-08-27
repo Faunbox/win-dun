@@ -25,9 +25,9 @@ const AboutHomeSection = () => {
         <Link href={t("about.link")}>
           <Button
             type="submit"
-            color="success"
+            color="primary"
             radius="none"
-            className="mx-auto w-full max-w-[300px] text-white disabled:text-black p-6 hover:scale-110 transition-transform duration-500"
+            className="mx-auto w-full max-w-[300px] text-black disabled:text-black p-6 hover:scale-110 transition-transform duration-500 rounded-2xl"
           >
             {t("about.button")} {"->"}
           </Button>

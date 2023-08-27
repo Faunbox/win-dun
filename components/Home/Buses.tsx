@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 const HomeBuses = () => {
   const t = useTranslations("homePage");
   return (
-    <section className="flex flex-col bg-gray-300 justify-center items-center py-4">
+    <section className="flex flex-col bg-whitejustify-center items-center py-4">
       <div className="container text-center p-4 flex flex-col ">
         <SectionHeader>{t("bus.title")}</SectionHeader>
         <ul className="flex flex-col md:flex-row justify-around gap-4">
@@ -28,7 +28,6 @@ const HomeBuses = () => {
             <p className="text-xl font-bold ">{t("bus.text4")}</p>
           </li>
         </ul>
-        
       </div>
     </section>
   );

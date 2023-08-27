@@ -8,9 +8,9 @@ const HeroSection = () => {
   const t = useTranslations("homePage");
 
   return (
-    <div className="section-container bg-[url('/images/hero10.jpg')] w-screen h-screen bg-right lg:bg-cover bg-no-repeat">
-      <div className="container  flex flex-col md:flex-row justify-center items-start mx-auto align-middle relative px-4 py-10 lg:py-0">
-        <aside className="flex flex-col justify-center items-center lg:justify-start w-full lg:w-6/12 mx-auto lg:absolute lg:top-[30%] lg:left-[30%] lg:-translate-x-1/2 lg:-translate-y-2/4 -z-1 text-gray-50 mt-4">
+    <div className="section-container bg-[url('/images/hero10.jpg')] w-screen h-screen bg-right lg:bg-cover bg-no-repeat relative">
+      <div className="container flex flex-col md:flex-row justify-center items-start mx-auto align-middle  px-4 py-10 lg:py-0">
+        <aside className="flex flex-col justify-center items-center lg:justify-start w-full lg:w-6/12 mx-auto lg:absolute lg:top-[50%] lg:left-[30%] lg:-translate-x-1/2 lg:-translate-y-2/4 -z-1 text-gray-50 mt-4">
           <h1 className="text-5xl md:text-6xl font-bold  px-2 border-black ">
             {t("homeDescription1")}
           </h1>
@@ -60,6 +60,8 @@ const HeroSection = () => {
             className="w-screen h-screen object-center md:object-cover "
           />
         </aside> */}
+        {/* trapezoid */}
+        <div className="h-0 w-10/12 border-b-white absolute bottom-0 z-10 border-b-[20px] border-r-[30px] border-r-transparent border-l-[30px] border-l-transparent"></div>
       </div>
     </div>
   );

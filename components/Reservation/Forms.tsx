@@ -1,13 +1,18 @@
+"use client";
+import { useSearchParams } from "next/navigation";
 import BigForm from "./Large";
 import PackageForm from "./Package";
 import PeopleForm from "./People";
 
-const Forms = ({ state }: { state: string }) => {
+const Forms = () => {
+  const searchParams = useSearchParams();
+  const typeParam = searchParams.get("type")?.toString();
+
   return (
     <div className="flex flex-col justify-center items-center container">
-      {state === "people" && <PeopleForm />}
-      {state === "package" && <PackageForm />}
-      {state === "large" && <BigForm />}
+      {typeParam === "people" && <PeopleForm />}
+      {typeParam === "package" && <PackageForm />}
+      {typeParam === "large" && <BigForm />}
     </div>
   );
 };
