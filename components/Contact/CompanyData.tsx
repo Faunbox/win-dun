@@ -9,7 +9,7 @@ const CompanyData = () => {
   const t = useTranslations("contact");
 
   return (
-    <div className="relative flex flex-col w-full md:w-4/12 justify-center items-center p-4 border-1 border-black after:content-[''] after:border-1 after:border-black after:w-full after:h-full after:absolute after:inset-x-2 after:-inset-y-2">
+    <div className="relative flex flex-col w-11/12 md:w-4/12 justify-center items-center p-4 border-1 border-black after:content-[''] after:border-1 after:border-black after:w-full after:h-full after:absolute after:inset-x-2 after:-inset-y-2">
       <h2 className="m-4 text-2xl font-bold justify-self-start border-b-1 self-center border-black uppercase">
         {t("companyDataTitle")}
       </h2>

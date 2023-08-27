@@ -112,7 +112,7 @@ const ContactForm = ({ width }: { width: string }) => {
                 onChange={handleOnChange}
                 className="text-inherit"
                 classNames={{
-                  label: ["text-white"],
+                  label: ["text-white mix-blend-difference"],
                 }}
               />
             </div>
@@ -133,7 +133,7 @@ const ContactForm = ({ width }: { width: string }) => {
               onChange={handleOnChange}
               className="text-inherit"
               classNames={{
-                label: ["text-white"],
+                label: ["text-white mix-blend-difference"],
               }}
             />
           </div>
@@ -152,7 +152,7 @@ const ContactForm = ({ width }: { width: string }) => {
             name="message"
             onChange={handleOnChange}
             classNames={{
-              label: ["text-white"],
+              label: ["text-white mix-blend-difference"],
             }}
           />
         </div>

@@ -16,7 +16,7 @@ const MobileNav = () => {
   return (
     <nav
       className={
-        "lg:hidden flex row-auto justify-between p-4 gap-10 items-center text-center"
+        "lg:hidden flex row-auto justify-between p-4 gap-10 items-center text-center mix-blend-difference"
       }
     >
       {/* Logo */}
@@ -32,7 +32,10 @@ const MobileNav = () => {
         </Link>
       </div>
       {/* Menu icon */}
-      <button onClick={() => setMobileNavOpen(!mobileNavOpen)}>
+      <button
+        onClick={() => setMobileNavOpen(!mobileNavOpen)}
+        className="text-white "
+      >
         <CgMenuRightAlt className="w-[30px] h-[30px] mr-5" />
       </button>
       <div
