@@ -25,8 +25,8 @@ const Footer = () => {
               loading="lazy"
             />
           </Link>
-          <p className="mt-2 text-sm text-gray-100">{t("logoDesc")}</p>
-          <div className="mt-4 w-64">
+          <p className="mt-6 text-sm text-gray-100">{t("logoDesc")}</p>
+          <div className="m-4 w-64">
             <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-around gap-20">
               <Link
                 href={""}

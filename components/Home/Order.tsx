@@ -18,7 +18,7 @@ const Order = () => {
           <div className="flex flex-col">
             <h2 className="text-xl mb-4">Obsługiwane województwa</h2>
             <Image
-              src={"/images/pl.svg"}
+              src={"/images/mapa.svg"}
               alt="mapa polski"
               width={550}
               height={600}
