@@ -15,22 +15,14 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       keyframes: {
-        wave: {
-          "0%": { borderColor: "black", color: "black" },
-          "50%": { borderColor: "white", color: "white" },
-          "100%": { borderColor: "black", color: "black" },
-        },
         hithere: {
-          "30%": { transform: "scale(1)" },
-          "40%, 60%": { transform: "scale(1.05)" },
+          "0%": { transform: "scale(1)" },
           "50%": { transform: "scale(1.1)" },
-          "70%": { transform: "scale(1.05)" },
           "100%": { transform: "scale(1)" },
         },
       },
       animation: {
-        "waving-hand": "wave 10s ease-in infinite",
-        hithere: "hithere 4s ease-in-out infinite",
+        hithere: "hithere 5s ease-in-out infinite",
       },
       colors: {
         "yellow-0": "#fde047",

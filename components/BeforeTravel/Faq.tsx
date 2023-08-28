@@ -2,17 +2,18 @@
 
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import { useTranslations } from "next-intl";
+import SectionHeader from "../Typography/SectionHeader";
 
 const Faq = () => {
   const t = useTranslations("faq");
 
   return (
     <div className="container flex flex-col justify-center items-center gap-2 m-4">
-      <h2 className="text-xl font-semibold uppercase mt-6">{t("title")}</h2>
-      <p className="m-4 font-light">{t("desc")}</p>
+      <SectionHeader size={"xl"} margin={"mb-2"}>{t("title")}</SectionHeader>
+      <p className="font-light">{t("desc")}</p>
       <div className="w-full flex justify-center items-center">
         <div className="w-full m-4">
-          <Accordion variant="bordered">
+          <Accordion variant="light">
             <AccordionItem
               key="1"
               aria-label="Accordion 1"

@@ -88,7 +88,7 @@
     "howTo": "Jak zarezerwować przejazd?",
     "info": "Informacja",
     "instruction": "Przedstawiamy krótki poradnik w jaki sposób zarezerwować przejazd lub wysłać paczkę przez nasz forumlarz rezerwacyjny",
-    "button": "Zarezerwój swój przejazd",
+    "button": "Rezerwacja",
     "link": "/rezerwacja?type=people",
     "steps": {
       "1": {
@@ -144,7 +144,7 @@
 
   "faq": {
     "title": "Najczęsciej zadawane pytania",
-    "desc": "Poniżej przedstawiamy odpowiedzi na najczęsciej zadawane pytania. Jeżeli nie znalazłeś satysfakcjonującej Cię odpowiedzi, zapraszamy do kontaktu!",
+    "desc": "Jeżeli nie znalazłeś satysfakcjonującej Cię odpowiedzi, zapraszamy do kontaktu!",
     "qna": {
       "question1": "Czy jeździmy z adresu pod adres?",
       "response1": "Tak, wyjeżdżamy spod dowolnego adresu i dowozimy bezpośrednio pod wskazany adres.",

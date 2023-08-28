@@ -8,11 +8,11 @@ const HeroSection = () => {
   const t = useTranslations("homePage");
 
   return (
-    <div className="section-container bg-[url('/images/hero10.jpg')] w-screen h-screen bg-right lg:bg-cover bg-no-repeat relative">
+    <div className="section-container bg-[url('/images/hero10.jpg')] w-screen h-screen max-h-[1080px] mx-auto bg-right lg:bg-cover bg-no-repeat relative">
       <div className="container flex flex-col md:flex-row justify-center items-start mx-auto align-middle  px-4 py-10 lg:py-0">
-        <aside className="flex flex-col justify-center items-center lg:justify-start w-full lg:w-6/12 mx-auto lg:absolute lg:top-[50%] lg:left-[30%] lg:-translate-x-1/2 lg:-translate-y-2/4 -z-1 text-gray-50 mt-4">
+        <aside className="flex flex-col justify-center items-center lg:justify-start w-full lg:w-6/12 mx-auto lg:absolute lg:top-[55%] lg:left-[30%] lg:-translate-x-1/2 lg:-translate-y-2/4 -z-1 text-gray-50 mt-4">
           <div className="flex flex-col">
-            <h1 className="text-5xl md:text-6xl font-bold px-2 border-black leading-snug">
+            <h1 className="text-5xl md:text-6xl font-bold px-2 border-black  md:leading-tight">
               {t("homeDescription1")}
             </h1>
             {/* <h2 className="text-md md:text-lg font-light ">
@@ -27,9 +27,11 @@ const HeroSection = () => {
               <Button
                 disabled={true}
                 color="primary"
-                radius="none"
-                size="lg"
-                className="text-white my-1 md:my-8 w-full max-w-[300px] p-2 md:p-4 text-lg border-b-1 hover:scale-105 ease-in-out bg bg-transparent"
+                // radius="none"
+                // size="lg"
+                // className="text-white my-1 md:my-8 w-full max-w-[300px] p-2 md:p-4 text-lg border-b-1 hover:scale-105 ease-in-out bg bg-transparent"
+                radius="lg"
+                className="mx-auto w-full max-w-[300px] text-black disabled:text-black p-4 hover:scale-110 transition-transform duration-500"
               >
                 <BsPersonCheck />
                 {t("heroButton")}
@@ -39,10 +41,12 @@ const HeroSection = () => {
               <Button
                 disabled={true}
                 color="primary"
-                radius="none"
+                // radius="none"
                 // variant="bordered"
-                size="lg"
-                className="text-white my-1 md:my-8 w-full max-w-[300px] p-2 md:p-4 text-lg border-b-1 hover:scale-105 ease-in-out bg bg-transparent"
+                // size="lg"
+                // className="text-white my-1 md:my-8 w-full max-w-[300px] p-2 md:p-4 text-lg border-b-1 hover:scale-105 ease-in-out bg bg-transparent"
+                radius="lg"
+                className="mx-auto w-full max-w-[300px] text-black disabled:text-black p-4 hover:scale-110 transition-transform duration-500"
               >
                 <GoPackageDependents />
                 {t("heroPhone")}

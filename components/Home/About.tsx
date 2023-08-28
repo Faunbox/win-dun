@@ -11,7 +11,7 @@ const AboutHomeSection = () => {
   const t = useTranslations("homePage");
   return (
     <section className="section-container">
-      <div className=" flex flex-col md:flex-row-reverse justify-around my-20 container items-center gap-5">
+      <div className=" flex flex-col md:flex-row-reverse mx-8 my-20  container items-center gap-20">
         <div
           className={`flex flex-col items-center gap-4 ${spaceMono.className}`}
         >

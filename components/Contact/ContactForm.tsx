@@ -7,6 +7,7 @@ import axios from "axios";
 import { useState } from "react";
 import { RiMailSendLine } from "react-icons/ri";
 import { useTranslations } from "next-intl";
+import SectionHeader from "../Typography/SectionHeader";
 
 interface Input {
   name: string;
@@ -33,7 +34,7 @@ const ContactForm = ({ width }: { width: string }) => {
   const [disableButton, setDisableButton] = useState(false);
 
   const widthVariants: Variants = {
-    quater: "md:w-8/12",
+    quater: "md:w-8/12 mx-8",
     full: "md:w-full",
   };
 
@@ -68,12 +69,12 @@ const ContactForm = ({ width }: { width: string }) => {
     <div
       className={`flex flex-col w-full ${
         widthVariants[width as keyof typeof widthVariants]
-      } p-4`}
+      }`}
     >
-      <h2 className="m-4 font-bold text-2xl border-b-1 self-center border-white mb-8">
+      <SectionHeader>
         {t("formHeader")}
-      </h2>
-      <form className="flex flex-col px-4 gap-4" onSubmit={handleSubmit}>
+      </SectionHeader>
+      <form className="flex flex-col gap-4 md:py-12" onSubmit={handleSubmit}>
         <div className="flex flex-col xl:flex-row gap-2 md:gap-4">
           <div className="flex flex-col lg:flex-row gap-4 xl:w-full">
             <div className="flex flex-col justify-center items-center w-full xl:w-[50%]">
@@ -161,6 +162,7 @@ const ContactForm = ({ width }: { width: string }) => {
             type="checkbox"
             name="checkbox"
             id="checkbox"
+            className="mr-4"
             disabled={disableButton}
             onChange={() => setIsCheckd(!isCheckd)}
           />

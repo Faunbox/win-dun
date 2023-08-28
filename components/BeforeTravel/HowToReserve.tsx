@@ -1,6 +1,12 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+import {
+  PiNumberSquareOneThin,
+  PiNumberSquareTwoThin,
+  PiNumberSquareThreeThin,
+  PiNumberSquareFourThin,
+} from "react-icons/pi";
+import InfoComponents from "./InfoComponent";
 
 const HowToReserve = () => {
   const t = useTranslations("beforeTravel");
@@ -8,28 +14,12 @@ const HowToReserve = () => {
   return (
     <section>
       <div className="bg-transparent text-black ">
-        <div className="container mx-auto flex flex-col items-start md:flex-row my-4 md:my-4">
-          <div className="flex flex-col w-full sticky md:top-28 lg:w-1/3 mt-2 md:mt-12 px-8">
-            <p className="ml-2 text-red-700 uppercase tracking-loose">
-              {t("info")}
-            </p>
-            <p className="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">
-              {t("howTo")}
-            </p>
-            <p className="text-sm md:text-base text-black-50 mb-4">
-              {t("instruction")}
-            </p>
-            <Link
-              href={t("link")}
-              className="bg-transparent mr-auto hover:bg-red-700 text-red-700 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-red-700 hover:border-transparent self-end"
-            >
-              {t("button")}
-            </Link>
-          </div>
+        <div className="container mx-auto flex flex-col items-start md:flex-row mt-4 md:my-4">
+          <InfoComponents />
           <div className="ml-0 md:ml-12 lg:w-2/3 pt-20">
             <div className="container mx-auto w-full h-full">
               <Image
-                className="sticky top-7/12 top-0 md:top-1/4 mx-auto translate-y-1/2 -mt-36 md:-mt-36 z-10"
+                className="sticky top-7/12 top-0  mx-auto translate-y-1/2 -mt-36 z-10"
                 src="/images/why-bus.png"
                 alt="rocket"
                 width={180}
@@ -41,11 +31,12 @@ const HowToReserve = () => {
 
                 <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                   <div className="order-1 w-5/12"></div>
-                  <div className="order-1 w-5/12 px-1 py-4 text-right">
-                    <p className="mb-3 text-left md:text-right md:text-base text-black">
-                      {t("steps.1.topHeader")}
+                  <div className="order-1 w-5/12 px-4 py-4 text-right items-right relative">
+                    <p className="mb-3 text-left md:text-right md:text-base text-black absolute -top-10 right-3">
+                      {/* {t("steps.1.topHeader")} */}
+                      <PiNumberSquareOneThin size={50} />
                     </p>
-                    <h4 className="mb-3 mr-3 font-bold text-lg md:text-xl">
+                    <h4 className="mb-3 font-bold text-lg md:text-xl">
                       {t("steps.1.header")}
                     </h4>
                     <p className="text-sm md:text-base leading-snug text-black text-opacity-100">
@@ -55,9 +46,10 @@ const HowToReserve = () => {
                 </div>
                 <div className="mb-8 flex justify-between items-center w-full right-timeline">
                   <div className="order-1 w-5/12"></div>
-                  <div className="order-1 w-5/12 px-1 py-4 text-left">
-                    <p className="mb-3 text-base text-black">
-                      {t("steps.2.topHeader")}
+                  <div className="order-1 w-5/12 px-1 py-4 text-left relative">
+                    <p className="mb-3 text-base text-black absolute -top-10 left-0">
+                      {/* {t("steps.2.topHeader")} */}
+                      <PiNumberSquareTwoThin size={50} />
                     </p>
                     <h4 className="mb-3 font-bold text-lg md:text-xl">
                       {t("steps.2.header")}
@@ -69,9 +61,10 @@ const HowToReserve = () => {
                 </div>
                 <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                   <div className="order-1 w-5/12"></div>
-                  <div className="order-1 w-5/12 px-1 py-4 text-right">
-                    <p className="mb-3 text-base text-black">
-                      {t("steps.3.topHeader")}
+                  <div className="order-1 w-5/12 px-1 py-4 text-right relative">
+                    <p className="mb-3 text-base text-black absolute -top-10 right-0">
+                      <PiNumberSquareThreeThin size={50} />
+                      {/* {t("steps.3.topHeader")} */}
                     </p>
                     <h4 className="mb-3 font-bold text-lg md:text-xl">
                       {t("steps.3.header")}
@@ -82,11 +75,12 @@ const HowToReserve = () => {
                   </div>
                 </div>
 
-                <div className="mb-8 flex justify-between items-start w-full right-timeline">
+                <div className="flex justify-between items-start w-full right-timeline">
                   <div className="order-1 w-5/12"></div>
-                  <div className="order-1  w-5/12 px-1 py-4">
-                    <p className="mb-3 text-base text-black">
-                      {t("steps.4.topHeader")}.
+                  <div className="order-1  w-5/12 px-1 py-4 relative">
+                    <p className="mb-3 text-base text-black absolute -top-10 left-0">
+                      <PiNumberSquareFourThin size={50} />
+                      {/* {t("steps.4.topHeader")} */}
                     </p>
                     <h4 className="mb-3 font-bold  text-lg md:text-xl text-left">
                       {t("steps.4.header")}

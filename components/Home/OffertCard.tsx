@@ -13,7 +13,7 @@ const OffertCard = ({
 }) => {
   return (
     <div
-      className={`flex justify-center items-center flex-col gap-5 p-4 border rounded-2xl border-black max-w-[300px] md:max-w-[330px] lg:max-w-[370px] ${
+      className={`flex justify-center items-center flex-col gap-5 p-4 border  border-black max-w-[300px] md:max-w-[330px] lg:max-w-[370px] ${
         number === 1 ? "md:scale-105" : "md:scale-100"
       } md:hover:scale-110 duration-1000`}
     >

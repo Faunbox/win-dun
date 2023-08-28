@@ -40,7 +40,7 @@ const CompanyData = () => {
         </li>
       </ul>
       <div className="flex flex-row justify-around m-4 p-5 max-w-[300px]">
-        <div className="flex flex-row justify-around items-center w-screen max-w-[300px] pt-4">
+        <div className="flex flex-row justify-around items-center w-screen max-w-[300px] pt-4 text-red-0">
           <SiFacebook className="scale-125 hover:scale-150 transition-transform duration-500 text-red" />
           <SiInstagram className="scale-125 hover:scale-150 transition-transform duration-500 text-red" />
           <SiTwitter className="scale-125 hover:scale-150 transition-transform duration-500 text-red" />

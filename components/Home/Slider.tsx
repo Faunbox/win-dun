@@ -13,11 +13,12 @@ const Slider = () => {
           slides: { perView: 3 },
         },
         "(min-width: 1240px)": {
-          slides: { perView: 4 },
+          slides: { perView: 3.5 },
         },
       },
       slides: { perView: 1 },
       loop: true,
+      renderMode: "performance",
     },
     [
       (slider) => {
@@ -52,14 +53,15 @@ const Slider = () => {
   );
 
   return (
-    <div className="flex justify-center items-center">
-      <div ref={ref} className="keen-slider container mt-20">
+    <div className="flex justify-center 2xl:container mx-auto items-center">
+      <div ref={ref} className="keen-slider  mt-20">
         <div className="keen-slider__slide">
           <Image
             src="/images/paczki.jpg"
             alt="paczki"
             width={600}
             height={400}
+            className="h-full w-full"
           />
         </div>
         <div className="keen-slider__slide min-h-[80vh]">
