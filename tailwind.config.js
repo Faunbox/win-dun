@@ -22,15 +22,15 @@ module.exports = {
         },
         hithere: {
           "30%": { transform: "scale(1)" },
-          "40%, 60%": { transform: "rotate(-5deg) scale(1.05)" },
-          "50%": { transform: "rotate(5deg) scale(1.05)" },
-          "70%": { transform: "rotate(0deg) scale(1.05)" },
+          "40%, 60%": { transform: "scale(1.05)" },
+          "50%": { transform: "scale(1.1)" },
+          "70%": { transform: "scale(1.05)" },
           "100%": { transform: "scale(1)" },
         },
       },
       animation: {
         "waving-hand": "wave 10s ease-in infinite",
-        hithere: "hithere 4s ease infinite",
+        hithere: "hithere 4s ease-in-out infinite",
       },
       colors: {
         "yellow-0": "#fde047",

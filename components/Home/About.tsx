@@ -10,25 +10,18 @@ const spaceMono = Space_Mono({
 const AboutHomeSection = () => {
   const t = useTranslations("homePage");
   return (
-    <section className="flex items-center md:flex-row py-8">
-      <div className="w-0 md:w-6/12 container"></div>
-      <div className="conainer flex flex-col justify-around items-center gap-5 w-full mx-6 md:mx-0 md:px-2">
-        <div className="grid grid-rows-2 gap-4">
-          <p className="text-2xl">
+    <section className="section-container">
+      <div className=" flex flex-col md:flex-row-reverse justify-around my-20 container items-center gap-5">
+        <div
+          className={`flex flex-col items-center gap-4 ${spaceMono.className}`}
+        >
+          <p className="text-2xl ">
             {t("about.text1")}{" "}
-            <span
-              className={`font-bold text-3xl text-red-800 ${spaceMono.className}`}
-            >
-              {t("about.span1")}
-            </span>{" "}
+            <span className={`font-bold text-3xl`}>{t("about.span1")}</span>{" "}
             {t("about.text2")}
           </p>
           <p className="text-2xl">
-            <span
-              className={`font-bold text-3xl text-red-800 ${spaceMono.className}`}
-            >
-              {t("about.span2")}
-            </span>{" "}
+            <span className={`font-bold text-3xl`}>{t("about.span2")}</span>{" "}
             {t("about.text3")}
           </p>
         </div>

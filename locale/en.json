@@ -1,14 +1,15 @@
 {
   "core": {
-    "website": "En description",
+    "website": "Passenger transport to Germany and the Netherlands - Silesia, Lower Silesia, Opolskie - wit-dun.eu",
+    "description": "",
     "keywords": "",
-    "navbar": [
-      { "title": "Start", "href": "/" },
-      { "title": "Flota", "href": "/galeria" },
-      { "title": "Rezerwacja", "href": "/rezerwacja" },
-      { "title": "Kontakt", "href": "/kontakt" },
-      { "title": "Przed podróżą", "href": "/przed-podroza" }
-    ]
+    "navbar": {
+      "1": { "title": "Start", "href": "/" },
+      "2": { "title": "Flota", "href": "/galeria" },
+      "3": { "title": "Rezerwacja", "href": "/rezerwacja" },
+      "4": { "title": "Kontakt", "href": "/kontakt" },
+      "5": { "title": "Przed podróżą", "href": "/przed-podroza" }
+    }
   },
   "coockies": {
     "header": "Your privacy matters to us",

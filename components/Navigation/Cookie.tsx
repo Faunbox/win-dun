@@ -28,7 +28,8 @@ const CookieConsent = () => {
       <Button
         variant="bordered"
         onClick={handleOnClick}
-        className="mx-auto text-white rounded-none hover:bg-green-600 border-green-600"
+        radius="lg"
+        className="mx-auto text-white hover:bg-green-600 border-green-600"
       >
         {t("button")}
       </Button>
