@@ -8,6 +8,7 @@ import { useFormContext, InputType } from "@/context/formContext";
 import { useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 const BigForm = () => {
   const t = useTranslations("contact");
@@ -56,7 +57,7 @@ const BigForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} ref={formRef}>
+    <form onSubmit={handleSubmit} ref={formRef} className="w-8/12">
       <div className="flex flex-col sm:flex-row gap-4 mt-4 sm:mt-16">
         <aside className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full ">
           <div className="flex flex-col gap-2 sm:gap-4 w-full">
@@ -262,25 +263,32 @@ const BigForm = () => {
         </aside>
       </div>
       <div className="flex flex-col jusity-center items-center mt-8">
-        <div className="flex flex-row justify-center items-center">
+        <div className="flex flex-row justify-center items-center mt-8">
           <input
             type="checkbox"
             name="checkbox"
             id="checkbox"
             disabled={disableButton}
             onChange={() => setIsCheckd(!isCheckd)}
+            className="mr-4"
           />
-          <label htmlFor="checkbox">{t("rodo")}</label>
+          <label htmlFor="checkbox">
+            {t("rodo")}{" "}
+            <Link href={"/regulamin"} className="text-blue-500" target="_blank">
+              {" "}
+              Regulamin
+            </Link>
+          </label>
         </div>
 
         <Button
           isDisabled={!isCheckd || disableButton ? true : false}
-          color="secondary"
-          radius="none"
+          color="primary"
+          radius="lg"
           type="submit"
           className="text-white my-8 w-full max-w-[300px]"
         >
-          {tr("buttons.formButtonPackage")}
+          {tr("buttons.formButtonLarge")}
         </Button>
       </div>
     </form>

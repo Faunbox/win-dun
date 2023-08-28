@@ -9,7 +9,7 @@ const Forms = () => {
   const typeParam = searchParams.get("type")?.toString();
 
   return (
-    <div className="flex flex-col justify-center items-center container">
+    <div className="flex flex-col justify-center items-center mx-auto">
       {typeParam === "people" && <PeopleForm />}
       {typeParam === "package" && <PackageForm />}
       {typeParam === "large" && <BigForm />}

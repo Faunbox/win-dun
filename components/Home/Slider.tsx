@@ -52,45 +52,52 @@ const Slider = () => {
   );
 
   return (
-    <div ref={ref} className="keen-slider container mt-20">
-      <div className="keen-slider__slide">
-        <Image src="/images/paczki.jpg" alt="paczki" width={600} height={400} />
-      </div>
-      <div className="keen-slider__slide min-h-[80vh]">
-        <Image
-          src="/images/pakowanie.jpg"
-          alt="paczki"
-          width={600}
-          height={400}
-          className="h-full w-full"
-        />
-      </div>
-      <div className="keen-slider__slide min-h-[80vh]">
-        <Image
-          src="/images/paczki.jpg"
-          alt="paczki"
-          width={600}
-          height={400}
-          className="h-full w-full"
-        />
-      </div>
-      <div className="keen-slider__slide min-h-[80vh]">
-        <Image
-          src="/images/zwierze.jpg"
-          alt="paczki"
-          width={600}
-          height={400}
-          className="h-full w-full"
-        />
-      </div>
-      <div className="keen-slider__slide min-h-[80vh]">
-        <Image
-          src="/images/pakowanie.jpg"
-          alt="paczki"
-          width={600}
-          height={400}
-          className="h-full w-full"
-        />
+    <div className="flex justify-center items-center">
+      <div ref={ref} className="keen-slider container mt-20">
+        <div className="keen-slider__slide">
+          <Image
+            src="/images/paczki.jpg"
+            alt="paczki"
+            width={600}
+            height={400}
+          />
+        </div>
+        <div className="keen-slider__slide min-h-[80vh]">
+          <Image
+            src="/images/pakowanie.jpg"
+            alt="paczki"
+            width={600}
+            height={400}
+            className="h-full w-full"
+          />
+        </div>
+        <div className="keen-slider__slide min-h-[80vh]">
+          <Image
+            src="/images/paczki.jpg"
+            alt="paczki"
+            width={600}
+            height={400}
+            className="h-full w-full"
+          />
+        </div>
+        <div className="keen-slider__slide min-h-[80vh]">
+          <Image
+            src="/images/zwierze.jpg"
+            alt="paczki"
+            width={600}
+            height={400}
+            className="h-full w-full"
+          />
+        </div>
+        <div className="keen-slider__slide min-h-[80vh]">
+          <Image
+            src="/images/pakowanie.jpg"
+            alt="paczki"
+            width={600}
+            height={400}
+            className="h-full w-full"
+          />
+        </div>
       </div>
     </div>
   );

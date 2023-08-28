@@ -8,6 +8,7 @@ import { useFormContext, InputType } from "@/context/formContext";
 import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 const PeopleForm = () => {
   const t = useTranslations("contact");
@@ -57,12 +58,12 @@ const PeopleForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} ref={formRef}>
+    <form onSubmit={handleSubmit} ref={formRef} className="w-8/12">
       <div className="flex flex-col sm:flex-row gap-4 mt-4 sm:mt-16">
-        <aside className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full ">
-          <div className="flex flex-col gap-2 sm:gap-4 w-full">
+        <aside className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
+          <div className="flex flex-col gap-2 sm:gap-4  items-center">
             <h3 className="font-light text-lg my-4">{tr("formTitle")}</h3>
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
               <Input
                 type="text"
                 name="name"
@@ -264,7 +265,7 @@ const PeopleForm = () => {
           </div>
         </aside>
       </div>
-      <div className="flex flex-col jusity-center items-center">
+      <div className="flex flex-col jusity-center items-center mt-8">
         <div className="flex flex-row justify-center items-center mt-8">
           <input
             type="checkbox"
@@ -272,14 +273,21 @@ const PeopleForm = () => {
             id="checkbox"
             disabled={disableButton}
             onChange={() => setIsCheckd(!isCheckd)}
+            className="mr-4"
           />
-          <label htmlFor="checkbox">{t("rodo")}</label>
+          <label htmlFor="checkbox">
+            {t("rodo")}{" "}
+            <Link href={"/regulamin"} className="text-blue-500" target="_blank">
+              {" "}
+              Regulamin
+            </Link>
+          </label>
         </div>
 
         <Button
           isDisabled={!isCheckd || disableButton ? true : false}
           color="primary"
-          radius="none"
+          radius="lg"
           type="submit"
           className="text-white my-8 w-full max-w-[300px]"
         >

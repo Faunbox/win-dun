@@ -23,12 +23,12 @@ const HomeBuses = () => {
             <p className="text-xl font-light">{t("bus.text2")}</p>
           </li>
 
-          <li className="flex flex-col justify-center items-center w-full gap-10 py-4 md:py-0">
+          <li className="flex flex-col justify-center items-center w-full gap-10 pyd-4 md:pyd-0">
             <AiOutlineUsb size={45} className="text-black" />
             <p className="text-xl font-light">{t("bus.text3")}</p>
           </li>
 
-          <li className="flex flex-col justify-center items-center w-full gap-10 py-4 md:py-0">
+          <li className="flex flex-col justify-center items-center w-full gap-10 pyd-4 md:pyd-0">
             <CiBoxes size={45} className="text-black" />
             <p className="text-xl font-light">{t("bus.text4")}</p>
           </li>

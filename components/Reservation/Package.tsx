@@ -9,6 +9,7 @@ import { createPdf } from "../lib/React-pdf";
 import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 const PackageForm = () => {
   const t = useTranslations("contact");
@@ -43,7 +44,7 @@ const PackageForm = () => {
     formData.append("date", peopleForm.date);
 
     //Create pdf Blob
-    const pdf = await createPdf(peopleForm)
+    const pdf = await createPdf(peopleForm);
 
     const blob2Base64 = (): Promise<string> => {
       return new Promise<string>((resolve, reject) => {
@@ -76,7 +77,7 @@ const PackageForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} ref={formRef}>
+    <form onSubmit={handleSubmit} ref={formRef} className="w-8/12">
       <div className="flex flex-col sm:flex-row gap-4 mt-4 sm:mt-16">
         <aside className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full ">
           <div className="flex flex-col gap-2 sm:gap-4 w-full">
@@ -230,7 +231,7 @@ const PackageForm = () => {
             {/* <div className="flex flex-row gap-2 md:gap-4"></div> */}
             <div className="flex flex-col gap-2 sm:gap-4 mt-8 items-center  ">
               <h3 className="font-light text-lg">{tr("formTitleToGo")}</h3>
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
+              <div className="flex flex-col  gap-2 sm:gap-4 w-full">
                 <div className="flex flex-col sm:flex-row gap-2 md:gap-4">
                   <Input
                     type="text"
@@ -316,21 +317,28 @@ const PackageForm = () => {
         </aside>
       </div>
       <div className="flex flex-col jusity-center items-center mt-8">
-        <div className="flex flex-row justify-center items-center">
+        <div className="flex flex-row justify-center items-center mt-8">
           <input
             type="checkbox"
             name="checkbox"
             id="checkbox"
             disabled={disableButton}
             onChange={() => setIsCheckd(!isCheckd)}
+            className="mr-4"
           />
-          <label htmlFor="checkbox">{t("rodo")}</label>
+          <label htmlFor="checkbox">
+            {t("rodo")}{" "}
+            <Link href={"/regulamin"} className="text-blue-500" target="_blank">
+              {" "}
+              Regulamin
+            </Link>
+          </label>
         </div>
 
         <Button
           isDisabled={!isCheckd || disableButton ? true : false}
-          color="secondary"
-          radius="none"
+          color="primary"
+          radius="lg"
           type="submit"
           className="text-white my-8 w-full max-w-[300px]"
         >
