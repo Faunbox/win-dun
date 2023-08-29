@@ -21,7 +21,15 @@ interface Variants {
   quater: string;
 }
 
-const ContactForm = ({ width }: { width: string }) => {
+const ContactForm = ({
+  width,
+  color = "white",
+  padding = false,
+}: {
+  width: string;
+  color?: string;
+  padding?: boolean;
+}) => {
   const t = useTranslations("contact");
 
   const [isCheckd, setIsCheckd] = useState(false);
@@ -37,6 +45,8 @@ const ContactForm = ({ width }: { width: string }) => {
     quater: "md:w-8/12 mx-8",
     full: "md:w-full",
   };
+
+  const paddingY = padding ? "md:py-12" : "";
 
   const handleOnChange = (
     e:
@@ -71,10 +81,11 @@ const ContactForm = ({ width }: { width: string }) => {
         widthVariants[width as keyof typeof widthVariants]
       }`}
     >
-      <SectionHeader>
-        {t("formHeader")}
-      </SectionHeader>
-      <form className="flex flex-col gap-4 md:py-12" onSubmit={handleSubmit}>
+      <SectionHeader>{t("formHeader")}</SectionHeader>
+      <form
+        className={`flex flex-col gap-4 ${paddingY}`}
+        onSubmit={handleSubmit}
+      >
         <div className="flex flex-col xl:flex-row gap-2 md:gap-4">
           <div className="flex flex-col lg:flex-row gap-4 xl:w-full">
             <div className="flex flex-col justify-center items-center w-full xl:w-[50%]">
@@ -93,7 +104,7 @@ const ContactForm = ({ width }: { width: string }) => {
                 onChange={handleOnChange}
                 className="text-inherit"
                 classNames={{
-                  label: ["text-white mix-blend-difference"],
+                  label: [`text-${color}`],
                 }}
               />
             </div>
@@ -113,7 +124,7 @@ const ContactForm = ({ width }: { width: string }) => {
                 onChange={handleOnChange}
                 className="text-inherit"
                 classNames={{
-                  label: ["text-white mix-blend-difference"],
+                  label: [`text-${color}`],
                 }}
               />
             </div>
@@ -134,7 +145,7 @@ const ContactForm = ({ width }: { width: string }) => {
               onChange={handleOnChange}
               className="text-inherit"
               classNames={{
-                label: ["text-white mix-blend-difference"],
+                label: [`text-${color}`],
               }}
             />
           </div>
@@ -153,7 +164,7 @@ const ContactForm = ({ width }: { width: string }) => {
             name="message"
             onChange={handleOnChange}
             classNames={{
-              label: ["text-white mix-blend-difference"],
+              label: [`text-${color}`],
             }}
           />
         </div>
@@ -162,7 +173,7 @@ const ContactForm = ({ width }: { width: string }) => {
             type="checkbox"
             name="checkbox"
             id="checkbox"
-            className="mr-4"
+            className="mr-4 "
             disabled={disableButton}
             onChange={() => setIsCheckd(!isCheckd)}
           />

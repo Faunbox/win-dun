@@ -41,6 +41,11 @@ module.exports = {
           },
         },
       },
+      layout: {
+        borderWidth: {
+          medium: "1px",
+        },
+      },
     }),
   ],
 };

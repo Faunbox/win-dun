@@ -48,7 +48,7 @@ const DesktopNav = () => {
           ))}
         {/* Locale */}
         <li className="flex items-center justify-center gap-1 hover:scale-110 transition-transform duration-300">
-          <BiPhoneOutgoing color="#F7B750" size={25} />
+          <BiPhoneOutgoing color="#fde047" size={25} />
           <a
             href="phone:+48505216526"
             className="text-sm font-light text-white animate-hithere duration-3s"

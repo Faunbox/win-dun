@@ -5,9 +5,9 @@ const About = () => {
   const t = useTranslations("termsOfUse");
 
   return (
-    <div className="flex flex-col text-center justify-center items-center mt-20 p-4 w-screen">
+    <div className="flex flex-col text-center justify-center items-center mt-10 px-4 py-16 w-screen">
       <SectionHeader>{t("title")}</SectionHeader>
-      <div className="flex flex-col lg:flex-row lg:gap-8 container py-10 px-2 text-left border-1 border-black lg:divide-x  lg:divide-black">
+      <div className="flex flex-col lg:flex-row lg:gap-8 container py-10 mt-10 px-2 text-left border-1 border-black lg:divide-x  lg:divide-black">
         <div className="flex flex-col items-right w-full lg:w-6/12 lg:ml-8">
           <p>{t("terms.1")}</p>
           <p>{t("terms.2")}</p>

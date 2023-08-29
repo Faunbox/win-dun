@@ -79,7 +79,7 @@ const PeopleForm = () => {
                 value={peopleForm.name}
                 onChange={handleOnChange}
                 classNames={{
-                  inputWrapper: ["border-black"],
+                  inputWrapper: ["border-black border-1"],
                 }}
               />
               <Input

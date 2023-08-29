@@ -17,7 +17,7 @@ const Order = () => {
             className="w-full"
           ></iframe> */}
           <div className="flex flex-col">
-          <SectionHeader>Obsługiwane województwa</SectionHeader>
+            <SectionHeader>Obsługiwane województwa</SectionHeader>
             <Image
               src={"/images/mapa.svg"}
               alt="mapa polski"
@@ -27,7 +27,7 @@ const Order = () => {
           </div>
         </div>
         <div className="flex flex-col w-full">
-          <ContactForm width="full" />
+          <ContactForm width="full" padding={true} />
           <p>lub</p>
           <div className="flex flex-row items-center justify-center gap-6 mt-4">
             <a href="tel:+48505216526">
