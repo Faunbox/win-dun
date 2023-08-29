@@ -46,7 +46,7 @@ const NavDropdown = () => {
             <li className="flex items-center justify-center">
               <Link
                 locale="pl"
-                href="/"
+                href="/pl"
                 className="fi fi-pl block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 "
               ></Link>
             </li>
