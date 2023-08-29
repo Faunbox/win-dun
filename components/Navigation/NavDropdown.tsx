@@ -16,7 +16,7 @@ const NavDropdown = () => {
         className="focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center relative"
         type="button"
       >
-        <TfiWorld size={20} color="white"/>
+        <TfiWorld size={20} color="white" />
         <svg
           className="w-2.5 h-2.5 ml-2.5"
           aria-hidden="true"
@@ -46,7 +46,7 @@ const NavDropdown = () => {
             <li className="flex items-center justify-center">
               <Link
                 locale="pl"
-                href="/pl"
+                href="/"
                 className="fi fi-pl block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 "
               ></Link>
             </li>
