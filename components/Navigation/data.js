@@ -61,4 +61,3 @@ export const BfTravelNl = {
 export const Flags = {
   locale: [{ flag: "pl" }, { flag: "en" }, { flag: "nl" }],
 };
-

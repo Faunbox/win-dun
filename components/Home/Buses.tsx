@@ -1,4 +1,3 @@
-"use client";
 import SectionHeader from "../Typography/SectionHeader";
 import { AiOutlineUsb } from "react-icons/ai";
 import { BsWind } from "react-icons/bs";

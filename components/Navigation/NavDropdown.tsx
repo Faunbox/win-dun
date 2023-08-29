@@ -1,10 +1,14 @@
 "use client";
+import { useLocale } from "next-intl";
 import Link from "next/link";
+import { useRouter } from "next-intl/client";
 import { useState } from "react";
 import { TfiWorld } from "react-icons/tfi";
 
 const NavDropdown = () => {
   const [open, setOpen] = useState(false);
+  const locale = useLocale();
+  const router = useRouter();
 
   return (
     <>
@@ -45,23 +49,29 @@ const NavDropdown = () => {
           >
             <li className="flex items-center justify-center">
               <Link
-                locale="pl"
+                locale={"pl"}
+                hrefLang="pl"
                 href="/pl"
-                className="fi fi-pl block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 "
+                onClick={() => router.replace("/", { locale: "pl" })}
+                className="fi fi-pl block p-4 hover:bg-gray-100 dark:hover:bg-gray-600 "
               ></Link>
             </li>
             <li className="flex items-center justify-center">
               <Link
-                locale="en"
-                href="/en"
-                className="fi fi-gb block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 "
+                locale={"en"}
+                hrefLang="en"
+                href={"/en"}
+                onClick={() => router.replace("en", { locale: "en" })}
+                className="fi fi-gb block p-4 hover:bg-gray-100 dark:hover:bg-gray-600 "
               ></Link>
             </li>
             <li className="flex items-center justify-center">
               <Link
-                locale="nl"
+                locale={"nl"}
+                hrefLang="nl"
                 href="/nl"
-                className="fi fi-nl block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 "
+                onClick={() => router.replace("nl", { locale: "nl" })}
+                className="fi fi-nl block p-4 hover:bg-gray-100 dark:hover:bg-gray-600 "
               ></Link>
             </li>
           </ul>

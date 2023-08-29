@@ -1,4 +1,4 @@
-const withNextIntl = require("next-intl/plugin")(
+const withNextIntl = require('next-intl/plugin')(
   // This is the default (also the `src` folder is supported out of the box)
   "./i18n.js"
 );
@@ -6,6 +6,8 @@ const withNextIntl = require("next-intl/plugin")(
 module.exports = withNextIntl({
   async rewrites() {
     return {
+
+      //EN routes
       beforeFiles: [
         {
           source: "/en/before-travel",
@@ -25,6 +27,26 @@ module.exports = withNextIntl({
         {
           source: "/en/reservation",
           destination: "/en/rezerwacja",
+          locale: false,
+        },
+        {
+          source: "/en/before-travel",
+          destination: "/before-travel",
+          locale: false,
+        },
+        {
+          source: "/en/terms",
+          destination: "/terms",
+          locale: false,
+        },
+        {
+          source: "/en/contact",
+          destination: "/contact",
+          locale: false,
+        },
+        {
+          source: "/en/reservation",
+          destination: "/reservation",
           locale: false,
         },
 

@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import NavLink from "./NavLink";
@@ -6,11 +5,9 @@ import { BiPhoneOutgoing } from "react-icons/bi";
 import NavDropdown from "./NavDropdown";
 import { EnNavbar, NlNavbar, PlNavbar } from "./data";
 import { useLocale } from "next-intl";
-import { usePathname } from "next/navigation";
 
 const DesktopNav = () => {
   const locale = useLocale();
-  const pathname = usePathname();
 
   return (
     <nav className="hidden lg:grid lg:grid-cols-6 justify-between container mx-10">

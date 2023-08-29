@@ -1,3 +1,4 @@
+import { useLocale } from "next-intl";
 import Link from "next/link";
 
 type Props = {
@@ -7,9 +8,12 @@ type Props = {
 };
 
 const NavLink = ({ href, title }: Props) => {
+  const locale = useLocale();
+
   return (
     <Link
       href={href}
+      locale={locale}
       className={`text-sm lg:text-md border-black font-normal text-white `}
     >
       <p className="hover:scale-110 transition-transform duration-500 uppercase">
