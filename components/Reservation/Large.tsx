@@ -1,7 +1,5 @@
 "use client";
-import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
-import { Textarea } from "@nextui-org/react";
 import Calendar from "../lib/Datepicker";
 import axios from "axios";
 import { useFormContext, InputType } from "@/context/formContext";
@@ -9,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { MyInput, MyTextArea } from "../lib/NextUi";
 
 const BigForm = () => {
   const t = useTranslations("contact");
@@ -63,7 +62,7 @@ const BigForm = () => {
           <div className="flex flex-col gap-2 sm:gap-4 w-full">
             <h3 className="font-light text-lg my-4">{tr("formTitle")}</h3>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
-              <Input
+              <MyInput
                 type="text"
                 name="name"
                 id="name"
@@ -78,7 +77,7 @@ const BigForm = () => {
                 onChange={handleOnChange}
                 className=""
               />
-              <Input
+              <MyInput
                 type="text"
                 name="surname"
                 id="surname"
@@ -95,7 +94,7 @@ const BigForm = () => {
               />
             </div>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
-              <Input
+              <MyInput
                 type="text"
                 name="city"
                 id="city"
@@ -110,7 +109,7 @@ const BigForm = () => {
                 onChange={handleOnChange}
                 className=""
               />
-              <Input
+              <MyInput
                 type="text"
                 name="street"
                 id="street"
@@ -125,7 +124,7 @@ const BigForm = () => {
                 onChange={handleOnChange}
                 className=""
               />
-              <Input
+              <MyInput
                 type="text"
                 name="country"
                 id="country"
@@ -140,7 +139,7 @@ const BigForm = () => {
                 onChange={handleOnChange}
                 className=""
               />
-              {/* <Input
+              {/* <MyInput
                 type="number"
                 name="weight"
                 id="weight"
@@ -161,7 +160,7 @@ const BigForm = () => {
               <Calendar />
               <div className="flex flex-col gap-2 sm:gap-4 justify-center items-center sm:items-start">
                 <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
-                  <Input
+                  <MyInput
                     type="number"
                     name="phone"
                     id="phone"
@@ -176,7 +175,7 @@ const BigForm = () => {
                     onChange={handleOnChange}
                     className=""
                   />
-                  <Input
+                  <MyInput
                     type="email"
                     name="email"
                     id="email"
@@ -192,7 +191,7 @@ const BigForm = () => {
                     className=""
                   />
                 </div>
-                <Textarea
+                <MyTextArea
                   type="text"
                   name="message"
                   id="message"
@@ -212,7 +211,7 @@ const BigForm = () => {
             <div className="flex flex-col gap-2 sm:gap-4 mt-8 items-center  ">
               <h3 className="font-light text-lg">{tr("formTitleToGo")}</h3>
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
-                <Input
+                <MyInput
                   type="text"
                   name="countryToGo"
                   id="countryToGo"
@@ -227,7 +226,7 @@ const BigForm = () => {
                   onChange={handleOnChange}
                   className=""
                 />
-                <Input
+                <MyInput
                   type="text"
                   name="cityToGo"
                   id="cityToGo"
@@ -242,7 +241,7 @@ const BigForm = () => {
                   onChange={handleOnChange}
                   className=""
                 />
-                <Input
+                <MyInput
                   type="text"
                   name="streetToGo"
                   id="streetToGo"

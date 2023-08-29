@@ -9,7 +9,7 @@ const BeforeTravel = () => {
   const t = useTranslations("beforeTravel");
 
   return (
-    <div className="bg-gray-50 flex flex-col text-center justify-center items-center mt-20 p-4 w-screen">
+    <div className="flex flex-col text-center justify-center items-center mt-20 p-4 w-screen">
       <SectionHeader>{t("title")}</SectionHeader>
       <HowToReserve />
       <Luggage />

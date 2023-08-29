@@ -1,7 +1,5 @@
 "use client";
-import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
-import { Textarea } from "@nextui-org/react";
 import Calendar from "../lib/Datepicker";
 import axios from "axios";
 import { useFormContext, InputType } from "@/context/formContext";
@@ -9,6 +7,7 @@ import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { MyInput, MyTextArea } from "../lib/NextUi";
 
 const PeopleForm = () => {
   const t = useTranslations("contact");
@@ -64,7 +63,7 @@ const PeopleForm = () => {
           <div className="flex flex-col gap-2 sm:gap-4  items-center">
             <h3 className="font-light text-lg my-4">{tr("formTitle")}</h3>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
-              <Input
+              <MyInput
                 type="text"
                 name="name"
                 id="name"
@@ -78,11 +77,8 @@ const PeopleForm = () => {
                 autoComplete="on"
                 value={peopleForm.name}
                 onChange={handleOnChange}
-                classNames={{
-                  inputWrapper: ["border-black border-1"],
-                }}
               />
-              <Input
+              <MyInput
                 type="text"
                 name="surname"
                 id="surname"
@@ -99,7 +95,7 @@ const PeopleForm = () => {
               />
             </div>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
-              <Input
+              <MyInput
                 type="text"
                 name="city"
                 id="city"
@@ -114,7 +110,7 @@ const PeopleForm = () => {
                 onChange={handleOnChange}
                 className=""
               />
-              <Input
+              <MyInput
                 type="text"
                 name="street"
                 id="street"
@@ -129,7 +125,7 @@ const PeopleForm = () => {
                 onChange={handleOnChange}
                 className=""
               />
-              <Input
+              <MyInput
                 type="text"
                 name="country"
                 id="country"
@@ -144,7 +140,7 @@ const PeopleForm = () => {
                 onChange={handleOnChange}
                 className=""
               />
-              <Input
+              <MyInput
                 type="number"
                 name="numer"
                 id="numer"
@@ -164,7 +160,7 @@ const PeopleForm = () => {
               <Calendar />
               <div className="flex flex-col gap-2 sm:gap-4 justify-center items-center sm:items-start">
                 <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
-                  <Input
+                  <MyInput
                     type="number"
                     name="phone"
                     id="phone"
@@ -179,7 +175,7 @@ const PeopleForm = () => {
                     onChange={handleOnChange}
                     className=""
                   />
-                  <Input
+                  <MyInput
                     type="email"
                     name="email"
                     id="email"
@@ -195,7 +191,7 @@ const PeopleForm = () => {
                     className=""
                   />
                 </div>
-                <Textarea
+                <MyTextArea
                   type="text"
                   name="message"
                   id="message"
@@ -215,7 +211,7 @@ const PeopleForm = () => {
             <div className="flex flex-col gap-2 sm:gap-4 mt-8 items-center  ">
               <h3 className="font-light text-lg">Twoje miejsce docelowe</h3>
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
-                <Input
+                <MyInput
                   type="text"
                   name="countryToGo"
                   id="countryToGo"
@@ -230,7 +226,7 @@ const PeopleForm = () => {
                   onChange={handleOnChange}
                   className=""
                 />
-                <Input
+                <MyInput
                   type="text"
                   name="cityToGo"
                   id="cityToGo"
@@ -245,7 +241,7 @@ const PeopleForm = () => {
                   onChange={handleOnChange}
                   className=""
                 />
-                <Input
+                <MyInput
                   type="text"
                   name="streetToGo"
                   id="streetToGo"

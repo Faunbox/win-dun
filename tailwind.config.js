@@ -27,7 +27,11 @@ module.exports = {
       colors: {
         "yellow-0": "#fde047",
         "red-0": "#AD1917",
+        footer: "#171213",
       },
+      borderColor: {
+
+      }
     },
   },
   plugins: [
@@ -46,6 +50,7 @@ module.exports = {
           medium: "1px",
         },
       },
+      
     }),
   ],
 };

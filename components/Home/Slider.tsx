@@ -7,13 +7,13 @@ const Slider = () => {
     {
       breakpoints: {
         "(min-width: 735px)": {
-          slides: { perView: 2 },
+          slides: { perView: 1 },
         },
         "(min-width: 1000px)": {
-          slides: { perView: 3 },
+          slides: { perView: 2 },
         },
         "(min-width: 1240px)": {
-          slides: { perView: 3.5 },
+          slides: { perView: 3 },
         },
       },
       slides: { perView: 1 },
@@ -53,8 +53,8 @@ const Slider = () => {
   );
 
   return (
-    <div className="flex justify-center 2xl:container mx-auto items-center">
-      <div ref={ref} className="keen-slider  mt-20">
+    <div className="flex justify-center mx-auto bg-footer items-center">
+      <div ref={ref} className="keen-slider w-screen max-w-[1536px] transform-cpu">
         <div className="keen-slider__slide">
           <Image
             src="/images/paczki.jpg"
