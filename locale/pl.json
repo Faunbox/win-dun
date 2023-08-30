@@ -110,8 +110,9 @@
     },
     "package": {
       "luggageTitle": "Jak przygotować paczkę do wysyłki ?",
-      "luggageDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia reiciendis a natus officia reprehenderit autem voluptas debitis. Dicta praesentium iste, obcaecati alias eaque debitis quam dolore, atque eveniet blanditiis beatae.",
-      "luggageInfo": "Tekst o wielkości bagażu i wadze",
+      "luggageDesc": "Wybierz opakowanie jak najbardziej zbliżone do wielkości przedmiotu który chcesz wysłać oraz wypełnij je np. papierem aby zminimalizować ryzyko uszkodzenia zawartości. Dokładnie zaklej paczkę oraz napisz na niej imię oraz nazwisko adresata wraz z numerem telefonu. Podczas odbioru nasz pracownik przyklei również etykietę wysyłkową. Wysyłka przedmiotów o niestardardowych wymiarach lub o wadze powyżej 20kg muszą być potwierdzone telefonicznie",
+      "luggageHeader": "Bagaż podczas transportu osobowego",
+      "luggageInfo": "Każdy pasażer ma prawo do bezpłatnego przewozu 3 sztuk bagażu w tym 1 sztuki bagażu podręcznego o wadze do 5 kg oraz 2 sztuk bagażu podstawowego, w której każda ze sztuk bagażu nie przekracza 20 kg. Istnieje możliwość zabrania większej ilości bagażu za dodatkową opłatą.",
       "button": "Zarezerwuj paczkę",
       "buttonLink": "/rezerwacja?type=package"
     }

@@ -6,12 +6,22 @@ import { EnNavbar, NlNavbar, PlNavbar } from "./data";
 import NavLink from "./NavLink";
 import { useLocale } from "next-intl";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { useRouter } from "next-intl/client";
 
 const MobileNav = () => {
   const locale = useLocale();
+  const router = useRouter();
+
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  const pathname = usePathname();
+
+  const setCookie = (locale: string) => {
+    document.cookie = `NEXT_LOCALE=${locale}; max-age=31536000; path=/`;
+  };
+
+  const handleLanguageSwitch = (lng: string) => {
+    setCookie(lng);
+    router.replace("/", { locale: lng });
+  };
 
   return (
     <nav
@@ -36,12 +46,12 @@ const MobileNav = () => {
         onClick={() => setMobileNavOpen(!mobileNavOpen)}
         className="text-white "
       >
-        <CgMenuRightAlt className="w-[30px] h-[30px] mr-5" />
+        <CgMenuRightAlt className="w-[30px] h-[30px] mr-5 text-white z-30" />
       </button>
       <div
         className={`${
           mobileNavOpen ? "flex" : "hidden"
-        } h-screen w-screen z-20 absolute top-0 left-0 right-0 bg-slate-400 bg-opacity-95 flex justify-center items-center align-middle gap-10 transition-all ease-in-out duration-1000 opacity-[${
+        } h-screen w-screen z-20 absolute top-0 left-0 right-0 bg-footer backdrop-blur-sm bg-opacity-95 flex justify-center items-center align-middle gap-10 transition-all ease-in-out duration-1000 opacity-[${
           mobileNavOpen ? "100" : "0"
         }]`}
       >
@@ -50,7 +60,7 @@ const MobileNav = () => {
           className="absolute top-4 right-6"
           onClick={() => setMobileNavOpen(!mobileNavOpen)}
         >
-          <CgPushRight className="w-[30px] h-[30px]" />
+          <CgPushRight className="w-[30px] h-[30px] text-white z-30" />
         </button>
         <ul>
           {locale === "pl" &&
@@ -94,16 +104,19 @@ const MobileNav = () => {
               <Link
                 locale="pl"
                 href="/pl"
+                onClick={() => handleLanguageSwitch("pl")}
                 className="fi fi-pl block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 "
               ></Link>
               <Link
                 locale="en"
                 href={`/en`}
+                onClick={() => handleLanguageSwitch("en")}
                 className="fi fi-gb block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 "
               ></Link>
               <Link
                 locale="nl"
                 href="/nl"
+                onClick={() => handleLanguageSwitch("nl")}
                 className="fi fi-nl block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 "
               ></Link>
             </div>

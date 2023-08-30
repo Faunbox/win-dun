@@ -23,7 +23,8 @@ const Luggage = () => {
           <SectionHeader>{t("package.luggageTitle")}</SectionHeader>
           <p className=" px-4">{t("package.luggageDesc")}</p>
         </div>
-        <div className="h-full flex items-center justify-center p-4">
+        <div className="h-full flex flex-col items-center justify-center p-4">
+          <SectionHeader>{t("package.luggageHeader")}</SectionHeader>
           <p>{t("package.luggageInfo")}</p>
         </div>
       </div>
