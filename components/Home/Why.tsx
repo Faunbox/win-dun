@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import SectionHeader from "../Typography/SectionHeader";
 import Image from "next/image";
 import WhyHeaders from "./WhyHeaders";
+import BusImageComponent from "./BusImage";
 
 const Why = () => {
   const t = useTranslations("homePage");
@@ -10,15 +11,7 @@ const Why = () => {
     <section className="section-container">
       <div className="flex flex-col container mx-auto lg:py-12 md:mt-20 md:p-4 justify-center items-center align-middle relative">
         <div className="flex flex-col lg:flex-row  items-center">
-          <div className="hidden lg:block mx-auto p-4 md:p-0 lg:col-span-1 ">
-            <Image
-              src={"/images/busikk.png"}
-              alt="tak"
-              width={1240}
-              height={720}
-              className="hover:scale-[102%] duration-700 lg:absolute lg:-top-24 lg:-left-[38%] xl:-left-[35%] 2xl:-left-[25%]"
-            />
-          </div>
+          <BusImageComponent />
           <div className="flex flex-col w-full lg:w-7/12">
             <SectionHeader>{t("whyOurCompany.title")}</SectionHeader>
             <div className="flex flex-col lg:flex-row w-full gap-6 mt-4">
