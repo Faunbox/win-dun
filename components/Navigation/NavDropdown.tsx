@@ -10,6 +10,15 @@ const NavDropdown = () => {
   const locale = useLocale();
   const router = useRouter();
 
+  const setCookie = (locale: string) => {
+    document.cookie = `NEXT_LOCALE=${locale}; max-age=31536000; path=/`;
+  };
+
+  const handleLanguageSwitch = (lng: string) => {
+    setCookie(lng);
+    router.replace("/", { locale: lng });
+  };
+
   return (
     <>
       <button
@@ -49,28 +58,28 @@ const NavDropdown = () => {
           >
             <li className="flex items-center justify-center">
               <Link
-                locale={"pl"}
+                locale={locale}
                 hrefLang="pl"
                 href="/pl"
-                onClick={() => router.replace("/", { locale: "pl" })}
+                onClick={() => handleLanguageSwitch("pl")}
                 className="fi fi-pl block p-4 hover:bg-gray-100 dark:hover:bg-gray-600 "
               ></Link>
             </li>
             <li className="flex items-center justify-center">
               <Link
-                locale={"en"}
+                locale={locale}
                 hrefLang="en"
-                href={"/en"}
-                onClick={() => router.replace("en", { locale: "en" })}
+                href="/en"
+                onClick={() => handleLanguageSwitch("en")}
                 className="fi fi-gb block p-4 hover:bg-gray-100 dark:hover:bg-gray-600 "
               ></Link>
             </li>
             <li className="flex items-center justify-center">
               <Link
-                locale={"nl"}
+                locale={locale}
                 hrefLang="nl"
                 href="/nl"
-                onClick={() => router.replace("nl", { locale: "nl" })}
+                onClick={() => handleLanguageSwitch("nl")}
                 className="fi fi-nl block p-4 hover:bg-gray-100 dark:hover:bg-gray-600 "
               ></Link>
             </li>

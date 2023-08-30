@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import SectionHeader from "../Typography/SectionHeader";
 import Image from "next/image";
+import WhyHeaders from "./WhyHeaders";
 
 const Why = () => {
   const t = useTranslations("homePage");
@@ -20,20 +21,20 @@ const Why = () => {
           </div>
           <div className="flex flex-col w-full lg:w-7/12">
             <SectionHeader>{t("whyOurCompany.title")}</SectionHeader>
-            <div className="flex flex-col lg:flex-row w-full gap-6">
-              <div className="flex flex-col gap-6 md:gap-2 px-4">
+            <div className="flex flex-col lg:flex-row w-full gap-6 mt-4">
+              <div className="flex flex-col gap-6 justify-between px-4 md:px-4">
                 <div>
-                  <h2>{t("whyOurCompany.texts.header1")}</h2>
+                  <WhyHeaders margin={"mb-2"}>
+                    {t("whyOurCompany.texts.header1")}
+                  </WhyHeaders>
                   <p>{t("whyOurCompany.texts.description1")}</p>
                 </div>
                 <div>
-                  <h2>{t("whyOurCompany.texts.header2")}</h2>
+                  <WhyHeaders margin={"mb-2"}>
+                    {t("whyOurCompany.texts.header2")}
+                  </WhyHeaders>
                   <p>{t("whyOurCompany.texts.description2")}</p>
                 </div>
-                {/* <div>
-              <h2>{t("whyOurCompany.texts.header3")}</h2>
-              <p>{t("whyOurCompany.texts.description3")}</p>
-            </div> */}
               </div>
               <div className="block lg:hidden mx-auto p-4 md:p-0 lg:col-span-1 ">
                 <Image
@@ -45,19 +46,19 @@ const Why = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-4 px-4 md:px-4">
+              <div className="flex flex-col justify-between gap-6 px-4 md:px-4">
                 <div>
-                  <h2>{t("whyOurCompany.texts.header4")}</h2>
+                  <WhyHeaders margin={"mb-2"}>
+                    {t("whyOurCompany.texts.header3")}
+                  </WhyHeaders>
+                  <p>{t("whyOurCompany.texts.description3")}</p>
+                </div>
+                <div>
+                  <WhyHeaders margin={"mb-2"}>
+                    {t("whyOurCompany.texts.header4")}
+                  </WhyHeaders>
                   <p>{t("whyOurCompany.texts.description4")}</p>
                 </div>
-                <div>
-                  <h2>{t("whyOurCompany.texts.header5")}</h2>
-                  <p>{t("whyOurCompany.texts.description5")}</p>
-                </div>
-                {/* <div>
-              <h2>{t("whyOurCompany.texts.header6")}</h2>
-              <p>{t("whyOurCompany.texts.description6")}</p>
-            </div> */}
               </div>
             </div>
           </div>

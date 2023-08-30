@@ -2,6 +2,7 @@
   "core": {
     "website": "NL description",
     "keywords": "",
+    "loading": "Ładuję...",
     "navbar": [
       { "title": "Start", "href": "/" },
       { "title": "Flota", "href": "/galeria" },

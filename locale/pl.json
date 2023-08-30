@@ -3,6 +3,7 @@
     "website": "Przewóz osób do Niemiec i Holandii - Śląsk, Dolny Śląsk, Opolskie - wit-dun.eu",
     "description": "",
     "keywords": "",
+    "loading": "Ładuję...",
     "navbar": {
       "1": { "title": "Start", "href": "/" },
       "2": { "title": "Flota", "href": "/galeria" },
@@ -36,22 +37,17 @@
     "whyOurCompany": {
       "title": "Dlaczego my?",
       "texts": {
-        "header1": "Header 1",
-        "description1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
-        "header2": "Header 2",
-        "description2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
+        "header1": "Transport bez przesiadek",
+        "description1": "Nasza firma transportowa oferuje wygodne i efektywne rozwiązania dla podróży bez zbędnych przesiadek. Zapewniamy płynny i komfortowy transport, eliminując niedogodności związane z przesiadkami.",
 
-        "header3": "Header 3",
-        "description3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
+        "header2": "Możliwość zabrania większych ładunków",
+        "description2": "Przewozimy duże ładunki bez kłopotów! Nasza firma transportowa gwarantuje sprawny i bezpieczny transport nawet największych towarów. Skorzystaj z naszej możliwości przewozu większych ładunków i zaufaj profesjonalizmowi.",
 
-        "header4": "Header 4",
-        "description4": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
+        "header3": "Odbiór i dojazd pod wskazany adres",
+        "description3": "Zaoszczędź czas dzięki naszej usłudze odbioru i dojazdu pod wskazany adres. Jesteśmy Twoim niezawodnym partnerem transportowym, zapewniającym wygodę i punktualność.",
 
-        "header5": "Header 5",
-        "description5": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
-
-        "header6": "Header 6",
-        "description6": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro."
+        "header4": "Bezpieczeństwo i doświadczenie",
+        "description4": "Twoje bezpieczeństwo i nasze doświadczenie to nasze priorytety. Jako firma transportowa łączymy solidne know-how z dbałością o każdy detal, zapewniając Ci spokojną podróż. Zaufaj naszemu doświadczeniu i podróżuj bezpiecznie."
       }
     },
     "about": {
