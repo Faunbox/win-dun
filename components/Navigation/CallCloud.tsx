@@ -24,7 +24,7 @@ const LinkElement = ({
 
 const CallCloud = () => {
   return (
-    <div className="fixed bottom-[48%] right-0 flex mix-blend-difference">
+    <div className="fixed bottom-[16%] md:bottom-[48%] right-0 flex mix-blend-difference">
       <div className="flex flex-col h-full justify-around items-center gap-5 p-4">
         <LinkElement href="tel:+48505216526">
           <BsTelephoneOutbound size={25} />

@@ -20,7 +20,7 @@ export const PlNavbar = [
   { title: "Przed podróżą", href: "/przed-podroza" },
   { title: "Regulamin", href: "/regulamin" },
   { title: "Kontakt", href: "/kontakt" },
-  { title: "Rezerwacja", href: "/rezerwacja?type=people" },
+  { title: "Rezerwacja", href: "/rezerwacja?type=people", bold: "font-bold" },
 ];
 
 export const BfTravelPL = {

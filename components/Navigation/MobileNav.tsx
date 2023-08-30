@@ -8,6 +8,12 @@ import { useLocale } from "next-intl";
 import { useState } from "react";
 import { useRouter } from "next-intl/client";
 
+interface NavLinkTypes {
+  href: string;
+  title: string;
+  bold?: string;
+}
+
 const MobileNav = () => {
   const locale = useLocale();
   const router = useRouter();
@@ -57,27 +63,31 @@ const MobileNav = () => {
       >
         {/* Close menu button */}
         <button
-          className="absolute top-4 right-6"
+          className="absolute top-7 right-8 z-50"
           onClick={() => setMobileNavOpen(!mobileNavOpen)}
         >
           <CgPushRight className="w-[30px] h-[30px] text-white z-30" />
         </button>
-        <ul>
+        <ul className="group-odd:font-bold">
           {locale === "pl" &&
             PlNavbar?.map(
-              ({ href, title }: { href: string; title: string }) => (
+              ({
+                href,
+                title,
+                bold = "",
+              }: NavLinkTypes) => (
                 <li
                   key={title}
-                  className="my-4"
+                  className="my-4 first:font-bold"
                   onClick={() => setMobileNavOpen(!mobileNavOpen)}
                 >
-                  <NavLink href={href} title={title} />
+                  <NavLink href={href} title={title} bold={bold} />
                 </li>
               )
             )}
           {locale === "en" &&
             EnNavbar?.map(
-              ({ href, title }: { href: string; title: string }) => (
+              ({ href, title, bold = "" }: NavLinkTypes) => (
                 <li
                   key={title}
                   className="my-4"
@@ -89,7 +99,7 @@ const MobileNav = () => {
             )}
           {locale === "nl" &&
             NlNavbar?.map(
-              ({ href, title }: { href: string; title: string }) => (
+              ({ href, title, bold = "" }: NavLinkTypes) => (
                 <li
                   key={title}
                   className="my-4"
@@ -100,7 +110,7 @@ const MobileNav = () => {
               )
             )}
           <li>
-            <div className="flex flex-row justify-between items-center gap-10">
+            <div className="flex flex-row pt-10 justify-between items-center gap-4">
               <Link
                 locale="pl"
                 href="/pl"

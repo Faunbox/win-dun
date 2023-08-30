@@ -77,7 +77,7 @@ const ContactForm = ({
   };
   return (
     <div
-      className={`flex flex-col w-full ${
+      className={`flex flex-col w-full px-4 ${
         widthVariants[width as keyof typeof widthVariants]
       }`}
     >

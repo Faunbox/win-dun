@@ -12,13 +12,13 @@ const HeroSection = () => {
       <div className="container flex flex-col md:flex-row justify-center items-start mx-auto align-middle  px-4 py-10 lg:py-0">
         <aside className="flex flex-col justify-center items-center lg:justify-start w-full lg:w-6/12 mx-auto lg:absolute lg:top-[52%] lg:left-[33%] 2xl:left-[40%] lg:-translate-x-1/2 lg:-translate-y-2/4 -z-1 text-gray-50 mt-4">
           <div className="flex flex-col">
-            <h1 className="text-5xl md:text-6xl font-bold px-2 border-black  md:leading-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold px-2 border-black  md:leading-tight">
               {t("homeDescription1")}
             </h1>
             {/* <h2 className="text-md md:text-lg font-light ">
               {t("homeDescription2")}
             </h2> */}
-            <h2 className="text-xl md:text-2xl font-light pt-4">
+            <h2 className="text-xl sm:text-2xl font-light pt-4">
               {t("homeDescription3")}
             </h2>
           </div>
