@@ -1,5 +1,7 @@
+"use client";
 import { useLocale } from "next-intl";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 type Props = {
   href: string;
@@ -12,15 +14,16 @@ const NavLink = ({ href, title, bold }: Props) => {
   const locale = useLocale();
 
   return (
-    <Link
-      href={href}
-      locale={locale}
-      className={`text-sm lg:text-md border-black text-white ${bold}`}
-    >
-      <p className="hover:scale-110 transition-transform duration-500 uppercase">
-        {title}
-      </p>
-    </Link>
+    
+      <Link
+        href={href}
+        locale={locale}
+        className={`text-sm lg:text-md border-black text-white ${bold}`}
+      >
+        <p className="hover:scale-110 transition-transform duration-500 uppercase">
+          {title}
+        </p>
+      </Link>
   );
 };
 
