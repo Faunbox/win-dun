@@ -11,7 +11,11 @@ const Why = () => {
     <section className="section-container">
       <div className="flex flex-col container mx-auto lg:py-12 md:mt-20 md:p-4 justify-center items-center align-middle relative">
         <div className="flex flex-col lg:flex-row  items-center">
-          <BusImageComponent />
+          <div className="flex flex-col w-full lg:w-5/12">
+            <div className="lg:absolute lg:-top-24 lg:-left-[38%] xl:-left-[30%] 2xl:-left-[25%]">
+              <BusImageComponent />
+            </div>
+          </div>
           <div className="flex flex-col w-full lg:w-7/12">
             <SectionHeader>{t("whyOurCompany.title")}</SectionHeader>
             <div className="flex flex-col lg:flex-row w-full gap-6 mt-4">
