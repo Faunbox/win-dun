@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { BsPersonCheck } from "react-icons/bs";
 import { GoPackageDependents } from "react-icons/go";
 import { Button } from "@nextui-org/button";
+import Buttons from "./Buttons";
 
 const HeroSection = () => {
   const t = useTranslations("homePage");
@@ -22,49 +23,8 @@ const HeroSection = () => {
               {t("homeDescription3")}
             </h2>
           </div>
-          <div className="flex flex-col md:flex-row items-center lg:justify-between gap-6 md:gap-20 mt-8 md:mt-10">
-            <Link href={t("heroButtonLink")}>
-              <Button
-                disabled={true}
-                color="primary"
-                // radius="none"
-                // size="lg"
-                // className="text-white my-1 md:my-8 w-full max-w-[300px] p-2 md:p-4 text-lg border-b-1 hover:scale-105 ease-in-out bg bg-transparent"
-                radius="lg"
-                className="mx-auto w-full max-w-[300px] text-black disabled:text-black p-4 hover:scale-110 transition-transform duration-500"
-              >
-                <BsPersonCheck />
-                {t("heroButton")}
-              </Button>
-            </Link>
-            <Link href={t("heroPhoneLink")}>
-              <Button
-                disabled={true}
-                color="primary"
-                // radius="none"
-                // variant="bordered"
-                // size="lg"
-                // className="text-white my-1 md:my-8 w-full max-w-[300px] p-2 md:p-4 text-lg border-b-1 hover:scale-105 ease-in-out bg bg-transparent"
-                radius="lg"
-                className="mx-auto w-full max-w-[300px] text-black disabled:text-black p-4 hover:scale-110 transition-transform duration-500"
-              >
-                <GoPackageDependents />
-                {t("heroPhone")}
-              </Button>
-            </Link>
-          </div>
+          <Buttons />
         </aside>
-        {/* <aside className="max-w-[100vw] w-full md:w-12/12 lg:flex hidden justify-end">
-          <Image
-            src={"/images/hero9.jpg"}
-            alt="tak"
-            width={1200}
-            height={600}
-            quality={100}
-            className="w-screen h-screen object-center md:object-cover "
-          />
-        </aside> */}
-        {/* trapezoid */}
         <div className="h-0 w-10/12 container border-b-white absolute bottom-0 right-[50%] translate-x-1/2 z-10 border-b-[20px] border-r-[30px] border-r-transparent border-l-[30px] border-l-transparent"></div>
       </div>
     </div>
