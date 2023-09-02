@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import ContactForm from "../Contact/ContactForm";
 import { BsMessenger, BsTelephoneOutbound, BsWhatsapp } from "react-icons/bs";
 import SectionHeader from "../Typography/SectionHeader";
+import { motion } from "framer-motion";
 
 const Order = () => {
   return (
@@ -18,11 +20,14 @@ const Order = () => {
           ></iframe> */}
           <div className="flex flex-col">
             <SectionHeader>Obsługiwane województwa</SectionHeader>
-            <Image
+            <motion.img
               src={"/images/mapa.svg"}
               alt="mapa polski"
               width={550}
               height={600}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
             />
           </div>
         </div>

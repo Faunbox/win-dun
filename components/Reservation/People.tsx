@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@nextui-org/button";
+import { motion } from "framer-motion";
 import Calendar from "../lib/Datepicker";
 import axios from "axios";
 import { useFormContext, InputType } from "@/context/formContext";
@@ -57,7 +58,7 @@ const PeopleForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} ref={formRef} className="w-8/12">
+    <motion.form onSubmit={handleSubmit} ref={formRef} className="w-8/12">
       <div className="flex flex-col sm:flex-row gap-4 mt-4 sm:mt-16">
         <aside className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
           <div className="flex flex-col gap-2 sm:gap-4  items-center">
@@ -290,7 +291,7 @@ const PeopleForm = () => {
           {tr("buttons.formButtonPeople")}
         </Button>
       </div>
-    </form>
+    </motion.form>
   );
 };
 

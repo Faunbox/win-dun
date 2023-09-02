@@ -3,20 +3,29 @@ import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
 
 const Slider = () => {
+  const images = [
+    "/images/1.jpeg",
+    "/images/2.jpeg",
+    "/images/3.jpeg",
+    "/images/4.jpeg",
+    "/images/5.jpeg",
+    "/images/6.jpeg",
+  ];
+
   const [ref] = useKeenSlider<HTMLDivElement>(
     {
       breakpoints: {
         "(min-width: 735px)": {
-          slides: { perView: 1 },
+          slides: { perView: 1, origin: "center" },
         },
         "(min-width: 1000px)": {
-          slides: { perView: 2 },
+          slides: { perView: 2, origin: "center" },
         },
         "(min-width: 1240px)": {
-          slides: { perView: 3 },
+          slides: { perView: 4, origin: "center" },
         },
       },
-      slides: { perView: 1 },
+      slides: { perView: 1, origin: "center" },
       loop: true,
       renderMode: "performance",
     },
@@ -45,6 +54,7 @@ const Slider = () => {
           });
           nextTimeout();
         });
+
         slider.on("dragStarted", clearNextTimeout);
         slider.on("animationEnded", nextTimeout);
         slider.on("updated", nextTimeout);
@@ -58,51 +68,17 @@ const Slider = () => {
         ref={ref}
         className="keen-slider w-screen max-w-[1536px] transform-cpu"
       >
-        <div className="keen-slider__slide">
-          <Image
-            src="/images/1.jpeg"
-            alt="paczki"
-            width={600}
-            height={400}
-            className="h-full w-full"
-          />
-        </div>
-        <div className="keen-slider__slide min-h-[80vh]">
-          <Image
-            src="/images/1.jpeg"
-            alt="paczki"
-            width={600}
-            height={400}
-            className="h-full w-full"
-          />
-        </div>
-        <div className="keen-slider__slide min-h-[80vh]">
-          <Image
-            src="/images/1.jpeg"
-            alt="paczki"
-            width={600}
-            height={400}
-            className="object-top"
-          />
-        </div>
-        <div className="keen-slider__slide min-h-[80vh]">
-          <Image
-            src="/images/1.jpeg"
-            alt="paczki"
-            width={600}
-            height={400}
-            className="h-full w-full"
-          />
-        </div>
-        <div className="keen-slider__slide min-h-[80vh]">
-          <Image
-            src="/images/1.jpeg"
-            alt="paczki"
-            width={600}
-            height={400}
-            className="h-full w-full"
-          />
-        </div>
+        {images.map((img) => (
+          <div className="keen-slider__slide" key={img}>
+            <Image
+              src={img}
+              alt="paczki"
+              width={600}
+              height={400}
+              className="max-h-[320px] object-center"
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

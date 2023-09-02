@@ -1,15 +1,22 @@
+"use client";
 import { TiInputCheckedOutline } from "react-icons/ti";
 import { MdOutlineEmail, MdOutlineGpsFixed } from "react-icons/md";
 import { BiPhoneOutgoing } from "react-icons/bi";
 import { BsInfoCircle } from "react-icons/bs";
 import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 const CompanyData = () => {
   const t = useTranslations("contact");
 
   return (
-    <div className="relative flex flex-col w-11/12 md:w-6/12 lg:4/12 justify-center items-center p-4 border-1 border-black after:content-[''] after:border-1 after:border-black after:w-full after:h-full after:absolute after:inset-x-2 after:-inset-y-2 after:-z-0">
+    <motion.div
+      initial={{ translateX: -600, opacity: 0 }}
+      animate={{ translateX: 0, opacity: [0, 1] }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="relative flex flex-col w-11/12 md:w-6/12 lg:4/12 justify-center items-center p-4 border-1 border-black after:content-[''] after:border-1 after:border-black after:w-full after:h-full after:absolute after:inset-x-2 after:-inset-y-2 after:-z-0"
+    >
       <h2 className="m-4 text-2xl font-bold justify-self-start border-b-1 self-center border-black uppercase">
         {t("companyDataTitle")}
       </h2>
@@ -46,7 +53,7 @@ const CompanyData = () => {
           <SiTwitter className="scale-125 hover:scale-150 transition-transform duration-500 text-red" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

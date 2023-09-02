@@ -2,13 +2,19 @@
 import { Button } from "@nextui-org/react";
 import { useTranslations } from "next-intl";
 import { TbInfoSquare } from "react-icons/tb";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 const InfoComponents = () => {
   const t = useTranslations("beforeTravel");
 
   return (
-    <div className="flex flex-col w-full sticky md:top-28 lg:w-1/3 mt-2 md:mt-12 px-8 py-8 border-1 border-black after:content-[''] after:border-1 after:border-black after:w-full after:h-full after:absolute after:inset-x-2 after:-inset-y-2">
+    <motion.div
+      initial={{ translateX: -600 }}
+      animate={{ translateX: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="flex flex-col w-full sticky md:top-28 lg:w-1/3 mt-2 md:mt-12 px-8 py-8 border-1 border-black after:content-[''] after:border-1 after:border-black after:w-full after:h-full after:absolute after:inset-x-2 after:-inset-y-2"
+    >
       <div className="flex flex-row items-center justify-center">
         <p className="ml-2 text-2xl uppercase tracking-loose text-[#fde047]">
           <TbInfoSquare />
@@ -33,7 +39,7 @@ const InfoComponents = () => {
           {t("button")}
         </Button>
       </Link>
-    </div>
+    </motion.div>
   );
 };
 
