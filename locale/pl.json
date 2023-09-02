@@ -18,8 +18,8 @@
     "button": "Akceptuję"
   },
   "homePage": {
-    "homeDescription1": "Usługi Transportowe Niemcy i Holandia",
-    "homeDescription2": "Usługi Transportowe Do Niemiec i Holandii",
+    "homeDescription1": "Usługi Transportowe",
+    "homeDescription2": "Niemcy i Holandia",
     "homeDescription3": "W Każdy Piątek, Sobotę i Niedziele",
     "heroButton": "Zarezerwuj przejazd",
     "heroButtonLink": "/rezerwacja?type=people",
