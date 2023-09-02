@@ -54,10 +54,13 @@ const Slider = () => {
 
   return (
     <div className="flex justify-center mx-auto bg-footer items-center">
-      <div ref={ref} className="keen-slider w-screen max-w-[1536px] transform-cpu">
+      <div
+        ref={ref}
+        className="keen-slider w-screen max-w-[1536px] transform-cpu"
+      >
         <div className="keen-slider__slide">
           <Image
-            src="/images/paczki.jpg"
+            src="/images/1.jpeg"
             alt="paczki"
             width={600}
             height={400}
@@ -66,7 +69,7 @@ const Slider = () => {
         </div>
         <div className="keen-slider__slide min-h-[80vh]">
           <Image
-            src="/images/pakowanie.jpg"
+            src="/images/1.jpeg"
             alt="paczki"
             width={600}
             height={400}
@@ -75,7 +78,16 @@ const Slider = () => {
         </div>
         <div className="keen-slider__slide min-h-[80vh]">
           <Image
-            src="/images/paczki.jpg"
+            src="/images/1.jpeg"
+            alt="paczki"
+            width={600}
+            height={400}
+            className="object-top"
+          />
+        </div>
+        <div className="keen-slider__slide min-h-[80vh]">
+          <Image
+            src="/images/1.jpeg"
             alt="paczki"
             width={600}
             height={400}
@@ -84,16 +96,7 @@ const Slider = () => {
         </div>
         <div className="keen-slider__slide min-h-[80vh]">
           <Image
-            src="/images/zwierze.jpg"
-            alt="paczki"
-            width={600}
-            height={400}
-            className="h-full w-full"
-          />
-        </div>
-        <div className="keen-slider__slide min-h-[80vh]">
-          <Image
-            src="/images/pakowanie.jpg"
+            src="/images/1.jpeg"
             alt="paczki"
             width={600}
             height={400}

@@ -1,4 +1,4 @@
-"use client";
+
 
 import { Button } from "@nextui-org/button";
 import { useTranslations } from "next-intl";
@@ -10,25 +10,11 @@ import Link from "next/link";
 const Buttons = () => {
   const t = useTranslations("homePage");
 
-  const variants = {
-    initial: {
-      opacity: 0,
-      scale: 0.5,
-    },
-    animate: {
-      opacity: 1,
-      scale: 1,
-    },
-  };
-
   return (
-    <motion.div
+    <div
       className="flex flex-col md:flex-row items-center lg:justify-between gap-6 md:gap-20 mt-8 md:mt-10"
-      initial="initial"
-      animate="animate"
-      transition={{ duration: 1, staggerChildren: 0.1 }}
     >
-      <motion.div variants={variants}>
+      <div >
         <Link href={t("heroButtonLink")}>
           <Button
             disabled={true}
@@ -43,8 +29,8 @@ const Buttons = () => {
             {t("heroButton")}
           </Button>
         </Link>
-      </motion.div>
-      <motion.div variants={variants}>
+      </div>
+      <div>
         <Link href={t("heroPhoneLink")}>
           <Button
             disabled={true}
@@ -56,8 +42,8 @@ const Buttons = () => {
             {t("heroPhone")}
           </Button>
         </Link>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 

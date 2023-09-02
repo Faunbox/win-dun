@@ -4,7 +4,7 @@ import { useLocale } from "next-intl";
 import { EnNavbar, NlNavbar, PlNavbar } from "./data";
 import NavLink from "./NavLink";
 
-const DesktopLinks = ({ variants }: { variants?: MotionProps }) => {
+const DesktopLinks = () => {
   const locale = useLocale();
 
   return (
@@ -13,10 +13,9 @@ const DesktopLinks = ({ variants }: { variants?: MotionProps }) => {
         PlNavbar?.map(
           ({ href, title }: { href: string; title: string }, id) => {
             return (
-              //@ts-expect-error
-              <motion.li key={title} variants={variants}>
+              <li key={title}>
                 <NavLink href={href} title={title} />
-              </motion.li>
+              </li>
             );
           }
         )}

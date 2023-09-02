@@ -12,14 +12,14 @@ const Why = () => {
       <div className="flex flex-col container mx-auto lg:py-12 md:mt-20 md:p-4 justify-center items-center align-middle relative">
         <div className="flex flex-col lg:flex-row  items-center">
           <div className="flex flex-col w-full lg:w-5/12">
-            <div className="lg:absolute lg:-top-24 lg:-left-[38%] xl:-left-[30%] 2xl:-left-[25%]">
+            <div className="lg:absolute lg:-top-24 lg:-left-[55%] xl:-left-[38%] 2xl:-left-[25%]">
               <BusImageComponent />
             </div>
           </div>
           <div className="flex flex-col w-full lg:w-7/12">
             <SectionHeader>{t("whyOurCompany.title")}</SectionHeader>
             <div className="flex flex-col lg:flex-row w-full gap-6 mt-4">
-              <div className="flex flex-col gap-6 justify-between px-4 md:px-4">
+              <div className="flex flex-col gap-14 justify-between px-4 md:px-4">
                 <div>
                   <WhyHeaders margin={"mb-2"}>
                     {t("whyOurCompany.texts.header1")}

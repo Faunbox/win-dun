@@ -3,6 +3,7 @@ import { Button } from "@nextui-org/react";
 import { useState } from "react";
 import Cookies from "js-cookie";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 const CookieConsent = () => {
   const cookieInfo: boolean = Cookies.get("cookieConsent");
@@ -18,7 +19,7 @@ const CookieConsent = () => {
   };
 
   return (
-    <div
+    <motion.div
       className={`fixed ${
         visible ? "flex" : "hidden"
       } flex-col gap-4 bottom-3 md:bottom-20 right-3 md:right-20 max-w-[320px] h-auto bg-neutral-600 rounded-lg z-50 bg-opacity-50 backdrop-blur-md text-white p-4`}
@@ -33,7 +34,7 @@ const CookieConsent = () => {
       >
         {t("button")}
       </Button>
-    </div>
+    </motion.div>
   );
 };
 
