@@ -12,10 +12,9 @@ const Faq = () => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 0.65", "1.3 1.5"],
+    offset: ["0 1", "1 1"],
   });
 
-  // TODO: Poprawic animacje na kompa
 
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.4, 1]);

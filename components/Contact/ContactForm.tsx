@@ -42,8 +42,8 @@ const ContactForm = ({
   const [disableButton, setDisableButton] = useState(false);
 
   const widthVariants: Variants = {
-    quater: "md:w-8/12 mx-8",
-    full: "md:w-full",
+    quater: "lg:w-8/12 mx-8",
+    full: "lg:w-full",
   };
 
   const paddingY = padding ? "md:py-12" : "";

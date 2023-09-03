@@ -9,8 +9,8 @@ const Order = () => {
   return (
     <section className=" section-container p-4 py-20 px-8 text-white bg-[#171213] flex-col h-full items-start">
       {/* <SectionHeader>Kontakt</SectionHeader> */}
-      <div className="container w-full flex flex-col md:flex-row gap-4 md:justify-around items-start px-4">
-        <div className="flex flex-col w-full md:max-w-[50%] justify-center items-start text-center gap-4">
+      <div className="container w-full flex flex-col lg:flex-row gap-4 lg:justify-around items-start px-4">
+        <div className="flex flex-col w-full lg:max-w-[50%] justify-center items-start text-center gap-4">
           {/* <iframe
             src="https://www.google.com/maps/d/embed?mid=1kTuo__lzH_8vQC9LyxqivG9D-QgCumw&ehbc=2E312F"
             width="640"
@@ -18,7 +18,7 @@ const Order = () => {
             loading="lazy"
             className="w-full"
           ></iframe> */}
-          <div className="flex flex-col">
+          <div className="flex flex-col w-full items-center">
             <SectionHeader>Obsługiwane województwa</SectionHeader>
             <motion.img
               src={"/images/mapa.svg"}

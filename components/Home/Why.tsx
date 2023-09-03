@@ -13,7 +13,7 @@ const Why = () => {
         <div className="flex flex-col lg:flex-row  items-center">
           <div className="flex flex-col w-full lg:w-5/12">
             <div className="lg:absolute lg:-top-24 lg:-left-[55%] xl:-left-[38%] 2xl:-left-[25%]">
-              <BusImageComponent />
+              <BusImageComponent variant="desktop" />
             </div>
           </div>
           <div className="flex flex-col w-full lg:w-7/12">
@@ -33,15 +33,7 @@ const Why = () => {
                   <p>{t("whyOurCompany.texts.description2")}</p>
                 </div>
               </div>
-              <div className="block lg:hidden mx-auto p-4 md:p-0 lg:col-span-1 ">
-                <Image
-                  src={"/images/busikk.png"}
-                  alt="tak"
-                  width={1240}
-                  height={720}
-                  className="hover:scale-110 duration-700 lg:absolute lg:-top-24 lg:-left-[38%] xl:-left-[30%] 2xl:-left-[25%]"
-                />
-              </div>
+              <BusImageComponent variant="mobile" />
 
               <div className="flex flex-col justify-between gap-6 px-4 md:px-4">
                 <div>

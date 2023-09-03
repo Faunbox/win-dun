@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useScroll, motion, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-const BusImageComponent = () => {
+const BusImageComponent = ({ variant }: { variant: string }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -23,27 +23,53 @@ const BusImageComponent = () => {
     ["-400px", "0px"]
   );
 
-  return (
-    <motion.div
-      ref={ref}
-      style={{
-        opacity: opacityProgress,
-        scale: scaleProgress,
-        translateX: traslateXProgress,
-        translateY: traslateYProgress,
-      }}
-      layout
-      className="hidden lg:block mx-auto p-4 md:p-0 lg:col-span-1 translate-x-11"
-    >
-      <Image
-        src={"/images/busikk.png"}
-        alt="tak"
-        width={1240}
-        height={720}
-        className=""
-      />
-    </motion.div>
-  );
+  {
+    if (variant === "desktop") {
+      return (
+        <motion.div
+          ref={ref}
+          style={{
+            opacity: opacityProgress,
+            scale: scaleProgress,
+            translateX: traslateXProgress,
+            translateY: traslateYProgress,
+          }}
+          layout
+          className="hidden lg:block mx-auto p-4 md:p-0 lg:col-span-1 translate-x-11"
+        >
+          <Image
+            src={"/images/busikk.png"}
+            alt="tak"
+            width={1240}
+            height={720}
+            className=""
+          />
+        </motion.div>
+      );
+    }
+
+    return (
+      <motion.div
+        ref={ref}
+        style={{
+          opacity: opacityProgress,
+          scale: scaleProgress,
+          translateX: traslateXProgress,
+          translateY: traslateYProgress,
+        }}
+        layout
+        className="block lg:hidden mx-auto p-4 md:p-0 lg:col-span-1"
+      >
+        <Image
+          src={"/images/busikk.png"}
+          alt="tak"
+          width={1240}
+          height={720}
+          className=""
+        />
+      </motion.div>
+    );
+  }
 };
 
 export default BusImageComponent;
