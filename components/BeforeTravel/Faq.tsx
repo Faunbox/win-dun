@@ -12,8 +12,10 @@ const Faq = () => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.3 1.15"],
+    offset: ["0 0.65", "1.3 1.5"],
   });
+
+  // TODO: Poprawic animacje na kompa
 
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
@@ -27,7 +29,11 @@ const Faq = () => {
       <motion.div
         className="w-full"
         ref={ref}
-        style={{ opacity: opacityProgress, scale: scaleProgress, translateX: yProgress }}
+        style={{
+          opacity: opacityProgress,
+          scale: scaleProgress,
+          translateX: yProgress,
+        }}
       >
         <p className="font-light">{t("desc")}</p>
         <div className="w-full flex justify-center items-center">

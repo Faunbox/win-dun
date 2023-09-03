@@ -11,11 +11,11 @@ const CompanyData = () => {
   const t = useTranslations("contact");
 
   return (
-    <motion.div
+      <motion.div
       initial={{ translateX: -600, opacity: 0 }}
       animate={{ translateX: 0, opacity: [0, 1] }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="relative flex flex-col w-11/12 md:w-6/12 lg:4/12 justify-center items-center p-4 border-1 border-black after:content-[''] after:border-1 after:border-black after:w-full after:h-full after:absolute after:inset-x-2 after:-inset-y-2 after:-z-0"
+      className="relative flex flex-col w-11/12 md:w-6/12 lg:4/12 justify-center items-center py-4 px-8 border-1 border-black after:content-[''] after:border-1 after:border-black after:w-full after:h-full after:absolute after:inset-x-2 after:-inset-y-2 after:-z-0"
     >
       <h2 className="m-4 text-2xl font-bold justify-self-start border-b-1 self-center border-black uppercase">
         {t("companyDataTitle")}
@@ -23,7 +23,7 @@ const CompanyData = () => {
       <ul className="list-none flex flex-col gap-2 justify-start items-start mx-auto z-40">
         <li className="flex-icon">
           <TiInputCheckedOutline size={25} className="mr-2 text-red-0" />
-          <p className="text-lg">WitDun express WITOLD DUNAT</p>
+          <p className="text-lg">WitDun Express WITOLD DUNAT</p>
         </li>
         <li className="flex-icon">
           <MdOutlineGpsFixed size={20} className="mr-2 text-red-0" />{" "}

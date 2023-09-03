@@ -1,7 +1,6 @@
 "use client";
 import { useLocale } from "next-intl";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 type Props = {
   href: string;

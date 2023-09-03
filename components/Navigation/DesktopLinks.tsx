@@ -1,5 +1,4 @@
 "use client";
-import { stagger, useAnimate, motion, MotionProps } from "framer-motion";
 import { useLocale } from "next-intl";
 import { EnNavbar, NlNavbar, PlNavbar } from "./data";
 import NavLink from "./NavLink";
