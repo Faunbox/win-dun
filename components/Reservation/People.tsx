@@ -58,7 +58,12 @@ const PeopleForm = () => {
   };
 
   return (
-    <motion.form onSubmit={handleSubmit} ref={formRef} className="w-8/12">
+    <motion.form
+      onSubmit={handleSubmit}
+      ref={formRef}
+      className="w-8/12"
+      key={"tak"}
+    >
       <div className="flex flex-col sm:flex-row gap-4 mt-4 sm:mt-16">
         <aside className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
           <div className="flex flex-col gap-2 sm:gap-4  items-center">
@@ -143,8 +148,8 @@ const PeopleForm = () => {
               />
               <MyInput
                 type="number"
-                name="numer"
-                id="numer"
+                name="number"
+                id="number"
                 variant="bordered"
                 labelPlacement="outside"
                 radius="none"
@@ -160,7 +165,7 @@ const PeopleForm = () => {
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-around mt-5">
               <Calendar />
               <div className="flex flex-col gap-2 sm:gap-4 justify-center items-center sm:items-start">
-                <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
+                <div className="flex flex-col sm:flex-row justify-center items-end gap-2 sm:gap-4 w-full">
                   <MyInput
                     type="number"
                     name="phone"

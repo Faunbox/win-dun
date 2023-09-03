@@ -57,7 +57,7 @@ const MobileNav = () => {
       <div
         className={`${
           mobileNavOpen ? "flex" : "hidden"
-        } h-screen w-screen z-20 absolute top-0 left-0 right-0 bg-footer backdrop-blur-sm bg-opacity-95 flex justify-center items-center align-middle gap-10 transition-all ease-in-out duration-1000 opacity-[${
+        } h-screen w-screen z-50 absolute top-0 left-0 right-0 bg-footer backdrop-blur-sm bg-opacity-95 flex justify-center items-center align-middle gap-10 transition-all ease-in-out duration-1000 opacity-[${
           mobileNavOpen ? "100" : "0"
         }]`}
       >
@@ -68,47 +68,37 @@ const MobileNav = () => {
         >
           <CgPushRight className="w-[30px] h-[30px] text-white z-30" />
         </button>
-        <ul className="group-odd:font-bold">
+        <ul className="">
           {locale === "pl" &&
-            PlNavbar?.map(
-              ({
-                href,
-                title,
-                bold = "",
-              }: NavLinkTypes) => (
-                <li
-                  key={title}
-                  className="my-4 first:font-bold"
-                  onClick={() => setMobileNavOpen(!mobileNavOpen)}
-                >
-                  <NavLink href={href} title={title} bold={bold} />
-                </li>
-              )
-            )}
+            PlNavbar?.map(({ href, title, bold = "" }: NavLinkTypes) => (
+              <li
+                key={title}
+                className="my-4 first:font-bold"
+                onClick={() => setMobileNavOpen(false)}
+              >
+                <NavLink href={href} title={title} bold={bold} />
+              </li>
+            ))}
           {locale === "en" &&
-            EnNavbar?.map(
-              ({ href, title, bold = "" }: NavLinkTypes) => (
-                <li
-                  key={title}
-                  className="my-4"
-                  onClick={() => setMobileNavOpen(!mobileNavOpen)}
-                >
-                  <NavLink href={href} title={title} />
-                </li>
-              )
-            )}
+            EnNavbar?.map(({ href, title, bold = "" }: NavLinkTypes) => (
+              <li
+                key={title}
+                className="my-4"
+                onClick={() => setMobileNavOpen(false)}
+              >
+                <NavLink href={href} title={title} bold={bold} />
+              </li>
+            ))}
           {locale === "nl" &&
-            NlNavbar?.map(
-              ({ href, title, bold = "" }: NavLinkTypes) => (
-                <li
-                  key={title}
-                  className="my-4"
-                  onClick={() => setMobileNavOpen(!mobileNavOpen)}
-                >
-                  <NavLink href={href} title={title} />
-                </li>
-              )
-            )}
+            NlNavbar?.map(({ href, title, bold = "" }: NavLinkTypes) => (
+              <li
+                key={title}
+                className="my-4"
+                onClick={() => setMobileNavOpen(false)}
+              >
+                <NavLink href={href} title={title} bold={bold} />
+              </li>
+            ))}
           <li>
             <div className="flex flex-row pt-10 justify-between items-center gap-4">
               <Link

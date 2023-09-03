@@ -4,12 +4,13 @@ import Image from "next/image";
 
 const Slider = () => {
   const images = [
-    "/images/1.jpeg",
-    "/images/2.jpeg",
-    "/images/3.jpeg",
-    "/images/4.jpeg",
-    "/images/5.jpeg",
-    "/images/6.jpeg",
+    "/images/1.webp",
+    "/images/2.webp",
+    "/images/3.webp",
+    "/images/4.webp",
+    "/images/5.webp",
+    "/images/6.webp",
+    "/images/7.webp",
   ];
 
   const [ref] = useKeenSlider<HTMLDivElement>(
@@ -18,11 +19,11 @@ const Slider = () => {
         "(min-width: 735px)": {
           slides: { perView: 1, origin: "center" },
         },
-        "(min-width: 1000px)": {
+        "(min-width: 810px)": {
           slides: { perView: 2, origin: "center" },
         },
         "(min-width: 1240px)": {
-          slides: { perView: 4, origin: "center" },
+          slides: { perView: 3, origin: "auto" },
         },
       },
       slides: { perView: 1, origin: "center" },
@@ -75,7 +76,7 @@ const Slider = () => {
               alt="paczki"
               width={600}
               height={400}
-              className="max-h-[320px] object-center"
+              className="max-h-[360px] object-scale-down lg:object-cover"
             />
           </div>
         ))}

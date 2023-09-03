@@ -179,7 +179,7 @@ const PackageForm = () => {
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-around mt-5">
               <Calendar />
               <div className="flex flex-col gap-2 sm:gap-4 justify-center items-center sm:items-start">
-                <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
+                <div className="flex flex-col sm:flex-row items-end gap-2 sm:gap-4 w-full">
                   <MyInput
                     type="number"
                     name="phone"

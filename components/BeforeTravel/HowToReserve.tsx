@@ -12,14 +12,14 @@ const HowToReserve = () => {
   const t = useTranslations("beforeTravel");
 
   return (
-    <section>
+    <section className="">
       <div className="bg-transparent text-black ">
         <div className="container mx-auto flex flex-col items-start lg:flex-row mt-4 lg:my-4">
           <InfoComponents />
           <div className="ml-0 lg:ml-12 lg:w-2/3 pt-20">
             <div className="container mx-auto w-full h-full">
               <Image
-                className="sticky top-7/12 top-0 mx-auto translate-y-1/2 -mt-36 z-10"
+                className="sticky top-8/12 top-0 mx-auto pt-4 translate-y-1/2 -mt-36 z-10"
                 src="/images/why-bus.png"
                 alt="rocket"
                 width={180}
@@ -29,7 +29,7 @@ const HowToReserve = () => {
                 <div className="border-2-2 border-yellow-555 absolute h-full border-2 border-solid right-[50%] bg-[#FFC100]"></div>
                 <div className="border-2-2 border-yellow-555 absolute h-full border-2 border-solid left-[50%] bg-[#FFC100]"></div>
 
-                <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                <div className="mb-8 flex justify-between flex-row-reverse items-center pt-10 w-full left-timeline">
                   <div className="order-1 w-5/12"></div>
                   <div className="order-1 w-5/12 px-4 py-4 text-right items-right relative">
                     <p className="mb-3 text-left lg:text-right lg:text-base text-black absolute -top-10 right-3">
