@@ -1,41 +1,69 @@
+"use client";
 import SectionHeader from "../Typography/SectionHeader";
 import { AiOutlineUsb } from "react-icons/ai";
 import { BsWind } from "react-icons/bs";
 import { CiBoxes } from "react-icons/ci";
 import { LuUserCheck } from "react-icons/lu";
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
 const HomeBuses = () => {
   const t = useTranslations("homePage");
 
+  const variants = {
+    hidden: {
+      opacity: 0.2,
+      scale: 0,
+      translateX: 30,
+    },
+    visible: {
+      opacity: 1,
+      scale: [1.05, 1],
+      translateX: [-20, 0],
+    },
+  };
+
   return (
-    <section className="flex flex-col bg-white justify-centerm text-center items-center py-4 md:py-20 mx-8 md:mx-28">
+    <>
       <SectionHeader>{t("bus.title")}</SectionHeader>
-      {/* <div className="container text-center p-4 flex flex-col border-1 border-black"> */}
-      <div className="container text-center items-center justify-center p-4 flex flex-col">
-        {/* <ul className="flex flex-col md:flex-row justify-around md:my-4 gap-2 divide-y md:divide-x md:divide-y-0 divide-black"> */}
-        <ul className="flex flex-col md:flex-row justify-around md:my-4 gap-10">
-          <li className="flex flex-col justify-center items-center w-full gap-10 py-4 px-4  border-1 border-black after:content-[''] after:border-1 after:border-black after:w-full after:h-full after:absolute after:inset-x-2  relative after:-inset-y-2">
-            <LuUserCheck size={45} className="text-black" />
-            <p className="text-xl font-normal">{t("bus.text1")}</p>
-          </li>
-          <li className="flex flex-col justify-center items-center w-full gap-10 py-4 px-4 border-1 border-black after:content-[''] after:border-1 after:border-black after:w-full after:h-full after:absolute after:inset-x-2 after:-inset-y-2 relative">
-            <BsWind size={45} className="text-black" />
-            <p className="text-xl font-normal">{t("bus.text2")}</p>
-          </li>
+      <motion.ul
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.8, delayChildren: 0.2, staggerChildren: 0.2 }}
+        className="flex flex-col sm:flex-row sm:flex-wrap justify-center md:my-4 gap-10"
+      >
+        <motion.li
+          variants={variants}
+          className="flex flex-col justify-center items-center w-full sm:w-[40%] gap-10 py-4 px-4 border-1 border-white "
+        >
+          <LuUserCheck size={45} className="text-white" />
+          <p className="text-xl font-normal">{t("bus.text1")}</p>
+        </motion.li>
+        <motion.li
+          variants={variants}
+          className="flex flex-col justify-center items-center w-full sm:w-[40%] gap-10 py-4 px-4 border-1 border-white "
+        >
+          <BsWind size={45} className="text-white" />
+          <p className="text-xl font-normal">{t("bus.text2")}</p>
+        </motion.li>
 
-          <li className="flex flex-col justify-center items-center w-full gap-10 py-4 px-4 border-1 border-black after:content-[''] after:border-1 after:border-black after:w-full after:h-full after:absolute after:inset-x-2 relative after:-inset-y-2">
-            <AiOutlineUsb size={45} className="text-black" />
-            <p className="text-xl font-normal">{t("bus.text3")}</p>
-          </li>
+        <motion.li
+          variants={variants}
+          className="flex flex-col justify-center items-center w-full sm:w-[40%] gap-10 py-4 px-4 border-1 border-white "
+        >
+          <AiOutlineUsb size={45} className="text-white" />
+          <p className="text-xl font-normal">{t("bus.text3")}</p>
+        </motion.li>
 
-          <li className="flex flex-col justify-center items-center w-full gap-10 py-4 px-4 border-1 border-black after:content-[''] after:border-1 after:border-black after:w-full after:h-full after:absolute after:inset-x-2  relative after:-inset-y-2">
-            <CiBoxes size={50} className="text-black" />
-            <p className="text-xl font-normal">{t("bus.text4")}</p>
-          </li>
-        </ul>
-      </div>
-    </section>
+        <motion.li
+          variants={variants}
+          className="flex flex-col justify-center items-center w-full sm:w-[40%] gap-4 py-4 px-4 border-1 border-white "
+        >
+          <CiBoxes size={50} className="text-white" />
+          <p className="text-xl font-normal">{t("bus.text4")}</p>
+        </motion.li>
+      </motion.ul>
+    </>
   );
 };
 

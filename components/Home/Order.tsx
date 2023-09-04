@@ -1,21 +1,17 @@
-"use client";
-import Image from "next/image";
+
 import ContactForm from "../Contact/ContactForm";
 import {
   BsMessenger,
   BsTelephoneOutbound,
   BsWhatsapp,
-  BsWind,
 } from "react-icons/bs";
-import SectionHeader from "../Typography/SectionHeader";
-import { motion } from "framer-motion";
-import HomeBuses from "./Buses";
-import { LuUserCheck } from "react-icons/lu";
-import { AiOutlineUsb } from "react-icons/ai";
-import { CiBoxes } from "react-icons/ci";
 import { useTranslations } from "next-intl";
+import dynamic from "next/dynamic";
 
 const Order = () => {
+
+  const HomeBuses = dynamic(() => import("./Buses"))
+
   const t = useTranslations("homePage");
   return (
     <section className=" section-container p-4 py-20 px-8 text-white bg-[#171213] flex-col h-full items-start">
@@ -34,27 +30,7 @@ const Order = () => {
               transition={{ duration: 1, ease: "easeInOut" }}
             />
           </div> */}
-          <SectionHeader>{t("bus.title")}</SectionHeader>
-          <ul className="flex flex-col sm:flex-row sm:flex-wrap justify-center md:my-4 gap-10">
-            <li className="flex flex-col justify-center items-center w-full sm:w-[40%] gap-10 py-4 px-4 border-1 border-white ">
-              <LuUserCheck size={45} className="text-white" />
-              <p className="text-xl font-normal">{t("bus.text1")}</p>
-            </li>
-            <li className="flex flex-col justify-center items-center w-full sm:w-[40%] gap-10 py-4 px-4 border-1 border-white ">
-              <BsWind size={45} className="text-white" />
-              <p className="text-xl font-normal">{t("bus.text2")}</p>
-            </li>
-
-            <li className="flex flex-col justify-center items-center w-full sm:w-[40%] gap-10 py-4 px-4 border-1 border-white ">
-              <AiOutlineUsb size={45} className="text-white" />
-              <p className="text-xl font-normal">{t("bus.text3")}</p>
-            </li>
-
-            <li className="flex flex-col justify-center items-center w-full sm:w-[40%] gap-4 py-4 px-4 border-1 border-white ">
-              <CiBoxes size={50} className="text-white" />
-              <p className="text-xl font-normal">{t("bus.text4")}</p>
-            </li>
-          </ul>
+          <HomeBuses />
         </div>
         <div className="flex flex-col w-full">
           <ContactForm width="full" padding={true} />

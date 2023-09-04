@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 export default function Home() {
   const Order = dynamic(() => import("@/components/Home/Order"));
   const Why = dynamic(() => import("@/components/Home/Why"));
+  const Maps = dynamic(() => import("@/components/Home/Maps"));
 
   return (
     <>
@@ -12,6 +13,7 @@ export default function Home() {
       <OffertSection />
       <Why />
       {/* <Slider /> */}
+      <Maps />
       <Order />
     </>
   );

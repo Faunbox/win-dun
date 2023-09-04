@@ -34,7 +34,7 @@ const AboutHomeSection = () => {
             color="primary"
             radius="lg"
             size="lg"
-            className="mx-auto w-full max-w-[300px] text-black disabled:text-black p-7 mx-3  hover:scale-110 transition-transform duration-500 "
+            className="mx-auto w-full max-w-[300px] text-black disabled:text-black p-7   hover:scale-110 transition-transform duration-500 "
           >
             {t("about.button")} {"->"}
           </Button>
