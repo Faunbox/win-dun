@@ -51,11 +51,11 @@
       }
     },
     "about": {
-      "text1": "Ponad",
-      "span1": "600",
-      "text2": "wyjazdów od drzwi do drzwi",
-      "span2": "0",
-      "text3": "minut spędzonych na awarii pojazdu",
+      "text1": "Dbamy o",
+      "span1": "Twoją",
+      "text2": "wygodę podróżowania,",
+      "span2": "Gwarantujemy",
+      "text3": "100% zadowolenia",
       "button": "Zamów przejazd",
       "link": "/rezerwacja=?type=people"
     },

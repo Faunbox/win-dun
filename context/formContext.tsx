@@ -58,16 +58,13 @@ export function FormProvider({ children }: { children: ReactNode }) {
     cityToGo: "",
     streetToGo: "",
   });
-  const [parcelForm, setParcelForm] = useState({});
-  const [bigForm, setBigForm] = useState({});
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const value = {
     peopleForm,
     setPeopleForm,
-    parcelForm,
-    setParcelForm,
-    bigForm,
-    setBigForm,
+    mobileNavOpen,
+    setMobileNavOpen,
   };
 
   return <FormContext.Provider value={value}>{children}</FormContext.Provider>;

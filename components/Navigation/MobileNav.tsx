@@ -2,34 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CgMenuRightAlt, CgPushRight } from "react-icons/cg";
-import { EnNavbar, NlNavbar, PlNavbar } from "./data";
-import NavLink from "./NavLink";
-import { useLocale } from "next-intl";
-import { useState } from "react";
-import { useRouter } from "next-intl/client";
 import DesktopLinksBar from "./DesktopLinksBar";
-
-interface NavLinkTypes {
-  href: string;
-  title: string;
-  bold?: string;
-}
+import { useFormContext } from "@/context/formContext";
 
 const MobileNav = () => {
-  const locale = useLocale();
-  const router = useRouter();
-
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
-
-  const setCookie = (locale: string) => {
-    document.cookie = `NEXT_LOCALE=${locale}; max-age=31536000; path=/`;
-  };
-
-  const handleLanguageSwitch = (lng: string) => {
-    setCookie(lng);
-    router.replace("/", { locale: lng });
-  };
-
+  const { mobileNavOpen, setMobileNavOpen } = useFormContext();
   return (
     <nav
       className={
@@ -49,10 +26,7 @@ const MobileNav = () => {
         </Link>
       </div>
       {/* Menu icon */}
-      <button
-        onClick={() => setMobileNavOpen(!mobileNavOpen)}
-        className="text-white "
-      >
+      <button onClick={() => setMobileNavOpen(true)} className="text-white ">
         <CgMenuRightAlt className="w-[30px] h-[30px] mr-5 text-white z-30" />
       </button>
       <div
@@ -65,65 +39,11 @@ const MobileNav = () => {
         {/* Close menu button */}
         <button
           className="absolute top-7 right-8 z-50"
-          onClick={() => setMobileNavOpen(!mobileNavOpen)}
+          onClick={() => setMobileNavOpen(false)}
         >
           <CgPushRight className="w-[30px] h-[30px] text-white z-30" />
         </button>
         <DesktopLinksBar />
-        {/* <ul className="">
-          {locale === "pl" &&
-            PlNavbar?.map(({ href, title, bold = "" }: NavLinkTypes) => (
-              <li
-                key={title}
-                className="my-4 first:font-bold"
-                onClick={() => setMobileNavOpen(false)}
-              >
-                <NavLink href={href} title={title} bold={bold} />
-              </li>
-            ))}
-          {locale === "en" &&
-            EnNavbar?.map(({ href, title, bold = "" }: NavLinkTypes) => (
-              <li
-                key={title}
-                className="my-4"
-                onClick={() => setMobileNavOpen(false)}
-              >
-                <NavLink href={href} title={title} bold={bold} />
-              </li>
-            ))}
-          {locale === "nl" &&
-            NlNavbar?.map(({ href, title, bold = "" }: NavLinkTypes) => (
-              <li
-                key={title}
-                className="my-4"
-                onClick={() => setMobileNavOpen(false)}
-              >
-                <NavLink href={href} title={title} bold={bold} />
-              </li>
-            ))}
-          <li>
-            <div className="flex flex-row pt-10 justify-between items-center gap-4">
-              <Link
-                locale="pl"
-                href="/pl"
-                onClick={() => handleLanguageSwitch("pl")}
-                className="fi fi-pl block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 "
-              ></Link>
-              <Link
-                locale="en"
-                href={`/en`}
-                onClick={() => handleLanguageSwitch("en")}
-                className="fi fi-gb block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 "
-              ></Link>
-              <Link
-                locale="nl"
-                href="/nl"
-                onClick={() => handleLanguageSwitch("nl")}
-                className="fi fi-nl block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 "
-              ></Link>
-            </div>
-          </li>
-        </ul> */}
       </div>
     </nav>
   );

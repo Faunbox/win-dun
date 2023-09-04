@@ -6,7 +6,7 @@ export default function Loading() {
   const t = useTranslations("core");
 
   return (
-    <center className="min-h-[70vw] flex items-center justify-center">
+    <center className="min-h-[100vw] flex items-center justify-center">
       <CircularProgress
         size="lg"
         aria-label="Loading..."
