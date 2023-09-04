@@ -9,7 +9,7 @@ const Why = () => {
   const t = useTranslations("homePage");
 
   return (
-    <section className="section-container mb-20 md:mb-0">
+    <section className="section-container mb-20 md:mb-10">
       <div className="flex flex-col container mx-auto lg:py-12 md:mt-20 md:p-4 justify-center items-center gap-2 align-middle relative">
         <div className="flex flex-col lg:flex-row  items-center">
           <div className="flex flex-col w-full lg:w-5/12">

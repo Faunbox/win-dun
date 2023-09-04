@@ -15,7 +15,7 @@ const AboutHomeSection = () => {
   return (
     <section className="section-container mt-10">
       <div className=" flex flex-col md:flex-row-reverse container gap-8 justify-center items-center">
-        <div
+        {/* <div
           className={`flex flex-col md:ml-12 items-center gap-4 ${oswald.className}`}
         >
           <p className="text-2xl ">
@@ -27,13 +27,14 @@ const AboutHomeSection = () => {
             <span className={`font-bold text-3xl`}>{t("about.span2")}</span>{" "}
             {t("about.text3")}
           </p>
-        </div>
+        </div> */}
         <Link href={t("about.link")}>
           <Button
             type="submit"
             color="primary"
             radius="lg"
-            className="mx-auto w-full max-w-[300px] text-black disabled:text-black p-6  hover:scale-110 transition-transform duration-500 "
+            size="lg"
+            className="mx-auto w-full max-w-[300px] text-black disabled:text-black p-7 mx-3  hover:scale-110 transition-transform duration-500 "
           >
             {t("about.button")} {"->"}
           </Button>

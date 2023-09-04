@@ -18,10 +18,10 @@ const NavLink = ({ href, title, bold }: Props) => {
     <Link
       href={href}
       locale={locale}
-      className={`text-sm lg:text-md border-black text-white ${bold}`}
+      className={`text-sm lg:text-md border-black  ${bold}  `}
       onClick={() => setMobileNavOpen(false)}
     >
-      <p className="hover:scale-110 transition-transform duration-500 uppercase">
+      <p className="transition-transform duration-500 uppercase hover:scale-110 ease-in-out">
         {title}
       </p>
     </Link>
