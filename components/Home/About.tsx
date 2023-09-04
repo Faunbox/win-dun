@@ -13,7 +13,7 @@ const oswald = Oswald({
 const AboutHomeSection = () => {
   const t = useTranslations("homePage");
   return (
-    <section className="section-container">
+    <section className="section-container mt-10">
       <div className=" flex flex-col md:flex-row-reverse container gap-8 justify-center items-center">
         <div
           className={`flex flex-col md:ml-12 items-center gap-4 ${oswald.className}`}
