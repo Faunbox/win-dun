@@ -7,6 +7,7 @@ import NavLink from "./NavLink";
 import { useLocale } from "next-intl";
 import { useState } from "react";
 import { useRouter } from "next-intl/client";
+import DesktopLinksBar from "./DesktopLinksBar";
 
 interface NavLinkTypes {
   href: string;
@@ -68,7 +69,8 @@ const MobileNav = () => {
         >
           <CgPushRight className="w-[30px] h-[30px] text-white z-30" />
         </button>
-        <ul className="">
+        <DesktopLinksBar />
+        {/* <ul className="">
           {locale === "pl" &&
             PlNavbar?.map(({ href, title, bold = "" }: NavLinkTypes) => (
               <li
@@ -121,7 +123,7 @@ const MobileNav = () => {
               ></Link>
             </div>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </nav>
   );

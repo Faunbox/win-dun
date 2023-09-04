@@ -26,7 +26,7 @@ const NavDropdown = () => {
         data-dropdown-toggle="dropdownHover"
         data-dropdown-trigger="hover"
         onClick={() => setOpen(!open)}
-        className="focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center relative"
+        className="focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center z-50"
         type="button"
       >
         <TfiWorld size={20} color="white" />
@@ -50,10 +50,10 @@ const NavDropdown = () => {
       {open && (
         <div
           id="dropdownHover"
-          className="absolute top-16 z-10 bg-white divide-y divide-gray-100 shadow w-44 dark:bg-[#171213]"
+          className="absolute top-14 lg:top-16 left-[50%] lg:left-auto -translate-x-1/2 lg:-translate-x-0 z-50 divide-y divide-gray-100 shadow w-24 "
         >
           <ul
-            className="py-2 text-sm text-gray-700 dark:text-gray-200"
+            className="flex flex-row lg:flex-col items-center justify-center gap-7 lg:gap-0 py-2 text-sm text-gray-700 dark:text-gray-200 lg:bg-transparent lg:backdrop-blur-lg rounded-lg"
             aria-labelledby="dropdownHoverButton"
           >
             <li className="flex items-center justify-center">
@@ -62,7 +62,7 @@ const NavDropdown = () => {
                 hrefLang="pl"
                 href="/pl"
                 onClick={() => handleLanguageSwitch("pl")}
-                className="fi fi-pl block p-4 hover:bg-gray-100 dark:hover:bg-gray-600 "
+                className="fi fi-pl block p-4 hover:scale-105 hover:duration-200"
               ></Link>
             </li>
             <li className="flex items-center justify-center">
@@ -71,7 +71,7 @@ const NavDropdown = () => {
                 hrefLang="en"
                 href="/en"
                 onClick={() => handleLanguageSwitch("en")}
-                className="fi fi-gb block p-4 hover:bg-gray-100 dark:hover:bg-gray-600 "
+                className="fi fi-gb block p-4 hover:scale-105 hover:duration-200"
               ></Link>
             </li>
             <li className="flex items-center justify-center">
@@ -80,7 +80,7 @@ const NavDropdown = () => {
                 hrefLang="nl"
                 href="/nl"
                 onClick={() => handleLanguageSwitch("nl")}
-                className="fi fi-nl block p-4 hover:bg-gray-100 dark:hover:bg-gray-600 "
+                className="fi fi-nl block p-4 hover:scale-105 hover:duration-200"
               ></Link>
             </li>
           </ul>

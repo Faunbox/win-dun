@@ -7,7 +7,7 @@ const DesktopLinks = () => {
   const locale = useLocale();
 
   return (
-    <div className="flex flex-row gap-4 mr-4">
+    <div className="flex flex-col items-center justify-center lg:flex-row gap-4 lg:mr-4">
       {locale === "pl" &&
         PlNavbar?.map(
           ({ href, title }: { href: string; title: string }, id) => {
