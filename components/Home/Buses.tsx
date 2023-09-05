@@ -3,7 +3,7 @@ import SectionHeader from "../Typography/SectionHeader";
 import { AiOutlineUsb } from "react-icons/ai";
 import { BsWind } from "react-icons/bs";
 import { CiBoxes } from "react-icons/ci";
-import { LuUserCheck } from "react-icons/lu";
+import { IoPeopleOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
@@ -36,7 +36,7 @@ const HomeBuses = () => {
           variants={variants}
           className="flex flex-col justify-center items-center w-full sm:w-[40%] gap-10 py-4 px-4 border-1 border-white "
         >
-          <LuUserCheck size={45} className="text-white" />
+          <IoPeopleOutline size={45} className="text-white" />
           <p className="text-xl font-normal">{t("bus.text1")}</p>
         </motion.li>
         <motion.li

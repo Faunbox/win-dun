@@ -35,7 +35,7 @@ const BusImageComponent = ({ variant }: { variant: string }) => {
             translateY: traslateYProgress,
           }}
           layout
-          className="hidden lg:block mx-auto p-4 md:p-0 lg:col-span-1 translate-x-11"
+          className="hidden lg:block mx-auto p-4 md:p-0 lg:col-span-1 "
         >
           <Image
             src={"/images/busikk.png"}

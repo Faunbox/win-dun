@@ -45,7 +45,7 @@ export async function generateMetadata({ params: { locale } }: Props) {
   const t = createTranslator({ locale, messages });
 
   return {
-    title: t("core.website"),
+    title: { default: t("core.website"), template: "%s | Wit-dun Express" }
   };
 }
 

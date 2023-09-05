@@ -2,7 +2,7 @@
 
 import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
-import { Textarea } from "@nextui-org/react";
+import { Spinner, Textarea } from "@nextui-org/react";
 import axios from "axios";
 import { useState } from "react";
 import { RiMailSendLine } from "react-icons/ri";
@@ -33,6 +33,7 @@ const ContactForm = ({
   const t = useTranslations("contact");
 
   const [isCheckd, setIsCheckd] = useState(false);
+  const [sending, isSending] = useState(false);
   const [inputInfo, setInputInfo] = useState({
     name: "",
     email: "",
@@ -61,6 +62,7 @@ const ContactForm = ({
 
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
+    isSending(true);
     const { name, email, message, phone }: Input = inputInfo;
     setDisableButton(true);
     await axios({
@@ -73,7 +75,9 @@ const ContactForm = ({
     })
       .then((msg) => alert(msg.data.message))
       .catch((error) => alert(error))
-      .finally(() => setIsCheckd(false));
+      .finally(() => {
+        setIsCheckd(false), isSending(false);
+      });
   };
   return (
     <div
@@ -186,8 +190,12 @@ const ContactForm = ({
           radius="lg"
           className="mx-auto w-full max-w-[300px] text-black disabled:text-black p-4 hover:scale-110 transition-transform duration-500"
         >
-          <RiMailSendLine size={20} />
-          {t("formButton")}
+          {sending ? (
+            <Spinner size="sm" color="secondary" />
+          ) : (
+            <RiMailSendLine size={20} />
+          )}
+          {sending ? "Ładuję" : t("formButton")}
         </Button>
       </form>
     </div>
