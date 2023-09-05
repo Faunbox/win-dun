@@ -1,8 +1,8 @@
 {
   "core": {
-    "website": "Przewóz osób do Niemiec i Holandii - Śląsk, Dolny Śląsk, Opolskie - wit-dun.eu",
-    "description": "",
-    "keywords": "",
+    "website": "Przewóz osób do Niemiec i Holandii - Śląsk, Dolny Śląsk, Opolskie",
+    "description": "Wit-dun Express - Busy za granicę. Zapewniamy kompleksowe usługi transportu osobowego osób i zwierząt do Niemiec i Holandii. Wyjeżdzamy w każdy piątek, sobotę oraz niedzielę!",
+    "keywords": "Testo, Elemento",
     "loading": "Ładuję...",
     "navbar": {
       "1": { "title": "Start", "href": "/" },

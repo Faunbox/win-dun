@@ -13,6 +13,7 @@ import Footer from "@/components/Footer/Footer";
 import CallCloud from "@/components/Navigation/CallCloud";
 import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
+import Script from "next/script";
 
 type Props = {
   children: ReactNode;
@@ -45,7 +46,16 @@ export async function generateMetadata({ params: { locale } }: Props) {
   const t = createTranslator({ locale, messages });
 
   return {
-    title: { default: t("core.website"), template: "%s | Wit-dun Express" }
+    title: `${t("core.website")} | Wit-dun Express `,
+    authors: { name: "Filip Sojecki", url: "https://succes-web.pl" },
+    keywords: [t("core.keywords")],
+    alternates: {
+      canonical: "https://wit-dun.eu",
+      languages: {
+        en: "https://wit-dun.eu/en",
+        nl: "https://wit-dun.eu/nl",
+      },
+    },
   };
 }
 
@@ -66,6 +76,16 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className={`${inter.className} bg-white scroll-smooth`}>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-C883Y1DZDC" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-C883Y1DZDC');
+        `}
+      </Script>
       <NextIntlClientProvider locale={locale} messages={messages}>
         <body className="relative bg-white">
           <CookieConsent />

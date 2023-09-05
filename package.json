@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -29,6 +30,7 @@
     "keen-slider": "^6.8.6",
     "next": "^13.4.12",
     "next-intl": "^3.0.0-beta.14",
+    "next-sitemap": "^4.2.2",
     "postcss": "8.4.24",
     "react": "18.2.0",
     "react-datepicker": "^4.16.0",
