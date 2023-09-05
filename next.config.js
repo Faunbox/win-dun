@@ -36,7 +36,12 @@ module.exports = withNextIntl({
         },
         {
           source: "/en/terms",
-          destination: "/terms",
+          destination: "/en/terms",
+          locale: false,
+        },
+        {
+          source: "/en/privacy",
+          destination: "/en/polityka-prywatnosci",
           locale: false,
         },
         {

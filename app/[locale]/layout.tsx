@@ -48,6 +48,7 @@ export async function generateMetadata({ params: { locale } }: Props) {
   return {
     title: `${t("core.website")} | Wit-dun Express `,
     authors: { name: "Filip Sojecki", url: "https://succes-web.pl" },
+    description: t("core.description"),
     keywords: [t("core.keywords")],
     alternates: {
       canonical: "https://wit-dun.eu",
@@ -55,6 +56,14 @@ export async function generateMetadata({ params: { locale } }: Props) {
         en: "https://wit-dun.eu/en",
         nl: "https://wit-dun.eu/nl",
       },
+    },
+    openGraph: {
+      title: "Usługi transportowe Polska-Niemcy-Holandia",
+      description: "Transport międzynarodowy Polska-Niemcy-Holandia",
+      url: "https://wit-dun.eu",
+      siteName: "Wit-dun Express",
+      locale: "pl",
+      type: "website",
     },
   };
 }

@@ -1,8 +1,8 @@
 {
   "core": {
     "website": "Przewóz osób do Niemiec i Holandii - Śląsk, Dolny Śląsk, Opolskie",
-    "description": "Wit-dun Express - Busy za granicę. Zapewniamy kompleksowe usługi transportu osobowego osób i zwierząt do Niemiec i Holandii. Wyjeżdzamy w każdy piątek, sobotę oraz niedzielę!",
-    "keywords": "Testo, Elemento",
+    "description": "Wit-dun Express - Busy za granicę. Zapewniamy kompleksowe usługi transportu osobowego osób i zwierząt z Polski do Niemiec i Holandii. Wyjeżdzamy w każdy piątek, sobotę oraz niedzielę!",
+    "keywords": "bus do holandii, bus holandia bielsko, bus holadnia katowice, bus holandia wroclaw, busy polska niemcy, busy polska holandia, bus katowice berlin, bus wroclaw berlin, bus katowice amsterdam, bus do amsterdamu",
     "loading": "Ładuję...",
     "navbar": {
       "1": { "title": "Start", "href": "/" },
@@ -25,6 +25,7 @@
     "heroButtonLink": "/rezerwacja?type=people",
     "heroPhone": "Wyślij paczkę",
     "heroPhoneLink": "/rezerwacja?type=package",
+    "heroMapTitle": "Gdzie dojeżdzamy?",
     "services": {
       "title": "Nasze usługi",
       "header1": "Listy, paczki, gabaryty",
@@ -38,10 +39,10 @@
       "title": "Dlaczego my?",
       "texts": {
         "header1": "Transport bez przesiadek",
-        "description1": "Nasza firma transportowa oferuje wygodne i efektywne rozwiązania dla podróży bez zbędnych przesiadek. Zapewniamy płynny i komfortowy transport, eliminując niedogodności związane z przesiadkami.",
+        "description1": "Nasza firma oferuje wygodne i efektywne rozwiązania dla podróży bez zbędnych przesiadek. Zapewniamy płynny i komfortowy transport, eliminując niedogodności związane z przesiadkami.",
 
         "header2": "Możliwość zabrania większych ładunków",
-        "description2": "Przewozimy duże ładunki bez kłopotów! Nasza firma transportowa gwarantuje sprawny i bezpieczny transport nawet największych towarów. Skorzystaj z naszej możliwości przewozu większych ładunków i zaufaj profesjonalizmowi.",
+        "description2": "Przewozimy duże ładunki bez kłopotów! Nasza firma gwarantuje sprawny i bezpieczny transport nawet największych towarów. Skorzystaj z naszej możliwości przewozu większych ładunków i zaufaj profesjonalizmowi.",
 
         "header3": "Odbiór i dojazd pod wskazany adres",
         "description3": "Zaoszczędź czas dzięki naszej usłudze odbioru i dojazdu pod wskazany adres. Jesteśmy Twoim niezawodnym partnerem transportowym, zapewniającym wygodę i punktualność.",
@@ -110,7 +111,7 @@
     },
     "package": {
       "luggageTitle": "Jak przygotować paczkę do wysyłki ?",
-      "luggageDesc": "Wybierz opakowanie jak najbardziej zbliżone do wielkości przedmiotu który chcesz wysłać oraz wypełnij je np. papierem aby zminimalizować ryzyko uszkodzenia zawartości. Dokładnie zaklej paczkę oraz napisz na niej imię oraz nazwisko adresata wraz z numerem telefonu. Podczas odbioru nasz pracownik przyklei również etykietę wysyłkową. Wysyłka przedmiotów o niestardardowych wymiarach lub o wadze powyżej 20kg muszą być potwierdzone telefonicznie",
+      "luggageDesc": "Wybierz opakowanie jak najbardziej zbliżone do wielkości przedmiotu który chcesz wysłać oraz wypełnij je np. papierem aby zminimalizować ryzyko uszkodzenia zawartości. Dokładnie zaklej paczkę oraz napisz na niej imię oraz nazwisko adresata wraz z numerem telefonu. Podczas odbioru nasz pracownik przyklei również etykietę wysyłkową. Wysyłka przedmiotów o niestardardowych wymiarach lub o wadze powyżej 20kg muszą być potwierdzone telefonicznie.",
       "luggageHeader": "Bagaż podczas transportu osobowego",
       "luggageInfo": "Każdy pasażer ma prawo do bezpłatnego przewozu 3 sztuk bagażu w tym 1 sztuki bagażu podręcznego o wadze do 5 kg oraz 2 sztuk bagażu podstawowego, w której każda ze sztuk bagażu nie przekracza 20 kg. Istnieje możliwość zabrania większej ilości bagażu za dodatkową opłatą.",
       "button": "Zarezerwuj paczkę",
@@ -124,6 +125,7 @@
     "formHeader": "Formularz kontaktowy",
     "formButton": "Wyślij wiadomość",
     "rodo": "Wyrażam zgodę na przetwarzanie podanych w formularzu kontaktowym danych w celu nawiązania kontaktu oraz akceptuję",
+    "terms": "Regulamin",
     "formInputs": {
       "label1": "Imie i nazwisko",
       "placeholder1": "Jan Kowalski",

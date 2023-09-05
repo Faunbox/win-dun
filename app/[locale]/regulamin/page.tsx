@@ -1,5 +1,11 @@
 import SectionHeader from "@/components/Typography/SectionHeader";
 import { useTranslations } from "next-intl";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Regulamin przejazdu | Wit-dun Express",
+  
+};
 
 const About = () => {
   const t = useTranslations("termsOfUse");

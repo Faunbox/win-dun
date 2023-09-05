@@ -1,6 +1,20 @@
 import WhyHeaders from "@/components/Home/WhyHeaders";
 import SectionHeader from "@/components/Typography/SectionHeader";
+import { Metadata } from "next";
 import { ReactNode } from "react";
+
+export const metadata: Metadata = {
+  title: "Polityka prywatności | Wit-dun Express",
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
+};
 
 const PrivacyDiv = ({ children }: { children: ReactNode }) => {
   return <div className="flex flex-col my-2 md:my-4 gap-2">{children}</div>;
@@ -187,10 +201,10 @@ const PrivacyPolitics = () => {
             użytkownika Serwisu (po zalogowaniu), dzięki której użytkownik nie
             musi na każdej podstronie Serwisu ponownie wpisywać loginu i hasła;
             realizacji celów określonych powyżej w części &#39;Istotne techniki
-            marketingowe&#39; W ramach Serwisu stosowane są dwa zasadnicze rodzaje
-            plików cookies: „sesyjne” (session cookies) oraz „stałe” (persistent
-            cookies). Cookies „sesyjne” są plikami tymczasowymi, które
-            przechowywane są w urządzeniu końcowym Użytkownika do czasu
+            marketingowe&#39; W ramach Serwisu stosowane są dwa zasadnicze
+            rodzaje plików cookies: „sesyjne” (session cookies) oraz „stałe”
+            (persistent cookies). Cookies „sesyjne” są plikami tymczasowymi,
+            które przechowywane są w urządzeniu końcowym Użytkownika do czasu
             wylogowania, opuszczenia strony internetowej lub wyłączenia
             oprogramowania (przeglądarki internetowej). „Stałe” pliki cookies
             przechowywane są w urządzeniu końcowym Użytkownika przez czas

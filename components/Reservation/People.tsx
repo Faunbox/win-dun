@@ -9,6 +9,7 @@ import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { MyInput, MyTextArea } from "../lib/NextUi";
+import { Spinner } from "@nextui-org/react";
 
 const PeopleForm = () => {
   const t = useTranslations("contact");
@@ -16,6 +17,7 @@ const PeopleForm = () => {
 
   const { peopleForm, setPeopleForm } = useFormContext();
   const [isCheckd, setIsCheckd] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const [disableButton, setDisableButton] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
   const searchParams = useSearchParams();
@@ -34,6 +36,7 @@ const PeopleForm = () => {
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     setDisableButton(true);
+    setIsSending(true)
     //Create form data obj from jsx form
     const formData = new FormData(formRef.current!);
     const topic = "Rezerwacja przejazdu";
@@ -54,7 +57,7 @@ const PeopleForm = () => {
       },
     })
       .then((msg) => alert(msg.data.message))
-      .catch((error) => alert(error));
+      .catch((error) => alert(error)).finally(() => {setIsSending(false)})
   };
 
   return (
@@ -63,6 +66,10 @@ const PeopleForm = () => {
       ref={formRef}
       className="w-8/12"
       key={"tak"}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
     >
       <div className="flex flex-col sm:flex-row gap-4 mt-4 sm:mt-16">
         <aside className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
@@ -281,7 +288,7 @@ const PeopleForm = () => {
             {t("rodo")}{" "}
             <Link href={"/regulamin"} className="text-blue-500" target="_blank">
               {" "}
-              Regulamin
+              {t("terms")}
             </Link>
           </label>
         </div>
@@ -293,7 +300,7 @@ const PeopleForm = () => {
           type="submit"
           className="text-white my-8 w-full max-w-[300px]"
         >
-          {tr("buttons.formButtonPeople")}
+          {isSending? <Spinner size="sm" color="secondary" /> : tr("buttons.formButtonPeople")}
         </Button>
       </div>
     </motion.form>

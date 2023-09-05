@@ -2,6 +2,13 @@ import HowToReserve from "@/components/BeforeTravel/HowToReserve";
 import SectionHeader from "@/components/Typography/SectionHeader";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Przed podróżą | Wit-dun Express",
+  
+  
+};
 
 const BeforeTravel = () => {
   const t = useTranslations("beforeTravel");

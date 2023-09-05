@@ -2,6 +2,13 @@ import RadioPickForm from "@/components/Reservation/RadioPickForm";
 import SectionHeader from "@/components/Typography/SectionHeader";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Rezerwacja przejazdu | Wit-dun Express",
+  
+  
+};
 
 const Reservation = () => {
   const t = useTranslations("reservation");

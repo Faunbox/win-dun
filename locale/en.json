@@ -1,8 +1,8 @@
 {
   "core": {
     "website": "Passenger transport to Germany and the Netherlands - Silesia, Lower Silesia, Opolskie - wit-dun.eu",
-    "description": "",
-    "keywords": "",
+    "description": "Wit-dun Express - Buses abroad. We provide comprehensive services for the transport of people and animals from Poland to Germany and the Netherlands. We go every Friday, Saturday and Sunday!",
+    "keywords": "bus to the netherlands, bus netherlands Bielsko, bus netherlands katowice, bus netherlands wroclaw, busy poland germany, busy poland netherlands, bus to katowice, bus to wroclaw",
     "loading": "Loading...",
     "navbar": {
       "1": { "title": "Start", "href": "/" },
@@ -18,13 +18,14 @@
     "button": "Accept"
   },
   "homePage": {
-    "homeDescription1": "Transport services to Germany and the Netherlands.",
-    "homeDescription2": "Transport services to Germany and the Netherlands.",
+    "homeDescription1": "Transport services",
+    "homeDescription2": "to Germany and the Netherlands",
     "homeDescription3": "Each friday, saturday and sunday",
     "heroButton": "Book a ride",
     "heroButtonLink": "/en/reservation?type=people",
     "heroPhone": "Send the package",
     "heroPhoneLink": "/en/reservation?type=package",
+    "heroMapTitle": "Working area",
     "services": {
       "title": "Services",
       "header2": "Transport of people and animals",
@@ -35,24 +36,18 @@
       "description3": "We realize that moving is an important event in the life of every person, which is why our goal is to provide you with a safe, efficiently organized and comfortable move."
     },
     "whyOurCompany": {
-      "title": "Why us?",
+      "title": "Why our company?",
       "texts": {
-        "header1": "Header En1",
-        "description1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
-        "header2": "Header En2",
-        "description2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
+        "header1": "Transport without transfers",
+        "description1": "Our company offers convenient and effective solutions for traveling without unnecessary transfers. We provide smooth and comfortable transport, eliminating the inconvenience of transfers.",
+        "header2": "Possibility to take larger loads",
+        "description2": "We transport large loads without hassle! Our company guarantees efficient and safe transport of even the largest goods. Take advantage of our ability to transport larger loads and trust professionalism.",
 
-        "header3": "Header EN3",
-        "description3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
+        "header3": "Pickup and drop off at the address provided",
+        "description3": "Save time with our pick-up and drop-off service. We are your reliable transport partner, ensuring comfort and punctuality.",
 
-        "header4": "Header EN4",
-        "description4": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
-
-        "header5": "Header EN5",
-        "description5": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro.",
-
-        "header6": "HeaderEN6",
-        "description6": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Utcupiditate debitis dolorem harum doloremque eaque eos, nesciunt possimus commodi porro."
+        "header4": "Safety and experience",
+        "description4": "Your safety and our experience are our priorities. As a transport company, we combine solid know-how with attention to every detail, ensuring you a peaceful journey. Trust our experience and travel safely."
       }
     },
     "about": {
@@ -65,7 +60,7 @@
       "link": "/en/reservation?type=people"
     },
     "bus": {
-      "title": "OUR BUSES HAVE",
+      "title": "Our buses have",
       "text1": "Comfortable seats",
       "text2": "Air conditioning",
       "text3": "USB Ports",
@@ -115,19 +110,21 @@
     },
     "package": {
       "luggageTitle": "How to prepare a package for shipping?",
-      "luggageDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia reiciendis a natus officia reprehenderit autem voluptas debitis. Dicta praesentium iste, obcaecati alias eaque debitis quam dolore, atque eveniet blanditiis beatae.",
-      "luggageInfo": "Tekst o wielkości bagażu i wadze",
+      "luggageDesc": "Choose a package as close as possible to the size of the item you want to send and fill it with e.g. paper to minimize the risk of damaging the contents. Seal the package carefully and write the addressee's name and phone number on it. During collection, our employee will also stick a shipping label. Shipment of items with non-standard dimensions or weighing more than 20 kg must be confirmed by telephone.",
+      "luggageHeader": "Luggage during passenger transport",
+      "luggageInfo": "Each passenger has the right to free transport of 3 pieces of luggage, including 1 piece of hand luggage weighing up to 5 kg and 2 pieces of basic luggage, in which each piece of luggage does not exceed 20 kg. It is possible to take more luggage for an additional fee.",
       "button": "Reserve a package",
       "buttonLink": "/en/reservation?type=package"
     }
   },
   "contact": {
     "title": "Contact",
-    "companyDataTitle": "COMPANY'S DATA",
+    "companyDataTitle": "Company's data",
     "text": "Do you have questions, need additional information or would you like to use our transport services? We are here to help you! Don't wait, contact us today and see why we are the leader in the transport industry in your region.",
     "formHeader": "Contact form",
     "formButton": "Send a message",
-    "rodo": "I consent to the processing of the data provided in the contact form in order to make contact",
+    "rodo": "I consent to the processing of the data provided in the contact form in order to make contact and I accept",
+    "terms": "Terms",
     "formInputs": {
       "label1": "Name and surname",
       "placeholder1": "John Smith",

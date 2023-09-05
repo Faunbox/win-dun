@@ -1,11 +1,17 @@
 import Faq from "@/components/BeforeTravel/Faq";
 import CompanyData from "@/components/Contact/CompanyData";
 import ContactForm from "@/components/Contact/ContactForm";
-import SectionHeader from "@/components/Typography/SectionHeader";
+import { Metadata } from "next";
+// import SectionHeader from "@/components/Typography/SectionHeader";
 import { useTranslations } from "next-intl";
 
+export const metadata: Metadata = {
+  title: 'Kontakt | Wit-dun Express',
+}
+
 const Contact = () => {
-  const t = useTranslations("contact");
+  // const t = useTranslations("contact");
+  
 
   return (
     <div className="flex flex-col text-center justify-center items-center mt-32 p-4 w-screen">

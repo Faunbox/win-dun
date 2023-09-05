@@ -21,6 +21,7 @@ const OffertCard = ({
       <Image
         src={photo}
         alt={title}
+        quality={70}
         width={180}
         height={280}
         loading="lazy"

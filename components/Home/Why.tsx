@@ -1,6 +1,5 @@
 import { useTranslations } from "next-intl";
 import SectionHeader from "../Typography/SectionHeader";
-import Image from "next/image";
 import WhyHeaders from "./WhyHeaders";
 import BusImageComponent from "./BusImage";
 import AboutHomeSection from "./About";

@@ -10,11 +10,12 @@ const Luggage = () => {
     <div className="container flex flex-col-reverse lg:flex-row-reverse my-20 pt-8 gap-2">
       <div className="w-full h-full lg:w-6/12 duration-300 ease-in-out">
         <Image
-          src="/images/paczka.jpg"
+          src="/images/paczka.webp"
           alt=""
           width={600}
           height={400}
           quality={100}
+          loading="lazy"
           className="w-full h-full object-center relative border-1 border-black"
         />
       </div>
