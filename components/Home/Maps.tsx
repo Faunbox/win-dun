@@ -7,9 +7,9 @@ const Maps = () => {
       <div className="flex flex-col items-center justify-center">
         <SectionHeader>Gdzie dojeżdzamy?</SectionHeader>
         <Image
-          src="/images/europa.png"
+          src="/images/mapa.webp"
           alt="Europe map"
-          width={900}
+          width={1000}
           height={250}
           className="h-full w-full"
         />

@@ -7,9 +7,9 @@ const OffertSection = () => {
   const t = useTranslations("homePage");
 
   const images = [
-    "/images/paczka-bus.jpg",
-    "/images/kotek.jpg",
-    "/images/paczka2.jpg",
+    "/images/paczka-bus.webp",
+    "/images/kotek.webp",
+    "/images/paczka2.webp",
   ];
 
   

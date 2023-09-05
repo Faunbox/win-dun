@@ -9,6 +9,8 @@ const Forms = () => {
   const searchParams = useSearchParams();
   const typeParam = searchParams.get("type")?.toString();
 
+ 
+
   return (
     <AnimatePresence>
       <motion.div

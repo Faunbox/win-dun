@@ -23,6 +23,7 @@ const OffertCard = ({
         alt={title}
         width={180}
         height={280}
+        loading="lazy"
         className="w-full h-full max-h-[400px] object-cover"
       />
       <p className="">{description}</p>

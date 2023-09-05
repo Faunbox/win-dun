@@ -28,7 +28,7 @@ const AboutHomeSection = () => {
             {t("about.text3")}
           </p>
         </div> */}
-        <Link href={t("about.link")}>
+        <Link href={t("about.link")} className="pt-6">
           <Button
             type="submit"
             color="primary"

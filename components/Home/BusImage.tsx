@@ -38,7 +38,7 @@ const BusImageComponent = ({ variant }: { variant: string }) => {
           className="hidden lg:block mx-auto p-4 md:p-0 lg:col-span-1 "
         >
           <Image
-            src={"/images/busikk.png"}
+            src={"/images/busikk.webp"}
             alt="tak"
             width={1240}
             height={720}
