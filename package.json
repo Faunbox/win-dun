@@ -18,6 +18,7 @@
     "@types/react": "18.2.14",
     "@types/react-datepicker": "^4.15.0",
     "@types/react-dom": "18.2.6",
+    "@vercel/analytics": "^1.0.2",
     "autoprefixer": "10.4.14",
     "axios": "^1.4.0",
     "country-flag-icons": "^1.5.7",

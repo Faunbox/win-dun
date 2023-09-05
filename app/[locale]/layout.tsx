@@ -14,6 +14,7 @@ import CallCloud from "@/components/Navigation/CallCloud";
 import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 
 type Props = {
   children: ReactNode;
@@ -95,6 +96,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           gtag('config', 'G-C883Y1DZDC');
         `}
       </Script>
+      <Analytics />
       <NextIntlClientProvider locale={locale} messages={messages}>
         <body className="relative bg-white">
           <CookieConsent />
