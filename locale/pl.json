@@ -58,7 +58,7 @@
       "span2": "Gwarantujemy",
       "text3": "100% zadowolenia!",
       "button": "Zamów przejazd",
-      "link": "/rezerwacja=?type=people"
+      "link": "/rezerwacja?type=people"
     },
     "bus": {
       "title": "Nasze busy posiadają",
