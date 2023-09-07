@@ -19,7 +19,7 @@ const HowToReserve = () => {
           <div className="ml-0 lg:ml-12 lg:w-2/3 pt-20">
             <div className="container mx-auto w-full h-full">
               <Image
-                className="sticky top-8/12 top-0 mx-auto pt-4 translate-y-1/2 -mt-36 z-10"
+                className="sticky top-8/12 top-0 mx-auto pt-4 translate-y-1/2 p-7 md:p-0 -mt-36 z-10"
                 src="/images/why-bus.webp"
                 alt="rocket"
                 width={180}
