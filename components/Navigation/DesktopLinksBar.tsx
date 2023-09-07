@@ -11,10 +11,10 @@ const DesktopLinksBar = () => {
       <li className="flex items-center justify-center gap-1 hover:scale-110 pt-6 lg:pt-0 transition-transform duration-300">
         <BiPhoneOutgoing color="#fde047" size={25} />
         <a
-          href="phone:+48505216526"
+          href="tel:+48507317221"
           className="text-sm font-light text-white animate-hithere duration-3s"
         >
-          505 216 526
+          507 317 221
         </a>
       </li>
       <li className="flex justify-end items-center pt-4 relative lg:pt-0">

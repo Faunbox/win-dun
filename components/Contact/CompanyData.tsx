@@ -31,7 +31,13 @@ const CompanyData = () => {
         </li>
         <li className="flex-icon">
           <BiPhoneOutgoing size={20} className="mr-2 text-red-0" />
-          <a href="phone:+48505216526" className="text-lg">
+          <a href="tel:+48507317221" className="text-lg">
+            +48 507 317 221
+          </a>
+        </li>
+        <li className="flex-icon">
+          <BiPhoneOutgoing size={20} className="mr-2 text-red-0" />
+          <a href="tel:+48505216526" className="text-lg">
             +48 505 216 526
           </a>
         </li>

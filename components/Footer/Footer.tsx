@@ -226,10 +226,10 @@ const Footer = () => {
               </li>
               <li className="mt-3">
                 <Link
-                  href="phone:+48505216526"
+                  href="tel:+48507317221"
                   className="text-gray-100 cursor-pointer hover:text-gray-300"
                 >
-                  +48 505 216 526
+                  +48 507 317 221
                 </Link>
               </li>
             </nav>
