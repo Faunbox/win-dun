@@ -25,13 +25,14 @@ const Maps = () => {
           src="images/arrow.svg"
           initial={{
             opacity: 0.5,
-            translateY: "-58%",
+            translateY: "-60%",
             translateX: "30%",
             rotate: 14,
+            width:0
           }}
           whileInView={{ opacity: 1, width: "20%", }}
           transition={{ duration: 2, ease: easeInOut }}
-          className="absolute w-20 -rotate-12 right-[40%] origin-top top-[50%]"
+          className="absolute -rotate-12 right-[40%] origin-top top-[50%]"
         />
       </div>
     </div>
