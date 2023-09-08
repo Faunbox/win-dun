@@ -21,7 +21,7 @@ const Maps = () => {
           loading="lazy"
           className="h-full w-full"
         />
-        <motion.img
+        {/* <motion.img
           src="images/arrow.svg"
           initial={{
             opacity: 0.5,
@@ -33,7 +33,7 @@ const Maps = () => {
           whileInView={{ opacity: 1, width: "20%", }}
           transition={{ duration: 2, ease: easeInOut }}
           className="absolute -rotate-12 right-[40%] origin-top top-[50%]"
-        />
+        /> */}
       </div>
     </div>
   );
