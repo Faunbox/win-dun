@@ -12,6 +12,7 @@
       "5": { "title": "Przed podróżą", "href": "/przed-podroza" }
     }
   },
+
   "coockies": {
     "header": "Liczy się dla nas Twoja prywatność",
     "desc": "Używamy plików cookie, aby poprawić jakość przeglądania oraz analizować ruch na stronie. Kliknięcie przycisku „Akceptuję” oznacza zgodę na wykorzystywanie przez nas plików cookie.",
@@ -68,7 +69,8 @@
       "text4": "Duża powierzchnia ładunkowa"
     },
     "nameAbout": "O nas",
-    "aboutDescription": "Jesteśmy dynamiczną firmą, która specjalizuje się w kompleksowych usługach transportowych. Od lat świadczymy profesjonalne usługi przewozu osób, paczek oraz zwierząt, zapewniając naszym klientom bezpieczne i komfortowe podróże. Nasz priorytet to zadowolenie i satysfakcja naszych klientów. Dlatego dbamy o każdy detal naszych usług, gwarantując wysoką jakość i niezawodność. Nasza wykwalifikowana kadra, doświadczenie oraz nowoczesny tabor pojazdów pozwala nam realizować transport na najwyższym poziomie."
+    "aboutDescription": "Jesteśmy dynamiczną firmą, która specjalizuje się w kompleksowych usługach transportowych. Od lat świadczymy profesjonalne usługi przewozu osób, paczek oraz zwierząt, zapewniając naszym klientom bezpieczne i komfortowe podróże. Nasz priorytet to zadowolenie i satysfakcja naszych klientów. Dlatego dbamy o każdy detal naszych usług, gwarantując wysoką jakość i niezawodność. Nasza wykwalifikowana kadra, doświadczenie oraz nowoczesny tabor pojazdów pozwala nam realizować transport na najwyższym poziomie.",
+    "mapTableHeader": "MIASTA"
   },
   "about": {
     "title": "O naszej firmie",

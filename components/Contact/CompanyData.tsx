@@ -11,7 +11,7 @@ const CompanyData = () => {
   const t = useTranslations("contact");
 
   return (
-      <motion.div
+    <motion.div
       initial={{ translateX: -600, opacity: 0 }}
       animate={{ translateX: 0, opacity: [0, 1] }}
       transition={{ duration: 1, ease: "easeOut" }}
@@ -21,23 +21,23 @@ const CompanyData = () => {
         {t("companyDataTitle")}
       </h2>
       <ul className="list-none flex flex-col gap-2 justify-start items-start mx-auto z-40">
-        <li className="flex-icon">
+        <li className="flex-icon !items-start sm:items-center">
           <TiInputCheckedOutline size={25} className="mr-2 text-red-0" />
           <p className="text-lg">WitDun Express WITOLD DUNAT</p>
         </li>
-        <li className="flex-icon">
+        <li className="flex-icon !items-start">
           <MdOutlineGpsFixed size={20} className="mr-2 text-red-0" />{" "}
           <p className="text-lg">ul. Źródlana 2A, 34-321 Łękawica</p>
         </li>
         <li className="flex-icon">
           <BiPhoneOutgoing size={20} className="mr-2 text-red-0" />
-          <a href="tel:+48507317221" className="text-lg">
+          <a href="tel:+48507317221" className="text-lg" rel="noopener">
             +48 507 317 221
           </a>
         </li>
         <li className="flex-icon">
           <BiPhoneOutgoing size={20} className="mr-2 text-red-0" />
-          <a href="tel:+48505216526" className="text-lg">
+          <a href="tel:+48505216526" className="text-lg" rel="noopener">
             +48 505 216 526
           </a>
         </li>

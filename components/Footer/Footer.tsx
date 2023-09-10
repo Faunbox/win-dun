@@ -199,38 +199,41 @@ const Footer = () => {
             </h2>
             <nav className="mb-10 list-none">
               <li className="mt-3">
-                <Link
+                <a
                   href="mailto:kontakt@wit-dun.eu"
                   className="text-gray-100 cursor-pointer hover:text-gray-300"
                 >
                   Email
-                </Link>
+                </a>
               </li>
               <li className="mt-3">
-                <Link
+                <a
                   href="https://m.me/107516904418538"
                   target={"_blank"}
+                  rel="noopener"
                   className="text-gray-100 cursor-pointer hover:text-gray-300"
                 >
                   Messenger
-                </Link>
+                </a>
               </li>
               <li className="mt-3">
-                <Link
+                <a
                   href="https://api.whatsapp.com/send?phone=505216526"
                   target={"_blank"}
+                  rel="noopener"
                   className="text-gray-100 cursor-pointer hover:text-gray-300"
                 >
                   Whatsapp
-                </Link>
+                </a>
               </li>
               <li className="mt-3">
-                <Link
+                <a
                   href="tel:+48507317221"
+                  rel="noopener"
                   className="text-gray-100 cursor-pointer hover:text-gray-300"
                 >
                   +48 507 317 221
-                </Link>
+                </a>
               </li>
             </nav>
           </div>
