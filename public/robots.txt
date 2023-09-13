@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https:www.wit-dun.eu/
+Host: https://www.wit-dun.eu
 
 # Sitemaps
-Sitemap: https:www.wit-dun.eu/sitemap.xml
+Sitemap: https://www.wit-dun.eu/sitemap.xml
