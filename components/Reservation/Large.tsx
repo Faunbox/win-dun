@@ -67,7 +67,7 @@ const BigForm = () => {
       exit={{ opacity: 0 }}
       onSubmit={handleSubmit}
       ref={formRef}
-      className="w-8/12"
+      className="w-10/12 sm:w-8/12"
     >
       <div className="flex flex-col sm:flex-row gap-4 mt-4 sm:mt-16">
         <aside className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full ">

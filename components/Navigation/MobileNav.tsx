@@ -10,7 +10,7 @@ const MobileNav = () => {
   return (
     <nav
       className={
-        "lg:hidden flex row-auto justify-between p-4 gap-10 items-center text-center mix-blend-difference"
+        "lg:hidden flex row-auto justify-between p-4 gap-10 items-center text-center"
       }
     >
       {/* Logo */}

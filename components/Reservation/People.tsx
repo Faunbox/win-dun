@@ -36,7 +36,7 @@ const PeopleForm = () => {
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     setDisableButton(true);
-    setIsSending(true)
+    setIsSending(true);
     //Create form data obj from jsx form
     const formData = new FormData(formRef.current!);
     const topic = "Rezerwacja przejazdu";
@@ -57,14 +57,17 @@ const PeopleForm = () => {
       },
     })
       .then((msg) => alert(msg.data.message))
-      .catch((error) => alert(error)).finally(() => {setIsSending(false)})
+      .catch((error) => alert(error))
+      .finally(() => {
+        setIsSending(false);
+      });
   };
 
   return (
     <motion.form
       onSubmit={handleSubmit}
       ref={formRef}
-      className="w-8/12"
+      className="w-10/12 sm:w-8/12"
       key={"tak"}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -107,7 +110,7 @@ const PeopleForm = () => {
                 className="border-black"
               />
             </div>
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
               <MyInput
                 type="text"
                 name="city"
@@ -169,9 +172,9 @@ const PeopleForm = () => {
                 className=""
               />
             </div>
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-around mt-5">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-around items-center mt-5 w-full">
               <Calendar />
-              <div className="flex flex-col gap-2 sm:gap-4 justify-center items-center sm:items-start">
+              <div className="flex flex-col gap-2 sm:gap-4 justify-center items-center sm:items-start w-full">
                 <div className="flex flex-col sm:flex-row justify-center items-end gap-2 sm:gap-4 w-full">
                   <MyInput
                     type="number"
@@ -221,7 +224,7 @@ const PeopleForm = () => {
             </div>
 
             {/* <div className="flex flex-row gap-2 sm:gap-4"></div> */}
-            <div className="flex flex-col gap-2 sm:gap-4 mt-8 items-center  ">
+            <div className="flex flex-col gap-2 sm:gap-4 mt-8 items-center  w-full ">
               <h3 className="font-light text-lg">Twoje miejsce docelowe</h3>
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full">
                 <MyInput
@@ -300,7 +303,11 @@ const PeopleForm = () => {
           type="submit"
           className="text-white my-8 w-full max-w-[300px]"
         >
-          {isSending? <Spinner size="sm" color="secondary" /> : tr("buttons.formButtonPeople")}
+          {isSending ? (
+            <Spinner size="sm" color="secondary" />
+          ) : (
+            tr("buttons.formButtonPeople")
+          )}
         </Button>
       </div>
     </motion.form>

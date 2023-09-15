@@ -8,6 +8,7 @@ import { useState } from "react";
 import { RiMailSendLine } from "react-icons/ri";
 import { useTranslations } from "next-intl";
 import SectionHeader from "../Typography/SectionHeader";
+import Link from "next/link";
 
 interface Input {
   name: string;
@@ -173,15 +174,21 @@ const ContactForm = ({
           />
         </div>
         <div className="flex flex-row justify-center items-center">
-          <input
+        <input
             type="checkbox"
             name="checkbox"
             id="checkbox"
-            className="mr-4 "
             disabled={disableButton}
             onChange={() => setIsCheckd(!isCheckd)}
+            className="mr-4"
           />
-          <label htmlFor="checkbox">{t("rodo")}</label>
+          <label htmlFor="checkbox">
+            {t("rodo")}{" "}
+            <Link href={"/regulamin"} className="text-blue-500" target="_blank">
+              {" "}
+              {t("terms")}
+            </Link>
+          </label>
         </div>
         <Button
           type="submit"
