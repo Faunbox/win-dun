@@ -15,7 +15,7 @@ const CompanyData = () => {
       initial={{ translateX: -600, opacity: 0 }}
       animate={{ translateX: 0, opacity: [0, 1] }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="relative flex flex-col w-11/12 lg:w-6/12 lg:4/12 justify-center items-center py-4 px-8 border-1 border-black after:content-[''] after:border-1 after:border-black after:w-full after:h-full after:absolute after:inset-x-2 after:-inset-y-2 after:-z-0"
+      className="relative flex flex-col w-11/12 lg:w-6/12 justify-center items-center py-4 px-8 border-1 border-black after:content-[''] after:border-1 after:border-black after:w-full after:h-full after:absolute after:inset-x-2 after:-inset-y-2 after:-z-0"
     >
       <h2 className="m-4 text-2xl font-bold justify-self-start border-b-1 self-center border-black uppercase">
         {t("companyDataTitle")}
@@ -31,7 +31,7 @@ const CompanyData = () => {
         </li>
         <li className="flex-icon">
           <BiPhoneOutgoing size={20} className="mr-2 text-red-0" />
-          <a href="tel:+48507317221" className="text-lg" rel="noopener">
+          <a href="tel:+48507317221" className="text-lg mx-auto" rel="noopener">
             +48 507 317 221
           </a>
         </li>
