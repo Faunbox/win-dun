@@ -62,7 +62,7 @@ const JsxToHtmlElement = (
             }}
           >
             <p>Nadawca:</p>
-            <p style={{ fontWeight: "bold" }}>
+            <p style={{ fontWeight: "bold", fontSize: "25px" }}>
               {name} {surname}
             </p>
           </div>
@@ -85,18 +85,19 @@ const JsxToHtmlElement = (
             style={{
               display: "flex",
               flexDirection: "column",
+              justifyContent:"space-between",
               marginTop: "60px",
             }}
           >
             <div style={{ display: "flex", flexDirection: "column" }}>
               <h1>Odbiorca:</h1>
-              <h1 style={{ fontWeight: "bold" }}>
+              <h1 style={{ fontWeight: "bold", fontSize:"25px" }}>
                 {nameToGo} {surnameToGo}
               </h1>
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <h2>Adres:</h2>
-              <h2 style={{ marginBottom: "25px", fontWeight: "bold" }}>
+              <h2 style={{ marginBottom: "25px", fontWeight: "bold", fontSize:"25px" }}>
                 {countryToGo} {cityToGo} {streetToGo}
               </h2>
             </div>
