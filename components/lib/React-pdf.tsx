@@ -21,7 +21,7 @@ var opt = {
     scale: 1,
     useCORS: true,
   },
-  jsPDF: { unit: "mm", format: [150, 75], orientation: "l" },
+  jsPDF: { unit: "mm", format: [148, 210], orientation: "l" },
 };
 
 const JsxToHtmlElement = (

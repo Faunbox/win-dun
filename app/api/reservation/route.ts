@@ -564,7 +564,7 @@ export async function POST(req: NextRequest) {
 
   const msgWithAtachment = {
     // to: data?.email, // Change to your recipient
-    to: "kontakt@wit-dun.eu", // Change to your recipient
+    to: ["kontakt@wit-dun.eu", "faunbox2@gmail.com"], // Change to your recipient
     from: "kontakt@wit-dun.eu", // Change to your verified sender
     subject: `Paczka - ${data.topic} na dzień ${data.date}`,
     text: data?.topic,
