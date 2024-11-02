@@ -85,7 +85,6 @@ const JsxToHtmlElement = (
             style={{
               display: "flex",
               flexDirection: "column",
-              justifyContent:"space-between",
               marginTop: "60px",
             }}
           >
